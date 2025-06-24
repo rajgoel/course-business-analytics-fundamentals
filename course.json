@@ -1,12 +1,30 @@
 {
-  "title": "My course",
-  "subtitle": "on an awesome topic",
-  "author": "Me Myself",
-  "email": "me.myself@example.com",
+  "title": "Business Analytics",
+  "subtitle": "Fundamentals",
+  "author": "Asvin Goel",
+  "email": "asvin.goel@klu.org",
   "logo": "logo.svg",
   "topics": [
-    { "topic": "First session", "src": "slides.md", "folder": "session1" },
-    { "topic": "Second session", "src": "slides.md", "folder": "session2" }
+    { "topic": "1. Introduction",                  "src": "slides.md", "folder": "01 - Introduction" },
+    { "topic": "1. Lab: Software & Prerequisites", "src": "slides.md", "folder": "01 - Lab" },
+    { "topic": "2. Linear Programming",            "src": "slides.md", "folder": "02 - Linear Programming" },
+    { "topic": "2. Lab: AMPL & JUMP",              "src": "slides.md", "folder": "02 - Lab" },
+    { "topic": "3. LP Modelling",                  "src": "slides.md", "folder": "03 - LP Modelling" },
+    { "topic": "3. Lab: Cases & Examples",         "src": "slides.md", "folder": "03 - Lab" },
+    { "topic": "4. Introduction", "src": "slides.md", "folder": "04 - Introduction" },
+    { "topic": "4. Lab:", "src": "slides.md", "folder": "04 - Lab introduction" },
+    { "topic": "5. Introduction", "src": "slides.md", "folder": "05 - Introduction" },
+    { "topic": "5. Lab introduction", "src": "slides.md", "folder": "05 - Lab introduction" },
+    { "topic": "6. Introduction", "src": "slides.md", "folder": "06 - Introduction" },
+    { "topic": "6. Lab introduction", "src": "slides.md", "folder": "06 - Lab introduction" },
+    { "topic": "7. Introduction", "src": "slides.md", "folder": "07 - Introduction" },
+    { "topic": "7. Lab introduction", "src": "slides.md", "folder": "07 - Lab introduction" },
+    { "topic": "8. Introduction", "src": "slides.md", "folder": "08 - Introduction" },
+    { "topic": "8. Lab introduction", "src": "slides.md", "folder": "08 - Lab introduction" },
+    { "topic": "9. Introduction", "src": "slides.md", "folder": "09 - Introduction" },
+    { "topic": "9. Lab introduction", "src": "slides.md", "folder": "09 - Lab introduction" },
+    { "topic": "10. Introduction", "src": "slides.md", "folder": "10 - Introduction" },
+    { "topic": "10. Lab introduction", "src": "slides.md", "folder": "10 - Lab introduction" }
   ]
 }
 
