@@ -14,7 +14,7 @@ https://rajgoel.github.io/course-business-analytics-fundamentals/
 |    4    | Generic Models                | Model & Data in AMPL     |
 |    5    | Integer Programming           | Cases & Examples         |
 |    6    | Logical Constraints           | Examples                 |
-|    7    | Piecewise-Linear Constraints  | Examples                 |
+|    7    | Advanced IP Modelling         | Examples                 |
 |    8    | LP/IP Modelling               | Cases & Examples         |
 |    9    | Network Optimization Problems | Examples                 |
 |   10    | Network Flow Modelling        | Examples                 |
