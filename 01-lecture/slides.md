@@ -32,24 +32,32 @@ Applied to **business**, it implies the detailed and systematic breakdown of bus
 
 ---
 
-### Main types of Business Analytics
+### Scopes of business analytics
 
-Analytics is used to tackle different questions related to business operations:
+Business analytics is commonly divided into three main categories:
 
-- Descriptive analytics: *What has happened?*
-- Predictive analytics: *What will happen?*
-- Prescriptive analytics: *What should be done?*
+- Descriptive analytics
+- Predictive analytics
+- Prescriptive analytics
 
 ---
 
 > **describe(v.)**
 >
-> mid-13c., descriven, <span style="background-color:yellow;">"interpret, explain,"</span> a sense now obsolete; c. 1300, "represent orally or by writing," from Old French descrivre, descrire (13c.) and directly from Latin describere "to write down, copy; sketch, represent," from de "down" (see [de-](https://www.etymonline.com/word/de-)) + scribere "to write" (from PIE root [*skribh-](https://www.etymonline.com/word/*skribh-) "to cut").
+> mid-13c., descriven, <span style="background-color:yellow;">"interpret, explain,"</span> a sense now obsolete; c. 1300, "represent orally or by writing," from Old French descrivre, descrire (13c.) and directly from Latin describere <span style="background-color:yellow;">"to write down, copy; sketch, represent,"</span> from de "down" (see [de-](https://www.etymonline.com/word/de-)) + scribere "to write" (from PIE root [*skribh-](https://www.etymonline.com/word/*skribh-) "to cut").
 >
 > From late 14c. as "form or trace by motion;" c. 1400 as "delineate or mark the form or figure of, outline." Reconstructed with Latin spelling from c. 1450. Related: Described, describes, describing.
 <!-- .element style="text-align: left;font-family: 'Times New Roman', Times, serif;"-->
 
 <small>Source: https://www.etymonline.com/word/describe</small>
+
+---
+
+#### Definition: Descriptive analytics
+
+Descriptive analytics is the process of using **current and historical data** to identify patterns and events. 
+
+Essentially, descriptive analytics answers the question: *What has happened?*
 
 ---
 
@@ -62,6 +70,14 @@ Analytics is used to tackle different questions related to business operations:
 
 ---
 
+#### Definition: Predictive analytics
+
+Predictive analytics is the process of using current and historical data to **forecast future events**.
+
+Essentially, predictive analytics answers the question: *What will happen?*
+
+---
+
 > **prescribe(v.)**
 >
 > mid-15c., prescriben, <span style="background-color:yellow;">"to write down as a direction, law, or rule,"</span> from Latin praescribere "write before, prefix in writing; ordain, determine in advance," from prae "before" (see [pre-](https://www.etymonline.com/word/pre-)) + scribere "to write" (from PIE root [*skribh-](https://www.etymonline.com/word/*skribh-) "to cut"). Related: Prescribed; prescribing. Medical sense of "advise, appoint, or designate as a remedy for a disease" is from 1580s, probably a back formation from prescription.
@@ -70,6 +86,16 @@ Analytics is used to tackle different questions related to business operations:
 <small>Source: https://www.etymonline.com/word/prescribe</small>
 
 ---
+
+#### Definition: Prescriptive analytics
+
+Prescriptive analytics is the process of determining **which actions shall be performed** to achieve a business objective.
+
+Essentially, prescriptive analytics answers the question: *What should be done?*
+
+---
+
+### Blurry scopes
 
 Sometimes similar methodologies are used for all three types.
 
@@ -83,15 +109,16 @@ For example, recommender systems may serve all purposes.
 
 ---
 
-If descriptive analytics ("*What has happened?*")  is combined with causal inference, we can also answer the question "*Why did it happen?*". This is sometimes referred to as **Diagnostic analytics**.
+### Other terms
 
-Other terms can also be found, but they often overlap with the main three types.
+Other terms can also be found, but they often overlap or belong to one of the main three scopes.
+
+**Example:** 
+If descriptive analytics ("*What has happened?*")  is combined with causal inference, we can also answer the question "*Why did it happen?*". This is sometimes referred to as **Diagnostic analytics**.
 
 ===
 
 ## Descriptive analytics  
-
-Descriptive analytics is the process of using **current and historical data** to identify patterns and events. 
 
 ---
 
@@ -150,8 +177,6 @@ These are often used to get a quick understanding of the dataset before applying
 ===
 
 ### Predictive analytics  
-
-Predictive analytics is the process of using current and historical data to **forecast future events**.
 
 ---
 
