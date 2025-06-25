@@ -110,13 +110,16 @@ Prescriptive analytics is the process of determining **which actions shall be pe
 
 ### Blurry scopes
 
-Sometimes, methodologies can be used for all three scopes, e.g., recommender systems may serve all purposes.
+Sometimes, methodologies can be used for all three scopes.
 
-| Scope          | Recommendation type                         |
-|----------------|---------------------------------------------|
-| Descriptive    | "People who bought this, also bought ..."   |
-| Predictive     | "Based on your search, you might like ..."  |
-| Prescriptive   | "We propose ... to you"                     |
+> [!Note]
+>  Recommender systems may serve all purposes:
+>
+> | Scope          | Recommendation type                         |
+> |----------------|---------------------------------------------|
+> | Descriptive    | "People who bought this, also bought ..."   |
+> | Predictive     | "Based on your search, you might like ..."  |
+> | Prescriptive   | "We propose ... to you"                     |
 
 ---
 
@@ -143,10 +146,11 @@ Basic techniques include simple aggregations:
 - **Minimum and maximum:** range of values
 - **Quantiles (e.g. quartiles):** divide a dataset into intervals with equal numbers of observations
 
-These are often used to get a quick understanding of the dataset before applying more advanced methods:
-
-- Descriptive: *How much did my customers spend on average?*
-- Predictive: *How much will an average customer spend?*
+> [!TIP]
+> These are often used to get a quick understanding of the dataset before applying more advanced methods:
+>
+> - Descriptive: *How much did my customers spend on average?*
+> - Predictive: *How much will an average customer spend?*
 
 ---
 
