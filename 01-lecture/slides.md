@@ -166,17 +166,24 @@ The centroid and center of gravity can be used to answer questions like: *Where 
 
 ---
 
-### Outlier detection using
+### Outlier detection
 
 Outliers can be detected by identifying points that deviate significantly from the centroid:
 
-- Suitable distance metrics are required to measure deviation, e.g. the **Euclidean distance** 
-  `$$ d(x, y) = \displaystyle\sqrt{ \sum_{i=1}^n (x_i - y_i)^2 } $$`
+- Suitable distance metrics are required to measure deviation.
 - Points with a deviation from the mean that exceed a certain are flagged as outliers.
 
 > [!NOTE]
 > For normally distributed data, 99.7% lie within ±3 standard deviations from the mean. Therefore, a threshold of **±3 standard deviations** is often used.
 
+---
+
+### Distance metrics
+
+A widespread distance metric is the **Euclidean distance** 
+
+$$ d(x, y) = \displaystyle\sqrt{ \sum_{i=1}^n (x_i - y_i)^2 } $$
+  
 > [!WARNING]
 > Other distance measures may work better for non-homogeneous data, such as the [Mahalanobis distance](https://en.wikipedia.org/wiki/Mahalanobis_distance) which accounts for correlations and scale, measuring how far a point lies from the centroid relative to the data distribution.
 
