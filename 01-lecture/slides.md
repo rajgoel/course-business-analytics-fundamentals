@@ -8,6 +8,8 @@ What is **Business analytics**?
 
 ---
 
+### Meaning of the prefix "ana-"
+
 > **ana-**
 >
 > before vowels an-, word-forming element meaning: 1. "upward, up in place or time," 2. "back, backward, against," 3. "again, anew," from Greek ana (prep.) <span style="background-color:yellow;">"up, on, upon; up to, toward; throughout; back, backwards; again, anew,"</span> from an extended form of PIE root *an- (1) "on, upon, above" (see [on](https://www.etymonline.com/word/on), which is the English cognate). In old medical prescriptions, ana by itself meant "an equal quantity of each."
@@ -16,6 +18,8 @@ What is **Business analytics**?
 <small>Source: https://www.etymonline.com/word/ana-</small>
 
 ---
+
+### Meaning of the suffix "-lytic"
 
 > **-lytic**
 >
@@ -42,6 +46,8 @@ Business analytics is commonly divided into three main categories:
 
 ---
 
+### Meaning of the word "describe"
+
 > **describe(v.)**
 >
 > mid-13c., descriven, <span style="background-color:yellow;">"interpret, explain,"</span> a sense now obsolete; c. 1300, "represent orally or by writing," from Old French descrivre, descrire (13c.) and directly from Latin describere <span style="background-color:yellow;">"to write down, copy; sketch, represent,"</span> from de "down" (see [de-](https://www.etymonline.com/word/de-)) + scribere "to write" (from PIE root [*skribh-](https://www.etymonline.com/word/*skribh-) "to cut").
@@ -53,13 +59,15 @@ Business analytics is commonly divided into three main categories:
 
 ---
 
-#### Definition: Descriptive analytics
+### Definition: Descriptive analytics
 
 Descriptive analytics is the process of using **current and historical data** to identify patterns and events. 
 
 Essentially, descriptive analytics answers the question: *What has happened?*
 
 ---
+
+### Meaning of the word "predict"
 
 > **predict(v.)**
 >
@@ -70,13 +78,15 @@ Essentially, descriptive analytics answers the question: *What has happened?*
 
 ---
 
-#### Definition: Predictive analytics
+### Definition: Predictive analytics
 
 Predictive analytics is the process of using current and historical data to **forecast future events**.
 
 Essentially, predictive analytics answers the question: *What will happen?*
 
 ---
+
+### Meaning of the word "prescribe"
 
 > **prescribe(v.)**
 >
@@ -87,7 +97,7 @@ Essentially, predictive analytics answers the question: *What will happen?*
 
 ---
 
-#### Definition: Prescriptive analytics
+### Definition: Prescriptive analytics
 
 Prescriptive analytics is the process of determining **which actions shall be performed** to achieve a business objective.
 
@@ -97,11 +107,9 @@ Essentially, prescriptive analytics answers the question: *What should be done?*
 
 ### Blurry scopes
 
-Sometimes similar methodologies are used for all three types.
+Sometimes, similar methodologies can be used for all three scopes, e.g., recommender systems may serve all purposes.
 
-For example, recommender systems may serve all purposes.
-
-| Analytics type | Recommendation type                         |
+| Scope          | Recommendation type                         |
 |----------------|---------------------------------------------|
 | Descriptive    | "People who bought this, also bought ..."   |
 | Predictive     | "Based on your search, you might like ..."  |
