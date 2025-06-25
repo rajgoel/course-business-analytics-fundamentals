@@ -158,8 +158,10 @@ Basic techniques include simple aggregations:
 
 The centroid and center of gravity can be used to answer questions like: *Where are my customers located?*
 
-- **Centroid:** arithmetic mean of multi-dimensional input `$$ x^\text{centroid} =\sum_{i=1}^n x_i / n $$`
-- **Center of gravity:** weighted mean of multi-dimensional input  `$$ x^\text{center of gravity} = \sum_{i=1}^n w_i x_i / \sum_{i=1}^n w_i $$`
+- **Centroid:** arithmetic mean of multi-dimensional input 
+  $$ x^\text{centroid} =\sum_{i=1}^n x_i / n $$
+- **Center of gravity:** weighted mean of multi-dimensional input
+  $$ x^\text{center of gravity} = \sum_{i=1}^n w_i x_i / \sum_{i=1}^n w_i $$
 
 > [!TIP]
 > The centroid is used when each point has equal importance, the center of gravity is used when each point carries a different weight (e.g. order volume, revenue, visit frequency).
@@ -185,7 +187,7 @@ A widespread distance metric is the **Euclidean distance**
 $$ d(x, y) = \displaystyle\sqrt{ \sum_{i=1}^n (x_i - y_i)^2 } $$
   
 > [!WARNING]
-> Outlier detection may be severely influenced by the distance measure. For non-homogeneous data, other distance measures may such as the [Mahalanobis distance](https://en.wikipedia.org/wiki/Mahalanobis_distance) work better. It accounts for correlations and scale, measuring how far a point lies from the centroid relative to the data distribution.
+> Outlier detection may be severely influenced by the distance measure. For non-homogeneous data, other distance measures, such as the [Mahalanobis distance](https://en.wikipedia.org/wiki/Mahalanobis_distance), may work better. It accounts for correlations and scale, measuring how far a point lies from the centroid relative to the data distribution.
 
 ---
 
