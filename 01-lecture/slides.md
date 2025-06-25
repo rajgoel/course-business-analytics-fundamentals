@@ -238,8 +238,7 @@ Regression can be used to quantify the relationship between one or more input va
   $$  y = \beta_0 + \beta_1 x_1 + \dots + \beta_n x_n + \varepsilon$$
    where $\varepsilon$ is a random error term.
 - The optimal parameters $\beta_0, \dots, \beta_n$ are estimated by minimizing  
-  $$  \sum_{i=1}^m (y_i - \hat{y}_i)^2 $$
-  where $\hat{y}_i = \beta_0 + \beta_1 x_1 + \dots + \beta_n x_n$.
+  $$  \sum_{i=1}^m \left(y_i - (\beta_0 + \beta_1 x_1 + \dots + \beta_n x_n)\right)^2$$
 
 > [!TIP]
 > Regression allows answering questions like: *How does a change in a customer’s attributes affect their spending?* or *What factors influence sales volume?*
