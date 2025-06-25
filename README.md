@@ -15,8 +15,8 @@ https://rajgoel.github.io/course-business-analytics-fundamentals/
 |    5    | Integer Programming           | Cases & Examples         |
 |    6    | Logical Constraints           | Examples                 |
 |    7    | Advanced IP Modelling         | Examples                 |
-|    8    | LP/IP Modelling               | Cases & Examples         |
-|    9    | Network Optimization Problems | Examples                 |
+|    8    | LP/IP Modelling               | Examples                 |
+|    9    | Network Optimization Problems | Cases & Examples         |
 |   10    | Network Flow Modelling        | Examples                 |
 |   11    | Ask me anything               | Ask me anything          |
 
