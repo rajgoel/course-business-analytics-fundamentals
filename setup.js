@@ -129,7 +129,7 @@ fetch('course.json')
           blockquote.classList.add("admonition", type);
 
           // Remove the [!...] marker from the first paragraph
-          firstParagraph.textContent = firstParagraph.textContent.replace(/^\[![A-Z]+\]\s*/i, '');
+          firstParagraph.innerHTML = firstParagraph.innerHTML.slice(match[0].length).trimStart();
         }
       });
     });

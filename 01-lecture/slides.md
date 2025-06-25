@@ -154,10 +154,10 @@ These are often used to get a quick understanding of the dataset before applying
 
 The centroid and center of gravity can be used to answer questions like: *Where are my customers located?*
 
-- **Centroid:** arithmetic mean of multi-dimensional input `$$x^\text{centroid} =\sum_{i=1}^n x_i / n $$`
-- **Center of gravity:** weighted mean of multi-dimensional input  `$$x^\text{center of gravity} = \sum_{i=1}^n w_i x_i / \sum_{i=1}^n w_i $$`
+- **Centroid:** arithmetic mean of multi-dimensional input `$$ x^\text{centroid} =\sum_{i=1}^n x_i / n $$`
+- **Center of gravity:** weighted mean of multi-dimensional input  `$$ x^\text{center of gravity} = \sum_{i=1}^n w_i x_i / \sum_{i=1}^n w_i $$`
 
-> [!TIP±
+> [!TIP]
 > The centroid is used when each point has equal importance, the center of gravity is used when each point carries a different weight (e.g. order volume, revenue, visit frequency).
 
 ---
