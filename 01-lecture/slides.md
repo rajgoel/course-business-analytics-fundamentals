@@ -63,7 +63,8 @@ Business analytics is commonly divided into three main categories:
 
 Descriptive analytics is the process of using **current and historical data** to identify patterns and events. 
 
-Essentially, descriptive analytics answers the question: *What has happened?*
+> [!TIP]
+> Descriptive analytics answers the question: *What has happened?*
 
 ---
 
@@ -82,7 +83,8 @@ Essentially, descriptive analytics answers the question: *What has happened?*
 
 Predictive analytics is the process of using current and historical data to **forecast future events**.
 
-Essentially, predictive analytics answers the question: *What will happen?*
+> [!TIP]
+> Predictive analytics answers the question: *What will happen?*
 
 ---
 
@@ -155,7 +157,8 @@ The centroid and center of gravity can be used to answer questions like: *Where 
 - **Centroid:** arithmetic mean of multi-dimensional input `$$x^\text{centroid} =\sum_{i=1}^n x_i / n $$`
 - **Center of gravity:** weighted mean of multi-dimensional input  `$$x^\text{center of gravity} = \sum_{i=1}^n w_i x_i / \sum_{i=1}^n w_i $$`
 
-The centroid is used when each point has equal importance, the center of gravity is used when each point carries a different weight (e.g. order volume, revenue, visit frequency).
+> [!TIP±
+> The centroid is used when each point has equal importance, the center of gravity is used when each point carries a different weight (e.g. order volume, revenue, visit frequency).
 
 ---
 
@@ -167,7 +170,8 @@ Outliers can be detected by identifying points that deviate significantly from t
   `$$ d(x, y) = \displaystyle\sqrt{ \sum_{i=1}^n (x_i - y_i)^2 } $$`
 - Points outside, e.g., **±3 standard deviations** from the mean are flagged as outliers (for normally distributed data, 99.7% lie within ±3 standard deviations).
 
-Other distance measure may work better for non-homogeneous data, such as the [Mahalanobis distance](https://en.wikipedia.org/wiki/Mahalanobis_distance) which accounts for correlations and scale, measuring how far a point lies from the centroid relative to the data distribution.
+> [!WARNING]
+> Other distance measure may work better for non-homogeneous data, such as the [Mahalanobis distance](https://en.wikipedia.org/wiki/Mahalanobis_distance) which accounts for correlations and scale, measuring how far a point lies from the centroid relative to the data distribution.
 
 ---
 
