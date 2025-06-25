@@ -218,14 +218,15 @@ Visualisation: <a href="https://harisnazir.github.io/K-Means-Clustering-Visualis
 Distribution fitting can be used to model the underlying probability distribution of a dataset. 
 
 - It is conducted by selecting candidate probability distributions and estimating their parameters.
-- For each distribution/parameter combination, the fit can be determined by e.g. [mean squared errors](https://en.wikipedia.org/wiki/Mean_squared_error).
+- For each distribution/parameter combination, the fit can be determined, e.g., by [mean squared errors](https://en.wikipedia.org/wiki/Mean_squared_error).
 
 > [!TIP]
 > Distribution fitting helps to understand the data’s characteristics, estimate probabilities of future events, and detect anomalies by comparing observed data to expected patterns.
 
+<!--
 > [!NOTE]
-> Selecting a candidate probability distribution should be based on assumptions or knowledge of the underlying process.
-
+> Selecting candidate probability distributions should be based on assumptions or knowledge of the underlying process.
+-->
 ---
 
 ### Regression
@@ -235,7 +236,7 @@ Regression can be used to quantify the relationship between one or more input va
 - **Linear regression** assumes a linear relationship between variables $ x_1, \dots, x_n $ and a dependent variable $y$, modeled as  
   $$  y = \beta_0 + \beta_1 x_1 + \dots + \beta_n x_n + \varepsilon$$
    where $\varepsilon$ is a random error term.
-- The optimal parameters $$\beta_0, \dots, \beta_n$$ are estimated by minimizing  
+- The optimal parameters $\beta_0, \dots, \beta_n$ are estimated by minimizing  
   $$  \sum_{i=1}^m (y_i - \hat{y}_i)^2 $$
   where $\hat{y}_i = \beta_0 + \beta_1 x_1 + \dots + \beta_n x_n$.
 
