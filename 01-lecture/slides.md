@@ -10,7 +10,7 @@ What is **Business analytics**?
 
 > **ana-**
 >
-> before vowels an-, word-forming element meaning: 1. "upward, up in place or time," 2. "back, backward, against," <span style="background-color:yellow;">3. "again, anew," from Greek ana (prep.) "up, on, upon; up to, toward; throughout; back, backwards; again, anew,"</span> from an extended form of PIE root *an- (1) "on, upon, above" (see [on](https://www.etymonline.com/word/on), which is the English cognate). In old medical prescriptions, ana by itself meant "an equal quantity of each."
+> before vowels an-, word-forming element meaning: 1. "upward, up in place or time," 2. "back, backward, against," 3. "again, anew," from Greek ana (prep.) <span style="background-color:yellow;">"up, on, upon; up to, toward; throughout; back, backwards; again, anew,"</span> from an extended form of PIE root *an- (1) "on, upon, above" (see [on](https://www.etymonline.com/word/on), which is the English cognate). In old medical prescriptions, ana by itself meant "an equal quantity of each."
 <!-- .element style="text-align: left;font-family: 'Times New Roman', Times, serif;"-->
 
 <small>Source: https://www.etymonline.com/word/ana-</small>
@@ -19,7 +19,7 @@ What is **Business analytics**?
 
 > **-lytic**
 >
-> word-forming element used in making adjectives corresponding to nouns in -lysis, from Greek -lytikos, from lytikos "able to loose, loosing," from lytos "loosed," verbal adjective of lyein "to unfasten, loose, loosen, untie" (from PIE root *leu-](https://www.etymonline.com/word/*leu-) <span style="background-color:yellow;">"to loosen, divide, cut apart"</span>).
+> word-forming element used in making adjectives corresponding to nouns in -lysis, from Greek -lytikos, from lytikos "able to loose, loosing," from lytos "loosed," verbal adjective of lyein "to unfasten, loose, loosen, untie" (from PIE root [*leu-](https://www.etymonline.com/word/*leu-) <span style="background-color:yellow;">"to loosen, divide, cut apart"</span>).
 <!-- .element style="text-align: left;font-family: 'Times New Roman', Times, serif;"-->
 
 <small>Source: https://www.etymonline.com/word/-lytic</small>
@@ -44,9 +44,9 @@ Analytics is used to tackle different questions related to business operations:
 
 > **describe(v.)**
 >
-> mid-13c., descriven, <span style="background-color:yellow;">"interpret, explain,"</span> a sense now obsolete; c. 1300, "represent orally or by writing," from Old French descrivre, descrire (13c.) and directly from Latin describere "to write down, copy; sketch, represent," from de "down" (see de-) + scribere "to write" (from PIE root *skribh- "to cut").
-
-From late 14c. as "form or trace by motion;" c. 1400 as "delineate or mark the form or figure of, outline." Reconstructed with Latin spelling from c. 1450. Related: Described, describes, describing.
+> mid-13c., descriven, <span style="background-color:yellow;">"interpret, explain,"</span> a sense now obsolete; c. 1300, "represent orally or by writing," from Old French descrivre, descrire (13c.) and directly from Latin describere "to write down, copy; sketch, represent," from de "down" (see [de-](https://www.etymonline.com/word/de-)) + scribere "to write" (from PIE root [*skribh-](https://www.etymonline.com/word/*skribh-) "to cut").
+>
+> From late 14c. as "form or trace by motion;" c. 1400 as "delineate or mark the form or figure of, outline." Reconstructed with Latin spelling from c. 1450. Related: Described, describes, describing.
 <!-- .element style="text-align: left;font-family: 'Times New Roman', Times, serif;"-->
 
 <small>Source: https://www.etymonline.com/word/describe</small>
@@ -55,7 +55,7 @@ From late 14c. as "form or trace by motion;" c. 1400 as "delineate or mark the f
 
 > **predict(v.)**
 >
-> 1620s (implied in predicted), <span style="background-color:yellow;">"foretell, prophesy, declare before the event happens,"</span> a back formation from prediction or else from Latin praedicatus, past participle of praedicere "foretell, advise, give notice," from prae "before" (see pre-) + dicere "to say" (from PIE root *deik- "to show," also "pronounce solemnly"). Related: Predicted; predicting.
+> 1620s (implied in predicted), <span style="background-color:yellow;">"foretell, prophesy, declare before the event happens,"</span> a back formation from [prediction](https://www.etymonline.com/word/prediction) or else from Latin praedicatus, past participle of praedicere "foretell, advise, give notice," from prae "before" (see [pre-](https://www.etymonline.com/word/pre-)) + dicere "to say" (from PIE root [*deik-](https://www.etymonline.com/word/*deik-) "to show," also "pronounce solemnly"). Related: Predicted; predicting.
 <!-- .element style="text-align: left;font-family: 'Times New Roman', Times, serif;"-->
 
 <small>Source: https://www.etymonline.com/word/predict</small>
@@ -64,7 +64,7 @@ From late 14c. as "form or trace by motion;" c. 1400 as "delineate or mark the f
 
 > **prescribe(v.)**
 >
-> mid-15c., prescriben, <span style="background-color:yellow;">"to write down as a direction, law, or rule,"</span> from Latin praescribere "write before, prefix in writing; ordain, determine in advance," from prae "before" (see pre-) + scribere "to write" (from PIE root *skribh- "to cut"). Related: Prescribed; prescribing. Medical sense of "advise, appoint, or designate as a remedy for a disease" is from 1580s, probably a back formation from prescription.
+> mid-15c., prescriben, <span style="background-color:yellow;">"to write down as a direction, law, or rule,"</span> from Latin praescribere "write before, prefix in writing; ordain, determine in advance," from prae "before" (see [pre-](https://www.etymonline.com/word/pre-)) + scribere "to write" (from PIE root [*skribh-](https://www.etymonline.com/word/*skribh-) "to cut"). Related: Prescribed; prescribing. Medical sense of "advise, appoint, or designate as a remedy for a disease" is from 1580s, probably a back formation from prescription.
 <!-- .element style="text-align: left;font-family: 'Times New Roman', Times, serif;"-->
 
 <small>Source: https://www.etymonline.com/word/prescribe</small>
