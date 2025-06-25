@@ -30,9 +30,9 @@ What is **Business analytics**?
 
 ---
 
-The term **analytics** can be understood as the process of repeatedly or thoroughly breaking something down into its parts to understand it better. 
+### Definition: Business analytics
 
-Applied to **business**, it implies the detailed and systematic breakdown of business operations to gain insight.
+**Business analytics** is the systematic breakdown of complex business problems into easier subproblems to gain business insight.
 
 ---
 
@@ -107,7 +107,7 @@ Essentially, prescriptive analytics answers the question: *What should be done?*
 
 ### Blurry scopes
 
-Sometimes, similar methodologies can be used for all three scopes, e.g., recommender systems may serve all purposes.
+Sometimes, methodologies can be used for all three scopes, e.g., recommender systems may serve all purposes.
 
 | Scope          | Recommendation type                         |
 |----------------|---------------------------------------------|
@@ -126,77 +126,132 @@ If descriptive analytics ("*What has happened?*")  is combined with causal infer
 
 ===
 
-## Descriptive analytics  
+## Descriptive and predictive analytics  
 
 ---
 
 ### Naive approaches
 
-Basic techniques in descriptive analytics include simple, summary statistics:
+Basic techniques include simple aggregations:
 
 - **Counts:** number of records, frequency of categories
 - **Mean and median:** measures of central tendency
 - **Standard deviation:** measure of variability
 - **Minimum and maximum:** range of values
+- **Quantiles (e.g. quartiles):** divide a dataset into intervals with equal numbers of observations
 
-These are often used to get a quick understanding of the dataset before applying more advanced methods.
+These are often used to get a quick understanding of the dataset before applying more advanced methods:
+
+- Descriptive: *How much did my customers spend on average?*
+- Predictive: *How much will an average customer spend?*
 
 ---
 
-### Centroid
+### Centroid and center of gravity
+
+The centroid and center of gravity can be used to answer questions like: *Where are my customers located?*
+
+- **Centroid:** arithmetic mean of multi-dimensional input `$$x^\text{centroid} =\sum_{i=1}^n x_i / n $$`
+- **Center of gravity:** weighted mean of multi-dimensional input  `$$x^\text{center of gravity} = \sum_{i=1}^n w_i x_i / \sum_{i=1}^n w_i $$`
+
+The centroid is used when each point has equal importance, the center of gravity is used when each point carries a different weight (e.g. order volume, revenue, visit frequency).
 
 ---
 
-### Center of gravity
+### Outlier detection using
+
+Outliers can be detected by identifying points that deviate significantly from the centroid:
+
+- With multidimensional data, distance metrics are required to measure deviation, e.g. the **Euclidean distance** 
+  `$$ d(x, y) = \displaystyle\sqrt{ \sum_{i=1}^n (x_i - y_i)^2 } $$`
+- Points outside, e.g., **±3 standard deviations** from the mean are flagged as outliers (for normally distributed data, 99.7% lie within ±3 standard deviations).
+
+Other distance measure may work better for non-homogeneous data, such as the [Mahalanobis distance](https://en.wikipedia.org/wiki/Mahalanobis_distance) which accounts for correlations and scale, measuring how far a point lies from the centroid relative to the data distribution.
 
 ---
 
 ### Clustering
+
+A cluster is a group of data points in a dataset that are more similar to each other than to points in other groups. Clustering can be used to answer questions like: *Which customers have similar characteristics as others?*
+
+- **$k$-Means** clustering partitions data into $k$ clusters, where $k$ is a predefined number.
+- Each data point is assigned to the cluster with the nearest centroid based on a distance metric, e.g. the Euclidean distance).
+- The algorithm iteratively reassigns data points to the closest centroid to maximize homogeneity within clusters.
+- After reassignment, centroids are updated and the process repeats until cluster assignments no longer change.
+
+Visualisation: <a href="https://harisnazir.github.io/K-Means-Clustering-Visualisation/" data-preview-link>K-Means Clustering</a>
+
+---
+
+### Clustering with outlier detection
+ 
+- K-Means clustering groups data points by assigning them to the nearest centroid based on a distance metric (usually Euclidean distance).
+- Points with a distance to their assigned centroid exceeding a predefined threshold can be flagged as outliers.
+- Combining clustering with outlier detection helps answer questions such as: *Which customers belong to groups with similar characteristics?* or *Which customers are significantly different from all others?*
+
+---
+
+### Distribution fitting
+
+Distribution fitting can be used to model the underlying probability distribution of a dataset. This helps to understand the data’s characteristics, estimate probabilities of future events, and detect anomalies by comparing observed data to expected patterns.
+
+- Distribution fitting is conducted by selecting a candidate probability distribution and estimating its parameters so that it closely matches the observed data.
+- Selecting a candidate probability distribution should be based on assumptions or knowledge of the underlying process.
+- For each distribution/parameter combination, the fit can be determined by e.g. [Mean squared errors](https://en.wikipedia.org/wiki/Mean_squared_error).
+
+---
+
+### Regression
+
+Regression can be used to quantify the relationship between one or more input variables and a continuous outcome. It allows answering questions like: *How does a change in a customer’s attributes affect their spending?* or *What factors influence sales volume?*
+
+- **Linear regression** assumes a linear relationship between variables `$ x_1, \dots, x_n $` and a dependent variable `$y$`, modeled as  
+  `$$  y = \beta_0 + \beta_1 x_1 + \dots + \beta_n x_n + \varepsilon$$` 
+   where $\varepsilon$ is a random error term.
+- The optimal parameters `$$\beta_0, \dots, \beta_n$$` are estimated by minimizing  
+  `$$  \sum_{i=1}^m (y_i - \hat{y}_i)^2 $$` where $\hat{y}_i = \beta_0 + \beta_1 x_1 + \dots + \beta_n x_n$.
 
 ---
 
 ### Classification
 
+Classification assigns data points to predefined categories and can be used to answer questions like: *Does a particular customer belong to a certain group?*
+
+A simple method is **$k$-Nearest Neighbors** which relies on a training set that is already classified:
+1. Compute distances (e.g. Euclidean) from the new data point to all points in the training set.
+2. Identify the $k$ nearest neighbors.
+3. Assign the most common class among those $k$ neighbors to the new data point.
+
+<!--
 ---
 
 ### Recommender systems
 
----
-
-### Outlier detection
-
----
-
-### Hypothesis testing
+we do not know, and may be the customer doesn't know yet either.
+-->
 
 ---
 
 ### Process mining
 
----
+Process mining is concerned with the analysis of event logs. It helps answer questions like: *How are actual processes executed?*
 
-### Related courses:
+- Process mining extracts event data from IT systems (e.g., timestamps, activities, case IDs).
+- It automatically detects temporal and causal dependencies between activities.
+- Process models are automatically generated based on these dependencies.
 
-- **Statistics & Econometrics**
-- **Fundamentals of Data Science**
-- **Business Process Management & Process Mining**
-- **Machine Learning & Deep Learning**
-
-===
-
-### Predictive analytics  
-
----
-
-### Regression models
-
----
-
-### Clustering
+Process mining helps establishing a causal relationship between events allowing to identify bottlenecks, anomalies, and optimization potential. 
 
 ---
 
 ### Simulation
+
+Simulation is the use of computational models to mimic the behavior of real-world systems over time. It helps answer questions like: *What will happen under different scenarios?*
+
+- Simulation requires a model representing the key components and dynamics of a system, e.g., a process model.
+- Usually, a data model representing the key probability distributions is required.
+- Simulation allows to run experiments by varying inputs and parameters to observe possible outcomes.
+- It allows exploration of complex systems where analytical solutions are difficult or impossible.
 
 ---
 
@@ -219,5 +274,3 @@ Prescriptive analytics is the process of determining **which actions shall be pe
 
 - **Management Science & Operations Research**: Optimization models, resource allocation, scheduling  
 - **Machine Learning & Deep Learning**: Reinforcement learning, constrained learning problems
-
-
