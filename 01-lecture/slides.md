@@ -232,13 +232,10 @@ Distribution fitting can be used to model the underlying probability distributio
 
 ### Regression
 
-Regression can be used to quantify the relationship between one or more input variables and a continuous outcome. 
-
-- **Linear regression** assumes a linear relationship between variables $ x_1, \dots, x_n $ and a dependent variable $y$, modeled as  
+Regression can be used to quantify the relationship between one or more input variables and a continuous outcome. **Linear regression** assumes a linear relationship between variables $ x_1, \dots, x_n $ and a dependent variable $y$, modeled as  
   $$  y = \beta_0 + \beta_1 x_1 + \dots + \beta_n x_n + \varepsilon$$
-   where $\varepsilon$ is a random error term.
-- The optimal parameters $\beta_0, \dots, \beta_n$ are estimated by minimizing  
-  $$  \sum_{i=1}^m \left(y_i - (\beta_0 + \beta_1 x_1 + \dots + \beta_n x_n)\right)^2$$
+   where $\varepsilon$ is a random error term. The optimal parameters $\beta_0, \dots, \beta_n$ are estimated by minimizing  
+  $$  \sum_{i=1}^m \big(y_i - (\beta_0 + \beta_1 x_1 + \dots + \beta_n x_n)\big)^2$$
 
 > [!TIP]
 > Regression allows answering questions like: *How does a change in a customer’s attributes affect their spending?* or *What factors influence sales volume?*
