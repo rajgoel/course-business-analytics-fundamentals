@@ -161,7 +161,6 @@ The **Centroid** is the arithmetic mean of multi-dimensional input
 
 > [!TIP]
 > The centroid can be used to answer questions like: *Where are my customers located?*
-> The centroid is used when each point has equal importance.
 
 ---
 
@@ -190,14 +189,17 @@ $$ d(x, y) = \displaystyle\sqrt{ \sum_{i=1}^n (x_i - y_i)^2 } $$
 
 ### Clustering
 
-A cluster is a group of data points in a dataset that are more similar to each other than to points in other groups. Clustering can be used to answer questions like: *Which customers have similar characteristics as others?*
+A cluster is a group of data points in a dataset that are more similar to each other than to points in other groups.
 
 - **$k$-Means** clustering partitions data into $k$ clusters, where $k$ is a predefined number.
 - Each data point is assigned to the cluster with the nearest centroid based on a distance metric, e.g. the Euclidean distance).
-- The algorithm iteratively reassigns data points to the closest centroid to maximize homogeneity within clusters.
+- Data points are iteratively reassigned to the closest centroid to maximize homogeneity within clusters.
 - After reassignment, centroids are updated and the process repeats until cluster assignments no longer change.
 
 Visualisation: <a href="https://harisnazir.github.io/K-Means-Clustering-Visualisation/" data-preview-link>K-Means Clustering</a>
+
+> [!TIP]
+>  Clustering can be used to answer questions like: *Which customers have similar characteristics as others?*
 
 ---
 
@@ -205,23 +207,30 @@ Visualisation: <a href="https://harisnazir.github.io/K-Means-Clustering-Visualis
  
 - $k$-Means clustering groups data points by assigning them to the nearest centroid based on a distance metric (usually Euclidean distance).
 - Points with a distance to their assigned centroid exceeding a predefined threshold can be flagged as outliers.
-- Combining clustering with outlier detection helps answer questions such as: *Which customers belong to groups with similar characteristics?* or *Which customers are significantly different from all others?*
+
+> [!TIP]
+> Combining clustering with outlier detection helps answer questions such as: *Which customers belong to groups with similar characteristics?* or *Which customers are significantly different from all others?*
 
 ---
 
 ### Distribution fitting
 
-Distribution fitting can be used to model the underlying probability distribution of a dataset. This helps to understand the data’s characteristics, estimate probabilities of future events, and detect anomalies by comparing observed data to expected patterns.
+Distribution fitting can be used to model the underlying probability distribution of a dataset. 
 
 - Distribution fitting is conducted by selecting a candidate probability distribution and estimating its parameters so that it closely matches the observed data.
-- Selecting a candidate probability distribution should be based on assumptions or knowledge of the underlying process.
 - For each distribution/parameter combination, the fit can be determined by e.g. [Mean squared errors](https://en.wikipedia.org/wiki/Mean_squared_error).
+
+> [!TIP]
+> Distribution fitting helps to understand the data’s characteristics, estimate probabilities of future events, and detect anomalies by comparing observed data to expected patterns.
+
+> [!NOTE]
+> Selecting a candidate probability distribution should be based on assumptions or knowledge of the underlying process.
 
 ---
 
 ### Regression
 
-Regression can be used to quantify the relationship between one or more input variables and a continuous outcome. It allows answering questions like: *How does a change in a customer’s attributes affect their spending?* or *What factors influence sales volume?*
+Regression can be used to quantify the relationship between one or more input variables and a continuous outcome. 
 
 - **Linear regression** assumes a linear relationship between variables $ x_1, \dots, x_n $ and a dependent variable $y$, modeled as  
   $$  y = \beta_0 + \beta_1 x_1 + \dots + \beta_n x_n + \varepsilon$$
@@ -230,16 +239,21 @@ Regression can be used to quantify the relationship between one or more input va
   $$  \sum_{i=1}^m (y_i - \hat{y}_i)^2 $$
   where $\hat{y}_i = \beta_0 + \beta_1 x_1 + \dots + \beta_n x_n$.
 
+> [!TIP]
+> Regression allows answering questions like: *How does a change in a customer’s attributes affect their spending?* or *What factors influence sales volume?*
+
 ---
 
 ### Classification
 
-Classification assigns data points to predefined categories and can be used to answer questions like: *Does a particular customer belong to a certain group?*
+Classification assigns data points to predefined categories. A simple method is **$k$-Nearest Neighbors** which relies on a training set that is already classified:
 
-A simple method is **$k$-Nearest Neighbors** which relies on a training set that is already classified:
 1. Compute distances (e.g. Euclidean) from the new data point to all points in the training set.
 2. Identify the $k$ nearest neighbors.
 3. Assign the most common class among those $k$ neighbors to the new data point.
+
+> [!TIP]
+> Classification can be used to answer questions like: *Does a particular customer belong to a certain group?*
 
 <!--
 ---
@@ -253,24 +267,28 @@ we do not know, and may be the customer doesn't know yet either.
 
 ### Process mining
 
-Process mining is concerned with the analysis of event logs. It helps answer questions like: *How are actual processes executed?*
+Process mining is concerned with the analysis of event logs. It helps establishing a causal relationship between events allowing to identify bottlenecks, anomalies, and optimization potential.  
 
 - Process mining extracts event data from IT systems (e.g., timestamps, activities, case IDs).
 - It automatically detects temporal and causal dependencies between activities.
 - Process models are automatically generated based on these dependencies.
 
-Process mining helps establishing a causal relationship between events allowing to identify bottlenecks, anomalies, and optimization potential. 
+> [!TIP]
+> Process mining helps answer questions like: *How are actual processes executed?*
 
 ---
 
 ### Simulation
 
-Simulation is the use of computational models to mimic the behavior of real-world systems over time. It helps answer questions like: *What will happen under different scenarios?*
+Simulation is the use of computational models to mimic the behavior of real-world systems over time. 
 
 - Simulation requires a model representing the key components and dynamics of a system, e.g., a process model.
 - Usually, a data model representing the key probability distributions is required.
 - Simulation allows to run experiments by varying inputs and parameters to observe possible outcomes.
 - It allows exploration of complex systems where analytical solutions are difficult or impossible.
+
+> [!TIP]
+> Simulation helps answer questions like: *What will happen under different scenarios?*
 
 ---
 
