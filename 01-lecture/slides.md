@@ -185,7 +185,7 @@ A widespread distance metric is the **Euclidean distance**
 $$ d(x, y) = \displaystyle\sqrt{ \sum_{i=1}^n (x_i - y_i)^2 } $$
   
 > [!WARNING]
-> Other distance measures may work better for non-homogeneous data, such as the [Mahalanobis distance](https://en.wikipedia.org/wiki/Mahalanobis_distance) which accounts for correlations and scale, measuring how far a point lies from the centroid relative to the data distribution.
+> Outlier detection may be severely influenced by the distance measure. For non-homogeneous data, other distance measures may such as the [Mahalanobis distance](https://en.wikipedia.org/wiki/Mahalanobis_distance) work better. It accounts for correlations and scale, measuring how far a point lies from the centroid relative to the data distribution.
 
 ---
 
