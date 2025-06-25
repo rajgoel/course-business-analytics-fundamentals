@@ -171,7 +171,7 @@ The centroid and center of gravity can be used to answer questions like: *Where 
 Outliers can be detected by identifying points that deviate significantly from the centroid:
 
 - Suitable distance metrics are required to measure deviation.
-- Points with a deviation from the mean that exceed a certain are flagged as outliers.
+- Points with a deviation from the mean that exceeds a certain threshold are flagged as outliers.
 
 > [!NOTE]
 > For normally distributed data, 99.7% lie within ±3 standard deviations from the mean. Therefore, a threshold of **±3 standard deviations** is often used.
