@@ -121,8 +121,8 @@ Sometimes, methodologies can be used for all three scopes, e.g., recommender sys
 
 Other terms can also be found, but they often overlap or belong to one of the main three scopes.
 
-**Example:** 
-If descriptive analytics ("*What has happened?*")  is combined with causal inference, we can also answer the question "*Why did it happen?*". This is sometimes referred to as **Diagnostic analytics**.
+> [!NOTE] 
+> If descriptive analytics ("*What has happened?*")  is combined with causal inference, we can also answer the question "*Why did it happen?*". This is sometimes referred to as **Diagnostic analytics**.
 
 ===
 
@@ -255,7 +255,7 @@ Simulation is the use of computational models to mimic the behavior of real-worl
 
 ---
 
-### Related courses:
+### Related courses
 
 - **Statistics & Econometrics**
 - **Fundamentals of Data Science**
@@ -270,7 +270,12 @@ Prescriptive analytics is the process of determining **which actions shall be pe
 
 ---
 
-### Related courses:
+todo
 
-- **Management Science & Operations Research**: Optimization models, resource allocation, scheduling  
-- **Machine Learning & Deep Learning**: Reinforcement learning, constrained learning problems
+---
+
+### Related courses
+
+- **Management Science & Operations Research**
+- **Machine Learning & Deep Learning**
+- **Decision Science**

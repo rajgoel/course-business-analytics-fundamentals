@@ -72,6 +72,59 @@ code:not(:empty):not(:has(*)):not(pre code) {
   font-family: courier;
 }
 
+/*********************************************
+ * Admonition
+ *********************************************/
+
+blockquote.admonition {
+  border-left: 20px solid;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 6px;
+  font-style: normal;
+  text-align: left;
+}
+
+blockquote.admonition.note      { background-color: #e7f3fe!important; border-color: #2196f3; }
+blockquote.admonition.tip       { background-color: #e6ffed!important; border-color: #2e7d32; }
+blockquote.admonition.important { background-color: #fff8e1!important; border-color: #f9a825; }
+blockquote.admonition.warning   { background-color: #fff3e0!important; border-color: #ef6c00; }
+blockquote.admonition.caution   { background-color: #ffebee!important; border-color: #c62828; }
+
+blockquote.admonition.note::before {
+  content: "\f05a";  /* FontAwesome info-circle */
+  font-family: "FontAwesome";
+  font-weight: bold;
+  color: #2196f3;
+}
+
+blockquote.admonition.tip::before {
+  content: "\f0eb";  /* FontAwesome lightbulb */
+  font-family: "FontAwesome";
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+blockquote.admonition.important::before {
+  content: "\f06a";  /* FontAwesome circle-exclamation */
+  font-family: "FontAwesome";
+  font-weight: bold;
+  color: #f9a825;
+}
+
+blockquote.admonition.warning::before {
+  content: "\f071";  /* FontAwesome triangle-exclamation */
+  font-family: "FontAwesome";
+  font-weight: bold;
+  color: #ef6c00;
+}
+
+blockquote.admonition.caution::before {
+  content: "\f071";  /* FontAwesome triangle-exclamation */
+  font-family: "FontAwesome";
+  font-weight: bold;
+  color: #c62828;
+}
 
 /*********************************************
  * Fragments
