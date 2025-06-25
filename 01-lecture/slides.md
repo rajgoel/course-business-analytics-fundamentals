@@ -128,7 +128,7 @@ Sometimes, methodologies can be used for all three scopes.
 Other terms can also be found, but they often overlap or belong to one of the main three scopes.
 
 > [!NOTE] 
-> If descriptive analytics ("*What has happened?*")  is combined with causal inference, we can also answer the question "*Why did it happen?*". This is sometimes referred to as **Diagnostic analytics**.
+> If descriptive analytics (*What has happened?*)  is combined with causal inference, we can also answer the question *Why did it happen?*. This is sometimes referred to as **Diagnostic analytics**.
 
 ===
 
@@ -170,12 +170,15 @@ The centroid and center of gravity can be used to answer questions like: *Where 
 
 Outliers can be detected by identifying points that deviate significantly from the centroid:
 
-- With multidimensional data, distance metrics are required to measure deviation, e.g. the **Euclidean distance** 
+- Suitable distance metrics are required to measure deviation, e.g. the **Euclidean distance** 
   `$$ d(x, y) = \displaystyle\sqrt{ \sum_{i=1}^n (x_i - y_i)^2 } $$`
-- Points outside, e.g., **±3 standard deviations** from the mean are flagged as outliers (for normally distributed data, 99.7% lie within ±3 standard deviations).
+- Points with a deviation from the mean that exceed a certain are flagged as outliers.
+
+> [!NOTE]
+> For normally distributed data, 99.7% lie within ±3 standard deviations from the mean. Therefore, a threshold of **±3 standard deviations** is often used.
 
 > [!WARNING]
-> Other distance measure may work better for non-homogeneous data, such as the [Mahalanobis distance](https://en.wikipedia.org/wiki/Mahalanobis_distance) which accounts for correlations and scale, measuring how far a point lies from the centroid relative to the data distribution.
+> Other distance measures may work better for non-homogeneous data, such as the [Mahalanobis distance](https://en.wikipedia.org/wiki/Mahalanobis_distance) which accounts for correlations and scale, measuring how far a point lies from the centroid relative to the data distribution.
 
 ---
 

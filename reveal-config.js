@@ -25,23 +25,23 @@ window.RevealConfig = {
   chalkboard: { theme: "whiteboard" },
   chart: {
     defaults: {
-    maintainAspectRatio: false,
-    responsive: true,
-    color: 'black',
-    font: { size: 30 },
-    scale: {
-    beginAtZero: true,
-    ticks: { stepSize: 1 },
-    grid: { color: "darkgray" },
-    }
+      maintainAspectRatio: false,
+      responsive: true,
+      color: 'black',
+      font: { size: 30 },
+      scale: {
+        beginAtZero: true,
+        ticks: { stepSize: 1 },
+        grid: { color: "darkgray" },
+      }
     },
     bar: { backgroundColor: ['firebrick', 'darkred', 'red'] },
     pie: { backgroundColor: [['firebrick', 'darkred', 'red']] },
   },
   customcontrols: {
     controls: [
-    { icon: '<i class="fa fa-pen-square"></i>', title: 'Toggle chalkboard (B)', action: 'RevealChalkboard.toggleChalkboard();' },
-    { icon: '<i class="fa fa-pen"></i>', title: 'Toggle notes canvas (C)', action: 'RevealChalkboard.toggleNotesCanvas();' }
+      { icon: '<i class="fa fa-pen-square"></i>', title: 'Toggle chalkboard (B)', action: 'RevealChalkboard.toggleChalkboard();' },
+      { icon: '<i class="fa fa-pen"></i>', title: 'Toggle notes canvas (C)', action: 'RevealChalkboard.toggleNotesCanvas();' }
     ]
   },
   plugins: [
