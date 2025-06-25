@@ -101,7 +101,8 @@ Essentially, predictive analytics answers the question: *What will happen?*
 
 Prescriptive analytics is the process of determining **which actions shall be performed** to achieve a business objective.
 
-Essentially, prescriptive analytics answers the question: *What should be done?*
+> [!TIP]
+> Prescriptive analytics answers the question: *What should be done?*
 
 ---
 
