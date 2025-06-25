@@ -112,7 +112,7 @@ Prescriptive analytics is the process of determining **which actions shall be pe
 
 Sometimes, methodologies can be used for all three scopes.
 
-> [!Note]
+> [!NOTE]
 >  Recommender systems may serve all purposes:
 >
 > | Scope          | Recommendation type                         |
