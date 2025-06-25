@@ -154,17 +154,14 @@ Basic techniques include simple aggregations:
 
 ---
 
-### Centroid and center of gravity
+### Centroid
 
-The centroid and center of gravity can be used to answer questions like: *Where are my customers located?*
-
-- **Centroid:** arithmetic mean of multi-dimensional input 
+The **Centroid** is the arithmetic mean of multi-dimensional input 
   $$ x^\text{centroid} =\sum_{i=1}^n x_i / n $$
-- **Center of gravity:** weighted mean of multi-dimensional input
-  $$ x^\text{center of gravity} = \sum_{i=1}^n w_i x_i / \sum_{i=1}^n w_i $$
 
 > [!TIP]
-> The centroid is used when each point has equal importance, the center of gravity is used when each point carries a different weight (e.g. order volume, revenue, visit frequency).
+> The centroid can be used to answer questions like: *Where are my customers located?*
+> The centroid is used when each point has equal importance.
 
 ---
 
@@ -206,7 +203,7 @@ Visualisation: <a href="https://harisnazir.github.io/K-Means-Clustering-Visualis
 
 ### Clustering with outlier detection
  
-- K-Means clustering groups data points by assigning them to the nearest centroid based on a distance metric (usually Euclidean distance).
+- $k$-Means clustering groups data points by assigning them to the nearest centroid based on a distance metric (usually Euclidean distance).
 - Points with a distance to their assigned centroid exceeding a predefined threshold can be flagged as outliers.
 - Combining clustering with outlier detection helps answer questions such as: *Which customers belong to groups with similar characteristics?* or *Which customers are significantly different from all others?*
 
@@ -226,11 +223,12 @@ Distribution fitting can be used to model the underlying probability distributio
 
 Regression can be used to quantify the relationship between one or more input variables and a continuous outcome. It allows answering questions like: *How does a change in a customer’s attributes affect their spending?* or *What factors influence sales volume?*
 
-- **Linear regression** assumes a linear relationship between variables `$ x_1, \dots, x_n $` and a dependent variable `$y$`, modeled as  
-  `$$  y = \beta_0 + \beta_1 x_1 + \dots + \beta_n x_n + \varepsilon$$` 
+- **Linear regression** assumes a linear relationship between variables $ x_1, \dots, x_n $ and a dependent variable $y$, modeled as  
+  $$  y = \beta_0 + \beta_1 x_1 + \dots + \beta_n x_n + \varepsilon$$
    where $\varepsilon$ is a random error term.
-- The optimal parameters `$$\beta_0, \dots, \beta_n$$` are estimated by minimizing  
-  `$$  \sum_{i=1}^m (y_i - \hat{y}_i)^2 $$` where $\hat{y}_i = \beta_0 + \beta_1 x_1 + \dots + \beta_n x_n$.
+- The optimal parameters $$\beta_0, \dots, \beta_n$$ are estimated by minimizing  
+  $$  \sum_{i=1}^m (y_i - \hat{y}_i)^2 $$
+  where $\hat{y}_i = \beta_0 + \beta_1 x_1 + \dots + \beta_n x_n$.
 
 ---
 
