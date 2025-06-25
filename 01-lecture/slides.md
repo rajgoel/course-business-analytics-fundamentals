@@ -238,7 +238,7 @@ Regression can be used to quantify the relationship between one or more input va
   $$  \sum_{i=1}^m \big(y_i - (\beta_0 + \beta_1 x_1 + \dots + \beta_n x_n)\big)^2$$
 
 > [!TIP]
-> Regression allows answering questions like: *How does a change in a customer’s attributes affect their spending?* or *What factors influence sales volume?*
+> Regression allows answering questions like: *How does a change in sales price influence sales volume?*
 
 ---
 
