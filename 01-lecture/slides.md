@@ -217,8 +217,8 @@ Visualisation: <a href="https://harisnazir.github.io/K-Means-Clustering-Visualis
 
 Distribution fitting can be used to model the underlying probability distribution of a dataset. 
 
-- Distribution fitting is conducted by selecting a candidate probability distribution and estimating its parameters so that it closely matches the observed data.
-- For each distribution/parameter combination, the fit can be determined by e.g. [Mean squared errors](https://en.wikipedia.org/wiki/Mean_squared_error).
+- It is conducted by selecting candidate probability distributions and estimating their parameters.
+- For each distribution/parameter combination, the fit can be determined by e.g. [mean squared errors](https://en.wikipedia.org/wiki/Mean_squared_error).
 
 > [!TIP]
 > Distribution fitting helps to understand the data’s characteristics, estimate probabilities of future events, and detect anomalies by comparing observed data to expected patterns.
