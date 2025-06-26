@@ -273,7 +273,7 @@ Process mining is concerned with the discovery of process models from event logs
 - Process models are automatically generated based on these dependencies.
 
 > [!TIP]
-> Process mining helps to identify bottlenecks, anomalies, and optimisation potential. It helps answer questions like: *How are actual processes executed?*
+> Process mining helps answer questions like: *How are actual processes executed?* This can be used to identify bottlenecks, anomalies, and optimisation potential.
 
 ---
 
@@ -302,7 +302,7 @@ Simulation is the use of computational models to mimic the behavior of real-worl
 
 ### Prescriptive analytics
 
-Prescriptive analytics is the process of determining **which decision shall be taken** to achieve a business objective.
+Prescriptive analytics is the process of determining **which decisions shall be taken** to achieve a business objective.
 
 > [!IMPORTANT]
 > Descriptive and predictive analytics can be used to assess the value of observed and proposed decisions, but they cannot be used to propose the decisions to be assessed.
@@ -313,7 +313,7 @@ Prescriptive analytics is the process of determining **which decision shall be t
 
 - Identify the **decision space**.
 - Identify **constraints** that impact which decision may be taken.
-- Determine how to **evaluate decisions**.
+- Determine how to **evaluate decisions** and what the **objective** is.
 - Systematically **search for decisions** that satisfy all constraints and have a good evaluation.
 
 ---
@@ -325,8 +325,34 @@ The decision space contains all decisions that can be taken, independently of wh
 It is typically represented by a set $X$. Each element $x \in X$ represents a particular decision.
 
 > [!TIP]
-> In many cases, decisions are represented by a vector, i.e., $x = (x_1, x_2, \ldots, x_n)$.
+> In many cases, decisions can be represented by a vector, i.e., $x = (x_1, x_2, \ldots, x_n)$.
 
+---
+
+### Constraints
+
+Constraints represent:
+
+- physical limitations, e.g., capacity or time.
+- business rules, e.g., budget or policy compliance.
+- logical dependencies, e.g., prerequisite conditions.
+
+The set of **feasible decisions** is $\{ x \in X \mid x \textrm{ satisfies all constraints \}$.
+
+> [!NOTE]
+> Simple constraints on simple variables, e.g. lower and upper bounds or integrality, are often directly included in the representation of the decision space, e.g., $X = \{0,1\}^n$.
+
+---
+
+### Objective
+
+The objective quantifies how good or bad a decision is. It can be represented by an **objective function** $f(x) : X \rightarrow \mathbb{R}^k$ where $k$ is the number of objectives and the goal is to **minimise** or **maximise** $f(x)$.
+
+> [!NOTE]
+> In some case we only want to a feasible solution. In such cases we can define the objective in such a way that $f(x) = 1$ if $x$ is feasible, and $f(x) = 0$ if $x$ is infeasible. 
+
+> [!IMPORTANT]
+> For [multi-objective optimisation](https://en.wikipedia.org/wiki/Multi-objective_optimization), i.e., $k>1$, different strategies comparing $f(x')$ and $f(x'') exist, such as **lexicographic (hierarchical) objectives**, **weighted sums**, or **Pareto optimality**.
 
 ---
 
