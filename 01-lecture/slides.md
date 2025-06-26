@@ -304,6 +304,9 @@ Simulation is the use of computational models to mimic the behavior of real-worl
 
 Prescriptive analytics is the process of determining **which actions shall be performed** to achieve a business objective.
 
+> [!IMPORTANT]
+> Predictive analytics can be used to assess the value of actions, but it cannot be used to propose the actions to be assessed.
+
 ---
 
 todo
