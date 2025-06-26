@@ -266,14 +266,14 @@ we do not know, and may be the customer doesn't know yet either.
 
 ### Process mining
 
-Process mining is concerned with the analysis of event logs. It helps establishing a causal relationship between events allowing to identify bottlenecks, anomalies, and optimization potential.  
+Process mining is concerned with the discovery of process models from event logs. 
 
-- Process mining extracts event data from IT systems (e.g., timestamps, activities, case IDs).
-- It automatically detects temporal and causal dependencies between activities.
+- Process mining extracts event data from IT systems (e.g., timestamps, event type, case IDs).
+- It automatically detects temporal and causal dependencies between events and activities.
 - Process models are automatically generated based on these dependencies.
 
 > [!TIP]
-> Process mining helps answer questions like: *How are actual processes executed?*
+> Process mining helps establishing a causal relationship between events and activities allowing to identify bottlenecks, anomalies, and optimization potential. It helps answer questions like: *How are actual processes executed?*
 
 ---
 
@@ -284,10 +284,10 @@ Simulation is the use of computational models to mimic the behavior of real-worl
 - Simulation requires a model representing the key components and dynamics of a system, e.g., a process model.
 - Usually, a data model representing the key probability distributions is required.
 - Simulation allows to run experiments by varying inputs and parameters to observe possible outcomes.
-- It allows exploration of complex systems where analytical solutions are difficult or impossible.
+- It allows exploration of complex systems where analytical solutions or real-life experimentation are difficult or impossible.
 
 > [!TIP]
-> Simulation helps answer questions like: *What will happen under different scenarios?*
+> Simulation helps answer questions like: *What will be the outcome of my decision policy?*
 
 ---
 
