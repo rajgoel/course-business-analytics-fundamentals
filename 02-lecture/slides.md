@@ -35,17 +35,13 @@ $$y \geq 0$$
 
 ### Graphical representation ###
 
-> [!IMPORTANT]
-> The graphical representation only works in the case of 2 (and 3) decision variables. Higher dimensions are difficult to imagine.
- 
----
-
-#### Solution space ####
-
 Each linear constraint cuts the solution space (set of feasible solutions) into two halves.
 
 - All values on side (including the boundary) are **feasible** w.r.t. the constraint.
 - All values on the other side are **infeasible**  w.r.t. the constraint.
+
+> [!IMPORTANT]
+> The graphical representation only works in the case of 2 (or 3) decision variables. Higher dimensions are difficult to imagine.
 
 ---
 
@@ -77,7 +73,7 @@ For any objective function, we can visualise the set of values with the same obj
 
 > [!TIP]
 > For any objective function value, e.g., $f(x,y) = 15$, we can solve $f(x,y) = 3x + 5y$, e.g. by setting $(x,y)=(0,3)$ or $(x,y)=(5,0)$. All points on the line between these points have the same objective function value.
- 
+
 ---
 
 #### Example ####
