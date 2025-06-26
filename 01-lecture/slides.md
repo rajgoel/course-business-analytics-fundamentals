@@ -353,6 +353,22 @@ The objective quantifies how good or bad a decision is. It can be represented by
 
 ---
 
+### Mathematical Program
+
+A **mathematical program** or **mathematical optimisation problem** can be written as
+
+$$ \text{minimize} f(x) $$
+
+subject to
+
+$$ x \in X $$
+
+> [!NOTE]
+> The problem to $\text{maximize} g(x)$ is equivalent to the problem to $\text{minimize} f(x) = -g(x)$.
+
+
+---
+
 ### Related courses
 
 - **Management Science & Operations Research**
