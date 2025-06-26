@@ -228,24 +228,15 @@ We can find the optimal solution of a linear program by shifting the line repres
 -->
 </div>
 
----
-
-#### Limitations of the graphical representation ####
-
-Each decision variable in the LP refers to one dimension, i.e.
-- 1 variable ↔ 1D ↔ line,
-- 2 variables ↔ 2D ↔ plane,
-- 3 variables ↔ 3D ↔ space,
-- 4 variables ↔ 4D ↔ ? <!-- .element: class="fragment" data-fragment-index="1"  -->
-- ... <!-- .element: class="fragment" data-fragment-index="2"  -->
-- 10000 variables ↔ 10000D ↔ ???<!-- .element: class="fragment" data-fragment-index="2" -->
-
 ===
 
-#### Corner point solutions ####
+### Corner point solutions ###
 
 The optimal solution of a linear program is always at a **corner point** of the solution space
 (if an optimal solution exists).
+
+> [!NOTE]
+> This is also the case in higher dimensions.
 
 ---
 
