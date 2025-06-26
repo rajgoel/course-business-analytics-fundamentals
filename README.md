@@ -6,19 +6,19 @@ https://rajgoel.github.io/course-business-analytics-fundamentals/
 
 ## Session overview
 
-| Session | Lecture                       | Lab                      |
-|---------|-------------------------------|--------------------------|
-|    1    | Introduction                  | Software & Prerequisites |
-|    2    | Linear Programming            | AMPL & JUMP              |
-|    3    | LP Modelling                  | Cases & Examples         |
-|    4    | Generic Models                | Model & Data in AMPL     |
-|    5    | Integer Programming           | Cases & Examples         |
-|    6    | Logical Constraints           | Examples                 |
-|    7    | Advanced IP Modelling         | Examples                 |
-|    8    | LP/IP Modelling               | Examples                 |
-|    9    | Network Optimization Problems | Cases & Examples         |
-|   10    | Network Flow Modelling        | Examples                 |
-|   11    | Ask me anything               | Ask me anything          |
+| Session | Lecture                       | Lab                          |
+|---------|-------------------------------|------------------------------|
+|    1    | Introduction                  | Requirements & Prerequisites |
+|    2    | Linear Programming            | AMPL & JUMP                  |
+|    3    | LP Modelling                  | Cases & Examples             |
+|    4    | Generic Models                | Model & Data in AMPL         |
+|    5    | Integer Programming           | Cases & Examples             |
+|    6    | Logical Constraints           | Examples                     |
+|    7    | Advanced IP Modelling         | Examples                     |
+|    8    | LP/IP Modelling               | Examples                     |
+|    9    | Network Optimization Problems | Cases & Examples             |
+|   10    | Network Flow Modelling        | Examples                     |
+|   11    | Ask me anything               | Ask me anything              |
 
 ## Grading
 
