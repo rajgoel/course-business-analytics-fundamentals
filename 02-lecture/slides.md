@@ -1,7 +1,9 @@
 
-## Linear programming ##
+## Linear programming
 
 ===
+
+### Linear program
 
 A linear program (LP) is a mathematical program 
 
@@ -10,7 +12,7 @@ $ \text{minimize } f(x) $ subject to $ x \in X $
 where
 
 - $X$ is only constrained by **linear constraints**, and
-- $f(x) is a **linear expression**.
+- $f(x)$ is a **linear expression**.
 
 > [!IMPORTANT]
 > Linear constraints must be of the type $g(x) \leq h(x)$, $g(x) \geq h(x)$, or $g(x) = h(x)$ where $g(x)$ and $h(x)$ are linear [expressions](https://en.wikipedia.org/wiki/Expression_(mathematics)).
@@ -19,15 +21,15 @@ where
 
 #### Example ####
 
-maximise `$f(x,y) = 3x + 5y$`
+maximise $f(x,y) = 3x + 5y$
 
 subject to
 
-`$$x \leq 4$$`
-`$$y \leq 6$$`
-`$$3x + 2y \leq 18$$`
-`$$x \geq 0$$`
-`$$y \geq 0$$`
+$$x \leq 4$$
+$$y \leq 6$$
+$$3x + 2y \leq 18$$
+$$x \geq 0$$
+$$y \geq 0$$
 
 ===
 
@@ -50,7 +52,7 @@ Each linear constraint cuts the solution space (set of feasible solutions) into 
 <span class="fragment"></span>
 <span class="fragment"></span>
 
-<div data-animate data-load="linearprogramming/linear_program.svg">
+<div data-animate data-load="02-lecture/linear_program.svg">
 <!--
 {
 "setup": [
@@ -78,7 +80,7 @@ For example, for $f(x,y) = 3x + 5y$ all values on the line through $(x,y)=(0,3)$
 
 #### Example ####
 
-<div data-animate data-load="linearprogramming/linear_program.svg">
+<div data-animate data-load="02-lecture/linear_program.svg">
 <!--
 {
 "setup": [
@@ -127,7 +129,7 @@ We can find the optimal solution of a linear program by shifting the line repres
 <span class="fragment"></span>
 <span class="fragment"></span>
 
-<div data-animate data-load="linearprogramming/linear_program.svg">
+<div data-animate data-load="02-lecture/linear_program.svg">
 <!--
 {
 "setup": [
@@ -253,7 +255,7 @@ When? <!-- .element: class="fragment" -->
 
 ---
 
-<div data-animate data-load="linearprogramming/linear_program.svg">
+<div data-animate data-load="02-lecture/linear_program.svg">
 <!--
 {
 "setup": [
@@ -350,7 +352,7 @@ It starts with a feasible corner point and iteratively moves to a neighbouring f
     <span class="fragment"></span>
     <span class="fragment"></span>
 
-<div data-animate data-load="linearprogramming/linear_program.svg">
+<div data-animate data-load="02-lecture/linear_program.svg">
 <!--
 {
 "setup": [
@@ -546,7 +548,7 @@ It starts with a feasible corner point and iteratively moves to a neighbouring f
 
 ### A 3-dimensional example ###
 
-![Exmaple](linearprogramming/3d-simplex.svg)
+![Exmaple](02-lecture/3d-simplex.svg)
 
 ---
 
@@ -652,14 +654,14 @@ maximise `$3000x_1 + 5000x_2$`
 
 #### Optimisation problem ####
 
-maximise `$3000x_1 + 5000x_2$`
+maximise $3000x_1 + 5000x_2$
 
 subject to
 
-`$$x_1 \leq 4$$`
-`$$2x_2 \leq 12$$`
-`$$3x_1 + 2x_2 \leq 18$$`
-`$$x_1 \geq 0, x_2 \geq 0$$`
+$$x_1 \leq 4$$
+$$2x_2 \leq 12$$
+$$3x_1 + 2x_2 \leq 18$$
+$$x_1 \geq 0, x_2 \geq 0$$
 
 ===
 
