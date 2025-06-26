@@ -349,10 +349,10 @@ The set of **feasible decisions** is $\{ x \in X \mid x \textrm{ satisfies all c
 The objective quantifies how good or bad a decision is. It can be represented by an **objective function** $f(x) : X \rightarrow \mathbb{R}^k$ where $k$ is the number of objectives and the goal is to **minimise** or **maximise** $f(x)$.
 
 > [!NOTE]
-> In some case we only want to a feasible solution. In such cases we can define the objective in such a way that $f(x) = 1$ if $x$ is feasible, and $f(x) = 0$ if $x$ is infeasible. 
+> In some case we only want to find a feasible solution. In such cases, we can define the objective in such a way that $f(x) = 1$ if $x$ is feasible, and $f(x) = 0$ if $x$ is infeasible. 
 
 > [!IMPORTANT]
-> For [multi-objective optimisation](https://en.wikipedia.org/wiki/Multi-objective_optimization), i.e., $k>1$, different strategies comparing $f(x')$ and $f(x'') exist, such as **lexicographic (hierarchical) objectives**, **weighted sums**, or **Pareto optimality**.
+> For [multi-objective optimisation](https://en.wikipedia.org/wiki/Multi-objective_optimization), i.e., $k>1$, different strategies comparing $f(x')$ and $f(x'')$ exist, such as **lexicographic (hierarchical) objectives**, **weighted sums**, or **Pareto optimality**.
 
 ---
 
