@@ -8,16 +8,16 @@ https://rajgoel.github.io/course-business-analytics-fundamentals/
 
 | Session | Lecture                       | Lab                          |
 |---------|-------------------------------|------------------------------|
-|    1    | Introduction                  | Requirements & Prerequisites |
-|    2    | Linear Programming            | AMPL & JUMP                  |
-|    3    | LP Modelling                  | Cases & Examples             |
-|    4    | Generic Models                | Model & Data in AMPL         |
-|    5    | Integer Programming           | Cases & Examples             |
-|    6    | Logical Constraints           | Examples                     |
-|    7    | Advanced IP Modelling         | Examples                     |
-|    8    | LP/IP Modelling               | Examples                     |
-|    9    | Network Optimization Problems | Cases & Examples             |
-|   10    | Network Flow Modelling        | Examples                     |
+| 01      | [Introduction](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=01-lecture)                  | [Requirements & Prerequisites](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=01-lab) |
+| 02      | [Linear Programming](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=02-lecture)            | [AMPL & JUMP](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=02-lab)                  |
+| 03      | [LP Modelling](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=03-lecture)                  | [Cases & Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=03-lab)             |
+| 04      | [Generic Models](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=04-lecture)                | [Model & Data in AMPL](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=04-lab)         |
+| 05      | [Integer Programming](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=05-lecture)           | [Cases & Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=05-lab)             |
+| 06      | [Logical Constraints](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=06-lecture)           | [Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=06-lab)                     |
+| 07      | [Advanced IP Modelling](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=07-lecture)         | [Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=07-lab)                     |
+| 08      | [LP/IP Modelling](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=08-lecture)               | [Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=08-lab)                     |
+| 09      | [Network Optimization Problems](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=09-lecture) | [Cases & Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=09-lab)             |
+| 10      | [Network Flow Modelling](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=10-lecture)        | [Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?session=10-lab)                     |
 |   11    | Ask me anything               | Ask me anything              |
 
 ## Grading
