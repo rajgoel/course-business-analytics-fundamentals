@@ -168,8 +168,8 @@ The **centroid** is the arithmetic mean of multi-dimensional input
 
 Outliers can be detected by identifying points that deviate significantly from the centroid:
 
-- Suitable distance metrics are required to measure deviation.
-- Points with a deviation from the mean that exceeds a certain threshold are flagged as outliers.
+- Suitable distance metrics can be used to measure deviation.
+- Points with a deviation from the mean that exceeds a certain threshold may be flagged as outliers.
 
 > [!NOTE]
 > For normally distributed data, 99.7% lie within ±3 standard deviations from the mean. Therefore, a threshold of **±3 standard deviations** is often used.
@@ -192,7 +192,7 @@ $$ d(x, y) = \displaystyle\sqrt{ \sum_{i=1}^n (x_i - y_i)^2 } $$
 A cluster is a group of data points in a dataset that are more similar to each other than to points in other groups.
 
 - **$k$-Means** clustering partitions data into $k$ clusters, where $k$ is a predefined number.
-- Each data point is assigned to the cluster with the nearest centroid based on a distance metric, e.g. the Euclidean distance).
+- Each data point is assigned to the cluster with the nearest centroid based on a distance metric, e.g. the Euclidean distance.
 - Data points are iteratively reassigned to the closest centroid to maximize homogeneity within clusters.
 - After reassignment, centroids are updated and the process repeats until cluster assignments no longer change.
 
@@ -248,7 +248,7 @@ Regression can be used to quantify the relationship between input variables and 
 Classification assigns data points to predefined categories. A simple method is **$k$-Nearest Neighbors** which relies on a training set that is already classified:
 
 1. Compute distances (e.g. Euclidean) from the new data point to all points in the training set.
-2. Identify the $k$ nearest neighbors.
+2. Identify the $k$ nearest neighbors, where $k$ is a predefined number.
 3. Assign the most common class among those $k$ neighbors to the new data point.
 
 > [!TIP]
@@ -284,7 +284,7 @@ Simulation is the use of computational models to mimic the behavior of real-worl
 - Simulation requires a model representing the key components and dynamics of a system, e.g., a process model.
 - Usually, a data model representing the key probability distributions is required.
 - Simulation allows to run experiments by varying inputs and parameters to observe possible outcomes.
-- It allows exploration of complex systems where analytical solutions or real-life experimentation are difficult or impossible.
+- It allows exploration of complex systems where analytical solutions or real-life experimentations are difficult or impossible.
 
 > [!TIP]
 > Simulation helps answer questions like: *What will be the outcome of my decision policy?*
@@ -357,14 +357,14 @@ The objective quantifies how good or bad a decision is. It can be represented by
 
 A **mathematical program** or **mathematical optimisation problem** can be written as
 
-$$ \text{minimize} f(x) $$
+$$ \text{minimize } f(x) $$
 
 subject to
 
 $$ x \in X $$
 
 > [!NOTE]
-> The problem to $\text{maximize} g(x)$ is equivalent to the problem to $\text{minimize} f(x) = -g(x)$.
+> The problem to $\text{maximize } g(x)$ is equivalent to the problem to $\text{minimize } f(x) = -g(x)$.
 
 
 ---
