@@ -115,11 +115,11 @@ Sometimes, methodologies can be used for all three scopes.
 > [!NOTE]
 > Recommender systems may serve all purposes:
 >
-> | Scope          | Recommendation type                         |
+> | Scope          | Recommendation type / question              |
 > |----------------|---------------------------------------------|
 > | Descriptive    | "People who bought this, also bought ..."   |
 > | Predictive     | "Based on your search, you might like ..."  |
-> | Prescriptive   | "We propose ... to you"                     |
+> | Prescriptive   | *What shall we propose to our customer?*    |
 
 ---
 
