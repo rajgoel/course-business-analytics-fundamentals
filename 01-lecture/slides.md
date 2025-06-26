@@ -349,7 +349,7 @@ The set of **feasible decisions** is $\lbrace x \in X \mid x \textrm{ satisfies 
 The objective quantifies how good or bad a decision is. It can be represented by an **objective function** $f(x) : X \rightarrow \mathbb{R}^k$ where $k$ is the number of objectives and the goal is to **minimise** or **maximise** $f(x)$.
 
 > [!IMPORTANT]
-> For [multi-objective optimisation](https://en.wikipedia.org/wiki/Multi-objective_optimization), i.e., $k>1$, different strategies for comparing $f(x')$ and $f(x'')$ exist, such as **lexicographic ordering**, **weighted sums**, or **Pareto optimality**.
+> For [multi-objective optimisation](https://en.wikipedia.org/wiki/Multi-objective_optimization), i.e., $k>1$, different strategies for comparing $f(x')$ and $f(x'')$ exist, such as **weighted sums**, **lexicographic ordering**, or **Pareto optimality**.
 
 ---
 
