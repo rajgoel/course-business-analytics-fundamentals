@@ -35,6 +35,9 @@ $$y \geq 0$$
 
 ### Graphical representation ###
 
+> [!IMPORTANT]
+> The graphical representation only works in the case of 2 (and 3) decision variables. Higher dimensions are difficult to imagine.
+ 
 ---
 
 #### Solution space ####
@@ -72,10 +75,9 @@ Each linear constraint cuts the solution space (set of feasible solutions) into 
 
 For any objective function, we can visualise the set of values with the same objective function value.
 
-<span class="fragment">
-For example, for $f(x,y) = 3x + 5y$ all values on the line through $(x,y)=(0,3)$ and $(x,y)=(5,0)$ have an objective function value of 15.
-</span>
-
+> [!TIP]
+> For any objective function value, e.g., $f(x,y) = 15$, we can solve $f(x,y) = 3x + 5y$, e.g. by setting $(x,y)=(0,3)$ or $(x,y)=(5,0)$. All points on the line between these points have the same objective function value.
+ 
 ---
 
 #### Example ####
