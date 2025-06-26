@@ -340,7 +340,7 @@ Constraints represent:
 The set of **feasible decisions** is $\{ x \in X \mid x \textrm{ satisfies all constraints} \}$.
 
 > [!NOTE]
-> Simple constraints on simple variables, e.g. lower and upper bounds or integrality, are often directly included in the representation of the decision space, e.g., $X = \{0,1\}^n$.
+> Constraints on single variables, e.g. lower and upper bounds or integrality, are often directly included in the representation of the decision space, e.g., $X = { \{ 0,1 \} }^n$.
 
 ---
 
