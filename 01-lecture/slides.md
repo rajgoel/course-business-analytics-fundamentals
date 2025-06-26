@@ -101,7 +101,7 @@ Predictive analytics is the process of using current and historical data to **fo
 
 ### Definition: Prescriptive analytics
 
-Prescriptive analytics is the process of determining **which actions shall be performed** to achieve a business objective.
+Prescriptive analytics is the process of determining **which decisions shall be taken** to achieve a business objective.
 
 > [!TIP]
 > Prescriptive analytics answers the question: *What should be done?*
@@ -273,7 +273,7 @@ Process mining is concerned with the discovery of process models from event logs
 - Process models are automatically generated based on these dependencies.
 
 > [!TIP]
-> Process mining helps establishing a causal relationship between events and activities allowing to identify bottlenecks, anomalies, and optimization potential. It helps answer questions like: *How are actual processes executed?*
+> Process mining helps to identify bottlenecks, anomalies, and optimisation potential. It helps answer questions like: *How are actual processes executed?*
 
 ---
 
@@ -302,14 +302,31 @@ Simulation is the use of computational models to mimic the behavior of real-worl
 
 ### Prescriptive analytics
 
-Prescriptive analytics is the process of determining **which actions shall be performed** to achieve a business objective.
+Prescriptive analytics is the process of determining **which decision shall be taken** to achieve a business objective.
 
 > [!IMPORTANT]
-> Predictive analytics can be used to assess the value of actions, but it cannot be used to propose the actions to be assessed.
+> Descriptive and predictive analytics can be used to assess the value of observed and proposed decisions, but they cannot be used to propose the decisions to be assessed.
 
 ---
 
-todo
+### Prescriptive analytics workflow
+
+- Identify the **decision space**.
+- Identify **constraints** that impact which decision may be taken.
+- Determine how to **evaluate decisions**.
+- Systematically **search for decisions** that satisfy all constraints and have a good evaluation.
+
+---
+
+### Decision space
+
+The decision space contains all decisions that can be taken, independently of whether they are good or bad.
+
+It is typically represented by a set $X$. Each element $x \in X$ represents a particular decision.
+
+> [!TIP]
+> In many cases, decisions are represented by a vector, i.e., $x = (x_1, x_2, \ldots, x_n)$.
+
 
 ---
 
