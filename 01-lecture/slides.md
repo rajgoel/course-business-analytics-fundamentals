@@ -337,10 +337,10 @@ Constraints represent:
 - business rules, e.g., budget or policy compliance.
 - logical dependencies, e.g., prerequisite conditions.
 
-The set of **feasible decisions** is $\left\{ x \in X \mid x \textrm{ satisfies all constraints} \right\}$.
+The set of **feasible decisions** is $\lbrace x \in X \mid x \textrm{ satisfies all constraints} \rbrace$.
 
 > [!NOTE]
-> Constraints on single variables, e.g. lower and upper bounds or integrality, are often directly included in the representation of the decision space, e.g., $X = \left\{ 0,1 \right\}^n$.
+> Constraints on single variables, e.g. lower and upper bounds or integrality, are often directly included in the representation of the decision space, e.g., $X = \lbrace 0,1 \rbrace^n$.
 
 ---
 
