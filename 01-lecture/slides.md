@@ -318,11 +318,11 @@ Prescriptive analytics is the process of determining **which decisions shall be 
 
 ---
 
-### Decision space
+### Decision space or domain
 
-The decision space contains all decisions that can be taken, independently of whether they are good or bad.
+The **decision space** or **domain** contains all decisions that can be taken, independently of whether they are good or bad.
 
-It is typically represented by a set $X$. Each element $x \in X$ represents a particular decision.
+It is typically represented by a set $X^\textrm{domain}$. Each element $x \in X^\textrm{domain}$ represents a particular decision.
 
 > [!TIP]
 > In many cases, decisions can be represented by a vector, i.e., $x = (x_1, x_2, \ldots, x_n)$.
@@ -337,10 +337,10 @@ Constraints represent:
 - business rules, e.g., budget or policy compliance.
 - logical dependencies, e.g., prerequisite conditions.
 
-The set of **feasible decisions** is $\lbrace x \in X \mid x \textrm{ satisfies all constraints} \rbrace$.
+The set of **feasible decisions** is $X^\textrm{feasible} = \lbrace x \in X^\textrm{domain} \mid x \textrm{ satisfies all constraints} \rbrace$.
 
 > [!NOTE]
-> Constraints on single variables, e.g. lower and upper bounds or integrality, are often directly included in the representation of the decision space, e.g., $X = \lbrace 0,1 \rbrace^n$.
+> Constraints on single variables, e.g. lower and upper bounds or integrality, are often directly included in the representation of the decision space, e.g., $X^\textrm{domain} = \lbrace 0,1 \rbrace^n$.
 
 ---
 
