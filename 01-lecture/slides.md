@@ -353,7 +353,7 @@ The objective quantifies how good or bad a decision is. It can be represented by
 
 ---
 
-### Mathematical Program
+### Mathematical program
 
 A **mathematical program** or **mathematical optimisation problem** can be written as
 
@@ -366,6 +366,26 @@ $$ x \in X $$
 > [!NOTE]
 > The problem to $\text{maximize} g(x)$ is equivalent to the problem to $\text{minimize} f(x) = -g(x)$.
 
+
+---
+
+### Types of mathematical programs
+
+Mathematical programs can be categorised along different dimensions:
+
+- **Deterministic vs. stochastic**: In deterministic problems, all parameters are known with certainty. In stochastic problems, some parameters are subject to uncertainty.
+
+- **Static vs. dynamic**: Static problems consider a set of decisions to be made at one point in time. Dynamic problems involve a sequence of decisions over time.
+
+- **Single-objective vs. multi-objective**: Some problems have a single objective, while others consider multiple, possibly conflicting objectives.
+
+---
+
+### Structural properties 
+
+- **Continuous vs. non-continuous**: If objective and constraints can be represented by continuous functions, a problem is said to be continuous.
+
+- **Linear vs. non-linear**: If objective and constraints can be represented by linear functions, a problem is said to be linear.
 
 ---
 
