@@ -233,10 +233,10 @@ Distribution fitting can be used to model the underlying probability distributio
 
 ### Regression
 
-Regression can be used to quantify the relationship between input variables and a continuous outcome. Given $m$ input-output pairs $\big( (x_{1,j}, \dots, x_{n,j}), y_j \big) $ **linear regression** assumes a relationship 
+Regression can be used to quantify the relationship between input variables and a continuous outcome. Given $m$ input-output pairs $\big( (x_{1,j}, \dots, x_{n,j}), y_j \big) $, **linear regression** assumes a relationship 
   $$  y_j = \beta_0 + \beta_1 x_{1,j} + \dots + \beta_n x_{n,j} + \varepsilon_j \textrm{ for all } 1 \leq j \leq m$$
-   where $\varepsilon_j$ is an error term. The optimal parameters $\beta_0, \dots, \beta_n$ are estimated by minimizing  
-  $$  \sum_{j=1}^m \big(y_j - (\beta_0 + \beta_1 x_{1,j} + \dots + \beta_n x_{n,j})\big)^2$$
+   where $\varepsilon_j$ is an error term. The optimal parameters $\beta_0, \dots, \beta_n$ can be estimated by minimizing  
+  $$ \sum_{j=1}^m \varepsilon_j^2 = \sum_{j=1}^m \big(y_j - (\beta_0 + \beta_1 x_{1,j} + \dots + \beta_n x_{n,j})\big)^2$$
 
 > [!TIP]
 > Regression allows answering questions like: *How does a change in sales price influence sales volume?*
