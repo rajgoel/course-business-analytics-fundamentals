@@ -556,6 +556,30 @@ Therefore, our focus is on modelling linear programs and not on knowing the solu
 
 ### Example: Wyndor Glass Co ###
 
+<div class="twocolumn" style="font-size=16px;">
+<div>
+The WYNDOR GLASS CO. produces high-quality glass products, including windows and
+glass doors. It has three plants. Aluminum frames and hardware are made in Plant 1, wood
+frames are made in Plant 2, and Plant 3 produces the glass and assembles the products.
+Because of declining earnings, top management has decided to revamp the company’s
+product line. Unprofitable products are being discontinued, releasing production capacity
+to launch two new products having large sales potential:
+Product 1: An 8-foot glass door with aluminum framing
+Product 2: A 4  6 foot double-hung wood-framed window
+Product 1 requires some of the production capacity in Plants 1 and 3, but none in Plant 2.
+Product 2 needs only Plants 2 and 3. The marketing division has concluded that the com-
+pany could sell as much of either product as could be produced by these plants. However,
+because both products would be competing for the same production capacity in Plant 3, it
+is not clear which mix of the two products would be most profitable. Therefore, an OR
+team has been formed to study this question.
+The OR team began by having discussions with upper management to identify man-
+agement’s objectives for the study. These discussions led to developing the following definition of the problem:
+</div>
+<div>
+...
+</div>
+</div>
+
 ---
 
 The Wyndor Glass Co produces high-quality glass products and is about to launch two new products:
@@ -628,7 +652,7 @@ How can we model this decision problem?
 
 #### Objective function ####
 
-maximise `$3000x_1 + 5000x_2$`
+maximise $3000x_1 + 5000x_2$
 
 ---
 
