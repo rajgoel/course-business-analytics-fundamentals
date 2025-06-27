@@ -173,7 +173,7 @@ $$x_k^c \geq 0\ {\rm for\ all}\ k \in K, c\in C$$
 
 ### Comparison
 
-<div class="twocolumn" style="font-size:50%;">
+<div class="twocolumn" style="font-size:50%;align-items: center;gap: 200px;">
 <div>
 maximise $ 1000 (x_1^{\rm sugarbeets} + x_2^{\rm sugarbeets} +x_3^{\rm sugarbeets}) + 750 (x_1^{\rm cotton} + x_2^{\rm cotton} +x_3^{\rm cotton})+ 250 (x_1^{\rm sorghum} + x_2^{\rm sorghum} +x_3^{\rm sorghum})$ 
 
