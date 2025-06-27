@@ -568,8 +568,8 @@ How can we model this decision problem?
 
 #### Variables
 
-- The production quantity of product 1 $\Rightarrow x_1$
-- The production quantity of product 2 $\Rightarrow x_2$
+- Production quantity of product 1: $x_1$
+- Production quantity of product 2: $x_2$
 
 ---
 
