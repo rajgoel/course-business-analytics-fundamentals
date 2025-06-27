@@ -19,12 +19,11 @@ The OR team also identified the data that needed to be gathered:
 
 Obtaining reasonable estimates of these quantities required enlisting the help of key personnel in various units of the company. Staff in the manufacturing division provided the data in the first category above. Developing estimates for the second category of data required some analysis by the manufacturing engineers involved in designing the production processes for the new products. By analyzing cost data from these same engineers and the marketing division, along with a pricing decision from the marketing division, the accounting department developed estimates for the third category.
 
-| Plant  | Product 1 | Product 2 | Available Time |
+| Plant  | Product 1 | Product 2 | Time available |
 |--------|-----------|-----------|----------------|
-|    1   |     1     |     0     |       4        |
-|    2   |     0     |     2     |      12        |
-|    3   |     3     |     2     |      18        |
-|--------|-----------|-----------|----------------|
+|    1   |    1h     |    0h     |       4h       |
+|    2   |    0h     |    2h     |      12h       |
+|    3   |    3h     |    2h     |      18h       |
 | Profit |  $ 3000   |  $ 5000   |                |
 
 
