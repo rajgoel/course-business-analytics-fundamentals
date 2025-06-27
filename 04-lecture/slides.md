@@ -100,11 +100,11 @@ The set and parameters of the generic model can be defined as follows:
 
 - a set of kibbutzim denoted by $K$
 - a set of crops denoted by $C$
-- For each kibbutz $k\in K$, the amount of land available is $q_k^{\rm land}$
-- For each kibbutz $k\in K$, the amount of water available is $q_k^{\rm water}$
-- For each crop $c \in C$, the amount of water required per acre for the crop is $w^c$ 
-- For each crop $c \in C$, the upper bound on the land that can be dedicated to the crop is $u^c$ 
-- For each crop $c \in C$, the expected net return per acre dedicated to the crop is $p^c$ 
+- for each kibbutz $k\in K$, the amount of land available is $q_k^{\rm land}$
+- for each kibbutz $k\in K$, the amount of water available is $q_k^{\rm water}$
+- for each crop $c \in C$, the amount of water required per acre for the crop is $w^c$ 
+- for each crop $c \in C$, the upper bound on the land that can be dedicated to the crop is $u^c$ 
+- for each crop $c \in C$, the expected net return per acre dedicated to the crop is $p^c$ 
 
 ---
 
