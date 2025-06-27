@@ -211,6 +211,7 @@ $$C = \lbrace {\rm sugarbeets}, {\rm cotton}, {\rm sorghum} \rbrace$$
 $$l_1 = 400, l_2 = 600, l_3 = 300$$
 $$w_1 = 600, w_2 = 800, w_3 = 375$$
 $$u^{\rm sugarbeets} = 600, u^{\rm cotton} = 500, u^{\rm sorghum} = 325$$
+$$p^{\rm sugarbeets} = 1000, p^{\rm cotton} = 750, p^{\rm sorghum} = 250$$
 </div>
 </div>
 
