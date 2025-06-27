@@ -145,7 +145,7 @@ $$\frac{x_2^{\rm sugarbeets} + x_2^{\rm cotton} +x_2^{\rm sorghum}}{600} =  \fra
 
 #### Non-negativity constraints ####
 
-$$x_i^{\rm sugarbeets} \geq 0,  x_i^{\rm cotton} \geq 0,  x_i ^{\rm sorghum} \geq 0\ {\rm for}\ i \in \{1,2,3\}$$ <!-- .element: class="fragment"  -->
+$$x_i^{\rm sugarbeets} \geq 0,  x_i^{\rm cotton} \geq 0,  x_i ^{\rm sorghum} \geq 0\ {\rm for}\ i \in \lbrace 1,2,3 \rbrace$$ <!-- .element: class="fragment"  -->
 
 
 ---
@@ -171,6 +171,6 @@ $$\tfrac{1}{400} x_1^{\rm sugarbeets} + \tfrac{1}{400} x_1^{\rm cotton} + \tfrac
 
 $$\tfrac{1}{600} x_2^{\rm sugarbeets} + \tfrac{1}{600} x_2^{\rm cotton} + \tfrac{1}{600} x_2^{\rm sorghum}= \tfrac{1}{300} x_3^{\rm sugarbeets} + \tfrac{1}{300} x_3^{\rm cotton} + \tfrac{1}{300} x_3^{\rm sorghum}$$
 
-$$x_i^{\rm sugarbeets} \geq 0,  x_i^{\rm cotton} \geq 0,  x_i ^{\rm sorghum} \geq 0\ {\rm for}\ i \in \{1,2,3\}$$
+$$x_i^{\rm sugarbeets} \geq 0,  x_i^{\rm cotton} \geq 0,  x_i ^{\rm sorghum} \geq 0\ {\rm for}\ i \in \lbrace 1,2,3 \rbrace$$
 
 

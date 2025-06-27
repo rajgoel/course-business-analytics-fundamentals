@@ -143,7 +143,7 @@ blockquote.admonition.caution::before {
  * Display fractions properly
  *********************************************/
 .tex .mfrac > span {
-  height: 1px!important;
+  min-height: 1px!important;
 }
 
 /*********************************************
