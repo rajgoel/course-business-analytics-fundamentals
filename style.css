@@ -138,6 +138,14 @@ blockquote.admonition.caution::before {
 	opacity: 1;
 	display: inline; }
 
+
+/*********************************************
+ * Display fractions properly
+ *********************************************/
+.tex .mfrac > span {
+  height: 1px!important;
+}
+
 /*********************************************
  * Print
  *********************************************/
