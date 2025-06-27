@@ -27,5 +27,5 @@ Obtaining reasonable estimates of these quantities required enlisting the help o
 | Profit |  $ 3000   |  $ 5000   |                |
 
 
-**Source:** Hillier, Liebermann: Introduction to Operations Research
+**Source:** Hillier, Liebermann: Introduction to Operations Research, 9th Edition, ISBN 978-0-07-337629-5
 
