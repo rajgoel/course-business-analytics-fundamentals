@@ -10,8 +10,6 @@ How can we model this decision problem?
 
 ---
 
----
-
 #### Summary of problem characteristics ####
 
 - There are 3 kibbutzim
@@ -28,11 +26,11 @@ How can we model this decision problem?
 ---
 
 
-#### Cariables ####
+#### Variables ####
 
 The number of acres devoted to each of the crops by each of the 3 kibbutzim:<!-- .element: class="fragment" data-fragment-index="1" -->
 
-`$x_i^{\rm sugarbeets}, x_i^{\rm cotton}, x_i^{\rm sorghum}\ {\rm for}\ i \in \{1,2,3\}$` <!-- .element: class="fragment" data-fragment-index="1" -->
+$$x_i^{\rm sugarbeets}, x_i^{\rm cotton}, x_i^{\rm sorghum}\ {\rm for}\ i \in \{1,2,3\}$$ <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
@@ -71,11 +69,11 @@ What are the constraints on the usable land?
 
 #### Constraints on the usable land ####
 
-`$x_1^{\rm sugarbeets} + x_1^{\rm cotton}  + x_1^{\rm sorghum} \leq 400$` <!-- .element: class="fragment"  -->
+$$x_1^{\rm sugarbeets} + x_1^{\rm cotton}  + x_1^{\rm sorghum} \leq 400$$ <!-- .element: class="fragment"  -->
 
-`$x_2^{\rm sugarbeets} + x_2^{\rm cotton}  + x_2^{\rm sorghum} \leq 600$` <!-- .element: class="fragment"  -->
+$$x_2^{\rm sugarbeets} + x_2^{\rm cotton}  + x_2^{\rm sorghum} \leq 600$$ <!-- .element: class="fragment"  -->
 
-`$x_3^{\rm sugarbeets} + x_3^{\rm cotton}  + x_3^{\rm sorghum} \leq 300$` <!-- .element: class="fragment"  -->
+$$x_3^{\rm sugarbeets} + x_3^{\rm cotton}  + x_3^{\rm sorghum} \leq 300$$ <!-- .element: class="fragment"  -->
 
 ---
 
