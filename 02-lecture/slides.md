@@ -554,7 +554,7 @@ Therefore, our focus is on modelling linear programs and not on knowing the solu
 ===
 
 
-### Example: <a href="markdown-viewer.html?file=02-lecture/wyndor.md" data-preview-link>Wyndor Glass Co. <i class="fa-solid fa-magnifying-glass"></i</a>
+### Example: <a href="markdown-viewer.html?file=02-lecture/wyndor.md" data-preview-link>Wyndor Glass Co. <i class="fa-solid fa-magnifying-glass"></i></a>
 
 How can we model this decision problem?
 
