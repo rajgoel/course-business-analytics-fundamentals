@@ -34,7 +34,7 @@ $$x_i^{\rm sugarbeets}, x_i^{\rm cotton}, x_i^{\rm sorghum}\ {\rm for}\ i \in \l
 
 > [!TIP]
 > Always try to use descriptive variable names with meaningful subscripts or superscripts. Avoid generic names like $x_1, x_2, \ldots, x_9$ which obscure the variables' semantics.
-<!-- .element: class="fragment" data-fragment-index="1" -->
+<!-- .element: class="fragment" data-fragment-index="2" -->
 
 ---
 
