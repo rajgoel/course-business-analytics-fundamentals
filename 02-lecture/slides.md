@@ -599,10 +599,3 @@ $$2x_2 \leq 12$$
 $$3x_1 + 2x_2 \leq 18$$
 $$x_1 \geq 0, x_2 \geq 0$$
 
-===
-
-### Summary
-
-- This session gave an introduction to linear programming.
-- We learned that optimal solutions can be found at a corner point.
-- We learned how to solve a linear program graphically and with the Simplex method.
