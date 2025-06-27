@@ -32,6 +32,9 @@ The number of acres devoted to each of the crops by each of the 3 kibbutzim:<!--
 
 $$x_i^{\rm sugarbeets}, x_i^{\rm cotton}, x_i^{\rm sorghum}\ {\rm for}\ i \in \lbrace 1,2,3 \rbrace$$ <!-- .element: class="fragment" data-fragment-index="1" -->
 
+> [!TIP]
+> Always try to use descriptive variable names with meaningful subscripts or superscripts. Avoid generic names like $x_1, x_2, \ldots, x_9$ which obscure the variables' semantics.
+
 ---
 
 
@@ -139,6 +142,10 @@ $$\frac{x_1^{\rm sugarbeets} + x_1^{\rm cotton} +x_1^{\rm sorghum}}{400} = \frac
 
 $$\frac{x_2^{\rm sugarbeets} + x_2^{\rm cotton} +x_2^{\rm sorghum}}{600} =  \frac{x_3^{\rm sugarbeets} + x_3^{\rm cotton} +x_3^{\rm sorghum}}{300}$$
  <!-- .element: class="fragment"  -->
+
+
+> [!NOTE]
+> Two constraints are sufficient to ensure that all three kibbutzim use the same share of the land.
 
 ---
 
