@@ -562,7 +562,7 @@ How can we model this decision problem?
 > The model must contain the following:
 > - **Variables:** What are the decisions that can be taken?
 > - **Objective:** What is the goal?
-> - **Constraints:** What are the restirctions on the decisions?
+> - **Constraints:** What are the restrictions on the decisions?
 
 ---
 
