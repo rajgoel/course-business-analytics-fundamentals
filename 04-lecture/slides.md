@@ -100,8 +100,8 @@ The set and parameters of the generic model can be defined as follows:
 
 - a set of kibbutzim denoted by $K$
 - a set of crops denoted by $C$
-- For each kibbutz $k\in K$, the amount of land available is $q^{\rm land}_k$
-- For each kibbutz $k\in K$, the maximum amount of water is $q^{\rm water}_k$
+- For each kibbutz $k\in K$, the amount of land available is $q_k^{\rm land}$
+- For each kibbutz $k\in K$, the maximum amount of water is $q_k^{\rm water}$
 - For each crop $c \in C$, the amount of water required per acre for the crop is $w^c$ 
 - For each crop $c \in C$, the upper bound on the land that can be dedicated to the crop is $u^c$ 
 - For each crop $c \in C$, the expected net return per acre dedicated to the crop is $p^c$ 
@@ -124,28 +124,28 @@ $$\displaystyle\sum_{c\in C} \sum_{k\in K} p^c x_k^c$$
 
 #### Constraints for the land available
 
-$$\displaystyle\sum_{c\in C} x_k^c \leq q^{\rm land}_k \ {\rm for\ all}\ k \in K$$
+$$\displaystyle\sum_{c\in C} x_k^c \leq q_k^{\rm land} \ {\rm for\ all}\ k \in K$$
 <!-- .element: class="fragment" -->
 
 ---
 
 #### Constraints for the water available
 
-$$\displaystyle\sum_{c\in C} w^c x_k^c \leq q^{\rm water}_i \ {\rm for\ all}\ k \in K$$
+$$\displaystyle\sum_{c\in C} w^c x_k^c \leq q_k^{\rm water} \ {\rm for\ all}\ k \in K$$
 <!-- .element: class="fragment" -->
 
 ---
 
 #### Constraints for the crop quotas
 
-$$\displaystyle\sum_{k\in K} x_k^c \leq u^c\ {\rm for\ all}\ c\in C$$
+$$\displaystyle\sum_{k\in K} x_k^c \leq u^c \ {\rm for\ all}\ c\in C$$
 <!-- .element: class="fragment" -->
 
 ---
 
 #### Equity constraints
 
-$$\displaystyle\sum_{c\in C} \frac{1}{q^{\rm land}_k}x_k^c = \displaystyle\sum_{c\in C} \frac{1}{q^{\rm land}_{h}}x_{h}^c\ {\rm for\ all}\ k,h \in K$$
+$$\displaystyle\sum_{c\in C} \frac{1}{q_k^{\rm land}} x_k^c = \displaystyle\sum_{c\in C} \frac{1}{q_h^{\rm land}} x_{h}^c\ {\rm for\ all}\ k,h \in K$$
 <!-- .element: class="fragment" -->
 
 ---
@@ -163,10 +163,10 @@ maximise  $\displaystyle\sum_{c\in C} \sum_{k\in K} p^c x_k^c$
 
 subject to
 
-$$\displaystyle\sum_{c\in C} x_k^c \leq q^{\rm land}_k \ {\rm for\ all}\ k \in K$$
-$$\displaystyle\sum_{c\in C} w^c x_k^c \leq q^{\rm water}_i \ {\rm for\ all}\ k \in K$$
+$$\displaystyle\sum_{c\in C} x_k^c \leq q_k^{\rm land} \ {\rm for\ all}\ k \in K$$
+$$\displaystyle\sum_{c\in C} w^c x_k^c \leq q_k^{\rm water} \ {\rm for\ all}\ k \in K$$
 $$\displaystyle\sum_{k\in K} x_k^c \leq u^c\ {\rm for\ all}\ c\in C$$
-$$\displaystyle\sum_{c\in C} \frac{1}{q^{\rm land}_k}x_k^c = \displaystyle\sum_{c\in C} \frac{1}{q^{\rm land}_{h}}x_{h}^c\ {\rm for\ all}\ k,h \in K$$
+$$\displaystyle\sum_{c\in C} \frac{1}{q_k^{\rm land}}x_k^c = \displaystyle\sum_{c\in C} \frac{1}{q_h^{\rm land}}x_{h}^c\ {\rm for\ all}\ k,h \in K$$
 $$x_k^c \geq 0\ {\rm for\ all}\ k \in K, c\in C$$
 
 
@@ -199,18 +199,18 @@ maximise  $\displaystyle\sum_{c\in C} \sum_{k\in K} p^c x_k^c$
 
 subject to
 
-$$\displaystyle\sum_{c\in C} x_k^c \leq q^{\rm land}_k \ {\rm for\ all}\ k \in K$$
-$$\displaystyle\sum_{c\in C} w^c x_k^c \leq q^{\rm water}_i \ {\rm for\ all}\ k \in K$$
+$$\displaystyle\sum_{c\in C} x_k^c \leq q_k^{\rm land} \ {\rm for\ all}\ k \in K$$
+$$\displaystyle\sum_{c\in C} w^c x_k^c \leq q_k^{\rm water} \ {\rm for\ all}\ k \in K$$
 $$\displaystyle\sum_{k\in K} x_k^c \leq u^c\ {\rm for\ all}\ c\in C$$
-$$\displaystyle\sum_{c\in C} \frac{1}{q^{\rm land}_k}x_k^c = \displaystyle\sum_{c\in C} \frac{1}{q^{\rm land}_{h}}x_{h}^c\ {\rm for\ all}\ k,h \in K$$
+$$\displaystyle\sum_{c\in C} \frac{1}{q_k^{\rm land}}x_k^c = \displaystyle\sum_{c\in C} \frac{1}{q_h^{\rm land}}x_{h}^c\ {\rm for\ all}\ k,h \in K$$
 $$x_k^c \geq 0\ {\rm for\ all}\ k \in K, c\in C$$
 
 <hr>
 
 $$K = \lbrace 1,2,3 \rbrace$$
 $$C = \lbrace {\rm sugarbeets}, {\rm cotton}, {\rm sorghum} \rbrace$$
-$$q^{\rm land}_1 = 400, q^{\rm land}_2 = 600, q^{\rm land}_3 = 300$$
-$$q^{\rm water}_1 = 600, q^{\rm water}_2 = 800, q^{\rm water}_3 = 375$$
+$$q_1^{\rm land} = 400, q_2^{\rm land} = 600, q_3^{\rm land} = 300$$
+$$q_1^{\rm water} = 600, q_1^{\rm water} = 800, q_3^{\rm water} = 375$$
 $$w^{\rm sugarbeets} = 3, w^{\rm cotton} = 2, w^{\rm sorghum} = 1$$
 $$u^{\rm sugarbeets} = 600, u^{\rm cotton} = 500, u^{\rm sorghum} = 325$$
 $$p^{\rm sugarbeets} = 1000, p^{\rm cotton} = 750, p^{\rm sorghum} = 250$$
