@@ -169,6 +169,7 @@ $$x_i^{\rm sugarbeets} \geq 0,  x_i^{\rm cotton} \geq 0,  x_i ^{\rm sorghum} \ge
 <!-- .element: style="font-size:200%;"  -->
 
 maximise $ 1000 (x_1^{\rm sugarbeets} + x_2^{\rm sugarbeets} +x_3^{\rm sugarbeets}) + 750 (x_1^{\rm cotton} + x_2^{\rm cotton} +x_3^{\rm cotton})+ 250 (x_1^{\rm sorghum} + x_2^{\rm sorghum} +x_3^{\rm sorghum})$ 
+
 subject to
 $$x_1^{\rm sugarbeets} + x_1^{\rm cotton}  + x_1^{\rm sorghum} \leq 400$$
 $$x_2^{\rm sugarbeets} + x_2^{\rm cotton}  + x_2^{\rm sorghum} \leq 600$$
