@@ -173,8 +173,8 @@ $$x_k^c \geq 0\ {\rm for\ all}\ k \in K, c\in C$$
 
 ### Comparison
 
-<div class="twocolumn" style="font-size:40%;align-items:center;gap:100px;">
-<div style="background-color:#f7f7f8;padding:20px;border-radius:10pt;">
+<div class="twocolumn" style="font-size:40%;gap:100px;top-margin:50px;">
+<div style="height:100%;background-color:#f7f7f8;padding:20px;border-radius:10pt;">
 maximise $ 1000 (x_1^{\rm sugarbeets} + x_2^{\rm sugarbeets} +x_3^{\rm sugarbeets}) + 750 (x_1^{\rm cotton} + x_2^{\rm cotton} +x_3^{\rm cotton})+ 250 (x_1^{\rm sorghum} + x_2^{\rm sorghum} +x_3^{\rm sorghum})$ 
 
 subject to
@@ -191,7 +191,7 @@ $$\tfrac{1}{400} x_1^{\rm sugarbeets} + \tfrac{1}{400} x_1^{\rm cotton} + \tfrac
 $$\tfrac{1}{600} x_2^{\rm sugarbeets} + \tfrac{1}{600} x_2^{\rm cotton} + \tfrac{1}{600} x_2^{\rm sorghum}= \tfrac{1}{300} x_3^{\rm sugarbeets} + \tfrac{1}{300} x_3^{\rm cotton} + \tfrac{1}{300} x_3^{\rm sorghum}$$
 $$x_i^{\rm sugarbeets} \geq 0,  x_i^{\rm cotton} \geq 0,  x_i ^{\rm sorghum} \geq 0\ {\rm for}\ i \in \lbrace 1,2,3 \rbrace$$
 </div>
-<div style="background-color:#f7f7f8;padding:20px;border-radius:10pt;">
+<div style="height:100%;background-color:#f7f7f8;padding:20px;border-radius:10pt;">
 maximise  $\displaystyle\sum_{c\in C} \sum_{k\in K} p^c x_k^c$
 
 subject to
