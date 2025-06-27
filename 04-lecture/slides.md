@@ -53,8 +53,6 @@ For each $i \in I$, the production quantity of product $i$ is denoted by $x_i$.
 
 #### Objective
 
-The object is to
-
 maximise $\displaystyle\sum_{i\in I} p_i x_i$
 
 ---
@@ -170,7 +168,39 @@ $$\displaystyle\sum_{k\in K} x_k^c \leq u^c\ {\rm for\ all}\ c\in C$$
 $$\displaystyle\sum_{c\in C} \frac{1}{l_k}x_k^c = \displaystyle\sum_{c\in C} \frac{1}{l_{h}}x_{h}^c\ {\rm for\ all}\ k,h \in K$$
 $$x_k^c \geq 0\ {\rm for\ all}\ k \in K, c\in C$$
 
-===
 
-### Case study: Fabrics and Fall Fashions
+---
+
+### Comparison
+
+<div class="twocolumn" style="font-size:50%;" -->
+<div>
+maximise $ 1000 (x_1^{\rm sugarbeets} + x_2^{\rm sugarbeets} +x_3^{\rm sugarbeets}) + 750 (x_1^{\rm cotton} + x_2^{\rm cotton} +x_3^{\rm cotton})+ 250 (x_1^{\rm sorghum} + x_2^{\rm sorghum} +x_3^{\rm sorghum})$ 
+
+subject to
+$$x_1^{\rm sugarbeets} + x_1^{\rm cotton}  + x_1^{\rm sorghum} \leq 400$$
+$$x_2^{\rm sugarbeets} + x_2^{\rm cotton}  + x_2^{\rm sorghum} \leq 600$$
+$$x_3^{\rm sugarbeets} + x_3^{\rm cotton}  + x_3^{\rm sorghum} \leq 300$$
+$$3x_1^{\rm sugarbeets} + 2x_1^{\rm cotton}  + x_1^{\rm sorghum} \leq 600$$
+$$3x_2^{\rm sugarbeets} + 2x_2^{\rm cotton}  + x_2^{\rm sorghum} \leq 800$$ 
+$$3x_3^{\rm sugarbeets} + 2x_3^{\rm cotton}  + x_3^{\rm sorghum} \leq 375$$
+$$x_1^{\rm sugarbeets} + x_2^{\rm sugarbeets} +x_3^{\rm sugarbeets} \leq 600$$ 
+$$x_1^{\rm cotton} + x_2^{\rm cotton} +x_3^{\rm cotton} \leq 500$$
+$$x_1^{\rm sorghum} + x_2^{\rm sorghum} +x_3^{\rm sorghum} \leq 325$$
+$$\tfrac{1}{400} x_1^{\rm sugarbeets} + \tfrac{1}{400} x_1^{\rm cotton} + \tfrac{1}{400} x_1^{\rm sorghum} = \tfrac{1}{600} x_2^{\rm sugarbeets} + \tfrac{1}{600} x_2^{\rm cotton} + \tfrac{1}{600} x_2^{\rm sorghum}$$
+$$\tfrac{1}{600} x_2^{\rm sugarbeets} + \tfrac{1}{600} x_2^{\rm cotton} + \tfrac{1}{600} x_2^{\rm sorghum}= \tfrac{1}{300} x_3^{\rm sugarbeets} + \tfrac{1}{300} x_3^{\rm cotton} + \tfrac{1}{300} x_3^{\rm sorghum}$$
+$$x_i^{\rm sugarbeets} \geq 0,  x_i^{\rm cotton} \geq 0,  x_i ^{\rm sorghum} \geq 0\ {\rm for}\ i \in \lbrace 1,2,3 \rbrace$$
+</div>
+<div>
+</div>
+maximise  $\displaystyle\sum_{c\in C} \sum_{k\in K} p^c x_k^c$
+
+subject to
+
+$$\displaystyle\sum_{c\in C} x_k^c \leq l_k \ {\rm for\ all}\ k \in K$$
+$$\displaystyle\sum_{c\in C} r^c x_k^c \leq w_i \ {\rm for\ all}\ k \in K$$
+$$\displaystyle\sum_{k\in K} x_k^c \leq u^c\ {\rm for\ all}\ c\in C$$
+$$\displaystyle\sum_{c\in C} \frac{1}{l_k}x_k^c = \displaystyle\sum_{c\in C} \frac{1}{l_{h}}x_{h}^c\ {\rm for\ all}\ k,h \in K$$
+$$x_k^c \geq 0\ {\rm for\ all}\ k \in K, c\in C$$
+</div>
 
