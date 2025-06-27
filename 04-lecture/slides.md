@@ -10,6 +10,8 @@ Although it is easy to change some of the numbers in the model, it is usually no
 
 ---
 
+### Separation of logic and data
+ 
 Separation of logic and data allows a trained analyst to develop a model, and all other users can work on the data without any risk of destroying the logic.
 
 ---
@@ -18,26 +20,61 @@ In order to separate logic from data we have to rethink our problem.
 
 ---
 
-#### Example: Rethinking Wyndor Glass Co
+### Example: <a href="markdown-viewer.html?file=02-lecture/wyndor.md" data-preview-link>Wyndor Glass Co. <i class="fa-solid fa-magnifying-glass"></i></a>
 
-maximise $3000x_1 + 5000x_2$
+How can we model this decision problem as a generic model?
 
-subject to
-
-$$x_1 \leq 4$$
-$$2x_2 \leq 12$$
-$$3x_1 + 2x_2 \leq 18$$
-$$x_1 \geq 0, x_2 \geq 0$$
+> [!TIP]
+> The model must contain the following:
+> - **Sets and parameters:** What are the sets and parameters that define the problem?
+> - **Variables:** What are the decisions that can be taken?
+> - **Objective:** What is the goal?
+> - **Constraints:** What are the restrictions on the decisions?
 
 ---
 
 In this problem we have
 
-- a given **set of products** with revenues,
-- a given **set of resources** with capacities, and
-- a given amount of the resources that is consumed by each product.
+- a given **set of products** with profits per batch,
+- a given **set of plants** with limited time available, and
+- a given amount of the time that is consumed when producing a batch of a product.
 
-The goal is to find non-negative production quantities maximising the total revenue.
+The goal is to find non-negative production quantities maximising the total profits.
+
+---
+
+#### Sets and parameters
+
+The set and parameters of the generic model can be defined as follows:
+
+- a set of products denoted by $I$,
+- a set of plants denoted $J$,
+- for each $i \in I$, the profit of product $i$ is denoted by $p_i$,
+- for each $j \in J$, the amount of time available at plant $j$ is denoted by $q_j$,
+- for each $i \in I$ and $j \in J$, the time at plant $j$ per batch of product $i$ is denoted by $a_{i,j}$. 
+
+---
+
+#### Variables
+
+For each $i \in I$, the production quantity of product $i$ is denoted by $x_i$.
+
+---
+
+#### Objective
+
+The object is to
+
+maximise $\displaystyle\sum_{i\in I} p_i x_i$
+
+---
+
+#### Constraints 
+
+
+$$\displaystyle\sum_{i\in I} a_{i,j} x_i \leq q_j \text{ for all } j\in J$$ 
+
+$$x_i \geq 0 \text{ for all } i\in I$$
 
 ---
 
@@ -47,13 +84,12 @@ maximise $\displaystyle\sum_{i\in I} p_i x_i$
 
 subject to
 
-$$\displaystyle\sum_{i\in I} a_{i,r} x_i \leq q_r \text{ for all } r\in R$$
+$$\displaystyle\sum_{i\in I} a_{i,j} x_i \leq q_j \text{ for all } j\in J$$ 
 $$x_i \geq 0 \text{ for all } i\in I$$
 
-where $I$ is the set of products, $R$ is the set of resources, $p_i$ is price of product $i$, $q_r$ is the quantity available of resource $r$, and $a_{i,r}$ indicates how much of resource $r$ is consumed by product $i$. The decision variable $x_i$ is the production quantity of product $i$.
 
 > [!NOTE]
-> This model works for any kind and number of products and resources.
+> This model works for any kind and number of products and plants as well as for many other production planning problems.
 
 ===
 
@@ -152,8 +188,3 @@ $$x_i^c \geq 0\ {\rm for\ all}\ i \inI, c\in C$$
 
 > TrendLines assumes that it can sell every item that was not sold during September and October in a big sale in November at 60 percent of the original price. Therefore, it can sell all items in unlimited quantity during the November sale. (The previously mentioned upper limits on demand concern only the sales during September and October.) What should the new production plan be to maximize profit?
 
-===
-
-### Summary ###
-
-- We learned how to separate logic from data.
