@@ -54,12 +54,13 @@ What is the objective function?
 #### Objective function ####
 
 $${\rm maximise}$$ <!-- .element: class="fragment"  -->
-
 $$1000 (x_1^{\rm sugarbeets} + x_2^{\rm sugarbeets} +x_3^{\rm sugarbeets})$$ <!-- .element: class="fragment"  -->
-
 $$+ 750 (x_1^{\rm cotton} + x_2^{\rm cotton} +x_3^{\rm cotton})$$ <!-- .element: class="fragment"  -->
-
 $$+ 250 (x_1^{\rm sorghum} + x_2^{\rm sorghum} +x_3^{\rm sorghum})$$ <!-- .element: class="fragment"  -->
+
+> [!TIP]
+> Never forget to state whether you want to maximise or minmise.
+<!-- .element: class="fragment"-->
 
 ---
 
@@ -83,15 +84,15 @@ $$x_3^{\rm sugarbeets} + x_3^{\rm cotton}  + x_3^{\rm sorghum} \leq 300$$ <!-- .
 
 The Water Commisioner has allocated
 
-- 600 thousand acre feet of water to kibbutz 1,
-- 800 thousand acre feet of water to kibbutz 2,
-- 375 thousand acre feet of water to kibbutz 3.
+- 600 acre feet of water to kibbutz 1,
+- 800 acre feet of water to kibbutz 2,
+- 375 acre feet of water to kibbutz 3.
 
 The required amount of water for an acre of land used for
 
-- sugar beets is 3 thousand acre feet per acre,
-- cotton is 2 thousand acre feet per acre,
-- sorghum is 1 thousand acre feet per acre.
+- sugar beets is 3 acre feet per acre,
+- cotton is 2 acre feet per acre,
+- sorghum is 1 acre feet per acre.
 
 What are the constraints on the available water?
 
@@ -147,14 +148,18 @@ $$\frac{x_2^{\rm sugarbeets} + x_2^{\rm cotton} +x_2^{\rm sorghum}}{600} =  \fra
 
 > [!NOTE]
 > Two constraints are sufficient to ensure that all three kibbutzim use the same share of the land.
+<!-- .element: class="fragment" -->
 
 ---
 
 
 #### Non-negativity constraints ####
 
-$$x_i^{\rm sugarbeets} \geq 0,  x_i^{\rm cotton} \geq 0,  x_i ^{\rm sorghum} \geq 0\ {\rm for}\ i \in \lbrace 1,2,3 \rbrace$$ <!-- .element: class="fragment"  -->
+$$x_i^{\rm sugarbeets} \geq 0,  x_i^{\rm cotton} \geq 0,  x_i ^{\rm sorghum} \geq 0\ {\rm for}\ i \in \lbrace 1,2,3 \rbrace$$ <!-- .element: class="fragment" data-fragment-index="1"  -->
 
+> [!TIP]
+> Non-negativity constraints are needed in most problems.
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 

@@ -586,9 +586,6 @@ maximise $3000x_1 + 5000x_2$
 - $3x_1 + 2x_2 \leq 18$ (capacity of plant 3)
 - $x_1 \geq 0$ and $x_2 \geq 0$ (non-negative production)
 
-> [!TIP]
-> Non-negativity constraints are needed in most problems.
-
 ---
 
 #### Optimisation problem
