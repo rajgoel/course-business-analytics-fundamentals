@@ -30,7 +30,7 @@ How can we model this decision problem?
 
 The number of acres devoted to each of the crops by each of the 3 kibbutzim:<!-- .element: class="fragment" data-fragment-index="1" -->
 
-$$x_i^{\rm sugarbeets}, x_i^{\rm cotton}, x_i^{\rm sorghum}\ {\rm for}\ i \in \{1,2,3\}$$ <!-- .element: class="fragment" data-fragment-index="1" -->
+$$x_i^{\rm sugarbeets}, x_i^{\rm cotton}, x_i^{\rm sorghum}\ {\rm for}\ i \in \lbrace 1,2,3 \rbrace$$ <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
