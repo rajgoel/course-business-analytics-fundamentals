@@ -203,6 +203,12 @@ $$\displaystyle\sum_{c\in C} r^c x_k^c \leq w_i \ {\rm for\ all}\ k \in K$$
 $$\displaystyle\sum_{k\in K} x_k^c \leq u^c\ {\rm for\ all}\ c\in C$$
 $$\displaystyle\sum_{c\in C} \frac{1}{l_k}x_k^c = \displaystyle\sum_{c\in C} \frac{1}{l_{h}}x_{h}^c\ {\rm for\ all}\ k,h \in K$$
 $$x_k^c \geq 0\ {\rm for\ all}\ k \in K, c\in C$$
+
+$$K = \lbrace 1,2,3 \rbrace$$
+$$C = \lbrace {\rm sugarbeets}, {\rm cotton}, {\rm sorghum} \rbrace$$
+$$l = ( 400, 600, 300 )$$
+$$w = ( 600, 800, 375 )$$
+$$u = ( 600, 500, 325 )$$
 </div>
 </div>
 
