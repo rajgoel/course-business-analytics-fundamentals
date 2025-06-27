@@ -566,10 +566,10 @@ How can we model this decision problem?
 
 ---
 
-#### Decision variables
+#### Variables
 
-- The production quantity of product 1 $\Rightarrow x_1$ <!-- .element: class="fragment" data-fragment-index="1" -->
-- The production quantity of product 2 $\Rightarrow x_2$ <!-- .element: class="fragment" data-fragment-index="1" -->
+- The production quantity of product 1 $\Rightarrow x_1$
+- The production quantity of product 2 $\Rightarrow x_2$
 
 ---
 
@@ -581,10 +581,10 @@ maximise $3000x_1 + 5000x_2$
 
 #### Constraints
 
-- $x_1 \leq 4$ (capacity of plant 1) <!-- .element: class="fragment"  -->
-- $2x_2 \leq 12$ (capacity of plant 2) <!-- .element: class="fragment"  -->
-- $3x_1 + 2x_2 \leq 18$ (capacity of plant 3) <!-- .element: class="fragment"  -->
-- $x_1 \geq 0$ and $x_2 \geq 0$ (non-negative production) <!-- .element: class="fragment"  -->
+- $x_1 \leq 4$ (capacity of plant 1)
+- $2x_2 \leq 12$ (capacity of plant 2)
+- $3x_1 + 2x_2 \leq 18$ (capacity of plant 3)
+- $x_1 \geq 0$ and $x_2 \geq 0$ (non-negative production)
 
 ---
 
