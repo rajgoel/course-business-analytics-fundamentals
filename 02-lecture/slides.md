@@ -19,7 +19,7 @@ where
 
 ---
 
-#### Example ####
+#### Example
 
 maximise $f(x,y) = 3x + 5y$
 
@@ -33,7 +33,7 @@ $$y \geq 0$$
 
 ===
 
-### Graphical representation ###
+### Graphical representation
 
 Each linear constraint cuts the solution space (set of feasible solutions) into two halves.
 
@@ -67,7 +67,7 @@ Each linear constraint cuts the solution space (set of feasible solutions) into 
 
 ---
 
-#### Objective function ####
+#### Objective function
 
 For any objective function, we can visualise the set of values with the same objective function value.
 
@@ -76,7 +76,7 @@ For any objective function, we can visualise the set of values with the same obj
 
 ---
 
-#### Example ####
+#### Example
 
 <div data-animate data-load="02-lecture/linear_program.svg">
 <!--
@@ -116,7 +116,7 @@ For any objective function, we can visualise the set of values with the same obj
 
 ---
 
-#### Graphical solution method ####
+#### Graphical solution method
 
 We can find the optimal solution of a linear program by shifting the line representing solutions with the same objective function value, until it just touches the solution space.
 
@@ -226,7 +226,7 @@ We can find the optimal solution of a linear program by shifting the line repres
 
 ===
 
-### Corner point solutions ###
+### Corner point solutions
 
 The optimal solution of a linear program is always at a **corner point** of the solution space
 (if an optimal solution exists).
@@ -236,7 +236,7 @@ The optimal solution of a linear program is always at a **corner point** of the 
 
 ---
 
-#### Multiple optimal solutions ####
+#### Multiple optimal solutions
 
 In some cases a linear program has multiple optimal solutions.<br><br>
 
@@ -535,7 +535,7 @@ It starts with a feasible corner point and iteratively moves to a neighbouring f
 
 ---
 
-### A 3-dimensional example ###
+### A 3-dimensional example
 
 ![Exmaple](02-lecture/3d-simplex.svg)
 
@@ -545,7 +545,7 @@ The simplex algorithm can quickly solve linear programs with many thousands of v
 
 ---
 
-### Implementations of the simplex algorithm ###
+### Implementations of the simplex algorithm
 
 Various implementation of the simplex algorithm are readily available.
 
@@ -554,125 +554,34 @@ Therefore, our focus is on modelling linear programs and not on knowing the solu
 ===
 
 
-### Example: Wyndor Glass Co ###
+### Example
 
-<div class="twocolumn" style="font-size:24px;text-align: left;font-family: 'Times New Roman', Times, serif;">
-<div>
-
-> The WYNDOR GLASS CO. produces high-quality glass products, including windows and glass doors. It has three plants. Aluminum frames and hardware are made in Plant 1, wood frames are made in Plant 2, and Plant 3 produces the glass and assembles the products. Because of declining earnings, top management has decided to revamp the company’s product line. Unprofitable products are being discontinued, releasing production capacity to launch two new products having large sales potential:
-> 
-> Product 1: An 8-foot glass door with aluminum framing
-> Product 2: A 4 x 6 foot double-hung wood-framed window
->
-> Product 1 requires some of the production capacity in Plants 1 and 3, but none in Plant 2. Product 2 needs only Plants 2 and 3. The marketing division has concluded that the company could sell as much of either product as could be produced by these plants. However, because both products would be competing for the same production capacity in Plant 3, it is not clear which mix of the two products would be *most profitable*. Therefore, an OR team has been formed to study this question.
-> 
->The OR team began by having discussions with upper management to identify management’s objectives for the study. These discussions led to developing the following definition of the problem:
-
-</div>
-<div>
-
-> *Determine what the production rates should be for the two products in order to maximize their total profit, subject to the restrictions imposed by the limited production capacities available in the three plants. (Each product will be produced in batches of 20, so the production rate is defined as the number of batches produced per week.) Any combination of production rates that satisfies these restrictions is permitted, including producing none of one product and as much as possible of the other.*
-> 
-> production rate is defined as the number of batches produced per week.) Any combination of production rates that satisfies these restrictions is permitted, including producing none of one product and as much as possible of the other.
-> 
-> The OR team also identified the data that needed to be gathered:
-> 1. Number of hours of production time available per week in each plant for these new products. (Most of the time in these plants already is committed to current products, so the available capacity for the new products is quite limited.)
-> 2. Number of hours of production time used in each plant for each batch produced of each new product.
-> 3. Profit per batch produced of each new product. (*Profit per batch produced* was chosen as an appropriate measure after the team concluded that the incremental profit from each additional batch produced would be roughly *constant* regardless of the total number of batches produced. Because no substantial costs will be incurred to initiate the production and marketing of these new products, the total profit from each one is approximately this *profit per batch produced* times *the number of batches produced*.)
-
-</div>
-</div>
-<small>Source: Hillier, Liebermann: Introduction to Operations Research</small>
-
-<!--
-Obtaining reasonable estimates of these quantities required enlisting the help of key
-personnel in various units of the company. Staff in the manufacturing division provided the
-data in the first category above. Developing estimates for the second category of data
-required some analysis by the manufacturing engineers involved in designing the production processes for the new products. By analyzing cost data from these same engineers and
-the marketing division, along with a pricing decision from the marketing division, the
-accounting department developed estimates for the third category.
-Table 3.1 summarizes the data gathered.
-The OR team immediately recognized that this was a linear programming problem of
-the classic product mix type, and the team next undertook the formulation of the corresponding mathematical model.
--->
-
----
-
-The Wyndor Glass Co produces high-quality glass products and is about to launch two new products:
-
-- Product 1: 8-foot glass door with aluminum framing
-- Product 2: 4 x 6 foot double-hung wood-framed window
-
----
-
-Wyndor Glass Co wants to determine how much to produce of each product to maximise profits.
-
----
-
-To answer these questions we need information on
-
-- the expected revenue for each unit produced
-- the constraints on production
-
----
-
-The expected profit is
-
-- 3000 € per batch of product 1
-- 5000 € per batch of product 2
-
----
-
-
-Wyndor Glass Co has three plants in which different production processes can be performed.
-
-- Aluminum frames are made in plant 1
-- Wood frames are made in plant 2
-- Glass is produced in plant 3
-- Assembly is done in plant 3
-
----
-
-The production capacity is
-
-- 4 person months at plant 1
-- 12 person months at plant 2
-- 18 person months at plant 3
-
----
-
-Each batch of product 1 requires
-
-- 1 person month at plant 1
-- 3 person months at plant 3
-
----
-
-Each batch of product 2 requires
-
-- 2 person months at plant 2
-- 2 person months at plant 3
-
----
+<a href="../markdown-viewer.html?file=02-lecture/wyndor.md"><i class="fa-solid fa-magnifying-glass"></i> Wyndor Glass Co.</a>
 
 How can we model this decision problem?
 
+> [!TIP]
+> The model must contain the following:
+> - **Variables:** What are the decisions that can be taken?
+> - **Objective:** What is the goal?
+> - **Constraints:** What are the restirctions on the decisions?
+
 ---
 
-#### Decision variables ####
+#### Decision variables
 
 - The production quantity of product 1 $\Rightarrow x_1$ <!-- .element: class="fragment" data-fragment-index="1" -->
 - The production quantity of product 2 $\Rightarrow x_2$ <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
-#### Objective function ####
+#### Objective function
 
 maximise $3000x_1 + 5000x_2$
 
 ---
 
-#### Constraints ####
+#### Constraints
 
 - $x_1 \leq 4$ (capacity of plant 1) <!-- .element: class="fragment"  -->
 - $2x_2 \leq 12$ (capacity of plant 2) <!-- .element: class="fragment"  -->
@@ -681,7 +590,7 @@ maximise $3000x_1 + 5000x_2$
 
 ---
 
-#### Optimisation problem ####
+#### Optimisation problem
 
 maximise $3000x_1 + 5000x_2$
 
@@ -694,7 +603,7 @@ $$x_1 \geq 0, x_2 \geq 0$$
 
 ===
 
-### Summary ###
+### Summary
 
 - This session gave an introduction to linear programming.
 - We learned that optimal solutions can be found at a corner point.
