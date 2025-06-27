@@ -14,14 +14,14 @@ How can we model this decision problem?
 
 - There are 3 kibbutzim
 - Each kibbutz can plant sugar beets, cotton, and sorghum
-- For each crop a different net return can be expected 
-- The federation wants to maximise total net return
 - The amount of land available for each kibbutz is limited
 - The amount of water available for each kibbutz is limited
+- For each crop a different net return can be expected 
 - The total amount of sugar beet production is limited
 - The total amount of cotton production is limited
 - The total amount of sorghum production is limited
 - Each kibbutz must use the same share of its land
+- The confederation wants to maximise total net return
 
 ---
 
@@ -53,7 +53,7 @@ What is the objective function?
 
 #### Objective function ####
 
-$${\rm maximise}$$ <!-- .element: class="fragment"  -->
+maximise <!-- .element: class="fragment"  -->
 $$1000 (x_1^{\rm sugarbeets} + x_2^{\rm sugarbeets} +x_3^{\rm sugarbeets})$$ <!-- .element: class="fragment"  -->
 $$+ 750 (x_1^{\rm cotton} + x_2^{\rm cotton} +x_3^{\rm cotton})$$ <!-- .element: class="fragment"  -->
 $$+ 250 (x_1^{\rm sorghum} + x_2^{\rm sorghum} +x_3^{\rm sorghum})$$ <!-- .element: class="fragment"  -->
@@ -168,7 +168,7 @@ $$x_i^{\rm sugarbeets} \geq 0,  x_i^{\rm cotton} \geq 0,  x_i ^{\rm sorghum} \ge
 #### Linear program ####
 <!-- .element: style="font-size:200%;"  -->
 
-$${\rm maximise}\ 1000 (x_1^{\rm sugarbeets} + x_2^{\rm sugarbeets} +x_3^{\rm sugarbeets}) + 750 (x_1^{\rm cotton} + x_2^{\rm cotton} +x_3^{\rm cotton})+ 250 (x_1^{\rm sorghum} + x_2^{\rm sorghum} +x_3^{\rm sorghum})$$ 
+maximise $ 1000 (x_1^{\rm sugarbeets} + x_2^{\rm sugarbeets} +x_3^{\rm sugarbeets}) + 750 (x_1^{\rm cotton} + x_2^{\rm cotton} +x_3^{\rm cotton})+ 250 (x_1^{\rm sorghum} + x_2^{\rm sorghum} +x_3^{\rm sorghum})$ 
 subject to
 $$x_1^{\rm sugarbeets} + x_1^{\rm cotton}  + x_1^{\rm sorghum} \leq 400$$
 $$x_2^{\rm sugarbeets} + x_2^{\rm cotton}  + x_2^{\rm sorghum} \leq 600$$
@@ -179,11 +179,8 @@ $$3x_3^{\rm sugarbeets} + 2x_3^{\rm cotton}  + x_3^{\rm sorghum} \leq 375$$
 $$x_1^{\rm sugarbeets} + x_2^{\rm sugarbeets} +x_3^{\rm sugarbeets} \leq 600$$ 
 $$x_1^{\rm cotton} + x_2^{\rm cotton} +x_3^{\rm cotton} \leq 500$$
 $$x_1^{\rm sorghum} + x_2^{\rm sorghum} +x_3^{\rm sorghum} \leq 325$$
-
 $$\tfrac{1}{400} x_1^{\rm sugarbeets} + \tfrac{1}{400} x_1^{\rm cotton} + \tfrac{1}{400} x_1^{\rm sorghum} = \tfrac{1}{600} x_2^{\rm sugarbeets} + \tfrac{1}{600} x_2^{\rm cotton} + \tfrac{1}{600} x_2^{\rm sorghum}$$
-
 $$\tfrac{1}{600} x_2^{\rm sugarbeets} + \tfrac{1}{600} x_2^{\rm cotton} + \tfrac{1}{600} x_2^{\rm sorghum}= \tfrac{1}{300} x_3^{\rm sugarbeets} + \tfrac{1}{300} x_3^{\rm cotton} + \tfrac{1}{300} x_3^{\rm sorghum}$$
-
 $$x_i^{\rm sugarbeets} \geq 0,  x_i^{\rm cotton} \geq 0,  x_i ^{\rm sorghum} \geq 0\ {\rm for}\ i \in \lbrace 1,2,3 \rbrace$$
 
 
