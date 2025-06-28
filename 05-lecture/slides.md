@@ -198,17 +198,16 @@ $x$ and $y$ are <span style="text-decoration: line-through;">integers</span> rea
 
 Modifying a fractional solution can lead to **infeasible solutions** for the IP or **solutions of very bad quality**.
 
+> [!IMPORTANT]
+> The optimal solution of the integer program can be **very different** from the solution of the linear relaxation.
+
 ---
 
 Modifying a fractional solution may, however, be acceptable if the fractional part of the solution is small compared to the value of the closest integer (and if feasibility can be warranted).
 
----
-
-The optimal solution of the integer program can be very different from the solution of the linear relaxation.
-
 ===
 
-### Enumeration ###
+### Enumeration
 
 ---
 
@@ -456,28 +455,28 @@ $x$ and $y$ are integers
 
 ---
 
-### Implementations of branch & bound ###
+### MIP Solver
 
-Many tools for solving linear programs have also implemented a branch & bound approach for solving integer programs.
+There is a variety of free and commerical solvers for mixed integer programs.
 
 Therefore, our focus is on modelling integer programs and not on knowing the solution algorithms.
 
 ---
 
-#### Computational effort ####
+### Computational effort
 
-The branch & bound approach may have to solve many linear relaxations. Although solving a linear program is generally very fast, solving many of them can require a lot of time.
+The branch & bound approach may have to solve a very large number linear relaxations. Although solving a linear program is generally very fast, solving many of them can require a lot of time.
 
 ---
 
-#### Specialised approaches ####
+### Specialised approaches
 
 For many integer programs generic branch & bound implementations are not competitive and specialised algorithms for the problem class under consideration may be required to find optimal solutions within an acceptable amount of time.
 
 ===
 
 
-#### Binary decisions ####
+### Binary decisions
 
 ---
 
@@ -491,58 +490,26 @@ $x =\left\\{ \begin{array}{cl}
 
 ---
 
-#### Example: California Manufacturing Co ####
+#### Example: California Manufacturing Co
+
+### Example: <a href="markdown-viewer.html?file=05-lecture/california_manufacturing.md" data-preview-link>California Manufacturing Company <i class="fa-solid fa-magnifying-glass"></i></a>
+
+How can we model this decision problem as a binary program?
+
+> [!TIP]
+> The model must contain the following:
+> - **Variables:** What are the decisions that can be taken?
+> - **Objective:** What is the goal?
+> - **Constraints:** What are the restrictions on the decisions?
 
 ---
 
-The California Manufacturing Co is considering expansion by building
-a new factory in either Los Angeles or San Francisco, or perhaps even in both cities.
-
----
-
-
-| Factory location | Net present value | Costs         |
-|------------------|-------------------|---------------|
-| Los Angeles      | 9 million USD     | 6 million USD |
-| San Francisco    | 5 million USD     | 3 million USD |
-
----
-
-It also is considering building at most one new warehouse, but the choice of location is
-restricted to a city where a new factory is being built.
-
----
-
-| Warehouse location | Net present value | Costs         |
-|--------------------|-------------------|---------------|
-| Los Angeles        | 6 million USD     | 5 million USD |
-| San Francisco      | 4 million USD     | 2 million USD |
-
----
-
-The total capital available is 10 million USD.
-
----
-
-The objective is to find the feasible combination of alternatives that maximises the total net present value.
-
----
-
-In this problem there are four basic decisions to be made:
-
-1. Should the company build a factory in Los Angeles?
-2. Should the company build a factory in San Francisco?
-3. Should the company build a warehouse in Los Angeles?
-4. Should the company build a warehouse in San Francisco?
-
----
-
-Each decision can be represented by a binary variable $x_i$ with
+In this problem there are four questions to be answered. Each decision can be represented by a binary variable $x_i$ with
 
 $$
 x_i =\left\\{ \begin{array}{cl}
-0 & \textrm{if decision } i \textrm{ is no}\\\\
-1 & \textrm{if decision } i \textrm{ is yes}\\\\
+0 & \textrm{if the answer to question } i \textrm{ is no}\\\\
+1 & \textrm{if the answer to question } i \textrm{ is yes}\\\\
 \end{array}
 \right.
 $$
@@ -563,7 +530,7 @@ $x_3 \leq x_1\ $ (warehouse requires factory)
 
 $x_4 \leq x_2\ $ (warehouse requires factory)
 
-$x_1,x_2,x_3,x_4 \in \\{0,1\\}$
+$x_1,x_2,x_3,x_4 \in \lbrace 0,1 \rbrace$
 
 ===
 
@@ -571,32 +538,3 @@ $x_1,x_2,x_3,x_4 \in \\{0,1\\}$
 
 <small>Please read the case *Capacity Concerns* from *Hillier, Lieberman. Introduction to Operations Research, McGraw-Hill*.</small>
 
----
-
-> Emily first decides to evaluate the number and type of servers to purchase on a month-to-month basis. For each month, formulate an IP model to determine which servers Emily should purchase in that month to minimize costs in that month and support the new users. How many and which types of servers should she purchase in each month? How much is the total cost of the plan?
-
-Solve this problem.
-
----
-
-> Emily realizes that she could perhaps achieve savings if she bought a larger server in the initial months to support users in the final months. She therefore decides to evaluate the number and type of servers to purchase over the entire planning period. Formulate an IP model to determine which servers Emily should purchase in which months to minimize total cost and support all new users. How many and which types of servers should she purchase in each month? How much is the total cost of the plan?
-
----
-
-> Why is the answer using the first method different from that using the second method?
-
----
-
-> Are there other costs that Emily is not accounting for in her problem formulation? If so, what are they?
-
----
-
-> What further concerns might the various departments of CommuniCorp have regarding the intranet?
-
-===
-
-### Summary ###
-
-- We learned how integer programming differs from linear programming.
-- We walked through solving integer programs with branch and bound.
-- We learned how to model integer programs.
