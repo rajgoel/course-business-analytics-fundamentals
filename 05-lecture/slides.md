@@ -79,8 +79,8 @@ $x \leq 5$
 
 $x \geq 0, y \geq 0$
 
-<p class="highlight" style="text-decoration: line-through;">
-$x$ and $y$ are integers
+<p class="highlight" >
+$x$ and $y$ are <span style="text-decoration: line-through;">integers</span> real numbers
 </p>
 
 ---
