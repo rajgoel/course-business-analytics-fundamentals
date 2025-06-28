@@ -24,10 +24,11 @@ $5x+10y \leq 49$
 
 $x \leq 5$
 
-
 $x \geq 0, y \geq 0$
 
-$x$ and $y$ are integers <!-- .element class="highlight" -->
+<p class="highlight">
+$x$ and $y$ are integers
+</p>
 
 ---
 
