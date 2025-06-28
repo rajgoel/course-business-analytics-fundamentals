@@ -74,8 +74,9 @@ $x \leq 5$
 
 $x \geq 0, y \geq 0$
 
-$\style{text-decoration:line-through}{x}$ and $\style{text-decoration:line-through}{y}$ are integers <!-- .element class="highlight" style="text-decoration: line-through;" -->
-
+<p class="highlight" style="text-decoration: line-through;">
+$x$ and $y$ are integers
+</p>
 
 ---
 
