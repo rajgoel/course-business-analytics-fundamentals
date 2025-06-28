@@ -11,6 +11,7 @@ An **integer program (IP)** is a linear program in which some or all of the vari
 > - **mixed integer program (MIP)**,
 > - **mixed integer linear program (MILP)** and 
 > - **integer program (IP)** 
+> 
 > are often used synonymously. Integer programs in which each integer variable can only take a value of 0 or 1  are called **binary programs**.
 
 
