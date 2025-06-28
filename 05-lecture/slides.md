@@ -197,14 +197,18 @@ $x$ and $y$ are <span style="text-decoration: line-through;">integers</span> rea
 
 ---
 
-Modifying a fractional solution can lead to **infeasible solutions** for the IP or **solutions of very bad quality**.
+Modifying the solution of the linear relaxation is only acceptable 
+
+- if the fractional part of the solution is small compared to the value of the closest integer value and 
+- if feasibility can be warranted.
+
 
 > [!IMPORTANT]
+> Modifying the solution of the linear relaxation can lead to 
+> - **infeasible solutions** or 
+> - **solutions of very bad quality**.
+> 
 > The optimal solution of the integer program can be **very different** from the solution of the linear relaxation.
-
----
-
-Modifying a fractional solution may, however, be acceptable if the fractional part of the solution is small compared to the value of the closest integer (and if feasibility can be warranted).
 
 ===
 
