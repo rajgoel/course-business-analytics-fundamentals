@@ -485,11 +485,11 @@ For many integer programs generic branch & bound implementations are not competi
 
 ---
 
-A binary decision can be represented by a binary variable $x$ with<br>
+A question that can be answered with *yes* or *no* can be represented by a binary variable $x$ with<br>
 
 $x =\left\\{ \begin{array}{cl}
-0 & \textrm{if decision } i \textrm{ is no}\\\\
-1 & \textrm{if decision } i \textrm{ is yes}\\\\
+0 & \textrm{if the answer to the question is no}\\\\
+1 & \textrm{if the answer to the question is yes}\\\\
 \end{array}
 \right.$
 
@@ -507,7 +507,7 @@ How can we model this decision problem as a binary program?
 
 ---
 
-In this problem there are four questions to be answered. Each decision can be represented by a binary variable $x_i$ with
+In this problem there are four questions to be answered. Each question can be represented by a binary variable $x_i$ with
 
 $$
 x_i =\left\\{ \begin{array}{cl}
@@ -534,10 +534,4 @@ $x_3 \leq x_1\ $ (warehouse requires factory)
 $x_4 \leq x_2\ $ (warehouse requires factory)
 
 $x_1,x_2,x_3,x_4 \in \lbrace 0,1 \rbrace$
-
-===
-
-### Case study: Capacity Concerns ###
-
-<small>Please read the case *Capacity Concerns* from *Hillier, Lieberman. Introduction to Operations Research, McGraw-Hill*.</small>
 
