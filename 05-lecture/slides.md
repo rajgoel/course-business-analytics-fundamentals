@@ -491,8 +491,6 @@ $x =\left\\{ \begin{array}{cl}
 
 ---
 
-#### Example: California Manufacturing Co
-
 ### Example: <a href="markdown-viewer.html?file=05-lecture/california_manufacturing.md" data-preview-link>California Manufacturing Company <i class="fa-solid fa-magnifying-glass"></i></a>
 
 How can we model this decision problem as a binary program?
