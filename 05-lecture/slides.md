@@ -477,7 +477,7 @@ For many integer programs generic branch & bound implementations are not competi
 ===
 
 
-### Binary decisions
+### Binary programs
 
 ---
 
