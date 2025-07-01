@@ -68,13 +68,11 @@ How can we model this decision problem?
 
 We can model this problem using binary variables $x_{ij}$ indicating whether product $i$ will be allocated $j$ spots.
 
-$$
-x_{ij} =\left\{ \begin{array}{cl}
+$$x_{ij} =\left\lbrace \begin{array}{cl}
 1 & \textrm{if product } i \textrm{ is allocated } j \textrm{ spots}\\
 0 & \textrm{otherwise}\\
 \end{array}
-\right.
-$$
+\right.$$
 
 ---
 
