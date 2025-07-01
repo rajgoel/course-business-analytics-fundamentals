@@ -38,7 +38,7 @@ If we have a set of binary variables $y_1, \ldots, y_n$, we can ensure that **ex
 $$\sum_{i=1}^{n} y_i = k$$
 
 > [!NOTE]
-> Analogously, we can ensure that **at most** $k$ **out of** $n$* or **at least** $k$ **out of** $n$ binary variables must take a value of 1.
+> Analogously, we can ensure that **at most** $k$ **out of** $n$ or **at least** $k$ **out of** $n$ binary variables must take a value of 1.
 
 ---
 
