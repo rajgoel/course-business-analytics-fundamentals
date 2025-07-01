@@ -6,7 +6,7 @@
 
 **Binary decision variables** allow us to model alternative constraints of the form
 
-- <condition_1> `or` <condition_2> [ `or` ... ]
+- `<condition_1> or <condition_2> [ or ... ]`
 
 > [!IMPORTANT]
 > In a MIP (or LP), a solution must satisfy all constraints, so we cannot directly include above.
