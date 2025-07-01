@@ -232,9 +232,8 @@ maximise $\displaystyle\sum_{i\in I}  p_i x_i$
 
 - The production time required at the chosen plant must not exceed the time available:
   $$\texttt{ if } z_j = 1 \texttt{ then } \sum_{i\in I} a_{ij} x_i \leq u_j \textrm{ for all } j \in J$$  
-
-> [!WARNING] 
-> This constraint is not linear, we will fix this later!
+  > [!WARNING] 
+  >  This constraint is not linear, we will fix this later!
 
 ---
 
@@ -243,6 +242,8 @@ maximise $\displaystyle\sum_{i\in I}  p_i x_i$
   $$z_j \in \lbrace 0, 1 \rbrace \textrm{ for all } j \in J$$
 
 ---
+
+<!-- .slide style="font-size:80%;" -->
 
 The problem is to 
 
@@ -431,6 +432,8 @@ $M$ is sufficiently large <!-- .element class="highlight" -->
 
 ---
 
+<!-- .slide style="font-size:80%;" -->
+
 ### Example: <a href="markdown-viewer.html?file=06-lecture/good_products.md" data-preview-link>Good Products Company <i class="fa-solid fa-magnifying-glass"></i></a>
 
 The problem is to 
@@ -451,10 +454,9 @@ $$x_i \geq 0, y_i \in \lbrace 0, 1 \rbrace \textrm{ for all } i \in I$$
 
 $$z_j \in \lbrace 0, 1 \rbrace \textrm{ for all } j \in J$$
 
-> [!WARNING] 
-> This is not a MIP, we will fix this later!
-
 ---
+
+<!-- .slide style="font-size:80%;" -->
 
 The integer program is to 
 
@@ -477,6 +479,8 @@ $$z_j \in \lbrace 0, 1 \rbrace \textrm{ for all } j \in J$$
 <span class="highlight">
 where $M$ is a sufficiently large value.
 </span
+
+---
 
 > [!TIP] 
 > When using a solver we need to specify a value for $M$. We should pick a value that is not too large to avoid numerical errors. A rough estimate that is sufficiently large, but not too large is often easy to find.
