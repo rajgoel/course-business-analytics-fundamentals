@@ -93,7 +93,7 @@ $$\sum_{j \in J}  x_{ij} \leq 1 \textrm{ for all } i \in I$$
 
 The number of allocations must not exceed $u$:
 
-$$\sum_{i \in I}\sum_{j \in J} j x_{ij} \leq u$$
+$$\sum_{i \in I}\sum_{j \in J} j \cdot x_{ij} \leq u$$
 
 Binary variables:
 
@@ -109,7 +109,7 @@ maximise $\displaystyle\sum_{i\in I}\sum_{j \in J}  p_{ij} x_{ij}$
 subject to 
 
 $$\sum_{j \in J}  x_{ij} \leq 1 \textrm{ for all } i \in I$$
-$$\sum_{i \in I}\sum_{j \in J} j x_{ij} \leq u$$
+$$\sum_{i \in I}\sum_{j \in J} j \cdot  x_{ij} \leq u$$
 $$x_{ij} \in \lbrace 0, 1 \rbrace \textrm{ for all } i \in I, j \in J$$
 
 
@@ -136,8 +136,8 @@ where
 
 Assume we have a capacity limit $b'$ and we have the option increase the capacity to $b''$. Moreover we have these conditional constraints:
 
-$$\textt{if } \textrm{capacity is increased} \textt{ then } \sum_{i=1}^n a_i x_i \leq b'$$
-$$\textt{if } \textrm{capacity is not increased} \textt{ then } \sum_{i=1}^n a_i x_i \leq b'$$
+$$\texttt{if } \textrm{capacity is increased} \texttt{ then } \sum_{i=1}^n a_i x_i \leq b'$$
+$$\texttt{if } \textrm{capacity is not increased} \texttt{ then } \sum_{i=1}^n a_i x_i \leq b'$$
 
 ---
 
@@ -145,8 +145,8 @@ $$\textt{if } \textrm{capacity is not increased} \textt{ then } \sum_{i=1}^n a_i
 
 Binary decision variables can be used to represent the conditions.
 
-$$\textt{if } y = 0 \text{ then } \sum_{i=1}^n a_i x_i \leq b'$$
-$$\textt{if } y = 1 \text{ then } \sum_{i=1}^n a_i x_i \leq b''$$
+$$\texttt{if } y = 0 \text{ then } \sum_{i=1}^n a_i x_i \leq b'$$
+$$\texttt{if } y = 1 \text{ then } \sum_{i=1}^n a_i x_i \leq b''$$
 
 where $y \in \lbrace 0, 1 \rbrace$.
 
@@ -165,8 +165,8 @@ Linearisation is the process of converting a non-linear expression into an equiv
 
 The constraints with conditional right hand side values
 
-$$\textt{if } y = 0 \text{ then } \sum_{i=1}^n a_i x_i \leq b'$$
-$$\textt{if } y = 1 \text{ then } \sum_{i=1}^n a_i x_i \leq b''$$
+$$\texttt{if } y = 0 \text{ then } \sum_{i=1}^n a_i x_i \leq b'$$
+$$\texttt{if } y = 1 \text{ then } \sum_{i=1}^n a_i x_i \leq b''$$
 
 can be linearised by
 
@@ -229,7 +229,7 @@ maximise $\displaystyle\sum_{i\in I}  p_i x_i$
   $$\sum_{j\in J} z_j = 1$$  
 
 - The production time required at the chosen plant must not exceed the time available:
-  $$\texttt{ if } z_j = 1 \textt{ then } \sum_{i\in I} a_{ij} x_i \leq u_j \textrm{ for all } j \in J$$  
+  $$\texttt{ if } z_j = 1 \texttt{ then } \sum_{i\in I} a_{ij} x_i \leq u_j \textrm{ for all } j \in J$$  
 
 > [!WARNING] 
 > This constraint is not linear, we will fix this later!
@@ -249,7 +249,7 @@ subject to
 $$\sum_{i\in I} y_i \leq 2$$  
 $$x_i \leq 0 + y_i ( q_i - 0)  = q_i y_i \textrm{ for all } i \in I$$
 $$\sum_{j\in J} z_j = 1$$  
-$$\texttt{ if } z_j = 1 \textt{ then } \sum_{i\in I} a_{ij} x_i \leq u_j \textrm{ for all } j \in J$$  <!-- .element class="highlight" -->
+$$\texttt{ if } z_j = 1 \texttt{ then } \sum_{i\in I} a_{ij} x_i \leq u_j \textrm{ for all } j \in J$$  <!-- .element class="highlight" -->
 $$x_i \geq 0, y_i \in \lbrace 0, 1 \rbrace \textrm{ for all } i \in I$$
 $$z_j \in \lbrace 0, 1 \rbrace \textrm{ for all } j \in J$$
 
@@ -429,7 +429,7 @@ subject to
 $$\sum_{i\in I} y_i \leq 2$$  
 $$x_i \leq 0 + y_i ( q_i - 0)  = q_i y_i \textrm{ for all } i \in I$$
 $$\sum_{j\in J} z_j = 1$$  
-$$\texttt{ if } z_j = 1 \textt{ then } \sum_{i\in I} a_{ij} x_i \leq u_j \textrm{ for all } j \in J$$  <!-- .element class="highlight" -->
+$$\texttt{ if } z_j = 1 \texttt{ then } \sum_{i\in I} a_{ij} x_i \leq u_j \textrm{ for all } j \in J$$  <!-- .element class="highlight" -->
 $$x_i \geq 0, y_i \in \lbrace 0, 1 \rbrace \textrm{ for all } i \in I$$
 $$z_j \in \lbrace 0, 1 \rbrace \textrm{ for all } j \in J$$
 
