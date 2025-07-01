@@ -14,10 +14,10 @@ https://rajgoel.github.io/course-business-analytics-fundamentals/
 | 04      | [Generic Models](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=04-lecture)                | [Model & Data in AMPL](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=04-lab)         |
 | 05      | [Integer Programming](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=05-lecture)           | [Cases & Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=05-lab)             |
 | 06      | [Logical Constraints](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=06-lecture)           | [Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=06-lab)                     |
-| 07      | [Advanced IP Modelling](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=07-lecture)         | [Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=07-lab)                     |
-| 08      | [LP/IP Modelling](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=08-lecture)               | [Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=08-lab)                     |
-| 09      | [Network Optimization Problems](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=09-lecture) | [Cases & Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=09-lab)             |
-| 10      | [Network Flow Modelling](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=10-lecture)        | [Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=10-lab)                     |
+| 07      | [LP/IP Modelling](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=07-lecture)               | [Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=07-lab)                     |
+| 08      | [Network Optimization Problems](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=08-lecture) | [Cases & Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=08-lab)             |
+| 09      | [Network Flow Modelling](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=09-lecture)        | [Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=09-lab)                     |
+| 10      | [Constraint Programming](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=10-lecture)        | Mock Exam                                                               |
 |   11    | Ask me anything               | Ask me anything              |
 
 ## Grading

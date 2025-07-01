@@ -17,14 +17,13 @@
     { "topic": "5. Lab: Cases & Examples",             "src": "slides.md", "folder": "05-lab" },
     { "topic": "6. Logical Constraints",               "src": "slides.md", "folder": "06-lecture" },
     { "topic": "6. Lab: Examples",                     "src": "slides.md", "folder": "06-lab" },
-    { "topic": "7. Advanced IP Modelling",             "src": "slides.md", "folder": "07-lecture" },
+    { "topic": "7. LP/IP Modelling",                   "src": "slides.md", "folder": "07-lecture" },
     { "topic": "7. Lab: Examples",                     "src": "slides.md", "folder": "07-lab" },
-    { "topic": "8. LP/IP Modelling",                   "src": "slides.md", "folder": "08-lecture" },
-    { "topic": "8. Lab: Examples",                     "src": "slides.md", "folder": "08-lab" },
-    { "topic": "9. Network Optimization Problems",     "src": "slides.md", "folder": "09-lecture" },
-    { "topic": "9. Lab: Cases & Examples",             "src": "slides.md", "folder": "09-lab" },
-    { "topic": "10. Network Flow Modelling",           "src": "slides.md", "folder": "10-lecture" },
-    { "topic": "10. Lab: Examples",                    "src": "slides.md", "folder": "10-lab" }
+    { "topic": "8. Network Optimization Problems",     "src": "slides.md", "folder": "08-lecture" },
+    { "topic": "8. Lab: Cases & Examples",             "src": "slides.md", "folder": "08-lab" },
+    { "topic": "9. Network Flow Modelling",            "src": "slides.md", "folder": "09-lecture" },
+    { "topic": "9. Lab: Examples",                     "src": "slides.md", "folder": "09-lab" },
+    { "topic": "10. Constraint Programming",           "src": "slides.md", "folder": "10-lecture" }
   ]
 }
 

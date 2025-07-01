@@ -243,7 +243,7 @@ maximise $\displaystyle\sum_{i\in I}  p_i x_i$
 
 ---
 
-<!-- .slide style="font-size:80%;" -->
+<!-- .slide style="font-size:70%;" -->
 
 The problem is to 
 
@@ -430,7 +430,7 @@ $M$ is sufficiently large <!-- .element class="highlight" -->
 
 ---
 
-<!-- .slide style="font-size:80%;" -->
+<!-- .slide style="font-size:70%;" -->
 
 ### Example: <a href="markdown-viewer.html?file=06-lecture/good_products.md" data-preview-link>Good Products Company <i class="fa-solid fa-magnifying-glass"></i></a>
 
@@ -452,7 +452,7 @@ $$x_i \geq 0, y_i \in \lbrace 0, 1 \rbrace \textrm{ for all } i \in I, z_j \in \
 
 ---
 
-<!-- .slide style="font-size:80%;" -->
+<!-- .slide style="font-size:70%;" -->
 
 The integer program is to 
 
