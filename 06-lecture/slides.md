@@ -136,8 +136,8 @@ where
 
 Assume we have a capacity limit $b'$ and we have the option increase the capacity to $b''$. Moreover we have these conditional constraints:
 
-$$\texttt{if } \textrm{capacity is increased} \texttt{ then } \sum_{i=1}^n a_i x_i \leq b'$$
-$$\texttt{if } \textrm{capacity is not increased} \texttt{ then } \sum_{i=1}^n a_i x_i \leq b'$$
+$$\texttt{if } \textit{capacity is increased} \texttt{ then } \sum_{i=1}^n a_i x_i \leq b'$$
+$$\texttt{if } \textit{capacity is not increased} \texttt{ then } \sum_{i=1}^n a_i x_i \leq b''$$
 
 ---
 
@@ -170,7 +170,7 @@ $$\texttt{if } y = 1 \text{ then } \sum_{i=1}^n a_i x_i \leq b''$$
 
 can be linearised by
 
-$$\displaystyle\sum_{i=1}^{n} a_i x_i  \leq b' \class{highlight}{+ y(b''-b')}$$
+$$\displaystyle\sum_{i=1}^{n} a_i x_i  \leq b' \class{highlight}{+ (b''-b')y}$$
 
 > [!IMPORTANT]
 > This works the same for conditional constraints using `≥` or `=`.
@@ -223,7 +223,9 @@ maximise $\displaystyle\sum_{i\in I}  p_i x_i$
   $$\sum_{i\in I} y_i \leq 2$$  
 
 - If the product is not chosen to be produced, the production quantity must not be positive. Otherwise, the production quantity must not exceed the sales potential:
-  $$x_i \leq 0 + y_i ( q_i - 0)  = q_i y_i \textrm{ for all } i \in I$$
+  $$x_i \leq 0 + ( q_i - 0)y_i  = q_i y_i \textrm{ for all } i \in I$$
+
+---
 
 - Just one of the two plants should be chosen to be the sole producer:
   $$\sum_{j\in J} z_j = 1$$  
@@ -233,6 +235,8 @@ maximise $\displaystyle\sum_{i\in I}  p_i x_i$
 
 > [!WARNING] 
 > This constraint is not linear, we will fix this later!
+
+---
 
 - Non-negativities and binaries
   $$x_i \geq 0, y_i \in \lbrace 0, 1 \rbrace \textrm{ for all } i \in I$$
