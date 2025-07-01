@@ -148,8 +148,6 @@ Binary decision variables can be used to represent the conditions.
 $$\texttt{if } y = 0 \text{ then } \sum_{i=1}^n a_i x_i \leq b'$$
 $$\texttt{if } y = 1 \text{ then } \sum_{i=1}^n a_i x_i \leq b''$$
 
-where $y \in \lbrace 0, 1 \rbrace$.
-
 > [!IMPORTANT]
 > These expressions are **not linear** and cannot be used in a MIP.
 
@@ -253,16 +251,13 @@ subject to
 
 $$\sum_{i\in I} y_i \leq 2$$  
 
-$$x_i \leq 0 + y_i ( q_i - 0)  = q_i y_i \textrm{ for all } i \in I$$
+$$x_i \leq q_i y_i \textrm{ for all } i \in I$$
 
 $$\sum_{j\in J} z_j = 1$$  
 
 $$\texttt{ if } z_j = 1 \texttt{ then } \sum_{i\in I} a_{ij} x_i \leq u_j \textrm{ for all } j \in J$$  <!-- .element class="highlight" -->
 
 $$x_i \geq 0, y_i \in \lbrace 0, 1 \rbrace \textrm{ for all } i \in I, z_j \in \lbrace 0, 1 \rbrace \textrm{ for all } j \in J$$
-
-> [!WARNING] 
-> This is not a MIP, we will fix this later!
 
 ===
 
@@ -442,7 +437,7 @@ subject to
 
 $$\sum_{i\in I} y_i \leq 2$$ 
  
-$$x_i \leq 0 + y_i ( q_i - 0)  = q_i y_i \textrm{ for all } i \in I$$
+$$x_i \leq q_i y_i \textrm{ for all } i \in I$$
 
 $$\sum_{j\in J} z_j = 1$$  
 
@@ -462,7 +457,7 @@ subject to
 
 $$\sum_{i\in I} y_i \leq 2$$  
 
-$$x_i \leq 0 + y_i ( q_i - 0)  = q_i y_i \textrm{ for all } i \in I$$
+$$x_i \leq q_i y_i \textrm{ for all } i \in I$$
 
 $$\sum_{j\in J} z_j = 1$$  
 
@@ -512,7 +507,7 @@ $x_1 + x_2 \geq 2 \class{highlight}{- M(1-y)}$
 
 <div class="fragment">
 A value of $M=2$ is sufficiently large and we can write
-$x_1 + x_2 \geq 2y$
+$$x_1 + x_2 \geq 2y$$
 </div>
 
 ---
@@ -525,7 +520,7 @@ $x_1 + x_2 \leq 1 \class{highlight}{+ My}$
 
 <div class="fragment">
 A value of $M=1$ is sufficiently large and we can write
-$x_1 + x_2 \leq 1 + y$
+$$x_1 + x_2 \leq 1 + y$$
 </div>
 
 ---
@@ -568,7 +563,7 @@ $x_1 + x_2 \geq 1 \class{highlight}{- M(1-y)}$
 
 <div class="fragment">
 A value of $M=1$ is sufficiently large and we can write
-$x_1 + x_2 \geq y$
+$$x_1 + x_2 \geq y$$
 </div>
 
 ---
@@ -582,7 +577,7 @@ $x_1 + x_2 \leq 0 \class{highlight}{+ My}$
 
 <div class="fragment">
 A value of $M=2$ is sufficiently large and we can write
-$x_1 + x_2 \leq 2y$
+$$x_1 + x_2 \leq 2y$$
 </div>
 
 ---
