@@ -439,11 +439,16 @@ maximise $\displaystyle\sum_{i\in I}  p_i x_i$
 
 subject to
 
-$$\sum_{i\in I} y_i \leq 2$$  
+$$\sum_{i\in I} y_i \leq 2$$ 
+ 
 $$x_i \leq 0 + y_i ( q_i - 0)  = q_i y_i \textrm{ for all } i \in I$$
+
 $$\sum_{j\in J} z_j = 1$$  
+
 $$\texttt{ if } z_j = 1 \texttt{ then } \sum_{i\in I} a_{ij} x_i \leq u_j \textrm{ for all } j \in J$$  <!-- .element class="highlight" -->
+
 $$x_i \geq 0, y_i \in \lbrace 0, 1 \rbrace \textrm{ for all } i \in I$$
+
 $$z_j \in \lbrace 0, 1 \rbrace \textrm{ for all } j \in J$$
 
 > [!WARNING] 
@@ -458,9 +463,15 @@ maximise $\displaystyle\sum_{i\in I}  p_i x_i$
 subject to
 
 $$\sum_{i\in I} y_i \leq 2$$  
+
 $$x_i \leq 0 + y_i ( q_i - 0)  = q_i y_i \textrm{ for all } i \in I$$
+
 $$\sum_{j\in J} z_j = 1$$  
-$$\sum_{i\in I} a_{ij} x_i \leq u_j \class{+ M(1-z_j)} \textrm{ for all } j \in J$$  $$x_i \geq 0, y_i \in \lbrace 0, 1 \rbrace \textrm{ for all } i \in I$$
+
+$$\sum_{i\in I} a_{ij} x_i \leq u_j \class{+ M(1-z_j)} \textrm{ for all } j \in J$$  
+
+$$x_i \geq 0, y_i \in \lbrace 0, 1 \rbrace \textrm{ for all } i \in I$$
+
 $$z_j \in \lbrace 0, 1 \rbrace \textrm{ for all } j \in J$$
 
 <span class="highlight">
