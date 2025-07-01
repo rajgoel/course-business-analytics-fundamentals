@@ -251,10 +251,15 @@ maximise $\displaystyle\sum_{i\in I}  p_i x_i$
 subject to
 
 $$\sum_{i\in I} y_i \leq 2$$  
+
 $$x_i \leq 0 + y_i ( q_i - 0)  = q_i y_i \textrm{ for all } i \in I$$
+
 $$\sum_{j\in J} z_j = 1$$  
+
 $$\texttt{ if } z_j = 1 \texttt{ then } \sum_{i\in I} a_{ij} x_i \leq u_j \textrm{ for all } j \in J$$  <!-- .element class="highlight" -->
+
 $$x_i \geq 0, y_i \in \lbrace 0, 1 \rbrace \textrm{ for all } i \in I$$
+
 $$z_j \in \lbrace 0, 1 \rbrace \textrm{ for all } j \in J$$
 
 > [!WARNING] 
@@ -296,7 +301,7 @@ $x \geq 0, y \geq 0$
 
 $x$ and $y$ are integers 
 
-`$z\in\{0,1\}$` <!-- .element class="highlight" -->
+$$z\in \lbrace 0,1 \rbrace$$ <!-- .element class="highlight" -->
 
 ---
 
@@ -307,9 +312,13 @@ maximise $-x + 4y$
 subject to
 
 $$-10x+20y \leq 22$$
+
 $$5x+10y \leq 49$$
+
 $$x \leq 5$$
+
 $$y \leq 1 + M(1-z)$$ <!-- .element class="highlight" -->
+
 $$x \geq 0, y \geq 0$$
 
 $x$ and $y$ are integers 
