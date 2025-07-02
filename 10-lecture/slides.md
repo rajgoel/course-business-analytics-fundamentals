@@ -1,2 +1,97 @@
+## Constrained programming
+
+---
+
+Linear programming, integer programming, and network optimisation assume a narrowly defined structure of the problem:
+
+- variables must be continuous or integer,
+- constraints must be linear, and
+- the objective function must be linear.
+
+---
+
+Constrained programming is a (vaguely defined) term putting the focus on specifying a problem by stating variables and constraints allowing for a wide variety of constraints that cannot be used in integer programming.
+
+Often, the goal is to only find a solution satisfying all constraints, in constraint optimisation an objective function can also be added.
+
+---
+
+By breaking with core assumptions of  linear and integer programming, constrained programs can no longer be solved with the simplex algorithm or branch and bound.
+
+Instead, constraint programming relies on:
+
+- **Constraint propagation:** Narrowing down variable domains by applying constraints.
+- **Search strategies:** Exploring combinations of variable assignments (e.g., depth-first search).
+
 > [!WARNING]
-> Content is not yet available.
+> Constrained programming solvers are typically **much slower** compared to LP and MIP solvers.
+
+---
+
+The main benefit of constrained programming is that it simplifies model formulation, by allowing
+
+- `if-then-else` statements
+- `alldifferent(x_1, x_2, ..., x_n )` requirements over a set of variables
+- `notequal(x,y)` statements over a pair of variables
+- non-linear expressions
+- ...
+
+Syntax and capabilities of constrained programming solvers vary. 
+
+---
+
+Well-known constrained programming solvers are:
+
+- [Google OR-Tools: CP-SAT)](https://developers.google.com/optimization/cp/cp_solver)
+- [CPLEX: CP Optimizer](https://www.ibm.com/products/ilog-cplex-optimization-studio/cplex-cp-optimizer)
+- [Hexaly](https://www.hexaly.com/) 
+
+These solvers use a variety of techniques that are not publically documented in detail.
+
+---
+
+Constrained programming is mainly used when the time required to model a problem is more critical than the time required to find a solution.
+
+---
+
+In many real-life cases, optimality of a solution is not a goal, because most input parameters are estimates anyhow.
+
+---
+
+Rather than sacrificing expressiveness in modelling, sacrificing solution quality may more reasonable.
+
+===
+
+### Example: Sudoku
+
+![Sudoku](sudoku.png)
+
+---
+
+### Rules
+
+- In every row all numbers must be different.
+- In every column all numbers must be different.
+- In each of the 9 subsquares all numbers must be different.
+- The given numbers must not be changed.
+
+---
+
+### CP Model
+
+**Variables:**
+
+- For each cell $(i,j)$, define a variable $x_{ij} \in \lbrace 1,2,\ldots,9\rbrace$
+
+**Constraints:**
+
+- If a number is given in cell $(i,j) \in \in \lbrace 1,2,\ldots,9\rbrace \times \in \lbrace 1,2,\ldots,9\rbrace$, then fix $x_{ij}$ to that value.
+- For each row $i\in \lbrace 1,2,\ldots,9\rbrace$, all values $x_{i,1}, x_{i,2}, ldots, x_{i,9}$​ must be different.
+- For each column $j\in \lbrace 1,2,\ldots,9\rbrace$, all values $x_{1,j}, x_{2,j}, ldots, x_{9,j}$​ must be different.
+- For each block indexed by $(k,h) \in \lbrace 1,2,3 \rbrace \times \lbrace 1,2,3 \rbrace$, the variables
+  $$ \left\lbrace x_{i,j} \mid i \in \lbrace 1 + 3(h-1), 2 + 3(h-1), 3 + 3(h-1) \rbrace, \quad j \in 1 + 3(k-1), 2 + 3(k-1), 3 + 3(k-1) \right\rbrace $$
+  must be different.
+
+---
+
+### Exercise: MIP equivalent
