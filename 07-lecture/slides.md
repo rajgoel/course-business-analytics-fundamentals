@@ -108,7 +108,7 @@ Extend the model by the new constraint.
 ---
 
 - Let $q_i$ denote the regular production limit for product $i$.
-- Let $\hat a_i$ denote the time required for production of product $i$ in excess of $q_i$. We assume that $\hat a_i > a_i$ for all $i\in I$.
+- Let $\hat a_i$ denote the time required for production of product $i$ in excess of $q_i$. <span class="highlight">We assume that $\hat a_i > a_i$ for all $i\in I$. </span>
 - Let $y_i$ denote the number of units to be produced of product $i$ in excess of $q_i$ units.
 
 > [!TIP]
@@ -126,13 +126,10 @@ $$\class{highlight}{x_i \leq q_i \textrm{ for all } i \in I}$$
 $$\sum_{i \in I} a_i x_i \class{highlight}{+ \sum_{i \in I} \hat a_i y_i} \leq u$$
 $$x_i \leq Mz_i \textrm{ for all } i \in I$$
 
-$$x_i \geq 0 \textrm{ for all } i\in I, \class{highlight}{y_i \geq 0 \textrm{ for all } i\in I}$$
-$$z_i \in \lbrace 0,1 \rbrace  \textrm{ for all } i\in I}$$
+$$x_i \geq 0 , \class{highlight}{y_i \geq 0} \textrm{ for all } i\in I$$
+$$z_i \in \lbrace 0,1 \rbrace  \textrm{ for all } i\in I$$
 
 where $M$ is a sufficiently large number.
-
-> [!IMPORTANT]
-> With $\hat a_i > a_i$ for all $i\in I$, we know that there exists an optimal solution with $y_i=0$ if $x_i < q_i$.
 
 ---
 
@@ -159,7 +156,7 @@ we need to introduce an auxiliary binary variable.
 - Let $\hat p_i$ denote the time required for and production of product $i$ in excess in excess of $q_i$.
 - Let $w_i$ denote a binary variable indicating whether $q_i$ items or more are produced of product $i$.
 
-> [!IMPORTANT]
+> [!NOTE]
 > We no longer need to assume that $\hat a_i > a_i$ for all $i\in I$.
 
 ---
@@ -178,8 +175,8 @@ $$\sum_{i \in I} a_i x_i + \sum_{i \in I} \hat a_i y_i \leq u$$
 $$\class{highlight}{y_i \leq Mw_i  \textrm{ for all } i \in I}$$ 
 $$x_i \leq Mz_i \textrm{ for all } i \in I$$
 
-$$x_i \geq 0 \textrm{ for all } i\in I, y_i \geq 0 \textrm{ for all } i\in I$$
-$$z_i \in \lbrace 0,1 \rbrace \textrm{ for all } i \in I, \class{highlight}{w_i \in \lbrace 0,1 \rbrace} \textrm{ for all } i\in I}$$
+$$x_i \geq 0 , y_i \geq 0 \textrm{ for all } i\in I$$
+$$z_i \in \lbrace 0,1 \rbrace \textrm{ for all } i \in I, \class{highlight}{w_i \in \lbrace 0,1 \rbrace} \textrm{ for all } i\in I$$
 
 where $M$ is a sufficiently large number.
 
@@ -232,8 +229,8 @@ $$x_i \leq Mz_i \textrm{ for all } i \in I$$
 $$\class{highlight}{z_i + z_j \leq v_{i,j} + 1}$$
 $$\class{highlight}{z_i + z_j \geq 2v_{i,j}}$$
 
-$$x_i \geq 0 \textrm{ for all } i\in I, y_i \geq 0 \textrm{ for all } i\in I$$
-$$z_i \in \lbrace 0,1 \rbrace \textrm{ for all } i\in I, w_i \in \lbrace 0,1 \rbrace \textrm{ for all } i\in I, \class{highlight}{v_{i,j} \in \lbrace 0,1 \rbrace} \textrm{ for all } i\in I}$$
+$$x_i \geq 0 , y_i \geq 0 \textrm{ for all } i\in I$$
+$$z_i \in \lbrace 0,1 \rbrace, w_i \in \lbrace 0,1 \rbrace, \class{highlight}{v_{i,j} \in \lbrace 0,1 \rbrace} \textrm{ for all } i\in I$$
 
 where $M$ is a sufficiently large number.
 
