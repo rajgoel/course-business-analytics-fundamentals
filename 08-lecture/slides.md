@@ -352,7 +352,7 @@ The minimum-cost network flow problem can be modelled using linear variables $x_
 
 For each node $i \in N$ the difference between the total outgoing and incoming flow must be equal to the supply $b_i$, i.e. 
 
-$$\underbrace{\sum_{(i,j)\in A} x_{i,j}}_{{\rm flow out of } i} - \underbrace{\sum_{(j,i)\in A} x_{j,i}}_{{\rm flow into } i} = b_i \textrm{ for all } i\in N$$
+$$\underbrace{\sum_{(i,j)\in A} x_{i,j}}\_{\textrm{flow out of } i} - \underbrace{\sum_{(j,i)\in A} x_{j,i}}\_{\textrm{flow into } i} = b_i \textrm{ for all } i\in N$$
 
 ---
 
