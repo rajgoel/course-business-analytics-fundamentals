@@ -427,14 +427,14 @@ A job is tardy if the completion time of the job is later than its given due dat
 
 If $c_j$ denotes the completion time of job $j$ and $d_j$ denotes the due date of the job, the tardiness of the job is  <!-- .element:  class="fragment" data-fragment-index="1" -->
 
-$$\max\{ 0, c_j - d_j \}.$$  <!-- .element:  class="fragment" data-fragment-index="1" -->
+$$\max\lbrace 0, c_j - d_j \rbrace.$$  <!-- .element:  class="fragment" data-fragment-index="1" -->
 
 ---
 
 Thus, the goal is to
 
 minimise
-$$\displaystyle \sum_{j\in J} \max\{ 0, c_j - d_j \}$$
+$$\displaystyle \sum_{j\in J} \max\lbrace 0, c_j - d_j \rbrace$$
 
 where $J$ denotes the set of jobs.
 
