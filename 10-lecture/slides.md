@@ -85,7 +85,7 @@ Rather than sacrificing expressiveness in modelling, sacrificing solution qualit
 
 ### CP Model
 
-** Sets:**
+**Sets:**
 - The set of numbers $I = \lbrace 1,2,\ldots,9\rbrace$
 
 **Variables:**
