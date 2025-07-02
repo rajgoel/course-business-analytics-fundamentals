@@ -116,6 +116,7 @@ fetch('course.json')
     /******************************************
      * Initialize Reveal
      ******************************************/   
+	RevealConfig.anything = [ { className: "graph", initialize: showGraph } ];
     Reveal.initialize(RevealConfig)
     .then(() => {
       // Admonitions
