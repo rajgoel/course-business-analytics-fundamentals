@@ -10,28 +10,16 @@ However, with the right modelling skills we can still succeed in modelling these
 
 ===
 
-### Example: Production planning ####
+### Example: <a href="markdown-viewer.html?file=0/-lecture/production.md" data-preview-link>Production planning <i class="fa-solid fa-magnifying-glass"></i></a>
 
----
+Formulate a generic problem formulation?
 
-<!-- .slide style="font-size:70%" -->
-
-> A company has seven products, each requiring a different production time per unit.
-The company has 720 person-hours available next week and the production time and the profit per unit are given in the table below. 
->  
-> | Product   | Person-hours per unit | Profit per unit |
-> |-----------|-----------------------|-----------------|
-> | Product 1 | 1.0                   | 10              |
-> | Product 2 | 2.0                   | 22              |
-> | Product 3 | 3.7                   | 35              |
-> | Product 4 | 2.4                   | 19              |
-> | Product 5 | 4.5                   | 55              |
-> | Product 6 | 0.7                   | 10              |
-> | Product 7 | 9.5                   | 115             |
-> 
-> The company's goal is to decide the mix of products which it should produce next week.
-
-Formulate the problem of optimising the profit for the company.
+> [!TIP]
+> The model must contain the following:
+> - **Sets and parameters:** What are the sets and parameters that define the problem?
+> - **Variables:** What are the decisions that can be taken?
+> - **Objective:** What is the goal?
+> - **Constraints:** What are the restrictions on the decisions?
 
 ---
 
