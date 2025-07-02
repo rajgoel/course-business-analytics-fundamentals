@@ -1,2 +1,497 @@
-> [!WARNING]
-> Content is not yet available.
+## LP/IP modelling ##
+
+---
+
+Many decision problems that we have to deal with cannot be immediately modelled as linear or integer programs due to nasty characteristics resulting in a non-linear objective function or non-linear constraints.
+
+---
+
+However, with the right modelling skills we can still succeed in modelling these problems in such a way that we can use existing tools to solve the problem.
+
+===
+
+### Example: Production planning ####
+
+---
+
+> A company has seven products, each requiring a different production time per unit.
+The company has 720 person-hours available next week and the production time and the profit per unit are given in the table below.  <!-- .element style="font-size:80%" -->
+>  
+| Product   | Person-hours per unit | Profit per unit |
+|-----------|-----------------------|-----------------|
+| Product 1 | 1.0                   | 10              |
+| Product 2 | 2.0                   | 22              |
+| Product 3 | 3.7                   | 35              |
+| Product 4 | 2.4                   | 19              |
+| Product 5 | 4.5                   | 55              |
+| Product 6 | 0.7                   | 10              |
+| Product 7 | 9.5                   | 115             |
+<!-- .element style="font-size:80%" -->
+> The company's goal is to decide the mix of products which it should produce next week.   <!-- .element style="font-size:80%" -->
+
+
+Formulate the problem of optimising the profit for the company.
+
+---
+
+#### Sets, parameters, and variables
+
+- Let $I = \lbrace 1,2,\ldots,7\rbrace$ denote the set of products.
+- For each $i\in I$ let $p_i$ denote the profit per unit of product $i$. 
+- For each $i\in I$ let $a_i$ denote the time required per unit of product $i$. 
+- Let $u$ denote the total amount of time available.
+- For each $i\in I$ let $x_i$ denote the number of unit of product $i$ to be produced. 
+
+---
+
+#### Linear program for the production planning problem ####
+
+maximise
+
+$$\sum_{i \in I} p_i x_i$$
+
+subject to
+
+$$\sum_{i \in I} a_i x_i \leq u$$
+
+$$x_i \geq 0 \textrm{ for all } i\in I$$
+
+---
+
+> If product 7 is chosen for production an additional fixed cost of 2000 is incurred.
+
+Extend the model by the new constraint.
+
+> [!TIP]
+> We can use additional parameters and variable for all products.
+
+---
+
+- Let $f_i$ denote the fixed cost incurred when product $i$ is chosen for production.
+- Let $z_i$ denote a binary variable indicating whether product $i$ is chosen for production.
+
+---
+
+#### Integer program for the extended production planning problem
+
+maximise
+
+$$\sum_{i \in I} p_i x_i \class{highlight}{- \sum_{i \in I} f_i z_i}$$
+
+subject to
+
+$$\sum_{i \in I} a_i x_i \leq u$$
+
+$$\class{highlight}{x_i \leq Mz_i \textrm{ for all } i \in I}$$
+
+$$x_i \geq 0 \textrm{ for all } i\in I$$
+
+$$\class{highlight}{z_i \in \lbrace 0,1 \rbrace}$$
+
+where $M$ is a sufficiently large number.
+
+---
+
+> Each unit of product 2 that is produced over 100 units requires a production time of 3.0 person-hours instead of 2.0 person-hours.
+
+Extend the model by the new constraint.
+
+> [!TIP]
+> We can exploit that the production in excess of the given limits is less efficient than up to that limit. 
+
+---
+
+- Let $q_i$ denote the regular production limit for product $i$.
+- Let $\hat a_i$ denote the time required for and production of product $i$ in excess of $q_i$. We assume that $\hat a_i > a_i$ for all $i\in I$.
+- Let $y_i$ denote the number of units to be produced of product $i$ in excess of $q_i$ units.
+
+> [!TIP]
+> $q_i = \infty$ and $\hat a_i = \infty$ for all $i \in I \setminus \lbrace 2 \rbrace$.
+
+---
+
+#### Integer program for the extended production planning problem
+
+$$\sum_{i \in I} p_i x_i \class{highlight}{+ \sum_{i \in I}  p_i y_i} - \sum_{i \in I} f_i z_i$$
+
+subject to
+
+$$\sum_{i \in I} a_i x_i \class{highlight}{+ \sum_{i \in I} \hat a_i y_i} \leq u$$
+$$\class{highlight}{x_i \leq q_i \textrm{ for all } i \in I}$$
+$$x_i \leq Mz_i \textrm{ for all } i \in I$$
+
+$$x_i \geq 0 \textrm{ for all } i\in I$$
+$$\class{highlight}{y_i \geq 0 \textrm{ for all } i\in I}$$
+$$z_i \in \lbrace 0,1 \rbrace}$$
+
+where $M$ is a sufficiently large number.
+
+> [!IMPORTANT]
+> With $\hat a_i > a_i$ for all $i\in I$, we know that there exists an optimal solution with $y_i=0$ if $x_i < q_i$.
+
+---
+
+> Each unit of product 3 that is produced over 50 units will contribute to the total profit by 40 instead of 35 (economies of scale).
+
+Extend the model by the new constraint.
+
+> [!TIP]
+> We now have to enforce that $y_i=0$ whenever $x_i < q_i$.
+
+---
+
+To ensure that
+
+$$\texttt{if } x_i < q_i \texttt{ then } y_i = 0,$$ 
+
+we need to introduce an auxiliary binary variable.
+
+> [!TIP]
+> Auxiliary binary variable help us creating a chain of conditional implications.
+
+---
+
+- Let $\hat p_i$ denote the time required for and production of product $i$ in excess in excess of $q_i$.
+- Let $w_i$ denote a binary variable indicating whether $q_i$ items or more are produced of product $i$.
+
+---
+
+#### Integer program for the extended production planning problem
+
+$$\sum_{i \in I} p_i x_i + \sum_{i \in I}  \class{highlight}{\hat p_i} y_i} - \sum_{i \in I} f_i z_i$$
+
+subject to
+
+$$\sum_{i \in I} a_i x_i + \sum_{i \in I} \hat a_i y_i \leq u$$
+$$x_i \leq q_i \textrm{ for all } i \in I$$
+$$\class{highlight}{x_i \geq q_i - M(1- w_i)  \textrm{ for all } i \in I}$$ 
+$$\class{highlight}{y_i \leq Mw_i  \textrm{ for all } i \in I}$$ 
+$$x_i \leq Mz_i \textrm{ for all } i \in I$$
+
+$$x_i \geq 0 \textrm{ for all } i\in I$$
+$$y_i \geq 0 \textrm{ for all } i\in I$$
+$$z_i \in \lbrace 0,1 \rbrace}$$
+$$\class{highlight}{w_i \in \lbrace 0,1 \rbrace} \textrm{ for all } i\in I}$$
+
+where $M$ is a sufficiently large number.
+
+---
+
+> If both product 3 and product 4 are produced, 75 person-hours are needed for production line set-up.
+
+Extend the model by the new constraint.
+
+> [!TIP]
+> We already have variables $z_i$ indicating whether product $i \in I$ is chosen for production.
+
+---
+
+- For each $i,j \in I$ with $i \neq j$, let $\bar v_{i,j}$ let $s_{i,j}$ denote the additional production line set-up time.
+- For each $i,j \in I$ with $i \neq j$, let $\bar v_{i,j}$ denote a binary variable indicating whether products $i$ and $j$ are chosen for production, i.e.
+
+$$v_{i,j} =\lbrace \begin{array}{cl}
+1 & \textrm{if products $i$ and $j$ are chosen for production}\\\\
+0 & \textrm{otherwise}\\\\
+\end{array}
+\right.$$
+
+---
+
+We can ensure that $v_{i,j} = 1$ if and only if $z_3=1$ and $z_4=1$ by the constraints
+
+$$z_i + z_j \leq v_{i,j} + 1$$
+
+and
+
+$$z_i + z_j \geq 2v_{i,j}.$$
+
+---
+
+<!-- .slide:  style="font-size:80%" -->
+
+#### Integer program for the extended production planning problem
+
+$$\sum_{i \in I} p_i x_i + \sum_{i \in I}  {\hat p_i} y_i - \sum_{i \in I} f_i z_i$$
+
+subject to
+
+$$\sum_{i \in I} a_i x_i + \sum_{i \in I} \hat a_i y_i \leq u$$
+$$x_i \leq q_i \textrm{ for all } i \in I$$
+$$x_i \geq q_i - M(1- w_i)  \textrm{ for all } i \in I$$ 
+$$y_i \leq Mw_i  \textrm{ for all } i \in I$$ 
+$$x_i \leq Mz_i \textrm{ for all } i \in I$$
+
+$$\class{highlight}{z_i + z_j \leq v_{i,j} + 1}$$
+$$\class{highlight}{z_i + z_j \geq 2v_{i,j}}$$
+
+$$x_i \geq 0 \textrm{ for all } i\in I$$
+$$y_i \geq 0 \textrm{ for all } i\in I$$
+$$z_i \in \lbrace 0,1 \rbrace}$$
+$$w_i \in \lbrace 0,1 \rbrace \textrm{ for all } i\in I$$
+$$\class{highlight}{v_{i,j} \in \lbrace 0,1 \rbrace} \textrm{ for all } i\in I}$$
+
+where $M$ is a sufficiently large number.
+
+===
+
+### Example: Multi-period production planning ####
+
+---
+
+> A factory works 24 hours a day, 7 days a week producing four products.
+Only one product can be produced at a time and throughout each day, the same product is produced (and then the next day either the same product is produced or the factory produces a different product).
+The number of units produced per hour depends on the product: <!-- .element:  style="font-size:80%" -->
+>
+| Product   | Production per hour |
+|-----------|---------------------|
+| Product 1 | 100                 |
+| Product 2 | 250                 |
+| Product 3 | 190                 |
+| Product 4 | 150                 |
+<!-- .element:  style="font-size:80%" -->
+
+> When changing from producing one product to another product, the first five working hours of the day are lost due to the necessity of cleaning.
+On the first day no cleaning is required if and only if product 1 is produced.
+<!-- .element:  style="font-size:80%" -->
+
+---
+
+> For the next seven days the following demand must be fulfilled: <!-- .element:  style="font-size:80%" -->
+>
+| Product | Mon. | Tue. | Wed. | Thu. | Fri. | Sat. | Sun. |
+|---------|--------|---------|-----------|----------|--------|----------|--------|
+| 1       | 1500   | 1700    | 1900      | 1000     | 2000   | 500      | 500    |
+| 2       | 4000   | 500     | 1000      | 3000     | 500    | 1000     | 2000   |
+| 3       | 2000   | 2000    | 3000      | 2000     | 2000   | 2000     | 500    |
+| 4       | 3000   | 2000    | 2000      | 1000     | 1000   | 500      | 500    |
+<!-- .element:  style="font-size:80%" -->
+
+---
+
+> The amount of items available at the beginning of the week is: <!-- .element:  style="font-size:80%" -->
+>
+| Product   | Current stock  |
+|-----------|----------------|
+| Product 1 | 5000           |
+| Product 2 | 7000           |
+| Product 3 | 9000           |
+| Product 4 | 8000           |
+<!-- .element:  style="font-size:80%" -->
+>
+> At the end of the week there must be at least 1750 units in stock for each product.
+> The cost of holding stock is €1.50 per unit for products 1 and 2 and €2.50 per unit for products 3 and 4 (based on the stock held at the end of each day).
+<!-- .element:  style="font-size:80%" -->
+
+Formulate a generic model that the company can use in any week to minimise holding costs.
+
+---
+
+Let $x_{i,t}$ denote a binary variable indicating whether product $i$ is produced on day $t$, i.e,
+
+`$x_{i,t} =\left\{ \begin{array}{cl}
+1 & \textrm{if product } i \textrm { is produced on day } t\\
+0 & \textrm{otherwise}\\
+\end{array}
+\right.$`
+
+---
+
+As we must produce one product per day we have the following constraint
+
+`$x_{1,t} + x_{2,t} + x_{3,t} + x_{4,t} = 1$ for all $t \in \{ 1,\ldots,7 \}$`
+
+---
+
+To indicate that product 1 was produced before start of day 1 we constrain `$x_{i,0}$` as follows
+
+`$$x_{1,0} = 1,  x_{2,0} = 0,  x_{3,0} = 0,  x_{4,0} = 0$$`
+
+
+---
+
+
+Let $P_{i,t}$ denote a variable indicating the number of units of product $i$ produced on day $t$.
+
+---
+
+If a product is produced, at most 24 hours of production time for the product are available, otherwise the production must be zero.
+Thus, we have the following constraint
+
+`$P_{i,t} \leq 24R_i x_{i,t}$  for all $i \in \{ 1,\ldots,4 \}$, $t \in \{ 1,\ldots,7 \}$`
+
+where $R_i$ is the hourly production rate of product $i$.
+
+---
+
+If another product is produced on the previous day, we must not produce for more than 19 hours.
+
+With a sufficently large value of $M$, this can be modelled by the constraints <!-- .element:  class="fragment" data-fragment-index="1" -->
+
+`$$P_{i,t} \leq 19R_i x_{i,t} + M x_{i,t-1}\text{ for all } i \in \{ 1,\ldots,4 \}, t \in \{ 1,\ldots,7 \}$$` <!-- .element:  class="fragment" data-fragment-index="1" -->
+
+
+---
+
+As the production must not be below the minimum possible production, we also have the following constraint
+
+`$P_{i,t} \geq 19R_i x_{i,t}$  for all $i \in \{ 1,\ldots,4 \}$, $t \in \{ 1,\ldots,7 \}$`
+
+as we have at least 19 hours of production available.
+
+
+---
+
+If the same product is produced on the previous day, we produce 24 hours.
+
+This can be modelled by the constraints <!-- .element:  class="fragment" data-fragment-index="1" -->
+
+`$$P_{i,t} \geq 24R_ix_{i,t} - M(1-x_{i,t-1}) \text{ for all }  i \in \{ 1,\ldots,4 \}, t \in \{ 1,\ldots,7 \}$$` <!-- .element:  class="fragment" data-fragment-index="1" -->
+
+---
+
+Let $I_{i,t}$ denote a variable indicating the amount of stock of product $i$ at the end of day $t$.
+
+---
+
+The initial stock is `$I_{i,0}$` and constrained as follows
+
+`$I_{1,0} = 5000,  I_{2,0} = 7000,  I_{3,0} = 9000,  I_{4,0} = 8000$`.
+
+---
+
+As there must not be any stockouts and there are lower limits on the inventory level on day 7, we have the following constraints
+
+`$I_{i,t} \geq 0$  for all $i \in \{ 1,\ldots,4 \}$, $t \in \{ 1,\ldots,6 \}$`
+
+`$I_{i,7} \geq 1750$  for all $i \in \{ 1,\ldots,4 \}$`
+
+
+---
+
+Let $D_{i,t}$ denote the demand for product $i$ on day $t$.
+
+---
+
+The amount of stock for each product at the end of a day is the amount of the product at the end of the previous day increased by the production and reduced by the demand.
+
+This can be modelled by the constraints <!-- .element:  class="fragment" data-fragment-index="1" -->
+
+`$I_{i,t} = I_{i,t-1} + P_{i,t} - D_{i,t}$  for all $i \in \{ 1,\ldots,4 \}$, $t \in \{ 1,\ldots,7 \}$` <!-- .element:  class="fragment" data-fragment-index="1" -->
+
+
+---
+
+We wish to minimise total cost, i.e. the objective function is
+
+minimise
+
+`$\displaystyle\sum_{t=1}^{7}(1.50I_{1,t} + 1.50I_{2,t} + 2.50I_{3,t} + 2.50I_{4,t})$`
+
+---
+
+<!-- .slide:  style="font-size:60%" -->
+
+#### Integer program of the multi-period production planning ####
+
+minimise `$\displaystyle\sum_{t=1}^{7}(1.50I_{1,t} + 1.50I_{2,t} + 2.50I_{3,t} + 2.50I_{4,t})$` 
+
+subject to 
+
+`$$x_{1,0} = 1,  x_{2,0} = 0,  x_{3,0} = 0,  x_{4,0} = 0$$`
+`$x_{1,t} + x_{2,t} + x_{3,t} + x_{4,t} = 1 \textrm{ for all } t \in \{ 1,\ldots,7 \}$` 
+
+`$$P_{i,t} \leq 24R_i x_{i,t} \textrm{ for all } i \in \{ 1,\ldots,4 \}, t \in \{ 1,\ldots,7 \}$$` 
+`$$P_{i,t} \leq 19R_i x_{i,t} + M x_{i,t-1} \textrm{ for all } i \in \{ 1,\ldots,4 \}, t \in \{ 1,\ldots,7 \}$$` 
+
+`$$P_{i,t} \geq 19R_i x_{i,t} \textrm{ for all } i \in \{ 1,\ldots,4 \}, t \in \{ 1,\ldots,7 \}$$` 
+`$$P_{i,t} \geq 24R_ix_{i,t} - M(1-x_{i,t-1}) \textrm{ for all } i \in \{ 1,\ldots,4 \}, t \in \{ 1,\ldots,7 \}$$` 
+
+
+`$$I_{1,0} = 5000,  I_{2,0} = 7000,  I_{3,0} = 9000,  I_{4,0} = 8000$$`
+`$$I_{i,7} \geq 1750 \textrm{ for all } i \in \{ 1,\ldots,4 \}$$` 
+`$$I_{i,t} = I_{i,t-1} + P_{i,t} - D_{i,t} \textrm{ for all } i \in \{ 1,\ldots,4 \}, t \in \{ 1,\ldots,7 \}$$` 
+
+`$$P_{i,t} \geq 0 \textrm{ for all } i \in \{ 1,\ldots,4 \}, t \in \{ 1,\ldots,7 \}$$` 
+`$$I_{i,t} \geq 0 \textrm{ for all } i \in \{ 1,\ldots,4 \}, t \in \{ 0,\ldots,7 \}$$` 
+`$$x_{i,t} \in \{0,1\} \textrm{ for all } i \in \{ 1,\ldots,4 \},t \in \{ 0,\ldots,7 \}$$` 
+
+where $M$ is a sufficiently large number.
+
+===
+
+### Example: Minimum tardiness scheduling problem ###
+
+---
+
+> A production company has to produce a number of jobs. Each job has a given production time and each job has a given due date. The company can only work on one job at any point in time and each job has to be conducted without preemption.
+
+Formulate a problem for determining a schedule with minimal tardiness.
+
+---
+
+A job is tardy if the completion time of the job is later than its given due date. Otherwise the job is not tardy.
+
+If $c_j$ denotes the completion time of job $j$ and $d_j$ denotes the due date of the job, the tardiness of the job is  <!-- .element:  class="fragment" data-fragment-index="1" -->
+
+`$$\max\{ 0, c_j - d_j \}.$$`  <!-- .element:  class="fragment" data-fragment-index="1" -->
+
+---
+
+Thus, the goal is to
+
+minimise
+`$\displaystyle \sum_{j\in J} \max\{ 0, c_j - d_j \}$`
+
+where $J$ denotes the set of jobs.
+
+Note, that the maximum function is not a linear function!  <!-- .element:  class="fragment" -->
+
+---
+
+The objective can be reformulated to
+
+minimise
+`$\displaystyle \sum_{j\in J} t_j$`
+
+by adding the constraint
+
+`$t_j \geq \max\{ 0, c_j - d_j \} \textrm{ for all } j \in J.$`
+
+
+---
+
+The constraint 
+
+`$t_j \geq \max\{ 0, c_j - d_j \}$`
+
+is equivalent to the constraints
+
+`$$ t_j \geq  c_j - d_j $$`
+and
+`$$ t_j \geq  0. $$`
+
+Thus, the constraint with the non-linear maximum function can be replaced by linear constraints!
+
+---
+
+In order to model the minimum tardiness scheduling problem we can use binary variables $x_{i,j}$ indicating whether job $i$ is scheduled immediately before job $j$.
+
+---
+
+For any two jobs $i$ and $j$ we have the constraint
+
+`$$c_j \geq c_i + p_j - M(1-x_{i,j})$$`
+
+where $p_j$ denotes the production time of job $j$ and $M$ is a sufficiently large number.
+
+---
+
+Each job $j$ has exactly one predecessor and one successor.
+
+We can model this by <!-- .element:  class="fragment" data-fragment-index="1" -->
+
+`$$\sum_{i\in J\cup\{0\} } x_{i,j} = 1$$` <!-- .element:  class="fragment" data-fragment-index="1" -->
+`$$\sum_{i\in J\cup\{0\} } x_{j,i} = 1$$` <!-- .element:  class="fragment" data-fragment-index="1" -->
+
+where $0$ is a dummy job indicating the start or the end of production. <!-- .element:  class="fragment" data-fragment-index="1" -->
+
