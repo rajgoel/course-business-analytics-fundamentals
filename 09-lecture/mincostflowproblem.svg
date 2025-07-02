@@ -1,0 +1,90 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+ onclick="next()">
+
+<defs>
+   <marker id="Arrow" markerWidth="5" markerHeight="5" viewBox="-6 -6 12 12" refX="-2" refY="0" markerUnits="strokeWidth" orient="auto">
+<polygon points="-2,0 -5,5 5,0 -5,-5" fill="black" stroke="black" stroke-width="1px"/>
+</marker>
+   <marker id="BlueArrow" markerWidth="5" markerHeight="5" viewBox="-6 -6 12 12" refX="-2" refY="0" markerUnits="strokeWidth" orient="auto">
+<polygon points="-2,0 -5,5 5,0 -5,-5" fill="blue" stroke="blue" stroke-width="1px"/>
+</marker>
+</defs>
+
+<g id="everything" transform="translate(0,20)" > 
+<g id="arc12" opacity="1">
+  <path d="M 100,200 L 225,125 L 350,50" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="225" y="100" font-size="30" fill="black" text-anchor="end"> (7, 0, 30) </text>
+</g>
+
+<g id="arc13" opacity="1">
+  <path d="M 100,200 L 225,275 L 350,350" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="225" y="320" font-size="30" fill="black" text-anchor="end"> (6, 0, 20) </text>
+</g>
+
+
+<g id="arc23" opacity="1">
+  <path d="M 350,50 L 350,200 L 350,350" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="330" y="200" font-size="30" fill="black" text-anchor="end"> (5, 0, 25) </text>
+</g>
+
+<g id="arc24" opacity="1">
+  <path d="M 350,50 L 475,50 L 600,50" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="530" y="30" font-size="30" fill="black" text-anchor="end"> (4, 0, 10) </text>
+</g>
+
+<g id="arc34" opacity="1">
+  <path d="M 350,350 L 475,200 L 600,50" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="520" y="140" font-size="30" fill="black" text-anchor="end"> (2, 0, 20) </text>
+</g>
+
+<g id="arc35" opacity="1">
+  <path d="M 350,350 L 475,350 L 600,350" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="530" y="400" font-size="30" fill="black" text-anchor="end"> (2, 0, 25) </text>
+</g>
+
+<g id="arc45" opacity="1">
+  <path d="M 600,50 L 600,200 L 600,350" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="750" y="190" font-size="30" fill="black" text-anchor="end"> (1, 0, 20) </text>
+</g>
+
+<g id="blankcircles">
+  <circle cx="100" cy="200" r="27.5" style="stroke:none; fill:white;"/>
+  <circle cx="350" cy="50" r="27.5" style="stroke:none; fill:white;"/>
+  <circle cx="350" cy="350" r="27.5" style="stroke:none; fill:white;"/>
+  <circle cx="600" cy="50" r="27.5" style="stroke:none; fill:white;"/>
+  <circle cx="600" cy="350" r="27.5" style="stroke:none; fill:white;"/>
+</g>
+
+<g id="node1" opacity="1">
+  <circle id="circle1" cx="100" cy="200" r="25" style="stroke: #000000; stroke-width:5" fill="aliceblue"/>
+  <text x="100" y="215" font-size="40" fill="black" text-anchor="middle"> 1 </text>
+  <text x="50" y="215" font-size="30" fill="black" text-anchor="middle"> 23 </text>
+</g>
+
+<g id="node2" opacity="1">
+  <circle id="circle2" cx="350" cy="50" r="25" style="stroke: #000000; stroke-width:5" fill="aliceblue"/>
+  <text x="350" y="65" font-size="40" fill="black" text-anchor="middle"> 2 </text>
+  <text x="350" y="15" font-size="30" fill="black" text-anchor="middle"> 5 </text>
+</g>
+
+<g id="node3" opacity="1">
+  <circle id="circle3" cx="350" cy="350" r="25" style="stroke: #000000; stroke-width:5" fill="aliceblue"/>
+  <text x="350" y="365" font-size="40" fill="black" text-anchor="middle"> 3 </text>
+  <text x="350" y="415" font-size="30" fill="black" text-anchor="middle"> -7 </text>
+</g>
+
+<g id="node4" opacity="1">
+  <circle id="circle4" cx="600" cy="50" r="25" style="stroke: #000000; stroke-width:5" fill="aliceblue"/>
+  <text x="600" y="65" font-size="40" fill="black" text-anchor="middle"> 4 </text>
+  <text x="600" y="15" font-size="30" fill="black" text-anchor="middle"> -2 </text>
+</g>
+
+<g id="node5" opacity="1">
+  <circle id="circle5" cx="600" cy="350" r="25" style="stroke: #000000; stroke-width:5" fill="aliceblue"/>
+  <text x="600" y="365" font-size="40" fill="black" text-anchor="middle"> 5 </text>
+  <text x="600" y="415" font-size="30" fill="black" text-anchor="middle"> -19 </text>
+</g>
+
+</g>
+
+</svg>
