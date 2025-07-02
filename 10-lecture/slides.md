@@ -4,19 +4,23 @@
 
 Linear programming, integer programming, and network optimisation assume a narrowly defined structure of the problem:
 
-- variables must be continuous or integer,
-- constraints must be linear, and
-- the objective function must be linear.
+- variables must be **continuous or integer**,
+- constraints must be **linear**, and
+- the objective function must be **linear**.
 
 ---
 
-Constrained programming is a (vaguely defined) term putting the focus on specifying a problem by stating variables and constraints allowing for a wide variety of constraints that cannot be used in integer programming.
+**Constrained programming (CP)** is a (vaguely defined) term putting the focus on specifying a problem by stating variables and constraints allowing for a wide variety of constraints that cannot be used in integer programming.
 
-Often, the goal is to only find a solution satisfying all constraints, in constraint optimisation an objective function can also be added.
+<span class="fragment">
+Often, the goal is to only find a solution satisfying all constraints, in **constraint optimisation** an objective function can also be added.
+</span>
 
 ---
 
 By breaking with core assumptions of  linear and integer programming, constrained programs can no longer be solved with the simplex algorithm or branch and bound.
+
+---
 
 Instead, constraint programming relies on:
 
@@ -24,11 +28,11 @@ Instead, constraint programming relies on:
 - **Search strategies:** Exploring combinations of variable assignments (e.g., depth-first search).
 
 > [!WARNING]
-> Constrained programming solvers are typically **much slower** compared to LP and MIP solvers.
+> Constraint propagation and exhaustive search typically require significantly more time to find an (optimal) solution compared to LP or MIP solvers - especially on large-scale problems.
 
 ---
 
-The main benefit of constrained programming is that it simplifies model formulation, by allowing
+The main benefit of CP is that it simplifies model formulation, by allowing
 
 - `if-then-else` statements
 - `alldifferent(x_1, x_2, ..., x_n )` requirements over a set of variables
@@ -36,29 +40,29 @@ The main benefit of constrained programming is that it simplifies model formulat
 - non-linear expressions
 - ...
 
-Syntax and capabilities of constrained programming solvers vary. 
+Syntax and capabilities of CP solvers vary. 
 
 ---
 
-Well-known constrained programming solvers are:
+Well-known solvers for CP models are:
 
 - [Google OR-Tools: CP-SAT)](https://developers.google.com/optimization/cp/cp_solver)
 - [CPLEX: CP Optimizer](https://www.ibm.com/products/ilog-cplex-optimization-studio/cplex-cp-optimizer)
 - [Hexaly](https://www.hexaly.com/) 
 
-These solvers use a variety of techniques that are not publically documented in detail.
+These solvers use a variety of techniques that are not publically documented in detail. Hexaly strongly relies on meta-heuristic search (and not on constraint propagation).
 
 ---
 
-Constrained programming is mainly used when the time required to model a problem is more critical than the time required to find a solution.
+CP models are mainly used when the **time required to model the problem** is more critical than the **time required to find an (optimal) solution**.
 
 ---
 
-In many real-life cases, optimality of a solution is not a goal, because most input parameters are estimates anyhow.
+In many real-life cases, **optimality** of a solution **is not a goal**, because most **input parameters are estimates** anyhow.
 
 ---
 
-Rather than sacrificing expressiveness in modelling, sacrificing solution quality may more reasonable.
+Rather than sacrificing expressiveness in modelling, sacrificing solution quality may be more reasonable. Solvers like Hexaly can produce *good* solutions very quickly compared to MIP solvers.
 
 ===
 
@@ -95,3 +99,5 @@ Rather than sacrificing expressiveness in modelling, sacrificing solution qualit
 ---
 
 ### Exercise: MIP equivalent
+
+Try to model Sudoku as a MIP.
