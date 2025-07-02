@@ -10,9 +10,9 @@ However, with the right modelling skills we can still succeed in modelling these
 
 ===
 
-### Example: <a href="markdown-viewer.html?file=0/-lecture/production.md" data-preview-link>Production planning <i class="fa-solid fa-magnifying-glass"></i></a>
+### Example: <a href="markdown-viewer.html?file=07-lecture/production.md" data-preview-link>Production planning <i class="fa-solid fa-magnifying-glass"></i></a>
 
-Formulate a generic problem formulation?
+Formulate a generic problem formulation.
 
 > [!TIP]
 > The model must contain the following:
@@ -33,7 +33,7 @@ Formulate a generic problem formulation?
 
 ---
 
-#### Linear program for the production planning problem ####
+#### Linear program for the production planning problem
 
 maximise
 
@@ -46,6 +46,8 @@ $$\sum_{i \in I} a_i x_i \leq u$$
 $$x_i \geq 0 \textrm{ for all } i\in I$$
 
 ---
+
+#### 1. Model extension
 
 > If product 7 is chosen for production an additional fixed cost of 2000 is incurred.
 
@@ -64,7 +66,6 @@ Extend the model by the new constraint.
 
 ---
 
-#### Integer program for the extended production planning problem
 
 maximise
 
@@ -86,6 +87,8 @@ where $M$ is a sufficiently large number.
 
 ---
 
+### 2. Model extension
+
 > Each unit of product 2 that is produced over 100 units requires a production time of 3.0 person-hours instead of 2.0 person-hours.
 
 Extend the model by the new constraint.
@@ -104,7 +107,6 @@ Extend the model by the new constraint.
 
 ---
 
-#### Integer program for the extended production planning problem
 
 $$\sum_{i \in I} p_i x_i \class{highlight}{+ \sum_{i \in I}  p_i y_i} - \sum_{i \in I} f_i z_i$$
 
@@ -120,6 +122,8 @@ $$z_i \in \lbrace 0,1 \rbrace  \textrm{ for all } i\in I$$
 where $M$ is a sufficiently large number.
 
 ---
+
+#### 3. Model extension
 
 > Each unit of product 3 that is produced over 50 units will contribute to the total profit by 40 instead of 35 (economies of scale).
 
@@ -170,6 +174,8 @@ where $M$ is a sufficiently large number.
 
 ---
 
+#### 4. Model extension
+
 > If both product 3 and product 4 are produced, 75 person-hours are needed for production line set-up.
 
 Extend the model by the new constraint.
@@ -202,8 +208,6 @@ $$z_i + z_j \geq 2v_{i,j}.$$
 
 <!-- .slide:  style="font-size:80%" -->
 
-#### Integer program for the extended production planning problem
-
 $$\sum_{i \in I} p_i x_i + \sum_{i \in I}  \hat p_i y_i - \sum_{i \in I} f_i z_i$$
 
 subject to
@@ -224,58 +228,16 @@ where $M$ is a sufficiently large number.
 
 ===
 
-### Example: Multi-period production planning ####
+### Example: <a href="markdown-viewer.html?file=07-lecture/multi-period_production.md" data-preview-link>Multi-period production planning <i class="fa-solid fa-magnifying-glass"></i></a>
 
----
+Formulate a generic problem formulation.
 
-<!-- .slide:  style="font-size:80%" -->
-
-> A factory works 24 hours a day, 7 days a week producing four products.
-Only one product can be produced at a time and throughout each day, the same product is produced (and then the next day either the same product is produced or the factory produces a different product).
-> 
-> The number of units produced per hour depends on the product: 
->
-> | Product   | Production per hour |
-> |-----------|---------------------|
-> | Product 1 | 100                 |
-> | Product 2 | 250                 |
-> | Product 3 | 190                 |
-> | Product 4 | 150                 |
-> 
-> When changing from producing one product to another product, the first five working hours of the day are lost due to a setup required.
-On the first day no setup is required if and only if product 1 is produced.
-
----
-
-<!-- .slide:  style="font-size:80%" -->
-
-> For the next seven days the following demand must be fulfilled:
-> 
-> | Product | Mon. | Tue. | Wed. | Thu. | Fri. | Sat. | Sun. |
-> |---------|--------|---------|-----------|----------|--------|----------|--------|
-> | 1       | 1500   | 1700    | 1900      | 1000     | 2000   | 500      | 500    |
-> | 2       | 4000   | 500     | 1000      | 3000     | 500    | 1000     | 2000   |
-> | 3       | 2000   | 2000    | 3000      | 2000     | 2000   | 2000     | 500    |
-> | 4       | 3000   | 2000    | 2000      | 1000     | 1000   | 500      | 500    |
-
----
-
-<!-- .slide:  style="font-size:80%" -->
-
-> The amount of items available at the beginning of the week is:
-> 
-> | Product   | Current stock  |
-> |-----------|----------------|
-> | Product 1 | 5000           |
-> | Product 2 | 7000           |
-> | Product 3 | 9000           |
-> | Product 4 | 8000           |
->
-> At the end of the week there must be at least 1750 units in stock for each product.
-> The cost of holding stock is €1.50 per unit for products 1 and 2 and €2.50 per unit for products 3 and 4 (based on the stock held at the end of each day).
-
-Formulate a generic model that the company can use in any week to minimise holding costs.
-
+> [!TIP]
+> The model must contain the following:
+> - **Sets and parameters:** What are the sets and parameters that define the problem?
+> - **Variables:** What are the decisions that can be taken?
+> - **Objective:** What is the goal?
+> - **Constraints:** What are the restrictions on the decisions?
 
 ---
 
@@ -307,6 +269,8 @@ Formulate a generic model that the company can use in any week to minimise holdi
 > The $p_{i,t}$ and $q_{i,t}$ are no independent decisions, they can be **deduced** once $x_{i,t}$ are decided on.
 
 ---
+
+#### Constraints
 
 To indicate that product 1 was produced before start of day 1 we add the following constraint
 $$x_{1,0} = 1$$
@@ -365,6 +329,8 @@ $$q_{i,t} = q_{i,t-1} + p_{i,t} - d_{i,t} \textrm{ for all }  i \in I, t \in T$$
 
 
 ---
+
+#### Objective
 
 We wish to minimise total cost, i.e. the objective function is
 
