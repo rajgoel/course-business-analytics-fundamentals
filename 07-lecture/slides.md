@@ -19,15 +19,15 @@ However, with the right modelling skills we can still succeed in modelling these
 > A company has seven products, each requiring a different production time per unit.
 The company has 720 person-hours available next week and the production time and the profit per unit are given in the table below. 
 >  
-| Product   | Person-hours per unit | Profit per unit |
-|-----------|-----------------------|-----------------|
-| Product 1 | 1.0                   | 10              |
-| Product 2 | 2.0                   | 22              |
-| Product 3 | 3.7                   | 35              |
-| Product 4 | 2.4                   | 19              |
-| Product 5 | 4.5                   | 55              |
-| Product 6 | 0.7                   | 10              |
-| Product 7 | 9.5                   | 115             |
+> | Product   | Person-hours per unit | Profit per unit |
+> |-----------|-----------------------|-----------------|
+> | Product 1 | 1.0                   | 10              |
+> | Product 2 | 2.0                   | 22              |
+> | Product 3 | 3.7                   | 35              |
+> | Product 4 | 2.4                   | 19              |
+> | Product 5 | 4.5                   | 55              |
+> | Product 6 | 0.7                   | 10              |
+> | Product 7 | 9.5                   | 115             |
 > 
 > The company's goal is to decide the mix of products which it should produce next week.
 
@@ -244,14 +244,16 @@ where $M$ is a sufficiently large number.
 
 > A factory works 24 hours a day, 7 days a week producing four products.
 Only one product can be produced at a time and throughout each day, the same product is produced (and then the next day either the same product is produced or the factory produces a different product).
+> 
 > The number of units produced per hour depends on the product: 
 >
-| Product   | Production per hour |
-|-----------|---------------------|
-| Product 1 | 100                 |
-| Product 2 | 250                 |
-| Product 3 | 190                 |
-| Product 4 | 150                 |
+> | Product   | Production per hour |
+> |-----------|---------------------|
+> | Product 1 | 100                 |
+> | Product 2 | 250                 |
+> | Product 3 | 190                 |
+> | Product 4 | 150                 |
+> 
 > When changing from producing one product to another product, the first five working hours of the day are lost due to the necessity of cleaning.
 On the first day no cleaning is required if and only if product 1 is produced.
 
@@ -261,13 +263,12 @@ On the first day no cleaning is required if and only if product 1 is produced.
 
 > For the next seven days the following demand must be fulfilled:
 > 
->
-| Product | Mon. | Tue. | Wed. | Thu. | Fri. | Sat. | Sun. |
-|---------|--------|---------|-----------|----------|--------|----------|--------|
-| 1       | 1500   | 1700    | 1900      | 1000     | 2000   | 500      | 500    |
-| 2       | 4000   | 500     | 1000      | 3000     | 500    | 1000     | 2000   |
-| 3       | 2000   | 2000    | 3000      | 2000     | 2000   | 2000     | 500    |
-| 4       | 3000   | 2000    | 2000      | 1000     | 1000   | 500      | 500    |
+> | Product | Mon. | Tue. | Wed. | Thu. | Fri. | Sat. | Sun. |
+> |---------|--------|---------|-----------|----------|--------|----------|--------|
+> | 1       | 1500   | 1700    | 1900      | 1000     | 2000   | 500      | 500    |
+> | 2       | 4000   | 500     | 1000      | 3000     | 500    | 1000     | 2000   |
+> | 3       | 2000   | 2000    | 3000      | 2000     | 2000   | 2000     | 500    |
+> | 4       | 3000   | 2000    | 2000      | 1000     | 1000   | 500      | 500    |
 
 ---
 
@@ -275,13 +276,12 @@ On the first day no cleaning is required if and only if product 1 is produced.
 
 > The amount of items available at the beginning of the week is:
 > 
->
-| Product   | Current stock  |
-|-----------|----------------|
-| Product 1 | 5000           |
-| Product 2 | 7000           |
-| Product 3 | 9000           |
-| Product 4 | 8000           |
+> | Product   | Current stock  |
+> |-----------|----------------|
+> | Product 1 | 5000           |
+> | Product 2 | 7000           |
+> | Product 3 | 9000           |
+> | Product 4 | 8000           |
 >
 > At the end of the week there must be at least 1750 units in stock for each product.
 > The cost of holding stock is €1.50 per unit for products 1 and 2 and €2.50 per unit for products 3 and 4 (based on the stock held at the end of each day).
