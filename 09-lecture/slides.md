@@ -104,17 +104,11 @@ Numbers next to the nodes indicate supply/demand values. All arcs have a lower b
 
 ===
 
-### Balanced networks ###
-
-The minimum cost network flow problem can only be solved if the total supply matches the total demand, i.e. if $$\sum_{i\in N} b_i = 0$$.
-
----
-
 #### Example: Unbalanced network ####
 
 > A company has two factories which can produce up to 100 units of a product each. The company wants to determine how to minimise costs for shipping 70 units to a distribution centre in the north and 120 units to a distribution center in the south.
 
-Model this problem as a minimum cost network flow problem.
+Can we model this problem as a minimum cost network flow problem?
 
 ---
 

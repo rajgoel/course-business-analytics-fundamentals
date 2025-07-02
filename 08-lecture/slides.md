@@ -56,7 +56,7 @@ A *network* is defined by
 
 ### Definition: Path ###
 
-A *path* is a sequence of nodes $$n_1, n_2, \ldots, n_k \in N$$  with $$(n_i,n_{i+1}) \in A$$ for each $$i \in \lbrace 1, \ldots, k-1\rbrace$$. 
+A *path* is a sequence of nodes $n_1, n_2, \ldots, n_k \in N$  with $(n_i,n_{i+1}) \in A$ for each $i \in \lbrace 1, \ldots, k-1\rbrace$. 
 
 ---
 
@@ -144,7 +144,7 @@ With negative arc costs, there could be negative cost cycles.
 
 #### Negative cost cycles ####
 
-If a network contains arcs with negative costs, then there might not be a shortest path, because it could be possible to decrease the cost by infinitively looping often through a cycle.
+If a network contains arcs with negative costs, then there might not be a shortest path, because it could be possible to decrease the cost by infinitively looping through a cycle.
 
 ===
 
@@ -378,15 +378,17 @@ $$\sum_{(i,j)\in A} x_{i,j} - \sum_{(j,i)\in A} x_{j,i} = b_i \textrm{ for all }
 $$l_{i,j} \leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
 
 
+> [!IMPORTANT]
+> The minimum cost network flow problem can only be solved if supply and demand are balanced, i.e., if $$\sum_{i\in N} b_i = 0$$
+
 ---
 
 ### Integrality ###
 
 The minimum-cost network flow problem has the property, that if all parameters are integers, then the optimal solution will also be integer.
 
----
-
-Consequently, we do not need to explicitly model integer constraints and **we do not need to apply branch & bound** to obtain integer solutions.
+> [!NOTE]
+> We do not need to explicitly model integer constraints and **we do not need to apply branch & bound** to obtain integer solutions.
 
 ---
 
