@@ -12,9 +12,9 @@ Linear programming, integer programming, and network optimisation assume a narro
 
 **Constrained programming (CP)** is a (vaguely defined) term putting the focus on specifying a problem by stating variables and constraints allowing for a wide variety of constraints that cannot be used in integer programming.
 
-<span class="fragment">
-Often, the goal is to only find a solution satisfying all constraints, in **constraint optimisation** an objective function can also be added.
-</span>
+> [!NOTE]
+> Often, the goal is to only find a solution satisfying all constraints. The term **constraint optimisation** is used when an objective function is added.
+
 
 ---
 
