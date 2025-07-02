@@ -395,7 +395,7 @@ minimise $\displaystyle\sum_{t\in T} \sum_{i\in I} c_i q_{i,t}$
 subject to 
 
 $$x_{1,0} = 1$$
-$$\sum_{i \in I} x_{i,t} = 1 \textrm{ for all } t \in T \cup \brace 0 \rbrace$$
+$$\sum_{i \in I} x_{i,t} = 1 \textrm{ for all } t \in T \cup \lbrace 0 \rbrace$$
 
 
 $$p_{i,t} \leq 24r_i x_{i,t} \textrm{ for all } i \in I, t \in T$$
