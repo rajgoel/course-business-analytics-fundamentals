@@ -1,0 +1,106 @@
+<svg width="700" height="400" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+ onclick="next()">
+
+<defs>
+   <marker id="Arrow" markerWidth="5" markerHeight="5" viewBox="-6 -6 12 12" refX="-2" refY="0" markerUnits="strokeWidth" orient="auto">
+<polygon points="-2,0 -5,5 5,0 -5,-5" fill="black" stroke="black" stroke-width="1px"/>
+</marker>
+</defs>
+ 
+<g id="arc12" opacity="1">
+  <path d="M 50,200 L 150,125 L 250,50" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="150" y="110" font-size="30" fill="black" text-anchor="end"> 4 </text>
+</g>
+
+<g id="arc13" opacity="1">
+  <path d="M 50,200 L 150,275 L 250,350" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="150" y="310" font-size="30" fill="black" text-anchor="end"> 3 </text>
+</g>
+
+<g id="arc23" opacity="1">
+  <path d="M 235,50 L 235,200 L 235,350" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="220" y="190" font-size="30" fill="black" text-anchor="end"> 3 </text>
+</g>
+
+<g id="arc32" opacity="1">
+  <path d="M 265,350 L 265,200 L 265,50" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="290" y="190" font-size="30" fill="black" text-anchor="end"> 2 </text>
+</g>
+
+<g id="arc24" opacity="1">
+  <path d="M 250,50 L 350,50 L 450,50" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="360" y="35" font-size="30" fill="black" text-anchor="end"> 2 </text>
+</g>
+
+<g id="arc25" opacity="1">
+  <path d="M 250,50 L 350,200 L 450,350" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="370" y="180" font-size="30" fill="black" text-anchor="end"> 1 </text>
+</g>
+
+<g id="arc35" opacity="1">
+  <path d="M 250,350 L 350,350 L 450,350" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="360" y="385" font-size="30" fill="black" text-anchor="end"> 3 </text>
+</g>
+
+<g id="arc45" opacity="1">
+  <path d="M 435,50 L 435,200 L 435,350" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="420" y="190" font-size="30" fill="black" text-anchor="end"> 1 </text>
+</g>
+
+<g id="arc54" opacity="1">
+  <path d="M 465,350 L 465,200 L 465,50" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="490" y="190" font-size="30" fill="black" text-anchor="end"> 2 </text>
+</g>
+
+<g id="arc46" opacity="1">
+  <path d="M 450,50 L 550,125 L 650,200" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="570" y="110" font-size="30" fill="black" text-anchor="end"> 3 </text>
+</g>
+
+<g id="arc56" opacity="1">
+  <path d="M 450,350 L 550,275 L 650,200" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+  <text x="570" y="310" font-size="30" fill="black" text-anchor="end"> 7 </text>
+</g>
+
+
+<g id="blankcircles">
+  <circle cx="50" cy="200" r="27.5" style="stroke:none; fill:white;"/>
+  <circle cx="250" cy="50" r="27.5" style="stroke:none; fill:white;"/>
+  <circle cx="250" cy="350" r="27.5" style="stroke:none; fill:white;"/>
+  <circle cx="450" cy="50" r="27.5" style="stroke:none; fill:white;"/>
+  <circle cx="450" cy="350" r="27.5" style="stroke:none; fill:white;"/>
+  <circle cx="650" cy="200" r="27.5" style="stroke:none; fill:white"/>
+</g>
+
+<g id="node1" opacity="1">
+  <circle id="circle1" cx="50" cy="200" r="25" style="stroke: #000000; stroke-width:5" fill="aliceblue"/>
+  <text x="50" y="215" font-size="40" fill="black" text-anchor="middle"> 1 </text>
+</g>
+
+<g id="node2" opacity="1">
+  <circle id="circle2" cx="250" cy="50" r="25" style="stroke: #000000; stroke-width:5" fill="aliceblue"/>
+  <text x="250" y="65" font-size="40" fill="black" text-anchor="middle"> 2 </text>
+</g>
+
+<g id="node3" opacity="1">
+  <circle id="circle3" cx="250" cy="350" r="25" style="stroke: #000000; stroke-width:5" fill="aliceblue"/>
+  <text x="250" y="365" font-size="40" fill="black" text-anchor="middle"> 3 </text>
+</g>
+
+<g id="node4" opacity="1">
+  <circle id="circle4" cx="450" cy="50" r="25" style="stroke: #000000; stroke-width:5" fill="aliceblue"/>
+  <text x="450" y="65" font-size="40" fill="black" text-anchor="middle"> 4 </text>
+</g>
+
+<g id="node5" opacity="1">
+  <circle id="circle5" cx="450" cy="350" r="25" style="stroke: #000000; stroke-width:5" fill="aliceblue"/>
+  <text x="450" y="365" font-size="40" fill="black" text-anchor="middle"> 5 </text>
+</g>
+
+<g id="node6" opacity="1">
+  <circle id="circle6" cx="650" cy="200" r="25" style="stroke: #000000; stroke-width:5" fill="aliceblue"/>
+  <text x="650" y="215" font-size="40" fill="black" text-anchor="middle"> 6 </text>
+</g>
+
+
+</svg>
