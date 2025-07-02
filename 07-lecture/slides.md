@@ -306,7 +306,7 @@ Formulate a generic model that the company can use in any week to minimise holdi
 
 #### Variables
 
-- For each $i \in I$, $t \in T \cup \brace 0 \rbrace$ let $x_{i,t}$ denote a binary variable indicating whether product $i$ is produced on day $t$, i.e,
+- For each $i \in I$, $t \in T \cup \lbrace 0 \rbrace$ let $x_{i,t}$ denote a binary variable indicating whether product $i$ is produced on day $t$, i.e,
   $$x_{i,t} =\left\lbrace \begin{array}{cl}
   1 & \textrm{if product } i \textrm { is produced on day } t\\\\
   0 & \textrm{otherwise}\\\\ 
@@ -325,7 +325,7 @@ $$x_{1,0} = 1$$
 
 As we must produce one product per day we have the following constraint
 
-$$\sum_{i \in I} x_{i,t} = 1 \textrm{ for all } t \in T \cup \brace 0 \rbrace$$
+$$\sum_{i \in I} x_{i,t} = 1 \textrm{ for all } t \in T \cup \lbrace 0 \rbrace$$
 
 ---
 
@@ -407,30 +407,7 @@ $$q_{i,t} \geq 0 \textrm{ for all } i \in I, t \in T$$
 $$q_{i,7} \geq l_i \textrm{ for all } i \in I$$
 $$q_{i,t} = q_{i,t-1} + p_{i,t} - d_{i,t} \textrm{ for all }  i \in I, t \in T$$
 
-$$x_{i,t} \in \lbrace {0,1 \rbrace \textrm{ for all } i \in I,t \in T \cup \lbrace 0 \rbrace$$
-
-where $M$ is a sufficiently large number.
-
----
-
-
-`$$x_{1,0} = 1,  x_{2,0} = 0,  x_{3,0} = 0,  x_{4,0} = 0$$`
-`$x_{1,t} + x_{2,t} + x_{3,t} + x_{4,t} = 1 \textrm{ for all } t \in \{ 1,\ldots,7 \}$` 
-
-`$$P_{i,t} \leq 24R_i x_{i,t} \textrm{ for all } i \in \{ 1,\ldots,4 \}, t \in \{ 1,\ldots,7 \}$$` 
-`$$P_{i,t} \leq 19R_i x_{i,t} + M x_{i,t-1} \textrm{ for all } i \in \{ 1,\ldots,4 \}, t \in \{ 1,\ldots,7 \}$$` 
-
-`$$P_{i,t} \geq 19R_i x_{i,t} \textrm{ for all } i \in \{ 1,\ldots,4 \}, t \in \{ 1,\ldots,7 \}$$` 
-`$$P_{i,t} \geq 24R_ix_{i,t} - M(1-x_{i,t-1}) \textrm{ for all } i \in \{ 1,\ldots,4 \}, t \in \{ 1,\ldots,7 \}$$` 
-
-
-`$$I_{1,0} = 5000,  I_{2,0} = 7000,  I_{3,0} = 9000,  I_{4,0} = 8000$$`
-`$$I_{i,7} \geq 1750 \textrm{ for all } i \in \{ 1,\ldots,4 \}$$` 
-`$$I_{i,t} = I_{i,t-1} + P_{i,t} - D_{i,t} \textrm{ for all } i \in \{ 1,\ldots,4 \}, t \in \{ 1,\ldots,7 \}$$` 
-
-`$$P_{i,t} \geq 0 \textrm{ for all } i \in \{ 1,\ldots,4 \}, t \in \{ 1,\ldots,7 \}$$` 
-`$$I_{i,t} \geq 0 \textrm{ for all } i \in \{ 1,\ldots,4 \}, t \in \{ 0,\ldots,7 \}$$` 
-`$$x_{i,t} \in \{0,1\} \textrm{ for all } i \in \{ 1,\ldots,4 \},t \in \{ 0,\ldots,7 \}$$` 
+$$x_{i,t} \in \lbrace 0,1 \rbrace \textrm{ for all } i \in I,t \in T \cup \lbrace 0 \rbrace$$
 
 where $M$ is a sufficiently large number.
 
@@ -450,14 +427,14 @@ A job is tardy if the completion time of the job is later than its given due dat
 
 If $c_j$ denotes the completion time of job $j$ and $d_j$ denotes the due date of the job, the tardiness of the job is  <!-- .element:  class="fragment" data-fragment-index="1" -->
 
-`$$\max\{ 0, c_j - d_j \}.$$`  <!-- .element:  class="fragment" data-fragment-index="1" -->
+$$\max\{ 0, c_j - d_j \}.$$  <!-- .element:  class="fragment" data-fragment-index="1" -->
 
 ---
 
 Thus, the goal is to
 
 minimise
-`$\displaystyle \sum_{j\in J} \max\{ 0, c_j - d_j \}$`
+$$\displaystyle \sum_{j\in J} \max\{ 0, c_j - d_j \}$$
 
 where $J$ denotes the set of jobs.
 
@@ -468,24 +445,24 @@ Note, that the maximum function is not a linear function!  <!-- .element:  class
 The objective can be reformulated to
 
 minimise
-`$\displaystyle \sum_{j\in J} t_j$`
+$$\displaystyle \sum_{j\in J} t_j$$
 
 by adding the constraint
 
-`$t_j \geq \max\{ 0, c_j - d_j \} \textrm{ for all } j \in J.$`
+$$t_j \geq \max\lbrace 0, c_j - d_j \rbrace \textrm{ for all } j \in J.$$
 
 
 ---
 
 The constraint 
 
-`$t_j \geq \max\{ 0, c_j - d_j \}$`
+$$t_j \geq \max\lbrace 0, c_j - d_j \rbrace$$
 
 is equivalent to the constraints
 
-`$$ t_j \geq  c_j - d_j $$`
+$$ t_j \geq  c_j - d_j $$
 and
-`$$ t_j \geq  0. $$`
+$$ t_j \geq  0. $$
 
 Thus, the constraint with the non-linear maximum function can be replaced by linear constraints!
 
@@ -497,7 +474,7 @@ In order to model the minimum tardiness scheduling problem we can use binary var
 
 For any two jobs $i$ and $j$ we have the constraint
 
-`$$c_j \geq c_i + p_j - M(1-x_{i,j})$$`
+$$c_j \geq c_i + p_j - M(1-x_{i,j})$$
 
 where $p_j$ denotes the production time of job $j$ and $M$ is a sufficiently large number.
 
@@ -507,8 +484,8 @@ Each job $j$ has exactly one predecessor and one successor.
 
 We can model this by <!-- .element:  class="fragment" data-fragment-index="1" -->
 
-`$$\sum_{i\in J\cup\{0\} } x_{i,j} = 1$$` <!-- .element:  class="fragment" data-fragment-index="1" -->
-`$$\sum_{i\in J\cup\{0\} } x_{j,i} = 1$$` <!-- .element:  class="fragment" data-fragment-index="1" -->
+$$\sum_{i\in J\cup\{0\} } x_{i,j} = 1$$ <!-- .element:  class="fragment" data-fragment-index="1" -->
+$$\sum_{i\in J\cup\{0\} } x_{j,i} = 1$$ <!-- .element:  class="fragment" data-fragment-index="1" -->
 
 where $0$ is a dummy job indicating the start or the end of production. <!-- .element:  class="fragment" data-fragment-index="1" -->
 
