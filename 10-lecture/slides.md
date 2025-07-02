@@ -99,9 +99,9 @@ Rather than sacrificing expressiveness in modelling, sacrificing solution qualit
 - For each column $j\in I$, all values $x_{1,j}, x_{2,j}, \ldots, x_{9,j}$​ must be different.
 - For each block indexed by $k,h) \in \lbrace 1,2,3 \rbrace \times \lbrace 1,2,3 \rbrace$, the variables
   $$\begin{aligned}
- \big\lbrace x_{i,j} \mid\quad
-  & i \in \lbrace 1 + 3(h-1), 2 + 3(h-1), 3 + 3(h-1) \rbrace,\\
-  & j \in \lbrace 1 + 3(k-1), 2 + 3(k-1), 3 + 3(k-1) \rbrace \  \big\rbrace\\
+ \big\lbrace x_{i,j} \ \mid\ 
+  & i \in \lbrace 1 + 3(h-1), 2 + 3(h-1), 3 + 3(h-1) \rbrace,\\\\
+  & j \in \lbrace 1 + 3(k-1), 2 + 3(k-1), 3 + 3(k-1) \rbrace \  \big\rbrace\\\\
 \end{aligned}$$
   must be different.
 
