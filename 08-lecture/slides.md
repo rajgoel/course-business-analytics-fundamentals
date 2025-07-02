@@ -70,9 +70,7 @@ A *path* is a sequence of nodes $$n_1, n_2, \ldots, n_k \in N$$  with $$(n_i,n_{
 ### Shortest path problem ####
 
 The *shortest path problem* is the problem of finding the shortest (or cheapest) path from an origin $s$ to a destination $t$ through a network $(N,A)$
-where each arc is given a <span class="fragment highlight" data-fragment-index="1">positive length (or cost) $c_{i,j}$</span>.
-
-Note, that in general the shortest path problem could also be formulated to allow non-positive arc lengths. <!-- .element class="fragment" data-fragment-index="1" --> 
+where each arc is given a **positive length (or cost)** $c_{i,j}$.
 
 ---
 
@@ -139,7 +137,8 @@ $$\sum_{(j,i)\in A} x_{j,i} = \sum_{(i,j)\in A} x_{i,j} \textrm{ for all } i\in 
 
 $$x_{i,j} \in \lbrace 0,1 \rbrace \textrm{ for all } (i,j)\in A$$
 
-Would this model also work for non-positive arc costs? <!-- .element class="fragment" --> 
+> [!WARNING]
+With negative arc costs, there could be negative cost cycles. 
 
 ---
 
@@ -334,8 +333,8 @@ $$0\leq x_{i,j} \textrm{ for all } (i,j)\in  N' \times N''$$
 
 Given a network $(N,A)$ where each node $i\in N$ has a given supply or demand $b_i$, the *minimum-cost network flow problem* is the problem of matching supply and demand with the smallest cost without violating the given lower and upper bounds $l_{i,j}$ and $u_{i,j}$ on the flow along the arc $(i,j)\in A$, where the cost of shipping one unit along the arc is $c_{i,j}$.
 
-A node $i\in N$ with $b_i >0$ is a supply node, a node $i\in N$ with $b_i <0$ is a demand node, and a node $i\in N$ with $b_i =0$ is a transshipment node. 
-<!-- .element class="fragment" -->  
+> [!NOTE]
+> A node $i\in N$ with $b_i >0$ is a supply node, a node $i\in N$ with $b_i <0$ is a demand node, and a node $i\in N$ with $b_i =0$ is a transshipment node. 
 
 ---
 
