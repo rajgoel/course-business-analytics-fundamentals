@@ -254,8 +254,8 @@ Only one product can be produced at a time and throughout each day, the same pro
 > | Product 3 | 190                 |
 > | Product 4 | 150                 |
 > 
-> When changing from producing one product to another product, the first five working hours of the day are lost due to the necessity of cleaning.
-On the first day no cleaning is required if and only if product 1 is produced.
+> When changing from producing one product to another product, the first five working hours of the day are lost due to a setup required.
+On the first day no setup is required if and only if product 1 is produced.
 
 ---
 
@@ -295,46 +295,45 @@ Formulate a generic model that the company can use in any week to minimise holdi
 
 - Let $I = \lbrace 1,2,3,4 \rbrace$ denote the set of products. 
 - Let $T = \lbrace 1,2,\ldots,7 \rbrace$ denote the set of days in a week. 
+- For each $i \in I$, let $r_i$ denote the production rate (units per hour) of product $i$.
+- For each $i \in I$, let $q_{i,0}$ denote the initial inventory level.
+- For each $i \in I$, let $l_i$ denote the lower bound on the final inventory level.
+- For each $i \in I$, let $c_i$ denote the costs for holding product $i$ for one day.
+- For each $i \in I$,$t \in T$, let $d_{i,t}$ denote the demand for product $i$ on day $t$.
+- Let $s = 5$ denote the setup time required when changing from one product to another. 
 
-- For each $i \in I$, $t \in T$ Let $p_{i,t}$ denote a variable indicating the number of units of product $i$ produced on day $t$.
+---
 
+#### Variables
+
+- For each $i \in I$, $t \in T \cup \brace 0 \rbrace$ let $x_{i,t}$ denote a binary variable indicating whether product $i$ is produced on day $t$, i.e,
+  $$x_{i,t} =\left\brace \begin{array}{cl}
+  1 & \textrm{if product } i \textrm { is produced on day } t\\\\
+  0 & \textrm{otherwise}\\\\ 
+  \end{array}
+  \right.$$
+- For each $i \in I$, $t \in T$, let $p_{i,t}$ denote a variable indicating the number of units of product $i$ produced on day $t$.
+- For each $i \in I$, $t \in T$, let $q_{i,t}$ denote a variable indicating the amount of stock of product $i$ at the end of day $t$.
+
+> [!NOTE]
+> The $p_{i,t}$ and $q_{i,t}$ are no independent decisions, they can be **deduced** once $x_{i,t}$ are decided on.
 
 ---
 
-Let $x_{i,t}$ denote a binary variable indicating whether product $i$ is produced on day $t$, i.e,
-
-$$x_{i,t} =\left\{ \begin{array}{cl}
-1 & \textrm{if product } i \textrm { is produced on day } t\\
-0 & \textrm{otherwise}\\
-\end{array}
-\right.$$
-
----
+To indicate that product 1 was produced before start of day 1 we add the following constraint
+$$x_{1,0} = 1$$
 
 As we must produce one product per day we have the following constraint
 
-`$x_{1,t} + x_{2,t} + x_{3,t} + x_{4,t} = 1$ for all $t \in \{ 1,\ldots,7 \}$`
-
----
-
-To indicate that product 1 was produced before start of day 1 we constrain `$x_{i,0}$` as follows
-
-`$$x_{1,0} = 1,  x_{2,0} = 0,  x_{3,0} = 0,  x_{4,0} = 0$$`
-
-
----
-
-
-Let $P_{i,t}$ denote a variable indicating the number of units of product $i$ produced on day $t$.
+$$\sum_{i \in I} x_{i,t} = 1 \textrm{ for all } t \in T \cup \brace 0 \rbrace$$
 
 ---
 
 If a product is produced, at most 24 hours of production time for the product are available, otherwise the production must be zero.
 Thus, we have the following constraint
 
-`$P_{i,t} \leq 24R_i x_{i,t}$  for all $i \in \{ 1,\ldots,4 \}$, $t \in \{ 1,\ldots,7 \}$`
+$$p_{i,t} \leq 24r_i x_{i,t} \textrm{ for all } i \in I, t \in T$$
 
-where $R_i$ is the hourly production rate of product $i$.
 
 ---
 
@@ -342,17 +341,14 @@ If another product is produced on the previous day, we must not produce for more
 
 With a sufficently large value of $M$, this can be modelled by the constraints <!-- .element:  class="fragment" data-fragment-index="1" -->
 
-`$$P_{i,t} \leq 19R_i x_{i,t} + M x_{i,t-1}\text{ for all } i \in \{ 1,\ldots,4 \}, t \in \{ 1,\ldots,7 \}$$` <!-- .element:  class="fragment" data-fragment-index="1" -->
+$$p_{i,t} \leq (24 - s) r_i x_{i,t} + M x_{i,t-1}\text{ for all } i \in I, t \in T$$ <!-- .element:  class="fragment" data-fragment-index="1" -->
 
 
 ---
 
-As the production must not be below the minimum possible production, we also have the following constraint
+As we produce whenever we are not in a setup, we also have the following constraint
 
-`$P_{i,t} \geq 19R_i x_{i,t}$  for all $i \in \{ 1,\ldots,4 \}$, $t \in \{ 1,\ldots,7 \}$`
-
-as we have at least 19 hours of production available.
-
+$$p_{i,t} \geq (24 - s) r_i x_{i,t} \textrm{ for all } i \in I, t \in T$$
 
 ---
 
@@ -360,30 +356,16 @@ If the same product is produced on the previous day, we produce 24 hours.
 
 This can be modelled by the constraints <!-- .element:  class="fragment" data-fragment-index="1" -->
 
-`$$P_{i,t} \geq 24R_ix_{i,t} - M(1-x_{i,t-1}) \text{ for all }  i \in \{ 1,\ldots,4 \}, t \in \{ 1,\ldots,7 \}$$` <!-- .element:  class="fragment" data-fragment-index="1" -->
-
----
-
-Let $I_{i,t}$ denote a variable indicating the amount of stock of product $i$ at the end of day $t$.
-
----
-
-The initial stock is `$I_{i,0}$` and constrained as follows
-
-`$I_{1,0} = 5000,  I_{2,0} = 7000,  I_{3,0} = 9000,  I_{4,0} = 8000$`.
+$$p_{i,t} \geq 24 r_ix_{i,t} - M(1-x_{i,t-1}) \text{ for all }  i \in I, t \in T$$ <!-- .element:  class="fragment" data-fragment-index="1" -->
 
 ---
 
 As there must not be any stockouts and there are lower limits on the inventory level on day 7, we have the following constraints
 
-`$I_{i,t} \geq 0$  for all $i \in \{ 1,\ldots,4 \}$, $t \in \{ 1,\ldots,6 \}$`
+$$q_{i,t} \geq 0 \textrm{ for all } i \in I, t \in T$$
 
-`$I_{i,7} \geq 1750$  for all $i \in \{ 1,\ldots,4 \}$`
+$$q_{i,7} \geq l_i \textrm{ for all } i \in I$$
 
-
----
-
-Let $D_{i,t}$ denote the demand for product $i$ on day $t$.
 
 ---
 
@@ -391,7 +373,7 @@ The amount of stock for each product at the end of a day is the amount of the pr
 
 This can be modelled by the constraints <!-- .element:  class="fragment" data-fragment-index="1" -->
 
-`$I_{i,t} = I_{i,t-1} + P_{i,t} - D_{i,t}$  for all $i \in \{ 1,\ldots,4 \}$, $t \in \{ 1,\ldots,7 \}$` <!-- .element:  class="fragment" data-fragment-index="1" -->
+$$q_{i,t} = q_{i,t-1} + p_{i,t} - d_{i,t} \textrm{ for all }  i \in I, t \in T$$ <!-- .element:  class="fragment" data-fragment-index="1" -->
 
 
 ---
@@ -400,7 +382,7 @@ We wish to minimise total cost, i.e. the objective function is
 
 minimise
 
-`$\displaystyle\sum_{t=1}^{7}(1.50I_{1,t} + 1.50I_{2,t} + 2.50I_{3,t} + 2.50I_{4,t})$`
+$$\sum_{t\in T} \sum_{i\in I} c_i q_{i,t}$$
 
 ---
 
@@ -408,9 +390,29 @@ minimise
 
 #### Integer program of the multi-period production planning ####
 
-minimise `$\displaystyle\sum_{t=1}^{7}(1.50I_{1,t} + 1.50I_{2,t} + 2.50I_{3,t} + 2.50I_{4,t})$` 
+minimise $\displaystyle\sum_{t\in T} \sum_{i\in I} c_i q_{i,t}$
 
 subject to 
+
+$$x_{1,0} = 1$$
+$$\sum_{i \in I} x_{i,t} = 1 \textrm{ for all } t \in T \cup \brace 0 \rbrace$$
+
+
+$$p_{i,t} \leq 24r_i x_{i,t} \textrm{ for all } i \in I, t \in T$$
+$$p_{i,t} \leq (24 - s) r_i x_{i,t} + M x_{i,t-1}\text{ for all } i \in I, t \in T$$
+$$p_{i,t} \geq (24 - s) r_i x_{i,t} \textrm{ for all } i \in I, t \in T$$
+$$p_{i,t} \geq 24 r_ix_{i,t} - M(1-x_{i,t-1}) \text{ for all }  i \in I, t \in T$$
+
+$$q_{i,t} \geq 0 \textrm{ for all } i \in I, t \in T$$
+$$q_{i,7} \geq l_i \textrm{ for all } i \in I$$
+$$q_{i,t} = q_{i,t-1} + p_{i,t} - d_{i,t} \textrm{ for all }  i \in I, t \in T$$
+
+$$x_{i,t} \in \lbrace {0,1 \rbrace \textrm{ for all } i \in I,t \in T \cup \lbrace 0 \rbrace$$
+
+where $M$ is a sufficiently large number.
+
+---
+
 
 `$$x_{1,0} = 1,  x_{2,0} = 0,  x_{3,0} = 0,  x_{4,0} = 0$$`
 `$x_{1,t} + x_{2,t} + x_{3,t} + x_{4,t} = 1 \textrm{ for all } t \in \{ 1,\ldots,7 \}$` 
