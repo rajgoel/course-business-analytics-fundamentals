@@ -85,11 +85,8 @@ Rather than sacrificing expressiveness in modelling, sacrificing solution qualit
 
 ### CP Model
 
-**Sets:**
+**Sets and variables:**
 - The set of numbers $I = \lbrace 1,2,\ldots,9\rbrace$
-
-**Variables:**
-
 - For each cell $(i,j)$, define a variable $x_{ij} \in I$
 
 **Constraints:**
