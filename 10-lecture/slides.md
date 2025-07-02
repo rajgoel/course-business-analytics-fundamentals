@@ -78,24 +78,31 @@ Rather than sacrificing expressiveness in modelling, sacrificing solution qualit
 
 - In every row all numbers must be different.
 - In every column all numbers must be different.
-- In each of the 9 subsquares all numbers must be different.
+- In each of the 9 blocks all numbers must be different.
 - The given numbers must not be changed.
 
 ---
 
 ### CP Model
 
+** Sets:**
+- The set of numbers $I = \lbrace 1,2,\ldots,9\rbrace$
+
 **Variables:**
 
-- For each cell $(i,j)$, define a variable $x_{ij} \in \lbrace 1,2,\ldots,9\rbrace$
+- For each cell $(i,j)$, define a variable $x_{ij} \in I$
 
 **Constraints:**
 
-- If a number is given in cell $(i,j)  \in \lbrace 1,2,\ldots,9 \rbrace \times \lbrace 1,2,\ldots,9 \rbrace$, then fix $x_{ij}$ to that value.
-- For each row $i\in \lbrace 1,2,\ldots,9\rbrace$, all values $x_{i,1}, x_{i,2}, \ldots, x_{i,9}$​ must be different.
-- For each column $j\in \lbrace 1,2,\ldots,9\rbrace$, all values $x_{1,j}, x_{2,j}, \ldots, x_{9,j}$​ must be different.
-- For each block indexed by $(k,h) \in \lbrace 1,2,3 \rbrace \times \lbrace 1,2,3 \rbrace$, the variables
-  $$ \left\lbrace x_{i,j} \mid i \in \lbrace 1 + 3(h-1), 2 + 3(h-1), 3 + 3(h-1) \rbrace, j \in 1 + 3(k-1), 2 + 3(k-1), 3 + 3(k-1) \right\rbrace $$
+- If a number is given in cell $(i,j)  \in I \times I$, then fix $x_{ij}$ to that value.
+- For each row $i\in I$, all values $x_{i,1}, x_{i,2}, \ldots, x_{i,9}$​ must be different.
+- For each column $j\in I$, all values $x_{1,j}, x_{2,j}, \ldots, x_{9,j}$​ must be different.
+- For each block indexed by $k,h) \in \lbrace 1,2,3 \rbrace \times \lbrace 1,2,3 \rbrace$, the variables
+  $$\begin{aligned}
+ \big\lbrace x_{i,j} \mid\quad
+  & i \in \lbrace 1 + 3(h-1), 2 + 3(h-1), 3 + 3(h-1) \rbrace,\\
+  & j \in \lbrace 1 + 3(k-1), 2 + 3(k-1), 3 + 3(k-1) \rbrace \  \big\rbrace\\
+\end{aligned}$$
   must be different.
 
 ---
