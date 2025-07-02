@@ -90,7 +90,7 @@ $$\class{highlight}{x_i \leq Mz_i \textrm{ for all } i \in I}$$
 
 $$x_i \geq 0 \textrm{ for all } i\in I$$
 
-$$\class{highlight}{z_i \in \lbrace 0,1 \rbrace \textrm{ for all } i \in I$$
+$$\class{highlight}{z_i \in \lbrace 0,1 \rbrace \textrm{ for all } i \in I}$$
 
 <span class="highlight">
 where $M$ is a sufficiently large number.
@@ -243,9 +243,11 @@ where $M$ is a sufficiently large number.
 
 ---
 
+<!-- .slide:  style="font-size:80%" -->
+
 > A factory works 24 hours a day, 7 days a week producing four products.
 Only one product can be produced at a time and throughout each day, the same product is produced (and then the next day either the same product is produced or the factory produces a different product).
-The number of units produced per hour depends on the product: <!-- .element:  style="font-size:80%" -->
+> The number of units produced per hour depends on the product: 
 >
 | Product   | Production per hour |
 |-----------|---------------------|
@@ -253,15 +255,15 @@ The number of units produced per hour depends on the product: <!-- .element:  st
 | Product 2 | 250                 |
 | Product 3 | 190                 |
 | Product 4 | 150                 |
-<!-- .element:  style="font-size:80%" -->
-
 > When changing from producing one product to another product, the first five working hours of the day are lost due to the necessity of cleaning.
 On the first day no cleaning is required if and only if product 1 is produced.
-<!-- .element:  style="font-size:80%" -->
 
 ---
 
-> For the next seven days the following demand must be fulfilled: <!-- .element:  style="font-size:80%" -->
+<!-- .slide:  style="font-size:80%" -->
+
+> For the next seven days the following demand must be fulfilled:
+> 
 >
 | Product | Mon. | Tue. | Wed. | Thu. | Fri. | Sat. | Sun. |
 |---------|--------|---------|-----------|----------|--------|----------|--------|
@@ -269,11 +271,13 @@ On the first day no cleaning is required if and only if product 1 is produced.
 | 2       | 4000   | 500     | 1000      | 3000     | 500    | 1000     | 2000   |
 | 3       | 2000   | 2000    | 3000      | 2000     | 2000   | 2000     | 500    |
 | 4       | 3000   | 2000    | 2000      | 1000     | 1000   | 500      | 500    |
-<!-- .element:  style="font-size:80%" -->
 
 ---
 
-> The amount of items available at the beginning of the week is: <!-- .element:  style="font-size:80%" -->
+<!-- .slide:  style="font-size:80%" -->
+
+> The amount of items available at the beginning of the week is:
+> 
 >
 | Product   | Current stock  |
 |-----------|----------------|
@@ -281,13 +285,22 @@ On the first day no cleaning is required if and only if product 1 is produced.
 | Product 2 | 7000           |
 | Product 3 | 9000           |
 | Product 4 | 8000           |
-<!-- .element:  style="font-size:80%" -->
 >
 > At the end of the week there must be at least 1750 units in stock for each product.
 > The cost of holding stock is €1.50 per unit for products 1 and 2 and €2.50 per unit for products 3 and 4 (based on the stock held at the end of each day).
-<!-- .element:  style="font-size:80%" -->
 
 Formulate a generic model that the company can use in any week to minimise holding costs.
+
+
+---
+
+#### Sets and parameters
+
+- Let $I = \lbrace 1,2,3,4 \rbrace$ denote the set of products. 
+- Let $T = \lbrace 1,2,\ldots,7 \rbrace$ denote the set of days in a week. 
+
+- For each $i \in I$, $t \in T$ Let $p_{i,t}$ denote a variable indicating the number of units of product $i$ produced on day $t$.
+
 
 ---
 
