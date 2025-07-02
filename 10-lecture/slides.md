@@ -44,6 +44,8 @@ Syntax and capabilities of CP solvers vary.
 
 ---
 
+### Solvers for CP models
+
 Well-known solvers for CP models are:
 
 - [Google OR-Tools: CP-SAT)](https://developers.google.com/optimization/cp/cp_solver)
@@ -68,7 +70,7 @@ Rather than sacrificing expressiveness in modelling, sacrificing solution qualit
 
 ### Example: Sudoku
 
-![Sudoku](sudoku.png)
+![Sudoku](10-lecture/sudoku.png)
 
 ---
 
