@@ -14,7 +14,7 @@ However, with the right modelling skills we can still succeed in modelling these
 
 ---
 
-<!-- .slide style="font-size:80%" -->
+<!-- .slide style="font-size:70%" -->
 
 > A company has seven products, each requiring a different production time per unit.
 The company has 720 person-hours available next week and the production time and the profit per unit are given in the table below. 
@@ -299,7 +299,7 @@ Formulate a generic model that the company can use in any week to minimise holdi
 - For each $i \in I$, let $q_{i,0}$ denote the initial inventory level.
 - For each $i \in I$, let $l_i$ denote the lower bound on the final inventory level.
 - For each $i \in I$, let $c_i$ denote the costs for holding product $i$ for one day.
-- For each $i \in I$,$t \in T$, let $d_{i,t}$ denote the demand for product $i$ on day $t$.
+- For each $i \in I$, $t \in T$, let $d_{i,t}$ denote the demand for product $i$ on day $t$.
 - Let $s = 5$ denote the setup time required when changing from one product to another. 
 
 ---
@@ -307,7 +307,7 @@ Formulate a generic model that the company can use in any week to minimise holdi
 #### Variables
 
 - For each $i \in I$, $t \in T \cup \brace 0 \rbrace$ let $x_{i,t}$ denote a binary variable indicating whether product $i$ is produced on day $t$, i.e,
-  $$x_{i,t} =\left\brace \begin{array}{cl}
+  $$x_{i,t} =\left\lbrace \begin{array}{cl}
   1 & \textrm{if product } i \textrm { is produced on day } t\\\\
   0 & \textrm{otherwise}\\\\ 
   \end{array}
