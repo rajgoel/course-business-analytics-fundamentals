@@ -31,48 +31,6 @@ If all supply/demand values and lower and upper bounds are integers, the solutio
 
 ---
 
-### AMPL: networkflow.mod ###
-
-```ampl[]
-set Nodes;                            # set of nodes
-set Arcs within (Nodes cross Nodes);  # set of arcs
-param supply { Nodes };               # supply/demand values of nodes
-param costs { Arcs };                 # arc costs
-param lowerbound { Arcs };            # lower bound on the flow along arc
-param upperbound { Arcs };            # upper bound on the flow along arc
-var flow { Arcs };                    # flow along arc
-# Problem
-minimize TotalCosts: sum { (i,j) in Arcs } costs[i,j] * flow[i,j];
-subject to
-FlowConservation { i in Nodes }:
-supply[i] + sum { (j,i) in Arcs } flow[j,i] = sum { (i,j) in Arcs } flow[i,j];
-LowerBounds { (i,j) in Arcs }: flow[i,j] >= lowerbound[i,j];
-UpperBounds { (i,j) in Arcs }: flow[i,j] <= upperbound[i,j];
-```
-
----
-
-### AMPL: networkflow.dat ###
-
-```ampl[]
-set Nodes:= origin terminal destination;
-set Arcs:= (origin,destination) (origin,terminal) (terminal,destination);
-
-param                supply :=
- origin                   1
- destination             -1
- terminal                 0
-;
-
-param:                costs lowerbound upperbound :=
- origin destination       3          0   Infinity
- origin terminal          1          0   Infinity
- terminal destination     1          0   Infinity
-;
-```
-
----
-
 ### Visualisation of a  minimum cost network flow problem  ###
 
 Modelling an optimisation problem as a minimum cost network flow problem has the additional advantage that the problem can be easily visualised.
@@ -80,7 +38,7 @@ Modelling an optimisation problem as a minimum cost network flow problem has the
 ---
 
 
-<img class="stretch" src="networkmodelling/mincostflowproblem.svg"></img>
+<img class="stretch" src="09-lecture/mincostflowproblem.svg"></img>
 
 <small>
 Numbers next to the nodes indicate supply/demand values, numbers next to the arcs indicate costs, lower bound, and upper bound.
@@ -108,7 +66,7 @@ Model this problem as a minimum cost network flow problem.
 
 ### Solution: Transportation to warehouses
 
-<img class="stretch" src="networkmodelling/mincostflowproblemwithouttransshipment.svg"></img>
+<img class="stretch" src="09-lecture/mincostflowproblemwithouttransshipment.svg"></img>
 
 <small>
 Numbers next to the nodes indicate supply/demand values. All arcs have a lower bound of zero and an infinite upper bound. The costs of each arc can be found in the table.
@@ -138,7 +96,7 @@ Model this problem as a minimum cost network flow problem.
 
 ### Solution: Transportation to warehouses with distribution centre
 
-<img class="stretch" src="networkmodelling/mincostflowproblemwithtransshipment.svg"></img>
+<img class="stretch" src="09-lecture/mincostflowproblemwithtransshipment.svg"></img>
 
 <small>
 Numbers next to the nodes indicate supply/demand values. All arcs have a lower bound of zero and an infinite upper bound. The costs of direct arcs from a factory to a warehouse can be found in the table. The costs of arcs from either factory to the distribution centre are 5. The costs of arcs from the distribution centre to a warehouse are zero.   
@@ -162,7 +120,7 @@ Model this problem as a minimum cost network flow problem.
 
 #### Example: Balanced network with dummy node ####
 
-<img class="stretch" src="networkmodelling/unbalancedtransportationproblem.svg"></img>
+<img class="stretch" src="09-lecture/unbalancedtransportationproblem.svg"></img>
 
 <small>
 Numbers next to the nodes indicate supply/demand values. Numbers next to the arcs indicate costs. All arcs have a lower bound of zero and an infinite upper bound.
@@ -183,7 +141,7 @@ If the network is unbalanced, i.e., if the total supply does not match the total
 ### Example: Minimum cost network flow problem with capacity constraints ###
 
 
-<img class="stretch" src="networkmodelling/mincostflowproblemwithcapacitatednode.svg"></img>
+<img class="stretch" src="09-lecture/mincostflowproblemwithcapacitatednode.svg"></img>
 
 Assume the total flow through node D is restricted due to capacity constraints.
 
@@ -215,7 +173,7 @@ We can formulate a standard minimum cost network flow problem by
 
 ### Example: Minimum cost network flow problem after node splitting ###
 
-<img class="stretch" src="networkmodelling/mincostflowproblemwithsplitnode.svg"></img>
+<img class="stretch" src="09-lecture/mincostflowproblemwithsplitnode.svg"></img>
 
 Now the capacity constraint is on the arc and not on the node.
 
