@@ -91,11 +91,11 @@ Rather than sacrificing expressiveness in modelling, sacrificing solution qualit
 
 **Constraints:**
 
-- If a number is given in cell $(i,j) \in \in \lbrace 1,2,\ldots,9\rbrace \times \in \lbrace 1,2,\ldots,9\rbrace$, then fix $x_{ij}$ to that value.
-- For each row $i\in \lbrace 1,2,\ldots,9\rbrace$, all values $x_{i,1}, x_{i,2}, ldots, x_{i,9}$​ must be different.
-- For each column $j\in \lbrace 1,2,\ldots,9\rbrace$, all values $x_{1,j}, x_{2,j}, ldots, x_{9,j}$​ must be different.
+- If a number is given in cell $(i,j)  \in \lbrace 1,2,\ldots,9 \rbrace \times \lbrace 1,2,\ldots,9 \rbrace$, then fix $x_{ij}$ to that value.
+- For each row $i\in \lbrace 1,2,\ldots,9\rbrace$, all values $x_{i,1}, x_{i,2}, \ldots, x_{i,9}$​ must be different.
+- For each column $j\in \lbrace 1,2,\ldots,9\rbrace$, all values $x_{1,j}, x_{2,j}, \ldots, x_{9,j}$​ must be different.
 - For each block indexed by $(k,h) \in \lbrace 1,2,3 \rbrace \times \lbrace 1,2,3 \rbrace$, the variables
-  $$ \left\lbrace x_{i,j} \mid i \in \lbrace 1 + 3(h-1), 2 + 3(h-1), 3 + 3(h-1) \rbrace, \quad j \in 1 + 3(k-1), 2 + 3(k-1), 3 + 3(k-1) \right\rbrace $$
+  $$ \left\lbrace x_{i,j} \mid i \in \lbrace 1 + 3(h-1), 2 + 3(h-1), 3 + 3(h-1) \rbrace, j \in 1 + 3(k-1), 2 + 3(k-1), 3 + 3(k-1) \right\rbrace $$
   must be different.
 
 ---
