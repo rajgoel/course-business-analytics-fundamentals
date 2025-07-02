@@ -25,8 +25,7 @@ The company has 720 person-hours available next week and the production time and
 | Product 4 | 2.4                   | 19              |
 | Product 5 | 4.5                   | 55              |
 | Product 6 | 0.7                   | 10              |
-| Product 7 | 9.5                   | 115             |
-<!-- .element style="font-size:80%" -->
+| Product 7 | 9.5                   | 115             |<!-- .element style="font-size:80%" -->
 > The company's goal is to decide the mix of products which it should produce next week.   <!-- .element style="font-size:80%" -->
 
 
@@ -40,7 +39,7 @@ Formulate the problem of optimising the profit for the company.
 - For each $i\in I$ let $p_i$ denote the profit per unit of product $i$. 
 - For each $i\in I$ let $a_i$ denote the time required per unit of product $i$. 
 - Let $u$ denote the total amount of time available.
-- For each $i\in I$ let $x_i$ denote the number of unit of product $i$ to be produced. 
+- For each $i\in I$ let $x_i$ denote the number of units of product $i$ to be produced. 
 
 ---
 
@@ -63,12 +62,15 @@ $$x_i \geq 0 \textrm{ for all } i\in I$$
 Extend the model by the new constraint.
 
 > [!TIP]
-> We can use additional parameters and variable for all products.
+> We can use additional parameters and variables for all products. 
 
 ---
 
 - Let $f_i$ denote the fixed cost incurred when product $i$ is chosen for production.
 - Let $z_i$ denote a binary variable indicating whether product $i$ is chosen for production.
+
+> [!TIP]
+> We can set $f_i = 0$ for all $i \in I \setminus \lbrace 7 \rbrace$.
 
 ---
 
@@ -86,9 +88,11 @@ $$\class{highlight}{x_i \leq Mz_i \textrm{ for all } i \in I}$$
 
 $$x_i \geq 0 \textrm{ for all } i\in I$$
 
-$$\class{highlight}{z_i \in \lbrace 0,1 \rbrace}$$
+$$\class{highlight}{z_i \in \lbrace 0,1 \rbrace \textrm{ for all } i \in I}$$
 
+<span class="highlight">
 where $M$ is a sufficiently large number.
+</span>
 
 ---
 
@@ -102,11 +106,11 @@ Extend the model by the new constraint.
 ---
 
 - Let $q_i$ denote the regular production limit for product $i$.
-- Let $\hat a_i$ denote the time required for and production of product $i$ in excess of $q_i$. We assume that $\hat a_i > a_i$ for all $i\in I$.
+- Let $\hat a_i$ denote the time required for production of product $i$ in excess of $q_i$. We assume that $\hat a_i > a_i$ for all $i\in I$.
 - Let $y_i$ denote the number of units to be produced of product $i$ in excess of $q_i$ units.
 
 > [!TIP]
-> $q_i = \infty$ and $\hat a_i = \infty$ for all $i \in I \setminus \lbrace 2 \rbrace$.
+> We can set $q_i = \infty$ and $\hat a_i = \infty$ for all $i \in I \setminus \lbrace 2 \rbrace$.
 
 ---
 
@@ -116,13 +120,13 @@ $$\sum_{i \in I} p_i x_i \class{highlight}{+ \sum_{i \in I}  p_i y_i} - \sum_{i 
 
 subject to
 
-$$\sum_{i \in I} a_i x_i \class{highlight}{+ \sum_{i \in I} \hat a_i y_i} \leq u$$
 $$\class{highlight}{x_i \leq q_i \textrm{ for all } i \in I}$$
+$$\sum_{i \in I} a_i x_i \class{highlight}{+ \sum_{i \in I} \hat a_i y_i} \leq u$$
 $$x_i \leq Mz_i \textrm{ for all } i \in I$$
 
 $$x_i \geq 0 \textrm{ for all } i\in I$$
 $$\class{highlight}{y_i \geq 0 \textrm{ for all } i\in I}$$
-$$z_i \in \lbrace 0,1 \rbrace}$$
+$$z_i \in \lbrace 0,1 \rbrace  \textrm{ for all } i\in I}$$
 
 where $M$ is a sufficiently large number.
 
@@ -147,30 +151,33 @@ $$\texttt{if } x_i < q_i \texttt{ then } y_i = 0,$$
 we need to introduce an auxiliary binary variable.
 
 > [!TIP]
-> Auxiliary binary variable help us creating a chain of conditional implications.
+> Auxiliary binary variables can help us creating a chain of conditional implications.
 
 ---
 
 - Let $\hat p_i$ denote the time required for and production of product $i$ in excess in excess of $q_i$.
 - Let $w_i$ denote a binary variable indicating whether $q_i$ items or more are produced of product $i$.
 
+> [!IMPORTANT]
+> We no longer need to assume that $\hat a_i > a_i$ for all $i\in I$.
+
 ---
 
 #### Integer program for the extended production planning problem
 
-$$\sum_{i \in I} p_i x_i + \sum_{i \in I}  \class{highlight}{\hat p_i} y_i} - \sum_{i \in I} f_i z_i$$
+$$\sum_{i \in I} p_i x_i + \sum_{i \in I}  \class{highlight}{\hat p_i} y_i - \sum_{i \in I} f_i z_i$$
 
 subject to
 
-$$\sum_{i \in I} a_i x_i + \sum_{i \in I} \hat a_i y_i \leq u$$
 $$x_i \leq q_i \textrm{ for all } i \in I$$
+$$\sum_{i \in I} a_i x_i + \sum_{i \in I} \hat a_i y_i \leq u$$
 $$\class{highlight}{x_i \geq q_i - M(1- w_i)  \textrm{ for all } i \in I}$$ 
 $$\class{highlight}{y_i \leq Mw_i  \textrm{ for all } i \in I}$$ 
 $$x_i \leq Mz_i \textrm{ for all } i \in I$$
 
 $$x_i \geq 0 \textrm{ for all } i\in I$$
 $$y_i \geq 0 \textrm{ for all } i\in I$$
-$$z_i \in \lbrace 0,1 \rbrace}$$
+$$z_i \in \lbrace 0,1 \rbrace \textrm{ for all } i \in I$$
 $$\class{highlight}{w_i \in \lbrace 0,1 \rbrace} \textrm{ for all } i\in I}$$
 
 where $M$ is a sufficiently large number.
@@ -189,7 +196,7 @@ Extend the model by the new constraint.
 - For each $i,j \in I$ with $i \neq j$, let $\bar v_{i,j}$ let $s_{i,j}$ denote the additional production line set-up time.
 - For each $i,j \in I$ with $i \neq j$, let $\bar v_{i,j}$ denote a binary variable indicating whether products $i$ and $j$ are chosen for production, i.e.
 
-$$v_{i,j} =\lbrace \begin{array}{cl}
+$$v_{i,j} = \left\lbrace \begin{array}{cl}
 1 & \textrm{if products $i$ and $j$ are chosen for production}\\\\
 0 & \textrm{otherwise}\\\\
 \end{array}
@@ -211,12 +218,12 @@ $$z_i + z_j \geq 2v_{i,j}.$$
 
 #### Integer program for the extended production planning problem
 
-$$\sum_{i \in I} p_i x_i + \sum_{i \in I}  {\hat p_i} y_i - \sum_{i \in I} f_i z_i$$
+$$\sum_{i \in I} p_i x_i + \sum_{i \in I}  \hat p_i y_i - \sum_{i \in I} f_i z_i$$
 
 subject to
 
-$$\sum_{i \in I} a_i x_i + \sum_{i \in I} \hat a_i y_i \leq u$$
 $$x_i \leq q_i \textrm{ for all } i \in I$$
+$$\sum_{i \in I} a_i x_i + \sum_{i \in I} \hat a_i y_i \leq u$$
 $$x_i \geq q_i - M(1- w_i)  \textrm{ for all } i \in I$$ 
 $$y_i \leq Mw_i  \textrm{ for all } i \in I$$ 
 $$x_i \leq Mz_i \textrm{ for all } i \in I$$
@@ -226,7 +233,7 @@ $$\class{highlight}{z_i + z_j \geq 2v_{i,j}}$$
 
 $$x_i \geq 0 \textrm{ for all } i\in I$$
 $$y_i \geq 0 \textrm{ for all } i\in I$$
-$$z_i \in \lbrace 0,1 \rbrace}$$
+$$z_i \in \lbrace 0,1 \rbrace \textrm{ for all } i\in I$$
 $$w_i \in \lbrace 0,1 \rbrace \textrm{ for all } i\in I$$
 $$\class{highlight}{v_{i,j} \in \lbrace 0,1 \rbrace} \textrm{ for all } i\in I}$$
 
@@ -288,11 +295,11 @@ Formulate a generic model that the company can use in any week to minimise holdi
 
 Let $x_{i,t}$ denote a binary variable indicating whether product $i$ is produced on day $t$, i.e,
 
-`$x_{i,t} =\left\{ \begin{array}{cl}
+$$x_{i,t} =\left\{ \begin{array}{cl}
 1 & \textrm{if product } i \textrm { is produced on day } t\\
 0 & \textrm{otherwise}\\
 \end{array}
-\right.$`
+\right.$$
 
 ---
 
