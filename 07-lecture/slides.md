@@ -51,7 +51,7 @@ $$x_i \geq 0 \textrm{ for all } i\in I$$
 
 > If product 7 is chosen for production an additional fixed cost of 2000 is incurred.
 
-Extend the model by the new constraint.
+Extend the model by the new requirement.
 
 > [!TIP]
 > We can use additional parameters and variables for all products. 
@@ -91,7 +91,7 @@ where $M$ is a sufficiently large number.
 
 > Each unit of product 2 that is produced over 100 units requires a production time of 3.0 person-hours instead of 2.0 person-hours.
 
-Extend the model by the new constraint.
+Extend the model by the new requirement.
 
 > [!TIP]
 > We can exploit that the production in excess of the given limits is less efficient than up to that limit. 
@@ -127,7 +127,7 @@ where $M$ is a sufficiently large number.
 
 > Each unit of product 3 that is produced over 50 units will contribute to the total profit by 40 instead of 35 (economies of scale).
 
-Extend the model by the new constraint.
+Extend the model by the new requirement.
 
 > [!TIP]
 > We now have to enforce that $y_i=0$ whenever $x_i < q_i$.
@@ -176,7 +176,7 @@ where $M$ is a sufficiently large number.
 
 > If both product 3 and product 4 are produced, 75 person-hours are needed for production line set-up.
 
-Extend the model by the new constraint.
+Extend the model by the new requirement.
 
 > [!TIP]
 > We already have variables $z_i$ indicating whether product $i \in I$ is chosen for production.
