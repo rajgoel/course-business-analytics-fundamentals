@@ -14,8 +14,10 @@ However, with the right modelling skills we can still succeed in modelling these
 
 ---
 
+<!-- .slide style="font-size:80%" -->
+
 > A company has seven products, each requiring a different production time per unit.
-The company has 720 person-hours available next week and the production time and the profit per unit are given in the table below.  <!-- .element style="font-size:80%" -->
+The company has 720 person-hours available next week and the production time and the profit per unit are given in the table below. 
 >  
 | Product   | Person-hours per unit | Profit per unit |
 |-----------|-----------------------|-----------------|
@@ -25,9 +27,9 @@ The company has 720 person-hours available next week and the production time and
 | Product 4 | 2.4                   | 19              |
 | Product 5 | 4.5                   | 55              |
 | Product 6 | 0.7                   | 10              |
-| Product 7 | 9.5                   | 115             |<!-- .element style="font-size:80%" -->
-> The company's goal is to decide the mix of products which it should produce next week.   <!-- .element style="font-size:80%" -->
-
+| Product 7 | 9.5                   | 115             |
+> 
+> The company's goal is to decide the mix of products which it should produce next week.
 
 Formulate the problem of optimising the profit for the company.
 
@@ -88,7 +90,7 @@ $$\class{highlight}{x_i \leq Mz_i \textrm{ for all } i \in I}$$
 
 $$x_i \geq 0 \textrm{ for all } i\in I$$
 
-$$\class{highlight}{z_i \in \lbrace 0,1 \rbrace \textrm{ for all } i \in I}$$
+$$\class{highlight}{z_i \in \lbrace 0,1 \rbrace \textrm{ for all } i \in I$$
 
 <span class="highlight">
 where $M$ is a sufficiently large number.
@@ -124,8 +126,7 @@ $$\class{highlight}{x_i \leq q_i \textrm{ for all } i \in I}$$
 $$\sum_{i \in I} a_i x_i \class{highlight}{+ \sum_{i \in I} \hat a_i y_i} \leq u$$
 $$x_i \leq Mz_i \textrm{ for all } i \in I$$
 
-$$x_i \geq 0 \textrm{ for all } i\in I$$
-$$\class{highlight}{y_i \geq 0 \textrm{ for all } i\in I}$$
+$$x_i \geq 0 \textrm{ for all } i\in I, \class{highlight}{y_i \geq 0 \textrm{ for all } i\in I}$$
 $$z_i \in \lbrace 0,1 \rbrace  \textrm{ for all } i\in I}$$
 
 where $M$ is a sufficiently large number.
@@ -163,6 +164,8 @@ we need to introduce an auxiliary binary variable.
 
 ---
 
+<!-- .slide:  style="font-size:80%" -->
+
 #### Integer program for the extended production planning problem
 
 $$\sum_{i \in I} p_i x_i + \sum_{i \in I}  \class{highlight}{\hat p_i} y_i - \sum_{i \in I} f_i z_i$$
@@ -170,15 +173,13 @@ $$\sum_{i \in I} p_i x_i + \sum_{i \in I}  \class{highlight}{\hat p_i} y_i - \su
 subject to
 
 $$x_i \leq q_i \textrm{ for all } i \in I$$
-$$\sum_{i \in I} a_i x_i + \sum_{i \in I} \hat a_i y_i \leq u$$
 $$\class{highlight}{x_i \geq q_i - M(1- w_i)  \textrm{ for all } i \in I}$$ 
+$$\sum_{i \in I} a_i x_i + \sum_{i \in I} \hat a_i y_i \leq u$$
 $$\class{highlight}{y_i \leq Mw_i  \textrm{ for all } i \in I}$$ 
 $$x_i \leq Mz_i \textrm{ for all } i \in I$$
 
-$$x_i \geq 0 \textrm{ for all } i\in I$$
-$$y_i \geq 0 \textrm{ for all } i\in I$$
-$$z_i \in \lbrace 0,1 \rbrace \textrm{ for all } i \in I$$
-$$\class{highlight}{w_i \in \lbrace 0,1 \rbrace} \textrm{ for all } i\in I}$$
+$$x_i \geq 0 \textrm{ for all } i\in I, y_i \geq 0 \textrm{ for all } i\in I$$
+$$z_i \in \lbrace 0,1 \rbrace \textrm{ for all } i \in I, \class{highlight}{w_i \in \lbrace 0,1 \rbrace} \textrm{ for all } i\in I}$$
 
 where $M$ is a sufficiently large number.
 
@@ -204,7 +205,7 @@ $$v_{i,j} = \left\lbrace \begin{array}{cl}
 
 ---
 
-We can ensure that $v_{i,j} = 1$ if and only if $z_3=1$ and $z_4=1$ by the constraints
+We can ensure that $v_{i,j} = 1$ if and only if $z_i=1$ and $z_j=1$ by the constraints
 
 $$z_i + z_j \leq v_{i,j} + 1$$
 
@@ -223,19 +224,16 @@ $$\sum_{i \in I} p_i x_i + \sum_{i \in I}  \hat p_i y_i - \sum_{i \in I} f_i z_i
 subject to
 
 $$x_i \leq q_i \textrm{ for all } i \in I$$
-$$\sum_{i \in I} a_i x_i + \sum_{i \in I} \hat a_i y_i \leq u$$
 $$x_i \geq q_i - M(1- w_i)  \textrm{ for all } i \in I$$ 
+$$\sum_{i \in I} a_i x_i + \sum_{i \in I} \hat a_i y_i \leq u$$
 $$y_i \leq Mw_i  \textrm{ for all } i \in I$$ 
 $$x_i \leq Mz_i \textrm{ for all } i \in I$$
 
 $$\class{highlight}{z_i + z_j \leq v_{i,j} + 1}$$
 $$\class{highlight}{z_i + z_j \geq 2v_{i,j}}$$
 
-$$x_i \geq 0 \textrm{ for all } i\in I$$
-$$y_i \geq 0 \textrm{ for all } i\in I$$
-$$z_i \in \lbrace 0,1 \rbrace \textrm{ for all } i\in I$$
-$$w_i \in \lbrace 0,1 \rbrace \textrm{ for all } i\in I$$
-$$\class{highlight}{v_{i,j} \in \lbrace 0,1 \rbrace} \textrm{ for all } i\in I}$$
+$$x_i \geq 0 \textrm{ for all } i\in I, y_i \geq 0 \textrm{ for all } i\in I$$
+$$z_i \in \lbrace 0,1 \rbrace \textrm{ for all } i\in I, w_i \in \lbrace 0,1 \rbrace \textrm{ for all } i\in I, \class{highlight}{v_{i,j} \in \lbrace 0,1 \rbrace} \textrm{ for all } i\in I}$$
 
 where $M$ is a sufficiently large number.
 
