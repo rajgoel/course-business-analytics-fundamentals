@@ -83,7 +83,7 @@ Rather than sacrificing expressiveness in modelling, sacrificing solution qualit
 
 ---
 
-### CP Model
+### CP Model: Sudoku
 
 **Sets and variables:**
 - The set of numbers $I = \lbrace 1,2,\ldots,9\rbrace$
@@ -94,7 +94,7 @@ Rather than sacrificing expressiveness in modelling, sacrificing solution qualit
 - If a number is given in cell $(i,j)  \in I \times I$, then fix $x_{ij}$ to that value.
 - For each row $i\in I$, all values $x_{i,1}, x_{i,2}, \ldots, x_{i,9}$​ must be different.
 - For each column $j\in I$, all values $x_{1,j}, x_{2,j}, \ldots, x_{9,j}$​ must be different.
-- For each block indexed by $k,h) \in \lbrace 1,2,3 \rbrace \times \lbrace 1,2,3 \rbrace$, the variables
+- For each block indexed by $(k,h) \in \lbrace 1,2,3 \rbrace \times \lbrace 1,2,3 \rbrace$, the variables
   $$\begin{aligned}
  \big\lbrace x_{i,j} \ \mid\ 
   & i \in \lbrace 1 + 3(h-1), 2 + 3(h-1), 3 + 3(h-1) \rbrace,\\\\
