@@ -33,7 +33,7 @@ Formulate a generic problem formulation.
 
 ---
 
-#### Linear program for the production planning problem
+#### Generic model for the production planning problem
 
 maximise
 
@@ -154,8 +154,6 @@ we need to introduce an auxiliary binary variable.
 ---
 
 <!-- .slide:  style="font-size:80%" -->
-
-#### Integer program for the extended production planning problem
 
 $$\sum_{i \in I} p_i x_i + \sum_{i \in I}  \class{highlight}{\hat p_i} y_i - \sum_{i \in I} f_i z_i$$
 
