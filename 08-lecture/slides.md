@@ -1,5 +1,4 @@
-## Network optimisation ##
-
+# Network optimisation
 ---
 
 Many important optimisation problems are characterised by their underlying network representation. 
@@ -37,7 +36,7 @@ Although integer programs can be difficult to solve, network optimisation proble
 
 ---
 
-### Definition: Network ###
+## Definition: Network
 
 A *network* is defined by
 
@@ -48,26 +47,26 @@ A *network* is defined by
 
 ---
 
-#### Example ###
+### Example
 
 <img class="stretch" src="08-lecture/network.svg"></img>
 
 ---
 
-### Definition: Path ###
+## Definition: Path
 
 A *path* is a sequence of nodes $n_1, n_2, \ldots, n_k \in N$  with $(n_i,n_{i+1}) \in A$ for each $i \in \lbrace 1, \ldots, k-1\rbrace$. 
 
 ---
 
-#### Example: A path through nodes 1, 2, 5, 4, 6 ###
+### Example: A path through nodes 1, 2, 5, 4, 6
 
 <img class="stretch" src="08-lecture/path.svg"></img>
 
 
 ===
 
-### Shortest path problem ####
+## Shortest path problem
 
 The *shortest path problem* is the problem of finding the shortest (or cheapest) path from an origin $s$ to a destination $t$ through a network $(N,A)$
 where each arc is given a **positive length (or cost)** $c_{i,j}$.
@@ -84,7 +83,7 @@ For larger networks it is impossible to easily identify the shortest path.
 
 ---
 
-#### Exercise: Shortest path problem ####
+### Exercise: Shortest path problem
 
 > The *shortest path problem* is the problem of finding the shortest (or cheapest) path from an origin $s$ to a destination $t$ through a network $(N,A)$
 where each arc is given a positive length (or cost) $c_{i,j}$.
@@ -125,7 +124,7 @@ $$\sum_{(j,i)\in A} x_{j,i} = \sum_{(i,j)\in A} x_{i,j} \textrm{ for all } i\in 
 
 ---
 
-#### Integer program for the shortest path problem ####
+### Integer program for the shortest path problem
 
 minimise $\displaystyle\sum_{(i,j)\in A} c_{i,j} x_{i,j}$
 
@@ -142,19 +141,19 @@ With negative arc costs, there could be negative cost cycles.
 
 ---
 
-#### Negative cost cycles ####
+### Negative cost cycles
 
 If a network contains arcs with negative costs, then there might not be a shortest path, because it could be possible to decrease the cost by infinitively looping through a cycle.
 
 ===
 
-### Maximum flow problem ####
+## Maximum flow problem
 
 The *maximum flow problem* is the problem of finding the maximum amount of flow through a network $(N,A)$ from an origin $s$ to a destination $t$, where each arc is given an upper bound $u_{i,j}$ on the flow along the arc.
 
 ---
 
-#### Example: Disaster relief ####
+### Example: Disaster relief
 
 ![Maximum flow problem](08-lecture/Philippines_humanitarian_aid_and_disaster_relief.jpg)
 
@@ -197,7 +196,7 @@ $$0\leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
 
 ---
 
-#### Linear program for the maximum flow problem ####
+### Linear program for the maximum flow problem
 
 maximise $\displaystyle\sum_{(s,j)\in A} x_{s,j}$
 
@@ -210,13 +209,13 @@ $$0\leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
 
 ===
 
-### Assignment problem ####
+## Assignment problem
 
 Given two sets $N'$ and $N''$ with the same number of nodes, the *assignment problem* is the problem of finding an assignment of each node in $N'$ to exactly one node in $N''$ with the goal of minimising the total costs, where each possible assignmemt of a node $i\in N'$ to node $j\in N''$ incurs a given cost $c_{i,j}$.
 
 ---
 
-#### Example: Ball ###
+### Example: Ball
 
 ![Assignment problem](08-lecture/MardiGrasBall1930s.jpeg)
 
@@ -262,7 +261,7 @@ $$\sum_{(i,j)\in N' \times N''} x_{i,j} = 1 \textrm{ for all } j \in N''$$
 
 ---
 
-#### Integer program for the assignment problem ####
+### Integer program for the assignment problem
 
 minimise $\displaystyle\sum_{(i,j)\in N' \times N''} c_{i,j} x_{i,j}$
 
@@ -276,7 +275,7 @@ $$x_{i,j} \in \lbrace 0,1 \rbrace \textrm{ for all } (i,j)\in  N' \times N''$$
 
 ===
 
-### Transportation problem ####
+## Transportation problem
 
 Given two sets $N'$ and $N''$ where each node $i\in N'$ has a given supply $s_i$ and each node $j\in N''$ has a given demand $d_j$, the *transportation problem* is the problem of matching supply and demand with the smallest cost, where any unit can be transported from a node $i\in N'$ to a node $j\in N''$ at a given cost $c_{i,j}$.
 
@@ -314,7 +313,7 @@ $$\sum_{(i,j)\in N' \times N''} x_{i,j} = d_j \textrm{ for all } j \in N''$$
 
 ---
 
-#### Linear program for the transportation problem ####
+### Linear program for the transportation problem
 
 minimise $\displaystyle\sum_{(i,j)\in N' \times N''} c_{i,j} x_{i,j}$
 
@@ -329,7 +328,7 @@ $$0\leq x_{i,j} \textrm{ for all } (i,j)\in  N' \times N''$$
 
 ===
 
-### Min-cost network flow problem ####
+## Min-cost network flow problem
 
 Given a network $(N,A)$ where each node $i\in N$ has a given supply or demand $b_i$, the *minimum-cost network flow problem* is the problem of matching supply and demand with the smallest cost without violating the given lower and upper bounds $l_{i,j}$ and $u_{i,j}$ on the flow along the arc $(i,j)\in A$, where the cost of shipping one unit along the arc is $c_{i,j}$.
 
@@ -367,7 +366,7 @@ $$l_{i,j} \leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
 
 ---
 
-#### Linear program for the minimum-cost network flow problem ####
+### Linear program for the minimum-cost network flow problem
 
 minimise $\displaystyle\sum_{(i,j)\in A} c_{i,j} x_{i,j}$
 
@@ -383,7 +382,7 @@ $$l_{i,j} \leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
 
 ---
 
-### Integrality ###
+### Integrality
 
 The minimum-cost network flow problem has the property, that if all parameters are integers, then the optimal solution will also be integer.
 

@@ -1,4 +1,4 @@
-## Generic models
+# Generic models
 
 ---
 
@@ -8,9 +8,9 @@ The models we created so far marry logic with data.
 
 Although it is easy to change some of the numbers in the model, it is usually not as easy to change the dimensions of the model, e.g. the number of products and factories, etc.
 
----
+===
 
-### Separation of logic and data
+## Separation of logic and data
  
 Separation of logic and data allows a trained analyst to develop a model, and all other users can work on the data without any risk of destroying the logic.
 
@@ -33,7 +33,7 @@ How can we model this decision problem as a generic model?
 
 ---
 
-#### Sets and parameters
+### Sets and parameters
 
 The set and parameters of the generic model can be defined as follows:
 
@@ -45,19 +45,19 @@ The set and parameters of the generic model can be defined as follows:
 
 ---
 
-#### Variables
+### Variables
 
 For each $i \in I$, the production quantity of product $i$ is denoted by $x_i$.
 
 ---
 
-#### Objective
+### Objective
 
 maximise $\displaystyle\sum_{i\in I} p_i x_i$
 
 ---
 
-#### Constraints 
+### Constraints 
 
 
 $\displaystyle\sum_{i\in I} a_{i,j} x_i \leq q_j \text{ for all } j\in J$ (time constraints)
@@ -66,7 +66,7 @@ $x_i \geq 0 \text{ for all } i\in I$ (non-negativity)
 
 ---
 
-#### Generic production model
+### Generic production model
 
 maximise $\displaystyle\sum_{i\in I} p_i x_i$
 
@@ -81,7 +81,7 @@ $$x_i \geq 0 \text{ for all } i\in I$$
 
 ===
 
-### Example: <a href="markdown-viewer.html?file=03-lecture/kibbutzim.md" data-preview-link>Southern Confederation of Kibbutzim <i class="fa-solid fa-magnifying-glass"></i></a>
+## Example: <a href="markdown-viewer.html?file=03-lecture/kibbutzim.md" data-preview-link>Southern Confederation of Kibbutzim <i class="fa-solid fa-magnifying-glass"></i></a>
 
 How can we model this decision problem as a generic model?
 
@@ -94,7 +94,7 @@ How can we model this decision problem as a generic model?
 
 ---
 
-#### Sets and parameters
+### Sets and parameters
 
 The set and parameters of the generic model can be defined as follows:
 
@@ -108,13 +108,13 @@ The set and parameters of the generic model can be defined as follows:
 
 ---
 
-#### Variables
+### Variables
 
 For each kibbutz $k\in K$ and each crop $c \in C$, the number of acres devoted to the crop is $x_k^c$.
 
 ---
 
-#### Objective
+### Objective
 
 maximise 
 $$\displaystyle\sum_{c\in C} \sum_{k\in K} p^c x_k^c$$
@@ -122,42 +122,42 @@ $$\displaystyle\sum_{c\in C} \sum_{k\in K} p^c x_k^c$$
 
 ---
 
-#### Constraints for the land available
+### Constraints for the land available
 
 $$\displaystyle\sum_{c\in C} x_k^c \leq q_k^{\rm land} \ {\rm for\ all}\ k \in K$$
 <!-- .element: class="fragment" -->
 
 ---
 
-#### Constraints for the water available
+### Constraints for the water available
 
 $$\displaystyle\sum_{c\in C} w^c x_k^c \leq q_k^{\rm water} \ {\rm for\ all}\ k \in K$$
 <!-- .element: class="fragment" -->
 
 ---
 
-#### Constraints for the crop quotas
+### Constraints for the crop quotas
 
 $$\displaystyle\sum_{k\in K} x_k^c \leq u^c \ {\rm for\ all}\ c\in C$$
 <!-- .element: class="fragment" -->
 
 ---
 
-#### Equity constraints
+### Equity constraints
 
 $$\displaystyle\sum_{c\in C} \frac{1}{q_k^{\rm land}} x_k^c = \displaystyle\sum_{c\in C} \frac{1}{q_h^{\rm land}} x_{h}^c\ {\rm for\ all}\ k,h \in K$$
 <!-- .element: class="fragment" -->
 
 ---
 
-#### Non-negativity constraints
+### Non-negativity constraints
 
 $$x_k^c \geq 0\ {\rm for\ all}\ k \in K, c\in C$$
 <!-- .element: class="fragment" -->
 
 ---
 
-#### Generic model for the Southern Confederation of Kibbutzim
+### Generic model for the Southern Confederation of Kibbutzim
 
 maximise  $\displaystyle\sum_{c\in C} \sum_{k\in K} p^c x_k^c$
 
@@ -170,9 +170,9 @@ $$\displaystyle\sum_{c\in C} \frac{1}{q_k^{\rm land}}x_k^c = \displaystyle\sum_{
 $$x_k^c \geq 0\ {\rm for\ all}\ k \in K, c\in C$$
 
 
----
+===
 
-### Comparison
+## Comparison
 
 <div class="twocolumn" style="font-size:40%;gap:50px;top-margin:50px;">
 <div style="height:100%;background-color:#f7f7f8;padding:20px;border-radius:10pt;">

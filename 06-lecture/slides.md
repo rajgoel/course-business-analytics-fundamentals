@@ -1,8 +1,8 @@
-## Logical constraints
+# Logical constraints
 
 ===
 
-### Alternative conditions
+## Alternative conditions
 
 **Binary decision variables** allow us to model alternative constraints of the form
 
@@ -18,9 +18,9 @@
 - If a binary decision variables holds a value of 1 it represents a condition that is `true`.
 - If a binary decision variables holds a value of 0 it represents a condition that is `false`.
 
----
+===
 
-### Exclusive alternatives
+## Exclusive alternatives
 
 If we have a set of binary variables $y_1, \ldots, y_n$, we can ensure that **exactly one** of them can take a value of 1 by
 
@@ -29,9 +29,9 @@ $$\sum_{i=1}^{n} y_i = 1$$
 > [!NOTE]
 > Analogously, we can ensure that **at most one** or **at least one** of the binary variables must take a value of 1.
 
----
+===
 
-### $k$ out of $n$
+## $k$ out of $n$
 
 If we have a set of binary variables $y_1, \ldots, y_n$, we can ensure that **exactly** $k$ **out of** $n$ binary variables can take a value of 1 by
 
@@ -115,7 +115,7 @@ $$x_{ij} \in \lbrace 0, 1 \rbrace \textrm{ for all } i \in I, j \in J$$
 
 ===
 
-### Conditional constraints
+## Conditional constraints
 
 Binary variables allow us model **conditional constraints** of the form: 
 
@@ -261,11 +261,11 @@ $$x_i \geq 0, y_i \in \lbrace 0, 1 \rbrace \textrm{ for all } i \in I, z_j \in \
 
 ===
 
-### Conditional constraints
+## Conditional constraints
 
 ---
 
-#### Big-M notation
+### Big-M notation
 
 
 A conditional constraint $\displaystyle\sum_{i=1}^{n} a_{i} x_i  \leq b$ which only applies if a given condition holds, can be modelled as
@@ -477,7 +477,7 @@ where $M$ is a sufficiently large value.
 
 ===
 
-#### Binary `AND`
+## Binary `AND`
 
 Assume we have two binary variables $x_1$ and $x_2$ and we want to have a third binary variable $y$ that is 1 if and only if both $x_1$ and $x_2$ are set to 1.
 
@@ -533,7 +533,7 @@ $x_1 + x_2 \leq 1 + y$
 
 ===
 
-#### Binary `OR`
+## Binary `OR`
 
 Assume we have two binary variables $x_1$ and $x_2$ and we want to have a third binary variable $y$ that is 1 if and only if $x_1$ or $x_2$ are set to 1 (or both).
 

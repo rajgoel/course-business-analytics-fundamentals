@@ -1,8 +1,8 @@
-## Network modelling ##
+# Network modelling
 
 ---
 
-### Minimum cost network flow problem ###
+## Minimum cost network flow problem
 
 minimise $\displaystyle\sum_{(i,j)\in A} c_{i,j} x_{i,j}$
 
@@ -31,7 +31,7 @@ If all supply/demand values and lower and upper bounds are integers, the solutio
 
 ---
 
-### Visualisation of a  minimum cost network flow problem  ###
+## Visualisation of a  minimum cost network flow problem
 
 Modelling an optimisation problem as a minimum cost network flow problem has the additional advantage that the problem can be easily visualised.
 
@@ -46,7 +46,7 @@ Numbers next to the nodes indicate supply/demand values, numbers next to the arc
 
 ---
 
-### Exercise: Transportation to warehouses ###
+## Exercise: Transportation to warehouses
 
 > A company has two factories and three warehouses. Factory 1 has a supply of 80 units, factory 2 has a supply of 130 units. The demand at warehouses A, B, and C is 60, 80, and 70. The company can ship an unlimited amount from each factory to each warehouse at the following costs per unit:
 >
@@ -74,7 +74,7 @@ Numbers next to the nodes indicate supply/demand values. All arcs have a lower b
 
 ---
 
-### Exercise: Transportation to warehouses with distribution centre
+## Exercise: Transportation to warehouses with distribution centre
 
 > A company has two factories and three warehouses. Factory 1 has a supply of 80 units, factory 2 has a supply of 130 units. The demand at warehouses A, B, and C is 60, 80, and 70. The company can ship an unlimited amount from each factory to each warehouse at the following costs per unit:
 >
@@ -104,7 +104,7 @@ Numbers next to the nodes indicate supply/demand values. All arcs have a lower b
 
 ===
 
-#### Example: Unbalanced network ####
+### Example: Unbalanced network
 
 > A company has two factories which can produce up to 100 units of a product each. The company wants to determine how to minimise costs for shipping 70 units to a distribution centre in the north and 120 units to a distribution center in the south.
 
@@ -112,7 +112,7 @@ Can we model this problem as a minimum cost network flow problem?
 
 ---
 
-#### Example: Balanced network with dummy node ####
+### Example: Balanced network with dummy node
 
 <img class="stretch" src="09-lecture/unbalancedtransportationproblem.svg"></img>
 
@@ -122,17 +122,17 @@ Numbers next to the nodes indicate supply/demand values. Numbers next to the arc
 
 ---
 
-#### Dummy nodes and arcs ####
+### Dummy nodes and arcs
 
 If the network is unbalanced, i.e., if the total supply does not match the total demand, we can always add a dummy supply or demand node to compensate for the excess demand or supply. This node is typically connected to each demand or supply node and is given a high cost value.
 
 ===
 
-### Node splitting ###
+## Node splitting
 
 ---
 
-### Example: Minimum cost network flow problem with capacity constraints ###
+### Example: Minimum cost network flow problem with capacity constraints
 
 
 <img class="stretch" src="09-lecture/mincostflowproblemwithcapacitatednode.svg"></img>
@@ -141,7 +141,7 @@ Assume the total flow through node D is restricted due to capacity constraints.
 
 ---
 
-### Linear program with capacity constraints ###
+### Linear program with capacity constraints
 
 minimise $$\displaystyle\sum_{(i,j)\in A} c_{i,j} x_{i,j}$$
 
@@ -165,7 +165,7 @@ We can formulate a standard minimum cost network flow problem by
 
 ---
 
-### Example: Minimum cost network flow problem after node splitting ###
+### Example: Minimum cost network flow problem after node splitting
 
 <img class="stretch" src="09-lecture/mincostflowproblemwithsplitnode.svg"></img>
 
@@ -173,7 +173,7 @@ Now the capacity constraint is on the arc and not on the node.
 
 ===
 
-### Time-expanded networks ###
+## Time-expanded networks
 
 ---
 
@@ -181,7 +181,7 @@ In transportation networks we usually have to consider the time required to trav
 
 ---
 
-#### Networks with traversal times ####
+### Networks with traversal times
 
 
 <div class="graph" style="height: 200px; width: 1280px;">
@@ -207,7 +207,7 @@ To model a network optimisation problem with traversal times as a minimum cost n
 
 ---
 
-#### Time expansion
+### Time expansion
 
 In time expanded networks we create multiple copies of nodes, where each copy refers to a location at a particular point in time.
 
@@ -215,7 +215,7 @@ These copies are then connected by arcs in such a way that the time required to 
 
 ---
 
-#### Time expansion of nodes
+### Time expansion of nodes
 
 <!-- .slide: data-transition="slide-in fade-out" -->
 
@@ -251,7 +251,7 @@ These copies are then connected by arcs in such a way that the time required to 
 
 ---
 
-#### Arcs with traversal times (for trips starting on day 1)
+### Arcs with traversal times (for trips starting on day 1)
 
 <!-- .slide: data-transition="fade" -->
 
@@ -292,7 +292,7 @@ These copies are then connected by arcs in such a way that the time required to 
 
 ---
 
-#### Arcs with traversal times (for trips starting on day 1 or 2)
+### Arcs with traversal times (for trips starting on day 1 or 2)
 
 <!-- .slide: data-transition="fade" -->
 
@@ -335,7 +335,7 @@ These copies are then connected by arcs in such a way that the time required to 
 
 ---
 
-#### Arcs with traversal times (for trips starting on any day)
+### Arcs with traversal times (for trips starting on any day)
 
 <!-- .slide: data-transition="fade" -->
 
@@ -385,7 +385,7 @@ These copies are then connected by arcs in such a way that the time required to 
 
 ---
 
-#### Time travel arcs
+### Time travel arcs
 
 <!-- .slide: data-transition="fade" -->
 
@@ -451,7 +451,7 @@ These copies are then connected by arcs in such a way that the time required to 
 
 ---
 
-#### Appropriate parameters must be given for all nodes and arcs
+### Appropriate parameters must be given for all nodes and arcs
 
 <!-- .slide: data-transition="fade-in slide-out" -->
 
@@ -519,7 +519,7 @@ Numbers next to the nodes indicate supply/demand values. Numbers next to the arc
 
 ---
 
-#### Exercise
+### Exercise
 
 Suppose we can use a direct transport mode that can be used to ship an unlimited amount of items from the origin to the destination within 2 days and at a cost of 100 per item.  
 
@@ -586,7 +586,7 @@ How do you include this additional transport option?
 
 ---
 
-#### Solution
+### Solution
 
 Suppose we can use a direct transport mode that can be used to ship an unlimited amount of items from the origin to the destination within 2 days and at a cost of 100 per item.
 
@@ -655,11 +655,11 @@ Suppose we can use a direct transport mode that can be used to ship an unlimited
 
 ===
 
-### Modelling tricks
+## Modelling tricks
 
 ---
 
-#### Upper bounds on supply and demand
+### Upper bounds on supply and demand
 
 Suppose we have upper bounds on supply and demand as shown below.
 
@@ -724,7 +724,7 @@ Suppose we have upper bounds on supply and demand as shown below.
 
 ---
 
-#### Time-expanded minimum cost network flow problem with upper bounds on supply and demand
+### Time-expanded minimum cost network flow problem with upper bounds on supply and demand
 
 We can use dummy nodes and arcs to model the upper bounds.
 
@@ -802,7 +802,7 @@ We can use dummy nodes and arcs to model the upper bounds.
 
 ---
 
-#### Backlogging of demand
+### Backlogging of demand
 
 Suppose we can fulfil the demand of any period at a later point in time and have to pay a penalty of $p$ for each day of the delay.
 
@@ -867,7 +867,7 @@ Suppose we can fulfil the demand of any period at a later point in time and have
 
 ---
 
-#### Time-expanded minimum cost network flow problem with backlogging
+### Time-expanded minimum cost network flow problem with backlogging
 
 We can use arcs traveling backwards in time to consider backlogging.
 
@@ -937,7 +937,7 @@ We can use arcs traveling backwards in time to consider backlogging.
 
 ---
 
-#### Restricted backlogging of demand
+### Restricted backlogging of demand
 
 Suppose we want to restrict backlogging to at most one day.
 
@@ -1006,7 +1006,7 @@ Suppose we want to restrict backlogging to at most one day.
 
 ---
 
-#### Time-expanded minimum cost network flow problem with restricted backlogging
+### Time-expanded minimum cost network flow problem with restricted backlogging
 
 We can split the demand nodes to consider backlogging of at most one day.
 

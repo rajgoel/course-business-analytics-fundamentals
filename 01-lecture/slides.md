@@ -1,8 +1,8 @@
-## Introduction
+# Introduction
 
 ===
 
-### Terminology
+## Terminology
 
 What is **business analytics**?
 
@@ -136,7 +136,7 @@ Other terms can also be found, but they often overlap or belong to one of the ma
 
 ---
 
-### Naive approaches
+### Naive techniques
 
 Basic techniques include simple aggregations:
 
@@ -300,7 +300,7 @@ Simulation is the use of computational models to mimic the behavior of real-worl
 
 ===
 
-### Prescriptive analytics
+## Prescriptive analytics
 
 Prescriptive analytics is the process of determining **which decisions shall be taken** to achieve a business objective.
 

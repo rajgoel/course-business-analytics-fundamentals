@@ -1,9 +1,8 @@
-
-## Linear programming
+# Linear programming
 
 ===
 
-### Linear program
+## Linear program
 
 A linear program (LP) is a mathematical program 
 
@@ -19,7 +18,7 @@ where
 
 ---
 
-#### Example
+### Example
 
 maximise $f(x,y) = 3x + 5y$
 
@@ -33,7 +32,7 @@ $$y \geq 0$$
 
 ===
 
-### Graphical representation
+## Graphical representation
 
 Each linear constraint cuts the solution space (set of feasible solutions) into two halves.
 
@@ -67,7 +66,7 @@ Each linear constraint cuts the solution space (set of feasible solutions) into 
 
 ---
 
-#### Objective function
+### Objective function
 
 For any objective function, we can visualise the set of values with the same objective function value.
 
@@ -76,7 +75,7 @@ For any objective function, we can visualise the set of values with the same obj
 
 ---
 
-#### Example
+### Example
 
 <div data-animate data-load="02-lecture/linear_program.svg">
 <!--
@@ -116,7 +115,7 @@ For any objective function, we can visualise the set of values with the same obj
 
 ---
 
-#### Graphical solution method
+### Graphical solution method
 
 We can find the optimal solution of a linear program by shifting the line representing solutions with the same objective function value, until it just touches the solution space.
 
@@ -226,7 +225,7 @@ We can find the optimal solution of a linear program by shifting the line repres
 
 ===
 
-### Corner point solutions
+## Corner point solutions
 
 The optimal solution of a linear program is always at a **corner point** of the solution space
 (if an optimal solution exists).
@@ -236,7 +235,7 @@ The optimal solution of a linear program is always at a **corner point** of the 
 
 ---
 
-#### Multiple optimal solutions
+### Multiple optimal solutions
 
 In some cases a linear program has multiple optimal solutions.<br><br>
 
@@ -315,7 +314,7 @@ A LP has multiple optimal solutions if **at least two corner points** have the s
 
 ===
 
-### Simplex algorithm ###
+## Simplex algorithm
 
 ---
 
@@ -554,7 +553,7 @@ Therefore, our focus is on modelling linear programs and not on knowing the solu
 ===
 
 
-### Example: <a href="markdown-viewer.html?file=02-lecture/wyndor.md" data-preview-link>Wyndor Glass Co. <i class="fa-solid fa-magnifying-glass"></i></a>
+## Example: <a href="markdown-viewer.html?file=02-lecture/wyndor.md" data-preview-link>Wyndor Glass Co. <i class="fa-solid fa-magnifying-glass"></i></a>
 
 How can we model this decision problem?
 
@@ -566,20 +565,20 @@ How can we model this decision problem?
 
 ---
 
-#### Variables
+### Variables
 
 - Production quantity of product 1: $x_1$
 - Production quantity of product 2: $x_2$
 
 ---
 
-#### Objective function
+### Objective function
 
 maximise $3000x_1 + 5000x_2$
 
 ---
 
-#### Constraints
+### Constraints
 
 - $x_1 \leq 4$ (capacity of plant 1)
 - $2x_2 \leq 12$ (capacity of plant 2)
@@ -588,7 +587,7 @@ maximise $3000x_1 + 5000x_2$
 
 ---
 
-#### Optimisation problem
+### Optimisation problem
 
 maximise $3000x_1 + 5000x_2$
 

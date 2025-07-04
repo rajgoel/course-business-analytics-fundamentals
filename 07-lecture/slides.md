@@ -1,4 +1,4 @@
-## LP/IP modelling ##
+# LP/IP modelling
 
 ---
 
@@ -10,7 +10,7 @@ However, with the right modelling skills we can still succeed in modelling these
 
 ===
 
-### Example: <a href="markdown-viewer.html?file=07-lecture/production.md" data-preview-link>Production planning <i class="fa-solid fa-magnifying-glass"></i></a>
+## Example: <a href="markdown-viewer.html?file=07-lecture/production.md" data-preview-link>Production planning <i class="fa-solid fa-magnifying-glass"></i></a>
 
 Formulate a generic problem formulation.
 
@@ -23,7 +23,7 @@ Formulate a generic problem formulation.
 
 ---
 
-#### Sets, parameters, and variables
+### Sets, parameters, and variables
 
 - Let $I = \lbrace 1,2,\ldots,7\rbrace$ denote the set of products.
 - For each $i\in I$ let $p_i$ denote the profit per unit of product $i$. 
@@ -33,7 +33,7 @@ Formulate a generic problem formulation.
 
 ---
 
-#### Generic model for the production planning problem
+### Generic model for the production planning problem
 
 maximise
 
@@ -47,7 +47,7 @@ $$x_i \geq 0 \textrm{ for all } i\in I$$
 
 ---
 
-#### 1. Model extension
+### 1. Model extension
 
 > If product 7 is chosen for production an additional fixed cost of 2000 is incurred.
 
@@ -123,7 +123,7 @@ where $M$ is a sufficiently large number.
 
 ---
 
-#### 3. Model extension
+### 3. Model extension
 
 > Each unit of product 3 that is produced over 50 units will contribute to the total profit by 40 instead of 35 (economies of scale).
 
@@ -172,7 +172,7 @@ where $M$ is a sufficiently large number.
 
 ---
 
-#### 4. Model extension
+### 4. Model extension
 
 > If both product 3 and product 4 are produced, 75 person-hours are needed for production line set-up.
 
@@ -226,7 +226,7 @@ where $M$ is a sufficiently large number.
 
 ===
 
-### Example: <a href="markdown-viewer.html?file=07-lecture/multi-period_production.md" data-preview-link>Multi-period production planning <i class="fa-solid fa-magnifying-glass"></i></a>
+## Example: <a href="markdown-viewer.html?file=07-lecture/multi-period_production.md" data-preview-link>Multi-period production planning <i class="fa-solid fa-magnifying-glass"></i></a>
 
 Formulate a generic problem formulation.
 
@@ -239,7 +239,7 @@ Formulate a generic problem formulation.
 
 ---
 
-#### Sets and parameters
+### Sets and parameters
 
 - Let $I = \lbrace 1,2,3,4 \rbrace$ denote the set of products. 
 - Let $T = \lbrace 1,2,\ldots,7 \rbrace$ denote the set of days in a week. 
@@ -252,7 +252,7 @@ Formulate a generic problem formulation.
 
 ---
 
-#### Variables
+### Variables
 
 - For each $i \in I$, $t \in T \cup \lbrace 0 \rbrace$ let $x_{i,t}$ denote a binary variable indicating whether product $i$ is produced on day $t$, i.e,
   $$x_{i,t} =\left\lbrace \begin{array}{cl}
@@ -268,7 +268,7 @@ Formulate a generic problem formulation.
 
 ---
 
-#### Constraints
+### Constraints
 
 To indicate that product 1 was produced before start of day 1 we add the following constraint
 $$x_{1,0} = 1$$
@@ -328,7 +328,7 @@ $$q_{i,t} = q_{i,t-1} + p_{i,t} - d_{i,t} \textrm{ for all }  i \in I, t \in T$$
 
 ---
 
-#### Objective
+### Objective
 
 We wish to minimise total cost, i.e. the objective function is
 
@@ -340,7 +340,7 @@ $$\sum_{t\in T} \sum_{i\in I} c_i q_{i,t}$$
 
 <!-- .slide:  style="font-size:60%" -->
 
-#### Integer program of the multi-period production planning ####
+### Integer program of the multi-period production planning
 
 minimise $\displaystyle\sum_{t\in T} \sum_{i\in I} c_i q_{i,t}$
 
@@ -365,7 +365,7 @@ where $M$ is a sufficiently large number.
 
 ===
 
-### Example: Minimum tardiness scheduling problem ###
+## Example: Minimum tardiness scheduling problem
 
 ---
 

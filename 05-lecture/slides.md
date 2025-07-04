@@ -1,8 +1,8 @@
-## Integer programming
+# Integer programming
 
 ---
 
-### Definition
+## Definition
 
 An **integer program (IP)** is a linear program in which some or all of the variables are restricted to be integers.
 
@@ -17,7 +17,7 @@ An **integer program (IP)** is a linear program in which some or all of the vari
 
 ---
 
-### Example: Integer program
+## Example: Integer program
 
 maximise $-x + 4y$
 
@@ -37,14 +37,14 @@ $x$ and $y$ are integers
 
 ---
 
-### Solution space
+## Solution space
 
 <div data-load="05-lecture/integer_program.svg">
 
 ===
 
 
-### Linear relaxation
+## Linear relaxation
 
 By removing the integer constraints we obtain a LP which is called the linear relaxation of the IP.
 
@@ -86,7 +86,7 @@ $x$ and $y$ are <span style="text-decoration: line-through;">integers</span> rea
 
 ---
 
-#### Linear relaxation and integer solutions
+### Linear relaxation and integer solutions
 
 <span class="fragment"></span>
 <span class="fragment"></span>
@@ -212,7 +212,7 @@ Modifying the solution of the linear relaxation is only acceptable
 
 ===
 
-### Enumeration
+## Enumeration
 
 ---
 
@@ -274,7 +274,7 @@ Let us consider integer programs which only have binary variables (i.e. variable
 
 ===
 
-### Branch & bound ###
+## Branch & bound
 
 ---
 
@@ -290,14 +290,14 @@ Branch & bound exploits the fact, that a solution to the IP cannot be better tha
 
 ---
 
-#### Step 1: Select a branch ####
+### Step 1: Select a branch
 
 - Select an unsolved branch (this may be the original problem).
 - If no such branch exists, the algorithm is done.
 
 ---
 
-#### Step 2: Solve linear relaxation of branch ####
+### Step 2: Solve linear relaxation of branch
 
 - Solve the linear relaxation for the branch.
 - If the linear relaxation has no feasible solution, discard branch and repeat Step 1.
@@ -320,7 +320,7 @@ Branch & bound exploits the fact, that a solution to the IP cannot be better tha
 
 ---
 
-#### Example ####
+### Example
 
 maximise $-x + 4y$
 
@@ -339,7 +339,7 @@ $x$ and $y$ are integers
 
 ---
 
-#### Example: Branch and bound ####
+#### Example: Branch and bound
 
 <div style="min-height: 1.5em">
     <span class="fragment appear-disappear">Solution: $(x,y) = (3.8,3)$</span>
@@ -457,12 +457,11 @@ $x$ and $y$ are integers
 </div>
 
 
+===
 
----
+## MIP Solvers
 
-### MIP Solver
-
-There is a variety of free and commerical solvers for mixed integer programs.
+There is a variety of free and commercial solvers for mixed integer programs.
 
 Therefore, our focus is on modelling integer programs and not on knowing the solution algorithms.
 
@@ -481,7 +480,7 @@ For many integer programs generic branch & bound implementations are not competi
 ===
 
 
-### Binary programs
+## Binary programs
 
 ---
 

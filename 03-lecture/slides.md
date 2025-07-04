@@ -1,4 +1,4 @@
-### Example: <a href="markdown-viewer.html?file=03-lecture/kibbutzim.md" data-preview-link>Southern Confederation of Kibbutzim <i class="fa-solid fa-magnifying-glass"></i></a>
+## Example: <a href="markdown-viewer.html?file=03-lecture/kibbutzim.md" data-preview-link>Southern Confederation of Kibbutzim <i class="fa-solid fa-magnifying-glass"></i></a>
 
 How can we model this decision problem?
 
@@ -10,7 +10,7 @@ How can we model this decision problem?
 
 ---
 
-#### Summary of problem characteristics ####
+### Summary of problem characteristics
 
 - There are 3 kibbutzim
 - Each kibbutz can plant sugar beets, cotton, and sorghum
@@ -26,7 +26,7 @@ How can we model this decision problem?
 ---
 
 
-#### Variables ####
+### Variables
 
 The number of acres devoted to each of the crops by each of the 3 kibbutzim:<!-- .element: class="fragment" data-fragment-index="1" -->
 
@@ -51,7 +51,7 @@ What is the objective function?
 ---
 
 
-#### Objective function ####
+### Objective function
 
 maximise <!-- .element: class="fragment"  -->
 $$1000 (x_1^{\rm sugarbeets} + x_2^{\rm sugarbeets} +x_3^{\rm sugarbeets})$$ <!-- .element: class="fragment"  -->
@@ -72,7 +72,7 @@ What are the constraints on the usable land?
 
 ---
 
-#### Constraints on the usable land ####
+### Constraints on the usable land
 
 $$x_1^{\rm sugarbeets} + x_1^{\rm cotton}  + x_1^{\rm sorghum} \leq 400$$ <!-- .element: class="fragment"  -->
 
@@ -82,7 +82,7 @@ $$x_3^{\rm sugarbeets} + x_3^{\rm cotton}  + x_3^{\rm sorghum} \leq 300$$ <!-- .
 
 ---
 
-The Water Commisioner has allocated
+The Water Commissioner has allocated
 
 - 600 acre feet of water to kibbutz 1,
 - 800 acre feet of water to kibbutz 2,
@@ -98,7 +98,7 @@ What are the constraints on the available water?
 
 ---
 
-#### Constraints on the available water ####
+### Constraints on the available water
 
 $$3x_1^{\rm sugarbeets} + 2x_1^{\rm cotton}  + x_1^{\rm sorghum} \leq 600$$ <!-- .element: class="fragment"  -->
 
@@ -120,7 +120,7 @@ What are the constraints on the total amount of land used per crop?
 
 ---
 
-#### Constraints on the total amount of land used per crop ####
+### Constraints on the total amount of land used per crop
 
 $$x_1^{\rm sugarbeets} + x_2^{\rm sugarbeets} +x_3^{\rm sugarbeets} \leq 600$$ <!-- .element: class="fragment"  -->
 
@@ -137,7 +137,7 @@ What are the equity constraints?
 
 ---
 
-#### Equity constraints ####
+### Equity constraints
 
 $$\frac{x_1^{\rm sugarbeets} + x_1^{\rm cotton} +x_1^{\rm sorghum}}{400} = \frac{x_2^{\rm sugarbeets} + x_2^{\rm cotton} +x_2^{\rm sorghum}}{600}$$
  <!-- .element: class="fragment"  -->
@@ -153,7 +153,7 @@ $$\frac{x_2^{\rm sugarbeets} + x_2^{\rm cotton} +x_2^{\rm sorghum}}{600} =  \fra
 ---
 
 
-#### Non-negativity constraints ####
+### Non-negativity constraints
 
 $$x_i^{\rm sugarbeets} \geq 0,  x_i^{\rm cotton} \geq 0,  x_i ^{\rm sorghum} \geq 0\ {\rm for}\ i \in \lbrace 1,2,3 \rbrace$$ <!-- .element: class="fragment" data-fragment-index="1"  -->
 
@@ -165,7 +165,7 @@ $$x_i^{\rm sugarbeets} \geq 0,  x_i^{\rm cotton} \geq 0,  x_i ^{\rm sorghum} \ge
 
 <!-- .slide: style="font-size:50%;"  -->
 
-#### Linear program ####
+### Linear program
 <!-- .element: style="font-size:200%;"  -->
 
 maximise $ 1000 (x_1^{\rm sugarbeets} + x_2^{\rm sugarbeets} +x_3^{\rm sugarbeets}) + 750 (x_1^{\rm cotton} + x_2^{\rm cotton} +x_3^{\rm cotton})+ 250 (x_1^{\rm sorghum} + x_2^{\rm sorghum} +x_3^{\rm sorghum})$ 
