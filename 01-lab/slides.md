@@ -40,7 +40,7 @@ A bonus of up to **10% of the final score** can be obtained by meaningful contri
 
 ### Contributing via Issues and Pull Requests (PR)
 
-A typical workflow to contribute on [GitHub](]https://github.com/rajgoel/course-business-analytics-fundamentals) is:
+A typical workflow to contribute on [GitHub](https://github.com/rajgoel/course-business-analytics-fundamentals) is:
 
 - Create an **Issue**
 - Comment on existing issues
@@ -57,7 +57,7 @@ A typical workflow to contribute on [GitHub](]https://github.com/rajgoel/course-
 
 The course also benefits from discussions:
 
-- Start a [GitHub Discussion](https://github.com/rajgoel/course-scientific-programming/discussions)
+- Start a [GitHub Discussion](https://github.com/rajgoel/course-business-analytics-fundamentals/discussions)
 - Participate in existing discussions
 - Link discussions to issues or pull requests where relevant.
 
