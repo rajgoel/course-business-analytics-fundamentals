@@ -460,7 +460,7 @@ println("Profit = ", objective_value(model))
 
 <!-- .slide: data-auto-animate="true" -->
 
-## OR-Tools
+## Google OR-Tools
 
 ---
 
