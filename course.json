@@ -6,7 +6,7 @@
   "logo": "logo.svg",
   "topics": [
     { "topic": "1. Introduction",                      "src": "slides.md", "folder": "01-lecture" },
-    { "topic": "1. Lab: Requirements & Prerequisites", "src": "slides.md", "folder": "01-lab" },
+    { "topic": "1. Lab: Prerequisites and requirements", "src": "slides.md", "folder": "01-lab" },
     { "topic": "2. Linear Programming",                "src": "slides.md", "folder": "02-lecture" },
     { "topic": "2. Lab: AMPL & JUMP",                  "src": "slides.md", "folder": "02-lab" },
     { "topic": "3. LP Modelling",                      "src": "slides.md", "folder": "03-lecture" },

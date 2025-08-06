@@ -8,7 +8,7 @@ https://rajgoel.github.io/course-business-analytics-fundamentals/
 
 | Session | Lecture                       | Lab                          |
 |---------|-------------------------------|------------------------------|
-| 01      | [Introduction](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=01-lecture)                  | [Requirements & Prerequisites](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=01-lab) |
+| 01      | [Introduction](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=01-lecture)                  | [Prerequisites and requirements](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=01-lab) |
 | 02      | [Linear Programming](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=02-lecture)            | [AMPL & JUMP](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=02-lab)                  |
 | 03      | [LP Modelling](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=03-lecture)                  | [Cases & Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=03-lab)             |
 | 04      | [Generic Models](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=04-lecture)                | [Model & Data in AMPL](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=04-lab)         |
@@ -35,6 +35,14 @@ A bonus of up to 10% of the final score can be obtained by meaningful contributi
 
 This module provides an introduction to descriptive, predictive, and prescriptive analytics in the context of business decision-making. Students will learn about various analytical techniques and models used in business, such as linear programming, integer programming, and network flow modelling. The module emphasises the application of analytics to solve real-world business problems and optimise decision-making processes. Through case studies and interactive exercises, students will gain practical skills in analysing complex business problems and deriving meaningful insights. They will learn to apply linear programming techniques to optimise resource allocation and solve business optimisation problems. By the end of the module, students will possess the necessary knowledge and skills to support data-driven decision-making, formulate and solve business problems, and provide actionable insights to enhance organisational performance.
 
+### Pre-requisites
+
+Prerequisites for the module are an inquisitive mind and an understanding of mathematics on a level typical of an undergraduate degree in business studies. Students are expected to refresh their knowledge in essential mathematics prior to the start of the module.
+
+Excellent books for self-study are:
+- Sydsaeter K. and P. Hammond (2012): Essential Mathematics for economic analysis, Prentice Hall.
+- Tan, S. T. (2015): Applied Mathematics for the Managerial, Life, and Social Sciences, Cengage
+
 ### Learning outcomes
 
 On successful completion of this module, students
@@ -46,7 +54,9 @@ On successful completion of this module, students
 
 ### Literature
 
-Frederick Hillier, Gerald Lieberman. Introduction to Operations Research, McGraw-Hill Higher Education, 2024, ISBN 9781264856961
+F. Hillier, G. Lieberman. Introduction to Operations Research, McGraw-Hill Higher Education, 2024, ISBN 9781264856961
+
+R. Fourer, D.M. gay, B.W. Kernighan. AMPL - A Modeling Language for Mathematical Programming, Second Edition, https://ampl.com/resources/books/ampl-book/
 
 ## License
 
