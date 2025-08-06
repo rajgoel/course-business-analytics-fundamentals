@@ -22,7 +22,7 @@ https://rajgoel.github.io/course-business-analytics-fundamentals/
 
 ## Grading
 
-Grading will be based to 100% on a written examination, composed of:
+Grading will be based to 100% on a written work, composed of:
 
 - 75% Final exam (open book, open notes, 90 min)
 - 25% E-Assignments

@@ -157,7 +157,7 @@ $$x_k^c \geq 0\ {\rm for\ all}\ k \in K, c\in C$$
 
 ---
 
-### Generic model for the Southern Confederation of Kibbutzim
+### Generic model
 
 maximise  $\displaystyle\sum_{c\in C} \sum_{k\in K} p^c x_k^c$
 
