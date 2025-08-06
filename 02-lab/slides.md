@@ -1,4 +1,4 @@
-# AMPL, JuMP, and OR-Tools
+# AMPL, JuMP, and Google OR-Tools
 
 ===
 
@@ -464,20 +464,19 @@ println("Profit = ", objective_value(model))
 
 ---
 
-## OR-Tools
+## Google OR-Tools
 
 <!-- .slide: data-auto-animate="true" -->
 
-[MathOpt](https://developers.google.com/optimization/math_opt) allows you to model and solve linear programs (and others) from within Python or C++ programs.
+[MathOpt](https://developers.google.com/optimization/math_opt) from Google OR-Tools allows you to model and solve linear programs (and others) from within Python or C++ programs.
 
 ---
 
 ### Example: Wyndor Glass Co
 
-```python[1|3-4|6-8|10-11|13-14|16-19|21-22|24-28]
+```python[1|3|5-7|9-10|12-15|17-18|20-24]
 from ortools.math_opt.python import mathopt
 
-# Create model
 model = mathopt.Model(name="wyndor")
 
 # Variables

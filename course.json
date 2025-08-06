@@ -8,7 +8,7 @@
     { "topic": "1. Introduction",                      "src": "slides.md", "folder": "01-lecture" },
     { "topic": "1. Lab: Prerequisites and requirements", "src": "slides.md", "folder": "01-lab" },
     { "topic": "2. Linear Programming",                "src": "slides.md", "folder": "02-lecture" },
-    { "topic": "2. Lab: AMPL, JuMP, and OR-Tools",     "src": "slides.md", "folder": "02-lab" },
+    { "topic": "2. Lab: AMPL, JuMP, and Google OR-Tools", "src": "slides.md", "folder": "02-lab" },
     { "topic": "3. LP Modelling",                      "src": "slides.md", "folder": "03-lecture" },
     { "topic": "3. Lab: Cases & Examples",             "src": "slides.md", "folder": "03-lab" },
     { "topic": "4. Generic Models",                    "src": "slides.md", "folder": "04-lecture" },

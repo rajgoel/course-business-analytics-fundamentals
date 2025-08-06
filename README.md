@@ -9,7 +9,7 @@ https://rajgoel.github.io/course-business-analytics-fundamentals/
 | Session | Lecture                       | Lab                          |
 |---------|-------------------------------|------------------------------|
 | 01      | [Introduction](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=01-lecture)                  | [Prerequisites and requirements](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=01-lab) |
-| 02      | [Linear Programming](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=02-lecture)            | [AMPL, JuMP, and OR-Tools](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=02-lab)                  |
+| 02      | [Linear Programming](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=02-lecture)            | [AMPL, JuMP, and Google OR-Tools](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=02-lab)                  |
 | 03      | [LP Modelling](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=03-lecture)                  | [Cases & Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=03-lab)             |
 | 04      | [Generic Models](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=04-lecture)                | [Model & Data in AMPL](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=04-lab)         |
 | 05      | [Integer Programming](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=05-lecture)           | [Cases & Examples](https://rajgoel.github.io/course-business-analytics-fundamentals/?topic=05-lab)             |
