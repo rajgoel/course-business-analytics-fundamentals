@@ -82,7 +82,7 @@ All **Pull Requests** that are merged are eligible for a bonus. Depending on the
 
 ### AMPL
 
-AMPL is a language for describing optimization problems in a way that closely mirrors mathematical notation on paper.
+AMPL is a language for describing optimisation problems in a way that closely mirrors mathematical notation on paper.
 
 > [!NOTE]
 > No programming skills are required to use AMPL.
