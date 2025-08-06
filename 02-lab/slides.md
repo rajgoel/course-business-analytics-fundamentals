@@ -18,22 +18,22 @@ AMPL is a modelling language that can be used to describe and solve linear progr
 
 We write linear programs like
 
-maximise `$3x + 5y$`
+maximise $3x + 5y$
 
 subject to
-`$$x \leq 4$$`
-`$$y \leq 6$$`
-`$$3x + 2y \leq 18$$`
+$$x \leq 4$$
+$$y \leq 6$$
+$$3x + 2y \leq 18$$
 
 ---
 
 Most solvers use the standard form to solve linear programs, i.e.,
 
-minimise `$c^Tx$`
+minimise $c^Tx$
 
 subject to
-`$$Ax=b$$`
-`$$x \geq 0$$`
+$$Ax=b$$
+$$x \geq 0$$
 
 
 ---
