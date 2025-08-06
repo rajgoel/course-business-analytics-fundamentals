@@ -76,7 +76,7 @@ All **Pull Requests** that are merged are eligible for a bonus. Depending on the
 
 ===
 
-## Software and tools
+## Software
 
 ---
 
