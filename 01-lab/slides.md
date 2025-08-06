@@ -121,4 +121,4 @@ JuMP is a modeling language for mathematical optimisation embedded in Julia. It 
 Google OR-Tools is an open-source software suite for optimisation. It supports linear programming, constraint programming, routing, and more, with APIs in several programming languages.
 
 > [!NOTE]
-> [MathOpt](https://developers.google.com/optimization/math_opt/basic_example) provides and easy to use interface for formulating optimisation models in Python and C++.
+> [MathOpt](https://developers.google.com/optimization/math_opt/basic_example) provides an easy to use interface for formulating optimisation models in Python and C++.
