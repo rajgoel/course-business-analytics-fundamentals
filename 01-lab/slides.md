@@ -104,7 +104,7 @@ The AMPL Community Edition is free to use and can be obtained from: https://ampl
 
 ### JuMP
 
-JuMP is a modeling language for mathematical optimisation embedded in Julia. It offers a syntax close to mathematical expressions and supports a wide range of solvers.
+[JuMP](https://jump.dev/) is a modeling language for mathematical optimisation embedded in Julia. It offers a syntax close to mathematical expressions and supports a wide range of solvers.
 
 > [!TIP]
 > You can install JuMP from within Julia by

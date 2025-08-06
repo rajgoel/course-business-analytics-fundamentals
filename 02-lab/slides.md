@@ -1,10 +1,14 @@
+# AMPL, JuMP, and OR-Tools
+
+===
+
 <!-- .slide: data-auto-animate="true" -->
 
-# AMPL (A Mathematical Programming Language)
+## AMPL (A Mathematical Programming Language)
 
 ---
 
-# AMPL (A Mathematical Programming Language)
+## AMPL (A Mathematical Programming Language)
 
 <!-- .slide: data-auto-animate="true" -->
 
@@ -12,7 +16,7 @@ AMPL is a modelling language that can be used to describe and solve linear progr
 
 ===
 
-## What does AMPL do ?
+### What does AMPL do ?
 
 ---
 
@@ -42,7 +46,7 @@ AMPL automatically does the translation for us.
 
 ---
 
-## Solvers
+### Solvers
 
 AMPL has interfaces to various different solvers, e.g.
 
@@ -54,20 +58,20 @@ The solver is the code that actually does the optimisation.
 
 ===
 
-## AMPL book
+### AMPL book
 
 The [AMPL book](https://ampl.com/resources/the-ampl-book/) provides comprehensive information on how to use AMPL.
 
 
 ===
 
-## AMPL console
+### AMPL console
 
 <!-- .slide: data-auto-animate="true" -->
 
 ---
 
-## AMPL console
+### AMPL console
 
 <!-- .slide: data-auto-animate="true" -->
 
@@ -94,7 +98,7 @@ In your AMPL installation folder, you can find several examples of such model fi
 
 ---
 
-### Example: Wyndor Glass Co ###
+### Example: Wyndor Glass Co
 
 `wyndor.mod`:
 
@@ -407,5 +411,95 @@ ampl:
 ```
 
 ===
+
+<!-- .slide: data-auto-animate="true" -->
+
+## JuMP
+
+---
+
+## JuMP
+
+<!-- .slide: data-auto-animate="true" -->
+
+[JuMP](https://jump.dev/) allows you to model and solve linear programs (and others) from within Julia programs.
+
+---
+
+### Example: Wyndor Glass Co
+
+```julia[1-2|4|6-8|10-11|13-16|18-19|21-25]
+using JuMP
+using HiGHS  # Solver
+
+model = Model(HiGHS.Optimizer)
+
+# Variables
+@variable(model, x1 >= 0)  # Product 1
+@variable(model, x2 >= 0)  # Product 2
+
+# Objective: Maximize profit
+@objective(model, Max, 3 * x1 + 5 * x2)
+
+# Constraints
+@constraint(model, x1 <= 4)                   # Plant 1
+@constraint(model, x2 <= 6)                   # Plant 2
+@constraint(model, 3 * x1 + 2 * x2 <= 18)     # Plant 3
+
+# Solve
+optimize!(model)
+
+# Results
+println("Status: ", termination_status(model))
+println("x1 = ", value(x1))
+println("x2 = ", value(x2))
+println("Profit = ", objective_value(model))
+```
+
+===
+
+<!-- .slide: data-auto-animate="true" -->
+
+## OR-Tools
+
+---
+
+## OR-Tools
+
+<!-- .slide: data-auto-animate="true" -->
+
+[MathOpt](https://developers.google.com/optimization/math_opt) allows you to model and solve linear programs (and others) from within Python or C++ programs.
+
+---
+
+### Example: Wyndor Glass Co
+
+```python[1|3-4|6-8|10-11|13-14|16-19|21-22|24-28]
+from ortools.math_opt.python import mathopt
+
+# Create model
+model = mathopt.Model(name="wyndor")
+
+# Variables
+x1 = model.add_variable(lb=0.0, name="x1")
+x2 = model.add_variable(lb=0.0, name="x2")
+
+# Objective
+model.maximize(3 * x1 + 5 * x2)
+
+# Constraints
+model.add_linear_constraint(x1 <= 4.0, name="Plant1")
+model.add_linear_constraint(x2 <= 6.0, name="Plant2")
+model.add_linear_constraint(3 * x1 + 2 * x2 <= 18.0, name="Plant3")
+
+# Solve
+result = mathopt.solve(model, mathopt.SolverType.HIGHS)
+    
+# Results
+print("Status:", result.termination.reason)
+print("x1 =", result.variable_values()[x1])
+print("x2 =", result.variable_values()[x2])
+print("Profit =", result.objective_value())
+```
 
 
