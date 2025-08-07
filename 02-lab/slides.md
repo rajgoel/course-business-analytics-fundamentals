@@ -94,7 +94,8 @@ AMPL has two types of commands, i.e., a set of commands
 
 Throughout this course we assume that the commands to formulate a model are stored in a separate model file with suffix `.mod`.
 
-In your AMPL installation folder, you can find several examples of such model files. These can be opened and modified with any text editor. <!-- .element: class="fragment" -->
+> [!TIP]
+> In your AMPL installation folder, you can find several examples of such model files. These can be opened and modified with any text editor.
 
 ---
 
