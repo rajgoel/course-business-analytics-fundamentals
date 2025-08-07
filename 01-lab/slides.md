@@ -100,6 +100,10 @@ The AMPL Community Edition is free to use and can be obtained from: https://ampl
 >  - Download AMPL Installer (Windows/MacOS) or bundle (Linux)
 >  - Install AMPL and activate your license
 
+===
+
+## Other software
+
 ---
 
 ### JuMP

@@ -22,7 +22,7 @@ https://rajgoel.github.io/course-business-analytics-fundamentals/
 
 ## Grading
 
-Grading will be based to 100% on a written work, composed of:
+Grading will be based to 100% on written work, composed of:
 
 - 75% Final exam (open book, open notes, 90 min)
 - 25% E-Assignments
@@ -56,7 +56,7 @@ On successful completion of this module, students
 
 F. Hillier, G. Lieberman. Introduction to Operations Research, McGraw-Hill Higher Education, 2024, ISBN 9781264856961
 
-R. Fourer, D.M. gay, B.W. Kernighan. AMPL - A Modeling Language for Mathematical Programming, Second Edition, https://ampl.com/resources/books/ampl-book/
+R. Fourer, D.M. Gay, B.W. Kernighan. AMPL - A Modeling Language for Mathematical Programming, Second Edition, https://ampl.com/resources/books/ampl-book/
 
 ## License
 

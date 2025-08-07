@@ -598,3 +598,147 @@ $$2x_2 \leq 12$$
 $$3x_1 + 2x_2 \leq 18$$
 $$x_1 \geq 0, x_2 \geq 0$$
 
+===
+
+## Standard form of linear programming
+
+---
+
+### Standard form (explicit)
+
+**Any** linear program can be written as
+
+minimise $c_1 x_1 + c_2 x_2 + \ldots + c_n x_n$
+
+subject to
+
+$$a_{11} x_1 + a_{12} x_2 + \ldots + a_{1n} x_n = b_1$$
+$$a_{21} x_1 + a_{22} x_2 + \ldots + a_{2n} x_n = b_2$$
+$$\ldots$$
+$$a_{m1} x_1 + a_{m2} x_2 + \ldots + a_{mn} x_n = b_m$$
+
+$$x_1 \geq 0, x_2 \geq 0, \ldots, x_n \geq 0$$
+
+---
+
+### Standard form (summation and indices)
+
+A compacter form to write the same linear program is
+
+minimise $\displaystyle \sum_{i=1}^n c_i x_i$
+
+subject to
+
+$$ \sum_{i=1}^n c_{j,i} x_i = b_j \textrm{ for all }  j \in \{ 1, 2, \ldots, m\}$$
+
+$$x_i \geq 0 \textrm{ for all }  i \in \{ 1, 2, \ldots, n\}$$
+
+---
+
+### Standard form (matrix formulation)
+
+In matrix formulation the same linear program is
+
+minimise $\displaystyle c^T x$
+
+subject to
+
+$$Ax = b$$
+
+$$x \geq 0$$
+
+
+---
+
+In the standard form all constraints (except for the non-negativity constraints) are equations.
+
+What can we do if we have constraints of type '$\leq$' or '$\geq'$? <!-- .element: class="fragment" -->
+
+---
+
+
+#### Slack variables ####
+
+Any '$\leq$' constraint can be converted into a '$=$' constraint by introducing a non-negative slack variable.<br><br>
+
+<div class="fragment">
+$$a_{j1} x_1 + a_{j2} x_2 + \ldots + a_{jn} x_n \leq b_j$$
+$$\Leftrightarrow$$
+$$a_{j1} x_1 + a_{j2} x_2 + \ldots + a_{jn} x_n + s_j = b_j$$
+$$s_j \geq 0$$
+</div>
+
+---
+
+Any '$\geq$' constraint can be converted into a '$=$' constraint by introducing a non-negative slack variable.<br><br>
+
+<div class="fragment">
+$$a_{j1} x_1 + a_{j2} x_2 + \ldots + a_{jn} x_n \geq b_j$$
+$$\Leftrightarrow$$
+$$a_{j1} x_1 + a_{j2} x_2 + \ldots + a_{jn} x_n + (-1)s_j = b_j$$
+$$s_j \geq 0$$
+</div>
+
+
+---
+
+#### Example: Standard form ####
+
+maximise `$f(x,y) = 3x + 5y$`
+
+subject to
+
+`$$x \leq 4$$`
+`$$y \leq 6$$`
+`$$3x + 2y \leq 18$$`
+`$$x \geq 0$$`
+`$$y \geq 0$$`
+
+How can this problem be transformed into standard form? <!-- .element: class="fragment" -->
+
+
+---
+
+maximise `$f(x,y) = 3x + 5y$`
+
+subject to
+
+`$$x + s_1 = 4$$`
+`$$y + s_2 = 6$$`
+`$$3x + 2y + s_3 = 18$$`
+`$$x \geq 0$$`
+`$$y \geq 0$$`
+`$$s_1 \geq 0$$`
+`$$s_2 \geq 0$$`
+`$$s_3 \geq 0$$`
+
+---
+
+
+#### Example: Matrix notation ####
+
+maximise $f(x,y) = 3x + 5y$
+
+subject to
+
+$$x \leq 4$$
+$$y \leq 6$$
+$$3x + 2y \leq 18$$
+$$x \geq 0$$
+$$y \geq 0$$
+
+How can we represent this problem in matrix notation? <!-- .element: class="fragment" -->
+
+---
+
+maximise $\displaystyle\left( \begin{array}{c}3\\ 5\end{array} \right)^T \left( \begin{array}{c}x_1\\ x_2\end{array} \right) $
+
+subject to
+
+$$\left( \begin{array}{cc}1 & 0 \\ 0 & 1 \\ 3 & 2 \end{array} \right)  \left( \begin{array}{c}x_1\\ x_2\end{array} \right)  \leq  \left( \begin{array}{c}4\\6\\18 \end{array} \right) $$
+$$ \left( \begin{array}{c}x_1\\ x_2\end{array} \right)  \geq  \left( \begin{array}{c}0\\ 0\end{array} \right)  $$
+
+---
+
+The different ways of formulating a linear program can be used interchangeably. Depending on the specific context one or another way of formulating a LP may be preferable.
+
