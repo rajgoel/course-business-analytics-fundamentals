@@ -690,30 +690,30 @@ $$s_j \geq 0$$
 
 #### Example: Standard form ####
 
-maximise $f(x,y) = 3x + 5y$
+maximise $f(x_1,x_2) = 3x_1 + 5x_2$
 
 subject to
 
-$$x \leq 4$$
-$$y \leq 6$$
-$$3x + 2y \leq 18$$
-$$x \geq 0$$
-$$y \geq 0$$
+$$x_1 \leq 4$$
+$$x_2 \leq 6$$
+$$3x_1 + 2x_2 \leq 18$$
+$$x_1 \geq 0$$
+$$x_2 \geq 0$$
 
 How can this problem be transformed into standard form? <!-- .element: class="fragment" -->
 
 
 ---
 
-maximise $f(x,y) = 3x + 5y$
+maximise $f(x_1,x_2) = 3x_1 + 5x_2$
 
 subject to
 
-$$x + s_1 = 4$$
-$$y + s_2 = 6$$
-$$3x + 2y + s_3 = 18$$
-$$x \geq 0$$
-$$y \geq 0$$
+$$x_1 + s_1 = 4$$
+$$x_2 + s_2 = 6$$
+$$3x_1 + 2x_2 + s_3 = 18$$
+$$x_1 \geq 0$$
+$$x_2 \geq 0$$
 $$s_1 \geq 0$$
 $$s_2 \geq 0$$
 $$s_3 \geq 0$$
@@ -723,22 +723,22 @@ $$s_3 \geq 0$$
 
 #### Example: Vector-matrix notation ####
 
-maximise $f(x,y) = 3x + 5y$
+maximise $f(x_1,x_2) = 3x_1 + 5x_2$
 
 subject to
 
-$$x \leq 4$$
-$$y \leq 6$$
-$$3x + 2y \leq 18$$
-$$x \geq 0$$
-$$y \geq 0$$
+$$x_1 \leq 4$$
+$$x_2 \leq 6$$
+$$3x_1 + 2x_2 \leq 18$$
+$$x_1 \geq 0$$
+$$x_2 \geq 0$$
 
 How can we represent this problem in vector-matrix notation? <!-- .element: class="fragment" -->
 
 ---
 
 maximise 
-$\begin{pmatrix} 3 \\\\ 5 \end{pmatrix}^T \begin{pmatrix} x_1 \\\\ x_2 \end{pmatrix}$
+$\displaystyle\left( \begin{array}{c}3 \\\\ 5\end{array} \right)^T \displaystyle\left( \begin{array}{c}x_1 \\\\ x_2\end{array} \right)$
 
 subject to
 
