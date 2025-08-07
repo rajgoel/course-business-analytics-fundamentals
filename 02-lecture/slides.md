@@ -612,10 +612,10 @@ minimise $c_1 x_1 + c_2 x_2 + \ldots + c_n x_n$
 
 subject to
 
-$$a_{11} x_1 + a_{12} x_2 + \ldots + a_{1n} x_n = b_1$$
-$$a_{21} x_1 + a_{22} x_2 + \ldots + a_{2n} x_n = b_2$$
+$$a_{1,1} x_1 + a_{1,2} x_2 + \ldots + a_{1,n} x_n = b_1$$
+$$a_{2,1} x_1 + a_{2,2} x_2 + \ldots + a_{2,n} x_n = b_2$$
 $$\ldots$$
-$$a_{m1} x_1 + a_{m2} x_2 + \ldots + a_{mn} x_n = b_m$$
+$$a_{m,1} x_1 + a_{m,2} x_2 + \ldots + a_{m,n} x_n = b_m$$
 
 $$x_1 \geq 0, x_2 \geq 0, \ldots, x_n \geq 0$$
 
@@ -629,7 +629,7 @@ minimise $\displaystyle \sum_{i=1}^n c_i x_i$
 
 subject to
 
-$$ \sum_{i=1}^n c_{j,i} x_i = b_j \textrm{ for all }  j \in \{ 1, 2, \ldots, m\}$$
+$$ \sum_{i=1}^n a_{j,i} x_i = b_j \textrm{ for all }  j \in \{ 1, 2, \ldots, m\}$$
 
 $$x_i \geq 0 \textrm{ for all }  i \in \{ 1, 2, \ldots, n\}$$
 
@@ -652,31 +652,37 @@ $$x \geq 0$$
 
 In the standard form all constraints (except for the non-negativity constraints) are equations.
 
-What can we do if we have constraints of type '$\leq$' or '$\geq'$? <!-- .element: class="fragment" -->
+What can we do if we have constraints of type ≤ or ≥? <!-- .element: class="fragment" -->
 
 ---
 
 
-#### Slack variables ####
+#### Slack variables for ≤ constraints ####
 
-Any '$\leq$' constraint can be converted into a '$=$' constraint by introducing a non-negative slack variable.<br><br>
+Any ≤ constraints constraint can be converted into an equation by introducing a non-negative slack variable.
 
 <div class="fragment">
-$$a_{j1} x_1 + a_{j2} x_2 + \ldots + a_{jn} x_n \leq b_j$$
+
+$$a_{j,1} x_1 + a_{j,2} x_2 + \ldots + a_{j,n} x_n \leq b_j$$
 $$\Leftrightarrow$$
-$$a_{j1} x_1 + a_{j2} x_2 + \ldots + a_{jn} x_n + s_j = b_j$$
+$$a_{j,1} x_1 + a_{j,2} x_2 + \ldots + a_{j,n} x_n + s_j = b_j$$
 $$s_j \geq 0$$
+
 </div>
 
 ---
 
-Any '$\geq$' constraint can be converted into a '$=$' constraint by introducing a non-negative slack variable.<br><br>
+#### Slack variables for ≥ constraints ####
+
+Any ≥ constraint can be converted into an equation constraint by introducing a non-negative slack variable.
 
 <div class="fragment">
-$$a_{j1} x_1 + a_{j2} x_2 + \ldots + a_{jn} x_n \geq b_j$$
+
+$$a_{j,1} x_1 + a_{j,2} x_2 + \ldots + a_{j,n} x_n \geq b_j$$
 $$\Leftrightarrow$$
-$$a_{j1} x_1 + a_{j2} x_2 + \ldots + a_{jn} x_n + (-1)s_j = b_j$$
+$$a_{j,1} x_1 + a_{j,2} x_2 + \ldots + a_{j,n} x_n + (-1)s_j = b_j$$
 $$s_j \geq 0$$
+
 </div>
 
 
@@ -732,19 +738,7 @@ How can we represent this problem in matrix notation? <!-- .element: class="frag
 ---
 
 maximise 
-$\displaystyle\left( 
-\begin{array}{c}
-3\\
-5
-\end{array}
-\right)^T 
-\left(
-\begin{array}{c}
-x_1\\
-x_2
-\end{array}
-\right)
-$
+$\begin{pmatrix} 3 \\ 5 \end{pmatrix}^T \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}$
 
 subject to
 
