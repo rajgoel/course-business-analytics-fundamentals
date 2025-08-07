@@ -738,7 +738,7 @@ How can we represent this problem in matrix notation? <!-- .element: class="frag
 ---
 
 maximise 
-$\begin{pmatrix} 3 \\ 5 \end{pmatrix}^T \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}$
+$\begin{pmatrix} 3 \\\\ 5 \end{pmatrix}^T \begin{pmatrix} x_1 \\\\ x_2 \end{pmatrix}$
 
 subject to
 
