@@ -604,7 +604,7 @@ $$x_1 \geq 0, x_2 \geq 0$$
 
 ---
 
-### Standard form (explicit)
+### Standard form explicitly listing all variables and parameters
 
 **Any** linear program can be written as
 
@@ -621,7 +621,7 @@ $$x_1 \geq 0, x_2 \geq 0, \ldots, x_n \geq 0$$
 
 ---
 
-### Standard form (summation and indices)
+### Standard form using summation operator
 
 A compacter form to write the same linear program is
 
@@ -635,9 +635,9 @@ $$x_i \geq 0 \textrm{ for all }  i \in \{ 1, 2, \ldots, n\}$$
 
 ---
 
-### Standard form (matrix formulation)
+### Standard form using vectors and matrix
 
-In matrix formulation the same linear program is
+In vector-matrix formulation the same linear program is
 
 minimise $\displaystyle c^T x$
 
@@ -721,7 +721,7 @@ $$s_3 \geq 0$$
 ---
 
 
-#### Example: Matrix notation ####
+#### Example: Vector-matrix notation ####
 
 maximise $f(x,y) = 3x + 5y$
 
@@ -733,7 +733,7 @@ $$3x + 2y \leq 18$$
 $$x \geq 0$$
 $$y \geq 0$$
 
-How can we represent this problem in matrix notation? <!-- .element: class="fragment" -->
+How can we represent this problem in vector-matrix notation? <!-- .element: class="fragment" -->
 
 ---
 
@@ -747,5 +747,8 @@ $$ \left( \begin{array}{c}x_1 \\\\ x_2\end{array} \right)  \geq  \left( \begin{a
 
 ---
 
-The different ways of formulating a linear program can be used interchangeably. Depending on the specific context one or another way of formulating a LP may be preferable.
+The different ways of formulating a linear program can be used interchangeably. 
+
+> [!NOTE]
+> Depending on the specific context one or another way of formulating a LP may be preferable.
 
