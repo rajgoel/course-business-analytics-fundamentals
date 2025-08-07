@@ -743,7 +743,7 @@ $\begin{pmatrix} 3 \\\\ 5 \end{pmatrix}^T \begin{pmatrix} x_1 \\\\ x_2 \end{pmat
 subject to
 
 $$\left( \begin{array}{cc}1 & 0 \\ 0 & 1 \\ 3 & 2 \end{array} \right)  \left( \begin{array}{c}x_1\\ x_2\end{array} \right)  \leq  \left( \begin{array}{c}4\\6\\18 \end{array} \right) $$
-$$ \left( \begin{array}{c}x_1\\ x_2\end{array} \right)  \geq  \left( \begin{array}{c}0\\ 0\end{array} \right)  $$
+$$ \left( \begin{array}{c}x_1 \\\\ x_2\end{array} \right)  \geq  \left( \begin{array}{c}0 \\\\ 0\end{array} \right)  $$
 
 ---
 
