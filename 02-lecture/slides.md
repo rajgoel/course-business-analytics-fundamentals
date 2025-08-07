@@ -684,33 +684,33 @@ $$s_j \geq 0$$
 
 #### Example: Standard form ####
 
-maximise `$f(x,y) = 3x + 5y$`
+maximise $f(x,y) = 3x + 5y$
 
 subject to
 
-`$$x \leq 4$$`
-`$$y \leq 6$$`
-`$$3x + 2y \leq 18$$`
-`$$x \geq 0$$`
-`$$y \geq 0$$`
+$$x \leq 4$$
+$$y \leq 6$$
+$$3x + 2y \leq 18$$
+$$x \geq 0$$
+$$y \geq 0$$
 
 How can this problem be transformed into standard form? <!-- .element: class="fragment" -->
 
 
 ---
 
-maximise `$f(x,y) = 3x + 5y$`
+maximise $f(x,y) = 3x + 5y$
 
 subject to
 
-`$$x + s_1 = 4$$`
-`$$y + s_2 = 6$$`
-`$$3x + 2y + s_3 = 18$$`
-`$$x \geq 0$$`
-`$$y \geq 0$$`
-`$$s_1 \geq 0$$`
-`$$s_2 \geq 0$$`
-`$$s_3 \geq 0$$`
+$$x + s_1 = 4$$
+$$y + s_2 = 6$$
+$$3x + 2y + s_3 = 18$$
+$$x \geq 0$$
+$$y \geq 0$$
+$$s_1 \geq 0$$
+$$s_2 \geq 0$$
+$$s_3 \geq 0$$
 
 ---
 
@@ -731,7 +731,20 @@ How can we represent this problem in matrix notation? <!-- .element: class="frag
 
 ---
 
-maximise $\displaystyle\left( \begin{array}{c}3\\ 5\end{array} \right)^T \left( \begin{array}{c}x_1\\ x_2\end{array} \right) $
+maximise 
+$\displaystyle\left( 
+\begin{array}{c}
+3\\
+5
+\end{array}
+\right)^T 
+\left(
+\begin{array}{c}
+x_1\\
+x_2
+\end{array}
+\right)
+$
 
 subject to
 
