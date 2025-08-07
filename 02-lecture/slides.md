@@ -629,9 +629,9 @@ minimise $\displaystyle \sum_{i=1}^n c_i x_i$
 
 subject to
 
-$$ \sum_{i=1}^n a_{j,i} x_i = b_j \textrm{ for all }  j \in \{ 1, 2, \ldots, m\}$$
+$$ \sum_{i=1}^n a_{j,i} x_i = b_j \textrm{ for all }  j \in \\{ 1, 2, \ldots, m\\}$$
 
-$$x_i \geq 0 \textrm{ for all }  i \in \{ 1, 2, \ldots, n\}$$
+$$x_i \geq 0 \textrm{ for all }  i \in \\{ 1, 2, \ldots, n\\}$$
 
 ---
 
