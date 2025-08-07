@@ -614,7 +614,7 @@ subject to
 
 $$a_{1,1} x_1 + a_{1,2} x_2 + \ldots + a_{1,n} x_n = b_1$$
 $$a_{2,1} x_1 + a_{2,2} x_2 + \ldots + a_{2,n} x_n = b_2$$
-$$\ldots$$
+$$\vdots$$
 $$a_{m,1} x_1 + a_{m,2} x_2 + \ldots + a_{m,n} x_n = b_m$$
 
 $$x_1 \geq 0, x_2 \geq 0, \ldots, x_n \geq 0$$
