@@ -6,7 +6,7 @@
 
 A linear program (LP) is a mathematical program 
 
-$ \text{minimize } f(x) $ subject to $ x \in X $
+minimise $f(x)$ subject to $ x \in X $
 
 where
 
