@@ -635,7 +635,7 @@ $$x_i \geq 0 \textrm{ for all }  i \in \\{ 1, 2, \ldots, n\\}$$
 
 ---
 
-### Standard form using vectors and matrix
+### Standard form in vector-matrix formulation 
 
 In vector-matrix formulation the same linear program is
 
