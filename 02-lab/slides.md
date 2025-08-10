@@ -332,19 +332,6 @@ ampl:
 
 ===
 
-
-### Example: <a href="markdown-viewer.html?file=02-lab/metalco.md" data-preview-link>Metalco Company  <i class="fa-solid fa-magnifying-glass"></i></a>
-
-How can we model this decision problem  and solve it with AMPL?
-
-> [!TIP]
-> The model must contain the following:
-> - **Variables:** What are the decisions that can be taken?
-> - **Objective:** What is the goal?
-> - **Constraints:** What are the restrictions on the decisions?
-
-===
-
 ### Scripting in AMPL
 
 ---
@@ -424,6 +411,18 @@ The profit is 36000.00.
 The number of doors and windows are 2 and 6.
 ampl: 
 ```
+
+===
+
+
+### Example: <a href="markdown-viewer.html?file=02-lab/metalco.md" data-preview-link>Metalco Company  <i class="fa-solid fa-magnifying-glass"></i></a>
+
+How can we model and solve this decision problem with AMPL?
+
+> [!TIP]
+> Create these two files:
+> - Model file: `metalco.mod`
+> - Script file: `metalco.run`
 
 ===
 
