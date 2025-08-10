@@ -327,7 +327,21 @@ X1 is not defined
 context:  display  >>> X1, <<<  X2;
 syntax error
 context:  display X1,  >>> X2; <<< 
-ampl:```
+ampl:
+```
+
+===
+
+
+### Example: <a href="markdown-viewer.html?file=02-lab/metalco.md" data-preview-link>Metalco Company  <i class="fa-solid fa-magnifying-glass"></i></a>
+
+How can we model this decision problem  and solve it with AMPL?
+
+> [!TIP]
+> The model must contain the following:
+> - **Variables:** What are the decisions that can be taken?
+> - **Objective:** What is the goal?
+> - **Constraints:** What are the restrictions on the decisions?
 
 ===
 
