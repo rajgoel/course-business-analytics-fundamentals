@@ -487,6 +487,21 @@ println("Profit = ", objective_value(model))
 
 ---
 
+<!--
+# Create a virtual environment in a folder called venv
+python3 -m venv venv
+
+# Activate it
+source venv/bin/activate
+
+# Install OR-Tools in the venv
+pip install --upgrade pip
+pip install ortools
+
+# Run your script inside the venv
+python wyndor.py
+-->
+
 ### Example: Wyndor Glass Co
 
 ```python[1|3|5-7|9-10|12-15|17-18|20-24]
