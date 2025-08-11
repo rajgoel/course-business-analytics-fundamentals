@@ -16,13 +16,13 @@ var x3 binary;       # binary variable
 
 **Google OR-Tools:**
 ```python
-x1 = model.add_variable(name="x1")                        # linear variable
-x2 = model.add_variable(lb=0.0, integer=True, name="x2")  # non-negative integer variable
-x3 = model.add_variable(lb=0.0, ub=1.0, integer=True, name="x3") # binary variable
+x1 = model.add_variable(name="x1")                  # linear variable
+x2 = model.add_integer_variable(lb=0.0, name="x2")  # non-negative integer variable
+x3 = model.add_binary_variable(name="x3")           # binary variable
 ```
 
 > [!IMPORTANT]
-> The solver chosen must be capable of Branch and Bound. 
+> You must use a solver supporting integer programming. 
 
 ===
 
