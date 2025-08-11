@@ -421,6 +421,7 @@ How can we model and solve this decision problem with AMPL?
 
 > [!TIP]
 > Create these two files:
+> 
 > - Model file: `metalco.mod`
 > - Script file: `metalco.run`
 
