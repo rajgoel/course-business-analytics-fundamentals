@@ -208,7 +208,7 @@ How can we model this decision problem?
 - $r^\textrm{regularchanelle}$ = 6: revenue per ounce of Regular Chanelle
 - $r^\textrm{luxurybrute} = 18$: revenue per ounce of Luxury Brute
 - $r^\textrm{luxurychanelle} = 14$: revenue per ounce of Luxury Chanelle
-- $c^\textrm{rawmaterial} = 3$: purchasing cost per pound of raw material purchased
+- $c^\textrm{rawmaterial} = 3$: cost per pound of raw material purchased
 - $c^\textrm{brute} = 4$: processing cost per ounce of Brute refined
 - $c^\textrm{chanelle} = 4$: processing cost per ounce of Chanelle refined
 - $t^\textrm{rawmaterial} = 1$: laboratory time for processing one pound of raw material 
@@ -240,7 +240,7 @@ $$ r^\textrm{regularbrute} x^\textrm{regularbrute} + r^\textrm{regularchanelle} 
 $$ + r^\textrm{luxurybrute} x^\textrm{luxurybrute} + r^\textrm{luxurychanelle} x^\textrm{luxurychanelle} $$<!-- .element: class="fragment"  -->
 
 
-$$ - c^\textrm{luxurybrute} x^\textrm{luxurybrute} - c^\textrm{luxurychanelle} x^\textrm{luxurychanelle} $$<!-- .element: class="fragment"  -->
+$$ - c^\textrm{brute} x^\textrm{luxurybrute} - c^\textrm{chanelle} x^\textrm{luxurychanelle} $$<!-- .element: class="fragment"  -->
 
 
 $$ - c^\textrm{rawmaterial} x^\textrm{rawmaterial}$$<!-- .element: class="fragment"  -->
@@ -261,7 +261,7 @@ $$t^\textrm{rawmaterial} x^\textrm{rawmaterial}$$ <!-- .element: class="fragment
 
 $$+ t^\textrm{brute} x^\textrm{luxurybrute} + t^\textrm{chanelle} x^\textrm{luxurychanelle}$$ <!-- .element: class="fragment"  -->
 
-$$\leq T$<!-- .element: class="fragment"  -->
+$$\leq T$$<!-- .element: class="fragment"  -->
 
 ---
 
