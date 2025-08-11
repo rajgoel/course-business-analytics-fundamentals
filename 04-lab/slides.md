@@ -471,7 +471,7 @@ println("Objective value = ", objective_value(model))
 for p in products
   println("Production of ", p, " = ", value(production[p]))
 end
-```
+```<!-- .element style="height:600px;" -->
 
 ===
 
@@ -537,7 +537,7 @@ result = mathopt.solve(model, solver_type=solver)
 print("Objective value =", result.objective_value())
 for p in products:
   print(f"Production of {p} = {result.variable_values(production[p])}")
-```
+```<!-- .element style="height:600px;" -->
 
 ===
 
