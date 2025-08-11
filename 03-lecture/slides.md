@@ -202,8 +202,8 @@ How can we model this decision problem?
 
 ### Parameters
 
-- $y^\textrm{brute} = 3$: ounces of Brute obtained from 1 pound of raw material
-- $y^\textrm{chanelle}$ = 4:  ounces of Chanelle obtained from 1 pound of raw material
+- $y^\textrm{brute} = 3$: ounces of Brute obtained per pound of raw material
+- $y^\textrm{chanelle}$ = 4:  ounces of Chanelle obtained per pound of raw material
 - $r^\textrm{regularbrute} = 7$: revenue per ounce of Regular Brute
 - $r^\textrm{regularchanelle}$ = 6: revenue per ounce of Regular Chanelle
 - $r^\textrm{luxurybrute} = 18$: revenue per ounce of Luxury Brute

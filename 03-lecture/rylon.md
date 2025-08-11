@@ -1,6 +1,12 @@
 # Rylon Corporation
 
-Rylon Corporation manufactures Brute and Chanelle perfumes. The raw material needed to manufacture each type of perfume can be purchased for $3 per pound. Processing 1 lb of raw material requires 1 hour of laboratory time. Each pound of processed raw material yields 3 oz of Regular Brute Perfume and 4 oz of Regular Chanelle Perfume. Regular Brute can be sold for $7/oz and Regular Chanelle for $6/oz. Rylon also has the option of further processing Regular Brute and Regular Chanelle to produce Luxury Brute, sold at $18/oz, and Luxury Chanelle, sold at $14/oz. Each ounce of Regular Brute processed further requires an additional 3 hours of laboratory time and $4 processing cost and yields 1 oz of Luxury Brute. Each ounce of Regular Chanelle processed further requires an additional 2 hours of laboratory time and $4 processing cost and yields 1 oz of Luxury Chanelle. Each year, Rylon has 6,000 hours of laboratory time available and can purchase up to 4,000 lb of raw material. Formulate an LP that can be used to determine how Rylon can maximize profits. Assume that the cost of the laboratory hours is a fixed cost.
+Rylon Corporation manufactures Brute and Chanelle perfumes. The raw material needed to manufacture each type of perfume can be purchased for $3 per pound. Processing 1 lb of raw material requires 1 hour of laboratory time. Each pound of processed raw material yields 3 oz of Regular Brute Perfume and 4 oz of Regular Chanelle Perfume. 
+
+Regular Brute can be sold for $7/oz and Regular Chanelle for $6/oz. Rylon also has the option of further processing Regular Brute and Regular Chanelle to produce Luxury Brute, sold at $18/oz, and Luxury Chanelle, sold at $14/oz. Each ounce of Regular Brute processed further requires an additional 3 hours of laboratory time and $4 processing cost and yields 1 oz of Luxury Brute. Each ounce of Regular Chanelle processed further requires an additional 2 hours of laboratory time and $4 processing cost and yields 1 oz of Luxury Chanelle.
+
+Each year, Rylon has 6,000 hours of laboratory time available and can purchase up to 4,000 lb of raw material.
+
+Formulate an LP that can be used to determine how Rylon can maximize profits. Assume that the cost of the laboratory hours is a fixed cost.
 
 **Source:** Winston: Operations Research - Applications and Algorithms, 4th Edition, ISBN 0-534-52020-0
 
