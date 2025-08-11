@@ -7,8 +7,7 @@
 With AMPL we can create a generic model and use a script to load the parameters from a respective data file.
 
 > [!TIP]
-> We can use the following files:
-> 
+> We can use the following files:  
 > - `<name>.mod`: the model file
 > - `<name>.dat`: the data file
 > - `<name>.run`: the script file
@@ -72,7 +71,7 @@ display production;    # display variable values (change if necessary)
 
 ### Example: AMPL solution ####
 
-```ampl
+```ampl[1|1-7]
 ampl: include production.run;
 Gurobi 8.1.0: optimal solution; objective 36000
 production [*] :=
@@ -451,8 +450,8 @@ profit = Dict( :doors => 3000, :windows => 5000 )
 capacity = Dict( :plant1 => 4, :plant2 => 12, :plant3 => 18 )
 
 utilisation = Dict(
-    (:doors,   :plant1) => 1, (:doors,   :plant2) => 0, (:doors,   :plant3) => 3,
-    (:windows, :plant1) => 0, (:windows, :plant2) => 2,  (:windows, :plant3) => 2
+  (:doors,   :plant1) => 1, (:doors,   :plant2) => 0, (:doors,   :plant3) => 3,
+  (:windows, :plant1) => 0, (:windows, :plant2) => 2,  (:windows, :plant3) => 2
 )
 
 # --- Model ---
@@ -461,7 +460,7 @@ model = Model(HiGHS.Optimizer)
 @variable(model, production[p in products] >= 0)
 @objective(model, Max, sum(profit[p] * production[p] for p in products))
 @constraint(model, [r in resources],
-    sum(utilisation[(p, r)] * production[p] for p in products) <= capacity[r]
+  sum(utilisation[(p, r)] * production[p] for p in products) <= capacity[r]
 )
 
 # --- Solve ---
@@ -470,7 +469,7 @@ optimize!(model)
 # --- Results ---
 println("Objective value = ", objective_value(model))
 for p in products
-    println("Production of ", p, " = ", value(production[p]))
+  println("Production of ", p, " = ", value(production[p]))
 end
 ```
 
@@ -517,7 +516,7 @@ utilisation = {
 model = mathopt.Model(name="production")
 
 # Decision variables
-production = {p: model.add_variable(lb=0.0, name=f"production[{p}]") for p in products}
+production = {p: model.add_variable( lb = 0.0 ) for p in products}
 
 # Objective function: maximize profit
 model.maximize(
