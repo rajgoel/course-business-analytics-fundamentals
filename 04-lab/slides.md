@@ -1,4 +1,4 @@
-# Generic Models & Data in AMPL, JuMP, and Google OR-Tools
+# Generic Models in AMPL, JuMP, and Google OR-Tools
 
 ===
 

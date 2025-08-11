@@ -12,7 +12,7 @@
     { "topic": "3. LP Modelling",                      "src": "slides.md", "folder": "03-lecture" },
     { "topic": "3. Lab: Cases & Examples",             "src": "slides.md", "folder": "03-lab" },
     { "topic": "4. Generic Models",                    "src": "slides.md", "folder": "04-lecture" },
-    { "topic": "4. Lab: Model & Data in AMPL",         "src": "slides.md", "folder": "04-lab" },
+    { "topic": "4. Lab: Generic Models in AMPL, JuMP, and Google OR-Tools", "src": "slides.md", "folder": "04-lab" },
     { "topic": "5. Integer Programming",               "src": "slides.md", "folder": "05-lecture" },
     { "topic": "5. Lab: Cases & Examples",             "src": "slides.md", "folder": "05-lab" },
     { "topic": "6. Logical Constraints",               "src": "slides.md", "folder": "06-lecture" },
