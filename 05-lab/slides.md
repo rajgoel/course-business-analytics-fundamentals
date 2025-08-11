@@ -26,18 +26,6 @@ x3 = model.add_binary_variable(name="x3")           # binary variable
 
 ===
 
-### Example: <a href="markdown-viewer.html?file=05-lab/northeastern_airlines.md" data-preview-link>Northeastern Airlines <i class="fa-solid fa-magnifying-glass"></i></a>
-
-How can we model this decision problem?
-
-> [!TIP]
-> The model must contain the following:
-> - **Variables:** What are the decisions that can be taken?
-> - **Objective:** What is the goal?
-> - **Constraints:** What are the restrictions on the decisions?
-
-===
-
 ### Example: <a href="markdown-viewer.html?file=05-lab/california_manufacturing.md" data-preview-link>California Manufacturing <i class="fa-solid fa-magnifying-glass"></i></a>
 
 How can we model this decision problem?
@@ -50,7 +38,19 @@ How can we model this decision problem?
 
 ===
 
-### Example: <a href="markdown-viewer.html?file=05-lab/supersuds.md" data-preview-link>Supersuds Corporation <i class="fa-solid fa-magnifying-glass"></i></a>
+### Example: <a href="markdown-viewer.html?file=05-lab/vincent_cardoza.md" data-preview-link>Vincent Cardoza <i class="fa-solid fa-magnifying-glass"></i></a>
+
+How can we model this decision problem?
+
+> [!TIP]
+> The model must contain the following:
+> - **Variables:** What are the decisions that can be taken?
+> - **Objective:** What is the goal?
+> - **Constraints:** What are the restrictions on the decisions?
+
+===
+
+### Example: <a href="markdown-viewer.html?file=05-lab/northeastern_airlines.md" data-preview-link>Northeastern Airlines <i class="fa-solid fa-magnifying-glass"></i></a>
 
 How can we model this decision problem?
 
