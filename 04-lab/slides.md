@@ -8,6 +8,7 @@ With AMPL we can create a generic model and use a script to load the parameters 
 
 > [!TIP]
 > We can use the following files:  
+>  
 > - `<name>.mod`: the model file
 > - `<name>.dat`: the data file
 > - `<name>.run`: the script file
