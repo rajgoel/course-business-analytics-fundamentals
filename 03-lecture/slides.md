@@ -184,4 +184,100 @@ $$\tfrac{1}{400} x_1^{\rm sugarbeets} + \tfrac{1}{400} x_1^{\rm cotton} + \tfrac
 $$\tfrac{1}{600} x_2^{\rm sugarbeets} + \tfrac{1}{600} x_2^{\rm cotton} + \tfrac{1}{600} x_2^{\rm sorghum}= \tfrac{1}{300} x_3^{\rm sugarbeets} + \tfrac{1}{300} x_3^{\rm cotton} + \tfrac{1}{300} x_3^{\rm sorghum}$$
 $$x_i^{\rm sugarbeets} \geq 0,  x_i^{\rm cotton} \geq 0,  x_i ^{\rm sorghum} \geq 0\ {\rm for}\ i \in \lbrace 1,2,3 \rbrace$$
 
+===
+
+
+## Example: <a href="markdown-viewer.html?file=03-lecture/rylon.md" data-preview-link>Rylon Corporation <i class="fa-solid fa-magnifying-glass"></i></a>
+
+How can we model this decision problem?
+
+> [!TIP]
+> The model must contain the following:
+> - **Parameters:** What are the parameters given?
+> - **Variables:** What are the decisions that can be taken?
+> - **Objective:** What is the goal?
+> - **Constraints:** What are the restrictions on the decisions?
+
+---
+
+### Parameters
+
+- $y^\textrm{brute} = 3$: ounces of Brute obtained from 1 pound of raw material
+- $y^\textrm{chanelle}$ = 4:  ounces of Chanelle obtained from 1 pound of raw material
+- $r^\textrm{regularbrute} = 7$: revenue per ounce of Regular Brute
+- $r^\textrm{regularchanelle}$ = 6: revenue per ounce of Regular Chanelle
+- $r^\textrm{luxurybrute} = 18$: revenue per ounce of Luxury Brute
+- $r^\textrm{luxurychanelle} = 14$: revenue per ounce of Luxury Chanelle
+- $c^\textrm{rawmaterial} = 3$: purchasing cost per pound of raw material purchased
+- $c^\textrm{brute} = 4$: processing cost per ounce of Brute refined
+- $c^\textrm{chanelle} = 4$: processing cost per ounce of Chanelle refined
+- $t^\textrm{rawmaterial} = 1$: laboratory time for processing one pound of raw material 
+- $t^\textrm{brute} = 3$: laboratory time for refining one ounce of Brute 
+- $t^\textrm{chanelle} = 2$: laboratory time for refining one ounce of Chanelle
+- $Q = 4000$: pounds of raw material that can be purchased
+- $T = 6000$: laboratory time available 
+
+---
+
+### Variables
+
+- $x^\textrm{rawmaterial}$: pounds of raw material purchased annually
+- $x^\textrm{regularbrute}$: ounces of Regular Brute sold annually
+- $x^\textrm{regularchanelle}$: ounces of Regular Chanelle sold annually
+- $x^\textrm{luxurybrute}$: ounces of Luxury Brute sold annually
+- $x^\textrm{luxurychanelle}$: ounces of Luxury Chanelle sold annually
+
+---
+
+### Objective
+
+maximise<!-- .element: class="fragment"  -->
+ 
+
+$$ r^\textrm{regularbrute} x^\textrm{regularbrute} + r^\textrm{regularchanelle} x^\textrm{regularchanelle} $$<!-- .element: class="fragment"  -->
+
+
+$$ + r^\textrm{luxurybrute} x^\textrm{luxurybrute} + r^\textrm{luxurychanelle} x^\textrm{luxurychanelle} $$<!-- .element: class="fragment"  -->
+
+
+$$ - c^\textrm{luxurybrute} x^\textrm{luxurybrute} - c^\textrm{luxurychanelle} x^\textrm{luxurychanelle} $$<!-- .element: class="fragment"  -->
+
+
+$$ - c^\textrm{rawmaterial} x^\textrm{rawmaterial}$$<!-- .element: class="fragment"  -->
+
+
+---
+
+### Constraints on the amount of raw material that can be purchased
+
+$x^\textrm{rawmaterial} \leq Q$
+<!-- .element: class="fragment"  -->
+
+---
+
+### Constraints on the laboratory time that can be used
+
+$$t^\textrm{rawmaterial} x^\textrm{rawmaterial}$$ <!-- .element: class="fragment"  -->
+
+$$+ t^\textrm{brute} x^\textrm{luxurybrute} + t^\textrm{chanelle} x^\textrm{luxurychanelle}$$ <!-- .element: class="fragment"  -->
+
+$$\leq T$<!-- .element: class="fragment"  -->
+
+---
+
+### Constraints on the production quantities
+
+$$x^\textrm{regularbrute} + x^\textrm{luxurybrute} = y^\textrm{brute} x^\textrm{rawmaterial}$$<!-- .element: class="fragment"  -->
+
+$$x^\textrm{regularchanelle} + x^\textrm{luxurychanelle} = y^\textrm{chanelle} x^\textrm{rawmaterial}$$<!-- .element: class="fragment"  -->
+
+---
+
+### Non-negativities
+
+$$x^\textrm{rawmaterial} \geq 0$$
+$$x^\textrm{regularbrute} \geq 0$$
+$$x^\textrm{regularchanelle} \geq 0$$
+$$x^\textrm{luxurybrute} \geq 0$$
+$$x^\textrm{luxurychanelle} \geq 0$$
 
