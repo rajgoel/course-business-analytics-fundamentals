@@ -6,9 +6,9 @@
 
 With AMPL we can create a generic model and use a script to load the parameters from a respective data file.
 
-> ![TIP]
-> We can use the following files
->
+> [!TIP]
+> We can use the following files:
+> 
 > - `<name>.mod`: the model file
 > - `<name>.dat`: the data file
 > - `<name>.run`: the script file
@@ -72,7 +72,7 @@ display production;    # display variable values (change if necessary)
 
 ### Example: AMPL solution ####
 
-```ampl[1-10|2|6-10]
+```ampl
 ampl: include production.run;
 Gurobi 8.1.0: optimal solution; objective 36000
 production [*] :=
@@ -436,7 +436,9 @@ param supply { i in LOCATIONS } :=
 
 ---
 
-```julia[1-2|4-15|18-24|26-27|29-33]
+### Example: Production
+
+```julia[1-2|4-15|17-24|26-27|29-33]
 using JuMP
 using HiGHS  # or another solver
 
@@ -478,6 +480,8 @@ end
 
 ---
 
+### Example: Production
+
 <!--
 # Create a virtual environment in a folder called venv
 python3 -m venv venv
@@ -493,7 +497,7 @@ pip install ortools
 python production.py
 -->
 
-```python[1|3-14|16-32|34-36|38-41]
+```python[1|3-14|16-31|33-35|37-40]
 from ortools.math_opt.python import mathopt
 
 # --- Data ---
@@ -523,8 +527,7 @@ model.maximize(
 # Constraints: resource capacity
 for r in resources:
   model.add_linear_constraint(
-    sum(utilisation[(p, r)] * production[p] for p in products) <= capacity[r],
-    name=f"capacity[{r}]"
+    sum(utilisation[(p, r)] * production[p] for p in products) <= capacity[r]
   )
 
 # --- Solve ---
@@ -538,6 +541,7 @@ for p in products:
 ```
 
 ===
+
  
 ### Case study: <a href="markdown-viewer.html?file=04-lab/fabrics_and_fall_fashions.md" data-preview-link>Fabrics and Fall Fashions <i class="fa-solid fa-magnifying-glass"></i></a>
 
