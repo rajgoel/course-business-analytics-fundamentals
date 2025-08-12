@@ -13,19 +13,19 @@ Model the knapsack problem as an integer program.
 ---
 
 ### Decision variables
-\[
-x_i =
+
+$$x_i =
 \begin{cases}
 1 & \text{if item } i \text{ is selected} \\
 0 & \text{otherwise}
 \end{cases}
-\]
+$$
 
 ---
 
 ### Objective
 
-maximise $\sum_{i\in I} v_i x_i$
+maximise $\displaystyle\sum_{i\in I} v_i x_i$
 
 ---
 
@@ -37,18 +37,20 @@ $$\sum_{i \in I} w_i x_i \leq W$$
 
 ### Binaries
 
-$$x_i \in \{0,1\} \quad \textrm{ for all } i \in I$$
+$$x_i \in \lbrace 0,1
+brace  \quad \textrm{ for all } i \in I$$
 
 ---
 
 ### Knapsack problem
 
-maximise $\sum_{i\in I} v_i x_i$
+maximise $\displaystyle\sum_{i\in I} v_i x_i$
 
 subject to
 
 $$\sum_{i \in I} w_i x_i \leq W$$
-$$x_i \in \{0,1\} \quad \textrm{ for all } i \in I$$
+$$x_i \in \lbrace 0,1
+brace  \quad \textrm{ for all } i \in I$$
 
 ===
 
@@ -85,7 +87,7 @@ y_j =
 
 ### Objective
 
-minimise $\sum_{j\in J} y_j$
+minimise $\displaystyle\sum_{j\in J} y_j$
 
 ---
 
@@ -108,7 +110,8 @@ $$\sum_{i \in I}^n s_i x_{i,j} \leq C y_j \quad \textrm{ for all } j \in J$$
 
 ### Binaries
 
-$$x_{i,j} \in \{0,1\} \quad \textrm{ for all } i \in I, j \in J$$
+$$x_{i,j} \in \lbrace 0,1
+brace  \quad \textrm{ for all } i \in I, j \in J$$
 
 
 ---
@@ -121,7 +124,8 @@ subject to
 
 $$\sum_{j \in J} x_{i,j} = 1 \quad \textrm{ for all } i \in I$$
 $$\sum_{i \in I}^n s_i x_{i,j} \leq C y_j \quad \textrm{ for all } j \in J$$
-$$x_{i,j} \in \{0,1\} \quad \textrm{ for all } i \in I, j \in J$$
+$$x_{i,j} \in \lbrace 0,1
+brace  \quad \textrm{ for all } i \in I, j \in J$$
 
 
 ===
@@ -148,7 +152,7 @@ x_{i,j} =
 
 ### Step 3: Objective Function
 
-minimise $\sum_{i\in I} \sum_{j \in I} c_{i,j} x_{i,j}$
+minimise $\displaystyle\sum_{i\in I} \sum_{j \in I} c_{i,j} x_{i,j}$
 
 ---
 
@@ -167,19 +171,21 @@ $$\sum_{i\in I} x_{i,j} = 1 \quad \textrm{ for all } j \in I$$
 
 ### Binaries
 
-$$x_{i,j} \in \{0,1\} \quad \textrm{ for all } i \in I, j \in I$$
+$$x_{i,j} \in \lbrace 0,1
+brace  \quad \textrm{ for all } i \in I, j \in I$$
 
 ---
 
 ### Incomplete model
 
-minimise $\sum_{i\in I} \sum_{j \in I}^n c_{i,j} x_{i,j}$
+minimise $\displaystyle\sum_{i\in I} \sum_{j \in I}^n c_{i,j} x_{i,j}$
 
 subject to
 
 $$\sum_{j\in I} x_{i,j} = 1 \quad \textrm{ for all } i \in I$$
 $$\sum_{i\in I} x_{i,j} = 1 \quad \textrm{ for all } j \in I$$
-$$x_{i,j} \in \{0,1\} \quad \textrm{ for all } i \in I, j \in I$$
+$$x_{i,j} \in \lbrace 0,1
+brace  \quad \textrm{ for all } i \in I, j \in I$$
 
 > [!CAUTION]
 > This model allows so-called **subtours**, i.e., multiple disconnected cycles.
@@ -194,8 +200,10 @@ $$u_i = \text{position of city } i  \quad \textrm{ for all } i \in I$$
 
 and respective constraints
 
-$$u_j \geq u_i + 1 - M (1 - x_{i,j}) \quad \forall i \in I , j \in I \setminus \{ i^* \}$$
-$$u_i \in \{1,2, \ldots, |I|\} \quad \textrm{ for all } i \in I$$
+$$u_j \geq u_i + 1 - M (1 - x_{i,j}) \quad \forall i \in I , j \in I \setminus \lbrace  i^* 
+brace $$
+$$u_i \in \lbrace 1,2, \ldots, |I|
+brace  \quad \textrm{ for all } i \in I$$
 
 where $i^*$ is a dedicated starting city.
 
@@ -203,16 +211,19 @@ where $i^*$ is a dedicated starting city.
 
 ### Travelling Salesperson Problem
 
-minimise $\sum_{i\in I} \sum_{j \in I}^n c_{i,j} x_{i,j}$
+minimise $\displaystyle\sum_{i\in I} \sum_{j \in I}^n c_{i,j} x_{i,j}$
 
 subject to
 
 $$\sum_{j\in I} x_{i,j} = 1 \quad \textrm{ for all } i \in I$$
 $$\sum_{i\in I} x_{i,j} = 1 \quad \textrm{ for all } j \in I$$
-$$u_j \geq u_i + 1 - M (1 - x_{i,j}) \quad \forall i \in I , j \in I \setminus \{ i^* \}$$
+$$u_j \geq u_i + 1 - M (1 - x_{i,j}) \quad \forall i \in I , j \in I \setminus \lbrace  i^* 
+brace $$
 
-$$x_{i,j} \in \{0,1\} \quad \textrm{ for all } i \in I, j \in I$$
-$$u_i \in \{1,2, \ldots, |I|\} \quad \textrm{ for all } i \in I$$
+$$x_{i,j} \in \lbrace 0,1
+brace  \quad \textrm{ for all } i \in I, j \in I$$
+$$u_i \in \lbrace 1,2, \ldots, |I|
+brace  \quad \textrm{ for all } i \in I$$
 
 ===
 
@@ -268,7 +279,7 @@ $$\sum_{i\in J} x_{i,j} = 1 \quad \textrm{ for all } j \in J$$
 
 Completion time:
 
-$$c_j \geq c_i + p_j - M (1 - x_{i,j}) \quad \textrm{ for all } i \in J, j \in J\setminus \lbrace j^* \rbrace$$
+$$c_j \geq c_i + p_j - M (1 - x_{i,j}) \quad \textrm{ for all } i \in J, j \in J\setminus \lbrace  j^* \rbrace$$
 
 where $M$ is a large constant (e.g., sum of all processing times).
 
@@ -291,24 +302,26 @@ $$t_j \geq 0 \quad \textrm{ for all } j \in J$$
 
 ### Binaries
 
-$$x_{i,j} \in \{0,1\} \quad \textrm{ for all } i \in J, j \in J$$
+$$x_{i,j} \in \lbrace 0,1
+brace  \quad \textrm{ for all } i \in J, j \in J$$
 
 ---
 
 ## Minimum Tardiness Scheduling Problem
 
-minimise $$\sum_{j\in J} t_j$$
+minimise $\displaystyle\sum_{j\in J} t_j$
 
 subject to
 
 $$\sum_{j\in J} x_{i,j} = 1 \quad \textrm{ for all } i \in J$$
 $$\sum_{i\in J} x_{i,j} = 1 \quad \textrm{ for all } j \in J$$
 
-$$c_j \geq c_i + p_j - M (1 - x_{i,j}) \quad \textrm{ for all } i \in J, j \in J\setminus \lbrace j^* \rbrace$$
+$$c_j \geq c_i + p_j - M (1 - x_{i,j}) \quad \textrm{ for all } i \in J, j \in J\setminus \lbrace  j^* \rbrace$$
 $$t_j \geq c_j - d_j \quad \textrm{ for all } j \in J$$
 $$t_j \geq 0 \quad \textrm{ for all } j \in J$$
 
-$$x_{i,j} \in \{0,1\} \quad \textrm{ for all } i \in J, j \in J$$
+$$x_{i,j} \in \lbrace 0,1
+brace  \quad \textrm{ for all } i \in J, j \in J$$
 
 where $M$ is a large constant (e.g., sum of all processing times).
 
