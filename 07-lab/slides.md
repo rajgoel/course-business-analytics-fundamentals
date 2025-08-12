@@ -16,7 +16,7 @@ Model the knapsack problem as an integer program.
 
 $$x_i =
 \begin{cases}
-1 & \text{if item } i \text{ is selected} \\
+1 & \text{if item } i \text{ is selected} \\\\
 0 & \text{otherwise}
 \end{cases}
 $$
@@ -70,7 +70,7 @@ For each $i\in I$, $b\in B$:
 $$
 x_{i,b} =
 \begin{cases}
-1 & \text{if item } i \text{ is placed in bin } b \\
+1 & \text{if item } i \text{ is placed in bin } b \\\\
 0 & \text{otherwise}
 \end{cases}
 $$
@@ -79,7 +79,7 @@ For each $b\in B$:
 $$
 y_b =
 \begin{cases}
-1 & \text{if bin } b \text{ is used} \\
+1 & \text{if bin } b \text{ is used} \\\\
 0 & \text{otherwise}
 \end{cases}
 $$
@@ -147,7 +147,7 @@ Model the travelling salesperson problem as an integer program.
 $$
 x_{i,j} =
 \begin{cases}
-1 & \text{if the tour goes from city } i \text{ to } j \\
+1 & \text{if the tour goes from city } i \text{ to } j \\\\
 0 & \text{otherwise}
 \end{cases}
 $$
@@ -246,7 +246,7 @@ Model the minimum total tardiness scheduling problem as an integer program.
 $$
 x_{i,j} =
 \begin{cases}
-1 & \text{if job } i \text{ precedes job } j \\
+1 & \text{if job } i \text{ precedes job } j \\\\
 0 & \text{otherwise}
 \end{cases}
 $$
