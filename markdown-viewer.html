@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <title>Markdown Viewer</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
     body { background-color:white; max-width: 800px; margin: auto; font-family: sans-serif; padding: 2em; }
@@ -34,7 +45,7 @@
         if (window.MathJax) {
           MathJax.typesetPromise();
         }
-              } catch (e) {
+      } catch (e) {
         document.getElementById('content').textContent = 'Error: ' + e.message;
       }
     }
