@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Markdown Viewer</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
     body { background-color:white; max-width: 800px; margin: auto; font-family: sans-serif; padding: 2em; }
     pre, code { background-color: #f0f0f0; padding: 0.5em; overflow-x: auto; }
@@ -29,7 +30,11 @@
         if (!response.ok) throw new Error("Failed to load file");
         const md = await response.text();
         document.getElementById('content').innerHTML = marked.parse(md);
-      } catch (e) {
+        // Trigger MathJax to process math in the loaded content
+        if (window.MathJax) {
+          MathJax.typesetPromise();
+        }
+              } catch (e) {
         document.getElementById('content').textContent = 'Error: ' + e.message;
       }
     }
