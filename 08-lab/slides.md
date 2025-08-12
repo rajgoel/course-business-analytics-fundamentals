@@ -1,4 +1,4 @@
-### Example: <a href="markdown-viewer.html?file=08-lab/cape_cod.md" data-preview-link>Cape Code <i class="fa-solid fa-magnifying-glass"></i></a>
+### Example: <a href="markdown-viewer.html?file=08-lab/cape_cod.md" data-preview-link>Cape Cod <i class="fa-solid fa-magnifying-glass"></i></a>
 
 How can we model this decision problem as a shortest path problem?
 
