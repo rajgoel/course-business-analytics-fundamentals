@@ -7,8 +7,8 @@
   <script>
     window.MathJax = {
       tex: {
-        inlineMath: [['\\(', '\\)']],
-        displayMath: [['\\[', '\\]']]
+        inlineMath: [['\\(', '\\)']], // inline math between $...$ is replaced  
+        displayMath: [['$$', '$$'],['\\[', '\\]']]
       },
       options: {
         skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
@@ -40,6 +40,8 @@
         const response = await fetch(file);
         if (!response.ok) throw new Error("Failed to load file");
         var md = await response.text();
+        // Replace $<nonwhitespace>$ with \(<nonwhitespace>\)
+        md = md.replace(/\$([^\s\r\n]+)\$/g, '\\($1\\)');
         // Escape backslashes in \( and \)
         md = md.replace(/\\\(/g, '\\\\(').replace(/\\\)/g, '\\\\)');
         document.getElementById('content').innerHTML = marked.parse(md);
