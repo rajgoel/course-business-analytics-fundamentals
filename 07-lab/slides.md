@@ -37,8 +37,7 @@ $$\sum_{i \in I} w_i x_i \leq W$$
 
 ### Binaries
 
-$$x_i \in \lbrace 0,1
-brace  \quad \textrm{ for all } i \in I$$
+$$x_i \in \lbrace 0,1 \rbrace \quad \textrm{ for all } i \in I$$
 
 ---
 
@@ -49,8 +48,7 @@ maximise $\displaystyle\sum_{i\in I} v_i x_i$
 subject to
 
 $$\sum_{i \in I} w_i x_i \leq W$$
-$$x_i \in \lbrace 0,1
-brace  \quad \textrm{ for all } i \in I$$
+$$x_i \in \lbrace 0,1 \rbrace  \quad \textrm{ for all } i \in I$$
 
 ===
 
@@ -111,8 +109,7 @@ $$\sum_{i \in I} s_i x_{i,b} \leq C y_b \quad \textrm{ for all } b \in B$$
 
 ### Binaries
 
-$$x_{i,j} \in \lbrace 0,1
-brace  \quad \textrm{ for all } i \in I, b \in B$$
+$$x_{i,j} \in \lbrace 0,1 \rbrace \quad \textrm{ for all } i \in I, b \in B$$
 
 
 ---
@@ -125,8 +122,7 @@ subject to
 
 $$\sum_{b \in B} x_{i,b} = 1 \quad \textrm{ for all } i \in I$$
 $$\sum_{i \in I} s_i x_{i,b} \leq C y_b \quad \textrm{ for all } b \in B$$
-$$x_{i,b} \in \lbrace 0,1
-brace  \quad \textrm{ for all } i \in I, b \in B$$
+$$x_{i,b} \in \lbrace 0,1 \rbrace  \quad \textrm{ for all } i \in I, b \in B$$
 
 > [!NOTE]
 > $y_b$ does not need an explicit upper bound. In an optimal solution $y_b$ will not be unnecessarily large.
@@ -175,8 +171,7 @@ $$\sum_{i\in I} x_{i,j} = 1 \quad \textrm{ for all } j \in I$$
 
 ### Binaries
 
-$$x_{i,j} \in \lbrace 0,1
-brace  \quad \textrm{ for all } i \in I, j \in I$$
+$$x_{i,j} \in \lbrace 0,1 \rbrace  \quad \textrm{ for all } i \in I, j \in I$$
 
 ---
 
@@ -188,8 +183,7 @@ subject to
 
 $$\sum_{j\in I} x_{i,j} = 1 \quad \textrm{ for all } i \in I$$
 $$\sum_{i\in I} x_{i,j} = 1 \quad \textrm{ for all } j \in I$$
-$$x_{i,j} \in \lbrace 0,1
-brace  \quad \textrm{ for all } i \in I, j \in I$$
+$$x_{i,j} \in \lbrace 0,1 \rbrace  \quad \textrm{ for all } i \in I, j \in I$$
 
 > [!CAUTION]
 > This model allows so-called **subtours**, i.e., multiple disconnected cycles.
@@ -206,8 +200,7 @@ and respective constraints
 
 $$u_j \geq u_i + 1 - M (1 - x_{i,j}) \quad \forall i \in I , j \in I \setminus \lbrace  i^* 
 brace $$
-$$u_i \in \lbrace 1,2, \ldots, |I|
-brace  \quad \textrm{ for all } i \in I$$
+$$u_i \in \lbrace 1,2, \ldots, |I| \rbrace  \quad \textrm{ for all } i \in I$$
 
 where $i^*$ is a dedicated starting city.
 
@@ -221,13 +214,10 @@ subject to
 
 $$\sum_{j\in I} x_{i,j} = 1 \quad \textrm{ for all } i \in I$$
 $$\sum_{i\in I} x_{i,j} = 1 \quad \textrm{ for all } j \in I$$
-$$u_j \geq u_i + 1 - M (1 - x_{i,j}) \quad \forall i \in I , j \in I \setminus \lbrace  i^* 
-brace $$
+$$u_j \geq u_i + 1 - M (1 - x_{i,j}) \quad \forall i \in I , j \in I \setminus \lbrace  i^* \rbrace $$
 
-$$x_{i,j} \in \lbrace 0,1
-brace  \quad \textrm{ for all } i \in I, j \in I$$
-$$u_i \in \lbrace 1,2, \ldots, |I|
-brace  \quad \textrm{ for all } i \in I$$
+$$x_{i,j} \in \lbrace 0,1\rbrace  \quad \textrm{ for all } i \in I, j \in I$$
+$$u_i \in \lbrace 1,2, \ldots, |I| \rbrace  \quad \textrm{ for all } i \in I$$
 
 ===
 
@@ -302,8 +292,7 @@ $$t_j \geq 0 \quad \textrm{ for all } j \in J$$
 
 ### Binaries
 
-$$x_{i,j} \in \lbrace 0,1
-brace  \quad \textrm{ for all } i \in J, j \in J$$
+$$x_{i,j} \in \lbrace 0,1 \rbrace  \quad \textrm{ for all } i \in J, j \in J$$
 
 ---
 
@@ -320,8 +309,7 @@ $$c_j \geq c_i + p_j - M (1 - x_{i,j}) \quad \textrm{ for all } i \in J, j \in J
 $$t_j \geq c_j - d_j \quad \textrm{ for all } j \in J$$
 $$t_j \geq 0 \quad \textrm{ for all } j \in J$$
 
-$$x_{i,j} \in \lbrace 0,1
-brace  \quad \textrm{ for all } i \in J, j \in J$$
+$$x_{i,j} \in \lbrace 0,1 \rbrace  \quad \textrm{ for all } i \in J, j \in J$$
 
 where $M$ is a large constant (e.g., sum of all processing times).
 
