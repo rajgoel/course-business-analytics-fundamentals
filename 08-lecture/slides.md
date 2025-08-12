@@ -1,18 +1,17 @@
 # Network optimisation
+
 ---
 
 Many important optimisation problems are characterised by their underlying network representation. 
 
----
-
-Networks pervade our daily lives. 
-
-- Transportation networks
-- Production networks
-- Communication networks
-- Energy networks
-- Social networks
-- ...
+> [!NOTE]
+> **Examples:**  
+> - Transportation networks
+> - Production networks
+> - Communication networks
+> - Energy networks
+> - Social networks
+> - ...
 
 ---
 
@@ -30,9 +29,8 @@ Components of typical networks are for example:
 
 In many network optimisation problems we have integer constraints, e.g., because we have to decide whether to use an arc or not.
 
----
-
-Although integer programs can be difficult to solve, network optimisation problems are often easy to solve and powerful algorithms and software are available for these problems so that huge problems can be solved very fast.
+> [!NOTE]
+> Although integer programs can be difficult to solve, network optimisation problems are often easy to solve - eve for huge problems. 
 
 ---
 
@@ -77,9 +75,8 @@ What is the shortest path from node 1 to node 6 if the indicated numbers represe
 
 <img class="stretch" src="08-lecture/network.svg"></img>
 
----
-
-For larger networks it is impossible to easily identify the shortest path.
+> [!NOTE]
+> For larger networks it is impossible to easily identify the shortest path.
 
 ---
 
@@ -378,7 +375,7 @@ $$l_{i,j} \leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
 
 
 > [!IMPORTANT]
-> The minimum cost network flow problem can only be solved if supply and demand are balanced, i.e., if $$\sum_{i\in N} b_i = 0$$
+> The minimum cost network flow problem can only be solved if supply and demand are balanced, i.e., if $\displaystyle\sum_{i\in N} b_i = 0$.
 
 ---
 

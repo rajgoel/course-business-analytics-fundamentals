@@ -180,12 +180,10 @@ $$
 minimise $\displaystyle\sum_{i\in I} \sum_{j \in I} c_{i,j} x_{i,j}$
 
 </span>
----
 
+---
 
 ### Constraints
-
----
 
 Arrive and depart once at each city:
 
