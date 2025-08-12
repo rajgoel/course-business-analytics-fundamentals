@@ -103,7 +103,7 @@ $$\sum_{b \in B} x_{i,b} = 1 \quad \textrm{ for all } i \in I$$
 
 The total size of all items assigned to any bin does not exceeded the bin's capacity:
 
-$$\sum_{i \in I} s_i x_{i,b} \leq C y_b \quad \textrm{ for all } b \in B$$
+$$\sum_{i \in I} s_i x_{i,b} \leq y_b C \quad \textrm{ for all } b \in B$$
 
 ---
 
@@ -121,7 +121,7 @@ minimise $\displaystyle\sum_{b\in B} y_b$
 subject to
 
 $$\sum_{b \in B} x_{i,b} = 1 \quad \textrm{ for all } i \in I$$
-$$\sum_{i \in I} s_i x_{i,b} \leq C y_b \quad \textrm{ for all } b \in B$$
+$$\sum_{i \in I} s_i x_{i,b} \leq y_b C \quad \textrm{ for all } b \in B$$
 $$x_{i,b} \in \lbrace 0,1 \rbrace  \quad \textrm{ for all } i \in I, b \in B$$
 
 > [!NOTE]
@@ -192,14 +192,9 @@ $$x_{i,j} \in \lbrace 0,1 \rbrace  \quad \textrm{ for all } i \in I, j \in I$$
 
 ### Subtour elimination
 
-Subtours can be eliminated by adding auxiliary decision variables
+Subtours can be eliminated by adding auxiliary decision variables $u_i$ representing the position of city $i$ in the tour and respective constraints
 
-$$u_i = \text{position of city } i  \quad \textrm{ for all } i \in I$$
-
-and respective constraints
-
-$$u_j \geq u_i + 1 - M (1 - x_{i,j}) \quad \forall i \in I , j \in I \setminus \lbrace  i^* 
-brace $$
+$$u_j \geq u_i + 1 - M (1 - x_{i,j}) \quad \forall i \in I , j \in I \setminus \lbrace  i^* \rbrace $$
 $$u_i \in \lbrace 1,2, \ldots, |I| \rbrace  \quad \textrm{ for all } i \in I$$
 
 where $i^*$ is a dedicated starting city.
@@ -218,6 +213,9 @@ $$u_j \geq u_i + 1 - M (1 - x_{i,j}) \quad \forall i \in I , j \in I \setminus \
 
 $$x_{i,j} \in \lbrace 0,1\rbrace  \quad \textrm{ for all } i \in I, j \in I$$
 $$u_i \in \lbrace 1,2, \ldots, |I| \rbrace  \quad \textrm{ for all } i \in I$$
+
+> [!NOTE]
+> In an optimal solution, we have $u_{i^*}=1$.
 
 ===
 
