@@ -39,7 +39,9 @@
       try {
         const response = await fetch(file);
         if (!response.ok) throw new Error("Failed to load file");
-        const md = await response.text();
+        var md = await response.text();
+        // Escape backslashes in \( and \)
+        md = md.replace(/\\\(/g, '\\\\(').replace(/\\\)/g, '\\\\)');
         document.getElementById('content').innerHTML = marked.parse(md);
         // Trigger MathJax to process math in the loaded content
         if (window.MathJax) {
