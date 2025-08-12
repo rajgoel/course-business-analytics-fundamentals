@@ -66,22 +66,23 @@ Model the bin packing problem as an integer program assuming a large enough set 
 ### Decision variables
 
 For each $i\in I$, $j\in J$:
-\[
+
+$$
 x_{i,j} =
 \begin{cases}
 1 & \text{if item } i \text{ is placed in bin } j \\
 0 & \text{otherwise}
 \end{cases}
-\]
+$$
 
 For each $j\in J$:
-\[
+$$
 y_j =
 \begin{cases}
 1 & \text{if bin } j \text{ is used} \\
 0 & \text{otherwise}
 \end{cases}
-\]
+$$
 
 ---
 
@@ -104,7 +105,7 @@ $$\sum_{j \in J} x_{i,j} = 1 \quad \textrm{ for all } i \in I$$
 
 The total size of all items assigned to any bin does not exceeded the bin's capacity:
 
-$$\sum_{i \in I}^n s_i x_{i,j} \leq C y_j \quad \textrm{ for all } j \in J$$
+$$\sum_{i \in I} s_i x_{i,j} \leq C y_j \quad \textrm{ for all } j \in J$$
 
 ---
 
@@ -123,7 +124,7 @@ minimise $\sum_{j\in J} y_j$
 subject to
 
 $$\sum_{j \in J} x_{i,j} = 1 \quad \textrm{ for all } i \in I$$
-$$\sum_{i \in I}^n s_i x_{i,j} \leq C y_j \quad \textrm{ for all } j \in J$$
+$$\sum_{i \in I} s_i x_{i,j} \leq C y_j \quad \textrm{ for all } j \in J$$
 $$x_{i,j} \in \lbrace 0,1
 brace  \quad \textrm{ for all } i \in I, j \in J$$
 
@@ -140,13 +141,14 @@ Model the travelling salesperson problem as an integer program.
 ---
 
 ### Decision variables
-\[
+
+$$
 x_{i,j} =
 \begin{cases}
 1 & \text{if the tour goes from city } i \text{ to } j \\
 0 & \text{otherwise}
 \end{cases}
-\]
+$$
 
 ---
 
@@ -239,20 +241,16 @@ Model the minimum total tardiness scheduling problem as an integer program.
 
 ### Decision variables
 
-\[
+$$
 x_{i,j} =
 \begin{cases}
 1 & \text{if job } i \text{ precedes job } j \\
 0 & \text{otherwise}
 \end{cases}
-\]
+$$
 
-\[
-c_j = \text{completion time of job } j
-\]
-\[
-t_j = \text{tardiness of job } j
-\]
+$c_j$ and $t_j$ are auxiliary variables representing the completion time and tardiness of job $j$.
+
 
 ---
 
