@@ -197,7 +197,7 @@ A cluster is a group of data points in a dataset that are more similar to each o
 - After reassignment, centroids are updated and the process repeats until cluster assignments no longer change.
 
 
-<a href="https://harisnazir.github.io/K-Means-Clustering-Visualisation" data-preview-link>Visualisation of $k$-Means clustering</a>
+<a href="https://harisnazir.github.io/K-Means-Clustering-Visualisation" data-preview-link>Visualisation of $k$-Means clustering <i class="fa-solid fa-magnifying-glass"></i></a>
 
 > [!TIP]
 >  Clustering can be used to answer questions like: *Which customers have similar characteristics as others?*

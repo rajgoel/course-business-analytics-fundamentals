@@ -420,6 +420,7 @@ ampl:
 How can we model and solve this decision problem with AMPL?
 
 > [!TIP]
+>
 > Create these two files:
 > 
 > - Model file: `metalco.mod`
@@ -469,7 +470,8 @@ println("Status: ", termination_status(model))
 println("x1 = ", value(x1))
 println("x2 = ", value(x2))
 println("Profit = ", objective_value(model))
-```
+```<!-- .element: style="height:600px;" -->
+
 
 ===
 
@@ -529,6 +531,6 @@ print("Status:", result.termination.reason)
 print("x1 =", result.variable_values()[x1])
 print("x2 =", result.variable_values()[x2])
 print("Profit =", result.objective_value())
-```
+```<!-- .element: style="height:600px;" -->
 
 
