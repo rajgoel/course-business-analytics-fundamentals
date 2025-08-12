@@ -150,7 +150,7 @@ $$
 
 ---
 
-### Step 3: Objective Function
+### Objective
 
 minimise $\displaystyle\sum_{i\in I} \sum_{j \in I} c_{i,j} x_{i,j}$
 
@@ -194,12 +194,14 @@ $$x_{i,j} \in \lbrace 0,1 \rbrace  \quad \textrm{ for all } i \in I, j \in I$$
 
 Subtours can be eliminated by adding auxiliary decision variables $u_i$ representing the position of city $i$ in the tour and respective constraints
 
-$$u_j \geq u_i + 1 - M (1 - x_{i,j}) \quad \forall i \in I , j \in I \setminus \lbrace  i^* \rbrace $$
+$$u_j \geq u_i + 1 - M (1 - x_{i,j}) \quad \textrm{ for all } i \in I , j \in I \setminus \lbrace  i^* \rbrace $$
 $$u_i \in \lbrace 1,2, \ldots, |I| \rbrace  \quad \textrm{ for all } i \in I$$
 
-where $i^*$ is a dedicated starting city.
+where $i^*$ is a dedicated starting city and $M$ is sufficiently large.
 
 ---
+
+<!-- .slide: style="font-size:80%;"  -->
 
 ### Travelling Salesperson Problem
 
@@ -209,10 +211,12 @@ subject to
 
 $$\sum_{j\in I} x_{i,j} = 1 \quad \textrm{ for all } i \in I$$
 $$\sum_{i\in I} x_{i,j} = 1 \quad \textrm{ for all } j \in I$$
-$$u_j \geq u_i + 1 - M (1 - x_{i,j}) \quad \forall i \in I , j \in I \setminus \lbrace  i^* \rbrace $$
+$$u_j \geq u_i + 1 - M (1 - x_{i,j}) \quad \textrm{ for all } i \in I , j \in I \setminus \lbrace  i^* \rbrace $$
 
 $$x_{i,j} \in \lbrace 0,1\rbrace  \quad \textrm{ for all } i \in I, j \in I$$
 $$u_i \in \lbrace 1,2, \ldots, |I| \rbrace  \quad \textrm{ for all } i \in I$$
+
+where $i^*$ is a dedicated starting city and $M$ is sufficiently large.
 
 > [!NOTE]
 > In an optimal solution, we have $u_{i^*}=1$.
@@ -283,7 +287,7 @@ $$t_j \geq c_j - d_j \quad \textrm{ for all } j \in J$$
 
 $$t_j \geq 0 \quad \textrm{ for all } j \in J$$
 
-> [!NOTE]
+> [!IMPORTANT]
 > $t_j = \max(0, c_j - d_j)$ is not linear and must not be used.
 
 ---
@@ -294,7 +298,9 @@ $$x_{i,j} \in \lbrace 0,1 \rbrace  \quad \textrm{ for all } i \in J, j \in J$$
 
 ---
 
-## Minimum Tardiness Scheduling Problem
+<!-- .slide: style="font-size:80%;"  -->
+
+### Minimum Tardiness Scheduling Problem
 
 minimise $\displaystyle\sum_{j\in J} t_j$
 
