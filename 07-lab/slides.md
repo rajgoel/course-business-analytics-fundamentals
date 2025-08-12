@@ -14,6 +14,8 @@ Model the knapsack problem as an integer program.
 
 ### Decision variables
 
+<span class="fragment">
+
 $$x_i =
 \begin{cases}
 1 & \text{if item } i \text{ is selected} \\\\
@@ -21,17 +23,23 @@ $$x_i =
 \end{cases}
 $$
 
+</span>
+
 ---
 
 ### Objective
 
+<span class="fragment">
+
 maximise $\displaystyle\sum_{i\in I} v_i x_i$
+
+</span>
 
 ---
 
 ### Capacity constraints
 
-$$\sum_{i \in I} w_i x_i \leq W$$
+$$\sum_{i \in I} w_i x_i \leq W$$<!-- .element: class="fragment" -->
 
 ---
 
@@ -63,6 +71,8 @@ Model the bin packing problem as an integer program assuming a large enough set 
 
 ### Decision variables
 
+<span class="fragment">
+
 For each $i\in I$, $b\in B$:
 
 $$
@@ -82,11 +92,17 @@ y_b =
 \end{cases}
 $$
 
+</span>
+
 ---
 
 ### Objective
 
+<span class="fragment">
+
 minimise $\displaystyle\sum_{b\in B} y_b$
+
+</span>
 
 ---
 
@@ -94,16 +110,19 @@ minimise $\displaystyle\sum_{b\in B} y_b$
 
 ---
 
+#### Assignments
+
 Each item is assigned to exactly one bin:
 
-$$\sum_{b \in B} x_{i,b} = 1 \quad \textrm{ for all } i \in I$$
+$$\sum_{b \in B} x_{i,b} = 1 \quad \textrm{ for all } i \in I$$<!-- .element: class="fragment" -->
 
 ---
 
+#### Size
 
 The total size of all items assigned to any bin does not exceeded the bin's capacity:
 
-$$\sum_{i \in I} s_i x_{i,b} \leq y_b C \quad \textrm{ for all } b \in B$$
+$$\sum_{i \in I} s_i x_{i,b} \leq y_b C \quad \textrm{ for all } b \in B$$<!-- .element: class="fragment" -->
 
 ---
 
@@ -140,6 +159,8 @@ Model the travelling salesperson problem as an integer program.
 
 ### Decision variables
 
+<span class="fragment">
+
 $$
 x_{i,j} =
 \begin{cases}
@@ -148,12 +169,17 @@ x_{i,j} =
 \end{cases}
 $$
 
+</span>
+
 ---
 
 ### Objective
 
+<span class="fragment">
+
 minimise $\displaystyle\sum_{i\in I} \sum_{j \in I} c_{i,j} x_{i,j}$
 
+</span>
 ---
 
 
@@ -163,9 +189,13 @@ minimise $\displaystyle\sum_{i\in I} \sum_{j \in I} c_{i,j} x_{i,j}$
 
 Arrive and depart once at each city:
 
+<span class="fragment">
+
 $$\sum_{j\in I} x_{i,j} = 1 \quad \textrm{ for all } i \in I$$
 
 $$\sum_{i\in I} x_{i,j} = 1 \quad \textrm{ for all } j \in I$$
+
+</span>
 
 ---
 
@@ -192,12 +222,16 @@ $$x_{i,j} \in \lbrace 0,1 \rbrace  \quad \textrm{ for all } i \in I, j \in I$$
 
 ### Subtour elimination
 
-Subtours can be eliminated by adding auxiliary decision variables $u_i$ representing the position of city $i$ in the tour and respective constraints
+Subtours can be eliminated by adding auxiliary decision variables $u_i$ representing the position of city $i$ in the tour and respective constraints:
+
+<span class="fragment">
 
 $$u_j \geq u_i + 1 - M (1 - x_{i,j}) \quad \textrm{ for all } i \in I , j \in I \setminus \lbrace  i^* \rbrace $$
 $$u_i \in \lbrace 1,2, \ldots, |I| \rbrace  \quad \textrm{ for all } i \in I$$
 
 where $i^*$ is a dedicated starting city and $M$ is sufficiently large.
+
+</span>
 
 ---
 
@@ -235,6 +269,8 @@ Model the minimum total tardiness scheduling problem as an integer program.
 
 ### Decision variables
 
+<span class="fragment">
+
 $$
 x_{i,j} =
 \begin{cases}
@@ -245,12 +281,17 @@ $$
 
 $c_j$ and $t_j$ are auxiliary variables representing the completion time and tardiness of job $j$.
 
+</span>
 
 ---
 
 ### Objective 
 
+<span class="fragment">
+
 minimise $\displaystyle \sum_{j\in J} t_j$
+
+</span>
 
 ---
 
@@ -258,7 +299,11 @@ minimise $\displaystyle \sum_{j\in J} t_j$
 
 ---
 
+#### Sequence
+
 Every job has one predecessor and one successor:
+
+<span class="fragment">
 
 $$\sum_{j\in J} x_{i,j} = 1 \quad \textrm{ for all } i \in J$$
 
@@ -267,9 +312,13 @@ $$\sum_{i\in J} x_{i,j} = 1 \quad \textrm{ for all } j \in J$$
 > [!NOTE]
 > We assume that $j$ includes a dummy job $j^*$ indicating start and end.
 
+</span>
+
 ---
 
-Completion time:
+#### Completion time
+
+<span class="fragment">
 
 $$c_j \geq c_i + p_j - M (1 - x_{i,j}) \quad \textrm{ for all } i \in J, j \in J\setminus \lbrace  j^* \rbrace$$
 
@@ -278,10 +327,14 @@ where $M$ is a large constant (e.g., sum of all processing times).
 > [!NOTE]
 > The completion time of the dummy job $j^*$ is unconstrained.
 
+</span>
+
 ---
 
 
-Tardiness:
+#### Tardiness
+
+<span class="fragment">
 
 $$t_j \geq c_j - d_j \quad \textrm{ for all } j \in J$$
 
@@ -289,6 +342,8 @@ $$t_j \geq 0 \quad \textrm{ for all } j \in J$$
 
 > [!IMPORTANT]
 > $t_j = \max(0, c_j - d_j)$ is not linear and must not be used.
+
+</span>
 
 ---
 
@@ -318,5 +373,4 @@ $$x_{i,j} \in \lbrace 0,1 \rbrace  \quad \textrm{ for all } i \in J, j \in J$$
 where $M$ is a large constant (e.g., sum of all processing times).
 
 > [!NOTE]
-> $c_j$ and $t_j$ do not need explicit upper bounds. In an optimal solution they will not be unnecessarily large.
-
+> $c_j$ and $t_j$ do not need explicit upper bounds.
