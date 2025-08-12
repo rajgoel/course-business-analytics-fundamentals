@@ -7,11 +7,7 @@
 With AMPL we can create a generic model and use a script to load the parameters from a respective data file.
 
 > [!TIP]
-> We can use the following files:  
->  
-> - `<name>.mod`: the model file
-> - `<name>.dat`: the data file
-> - `<name>.run`: the script file
+> Create a model file `<name>.mod`, a data file `<name>.dat`, and a script file `<name>.run` where `<name>` is the name of your problem.
 
 
 ---
@@ -472,7 +468,8 @@ println("Objective value = ", objective_value(model))
 for p in products
   println("Production of ", p, " = ", value(production[p]))
 end
-```<!-- .element style="height:600px;" -->
+```
+<!-- .element: style="height:600px;" -->
 
 ===
 
@@ -538,7 +535,8 @@ result = mathopt.solve(model, solver_type=solver)
 print("Objective value =", result.objective_value())
 for p in products:
   print(f"Production of {p} = {result.variable_values(production[p])}")
-```<!-- .element style="height:600px;" -->
+```
+<!-- .element: style="height:600px;" -->
 
 ===
 

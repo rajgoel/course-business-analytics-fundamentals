@@ -202,30 +202,30 @@ How can we model this decision problem?
 
 ### Parameters
 
-- $y^\textrm{brute} = 3$: ounces of Brute obtained per pound of raw material
-- $y^\textrm{chanelle}$ = 4:  ounces of Chanelle obtained per pound of raw material
-- $r^\textrm{regularbrute} = 7$: revenue per ounce of Regular Brute
-- $r^\textrm{regularchanelle}$ = 6: revenue per ounce of Regular Chanelle
-- $r^\textrm{luxurybrute} = 18$: revenue per ounce of Luxury Brute
-- $r^\textrm{luxurychanelle} = 14$: revenue per ounce of Luxury Chanelle
-- $c^\textrm{rawmaterial} = 3$: cost per pound of raw material purchased
-- $c^\textrm{brute} = 4$: processing cost per ounce of Brute refined
-- $c^\textrm{chanelle} = 4$: processing cost per ounce of Chanelle refined
-- $t^\textrm{rawmaterial} = 1$: laboratory time for processing one pound of raw material 
-- $t^\textrm{brute} = 3$: laboratory time for refining one ounce of Brute 
-- $t^\textrm{chanelle} = 2$: laboratory time for refining one ounce of Chanelle
-- $Q = 4000$: pounds of raw material that can be purchased
-- $T = 6000$: laboratory time available 
+- ounces of Brute obtained per pound of raw material: $y^\textrm{brute} = 3$
+- ounces of Chanelle obtained per pound of raw material: $y^\textrm{chanelle}$ = 4
+- revenue per ounce of Regular Brute: $r^\textrm{regularbrute} = 7$
+- revenue per ounce of Regular Chanelle: $r^\textrm{regularchanelle}$ = 6
+- revenue per ounce of Luxury Brute: $r^\textrm{luxurybrute} = 18$
+- revenue per ounce of Luxury Chanelle: $r^\textrm{luxurychanelle} = 14$
+- cost per pound of raw material purchased: $c^\textrm{rawmaterial} = 3$ 
+- cost per ounce of Brute refined: $c^\textrm{brute} = 4$
+- cost per ounce of Chanelle refined: $c^\textrm{chanelle} = 4$ 
+- laboratory time for processing one pound of raw material: $t^\textrm{rawmaterial} = 1$ 
+- laboratory time for refining one ounce of Brute: $t^\textrm{brute} = 3$ 
+- laboratory time for refining one ounce of Chanelle: $t^\textrm{chanelle} = 2$ 
+- pounds of raw material that can be purchased: $Q = 4000$ 
+- total laboratory time available: $T = 6000$ 
 
 ---
 
 ### Variables
 
-- $x^\textrm{rawmaterial}$: pounds of raw material purchased annually
-- $x^\textrm{regularbrute}$: ounces of Regular Brute sold annually
-- $x^\textrm{regularchanelle}$: ounces of Regular Chanelle sold annually
-- $x^\textrm{luxurybrute}$: ounces of Luxury Brute sold annually
-- $x^\textrm{luxurychanelle}$: ounces of Luxury Chanelle sold annually
+- pounds of raw material purchased: $x^\textrm{rawmaterial}$
+- ounces of Regular Brute sold: $x^\textrm{regularbrute}$
+- ounces of Regular Chanelle sold: $x^\textrm{regularchanelle}$
+- ounces of Luxury Brute sold: $x^\textrm{luxurybrute}$
+- ounces of Luxury Chanelle sold: $x^\textrm{luxurychanelle}$
 
 ---
 

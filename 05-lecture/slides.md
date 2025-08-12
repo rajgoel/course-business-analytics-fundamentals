@@ -7,13 +7,16 @@
 An **integer program (IP)** is a linear program in which some or all of the variables are restricted to be integers.
 
 > [!NOTE]
-> As most integer programs do not only contain integer variables, the terms
-> - **mixed integer program (MIP)**,
-> - **mixed integer linear program (MILP)** and 
-> - **integer program (IP)** 
-> 
-> are often used synonymously. Integer programs in which each integer variable can only take a value of 0 or 1  are called **binary programs**.
+> Integer programs in which each integer variable can only take a value of 0 or 1  are called **binary programs**.
 
+---
+
+As most integer programs do not only contain integer variables, the terms
+- **mixed integer program (MIP)**,
+- **mixed integer linear program (MILP)** and 
+- **integer program (IP)** 
+
+are often used synonymously. 
 
 ---
 
@@ -477,60 +480,4 @@ The branch & bound approach may have to solve a very large number linear relaxat
 
 For many integer programs generic branch & bound implementations are not competitive and specialised algorithms for the problem class under consideration may be required to find optimal solutions within an acceptable amount of time.
 
-===
-
-
-## Binary programs
-
----
-
-A question that can be answered with *yes* or *no* can be represented by a binary variable $x$ with<br>
-
-$x =\left\\{ \begin{array}{cl}
-0 & \textrm{if the answer to the question is no}\\\\
-1 & \textrm{if the answer to the question is yes}\\\\
-\end{array}
-\right.$
-
----
-
-### Example: <a href="markdown-viewer.html?file=05-lecture/california_manufacturing.md" data-preview-link>California Manufacturing Company <i class="fa-solid fa-magnifying-glass"></i></a>
-
-How can we model this decision problem as a binary program?
-
-> [!TIP]
-> The model must contain the following:
-> - **Variables:** What are the decisions that can be taken?
-> - **Objective:** What is the goal?
-> - **Constraints:** What are the restrictions on the decisions?
-
----
-
-In this problem there are four questions to be answered. Each question can be represented by a binary variable $x_i$ with
-
-$$
-x_i =\left\\{ \begin{array}{cl}
-0 & \textrm{if the answer to question } i \textrm{ is no}\\\\
-1 & \textrm{if the answer to question } i \textrm{ is yes}\\\\
-\end{array}
-\right.
-$$
-
----
-
-The integer program is
-
-maximise $9x_1 + 5x_2 + 6x_3 + 4x_4$
-
-subject to
-
-$6x_1 + 3x_2 + 5x_3 + 2x_4 \leq 10\ $ (financial constraints)
-
-$x_3 + x_4 \leq 1\ $ (at most one warehouse)
-
-$x_3 \leq x_1\ $ (warehouse requires factory)
-
-$x_4 \leq x_2\ $ (warehouse requires factory)
-
-$x_1,x_2,x_3,x_4 \in \lbrace 0,1 \rbrace$
 
