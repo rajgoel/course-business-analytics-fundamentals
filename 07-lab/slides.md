@@ -59,27 +59,27 @@ brace  \quad \textrm{ for all } i \in I$$
 > Given a set $I$ of items, where each item $i \in I$ has a size $s_i$, the bin packing problem is the problem of assigning all items to as homogeneous bins 
 > such that the total number of bins used is minimised and the total size of all items assigned to any bin does not exceed the bin's given capacity $C$.
 
-Model the bin packing problem as an integer program assuming a large enough set $J$ of bins.
+Model the bin packing problem as an integer program assuming a large enough set $B$ of bins.
 
 ---
 
 ### Decision variables
 
-For each $i\in I$, $j\in J$:
+For each $i\in I$, $b\in B$:
 
 $$
-x_{i,j} =
+x_{i,b} =
 \begin{cases}
-1 & \text{if item } i \text{ is placed in bin } j \\
+1 & \text{if item } i \text{ is placed in bin } b \\
 0 & \text{otherwise}
 \end{cases}
 $$
 
-For each $j\in J$:
+For each $b\in B$:
 $$
-y_j =
+y_b =
 \begin{cases}
-1 & \text{if bin } j \text{ is used} \\
+1 & \text{if bin } b \text{ is used} \\
 0 & \text{otherwise}
 \end{cases}
 $$
@@ -88,7 +88,7 @@ $$
 
 ### Objective
 
-minimise $\displaystyle\sum_{j\in J} y_j$
+minimise $\displaystyle\sum_{b\in B} y_b$
 
 ---
 
@@ -98,36 +98,38 @@ minimise $\displaystyle\sum_{j\in J} y_j$
 
 Each item is assigned to exactly one bin:
 
-$$\sum_{j \in J} x_{i,j} = 1 \quad \textrm{ for all } i \in I$$
+$$\sum_{b \in B} x_{i,b} = 1 \quad \textrm{ for all } i \in I$$
 
 ---
 
 
 The total size of all items assigned to any bin does not exceeded the bin's capacity:
 
-$$\sum_{i \in I} s_i x_{i,j} \leq C y_j \quad \textrm{ for all } j \in J$$
+$$\sum_{i \in I} s_i x_{i,b} \leq C y_b \quad \textrm{ for all } b \in B$$
 
 ---
 
 ### Binaries
 
 $$x_{i,j} \in \lbrace 0,1
-brace  \quad \textrm{ for all } i \in I, j \in J$$
+brace  \quad \textrm{ for all } i \in I, b \in B$$
 
 
 ---
 
 ### Bin packing problem
 
-minimise $\sum_{j\in J} y_j$
+minimise $\displaystyle\sum_{b\in B} y_b$
 
 subject to
 
-$$\sum_{j \in J} x_{i,j} = 1 \quad \textrm{ for all } i \in I$$
-$$\sum_{i \in I} s_i x_{i,j} \leq C y_j \quad \textrm{ for all } j \in J$$
-$$x_{i,j} \in \lbrace 0,1
-brace  \quad \textrm{ for all } i \in I, j \in J$$
+$$\sum_{b \in B} x_{i,b} = 1 \quad \textrm{ for all } i \in I$$
+$$\sum_{i \in I} s_i x_{i,b} \leq C y_b \quad \textrm{ for all } b \in B$$
+$$x_{i,b} \in \lbrace 0,1
+brace  \quad \textrm{ for all } i \in I, b \in B$$
 
+> [!NOTE]
+> $y_b$ does not need an explicit upper bound. In an optimal solution $y_b$ will not be unnecessarily large.
 
 ===
 
