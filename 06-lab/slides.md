@@ -38,8 +38,8 @@ How can we model this decision problem?
 
 Reconsider part (a) of the case and add the following restrictions to the model:
 
-**Restriction 1:**
-Students from any residential area are spread among at most 2 schools.
+> **Restriction 1:**
+> Students from any residential area are spread among at most 2 schools.
 
-**Restriction 2:**
-If students from a residential area are spread among multiple schools, at least 100 students are assigned to each school.
+> **Restriction 2:**
+> If students from a residential area are spread among multiple schools, at least 100 students are assigned to each school.
