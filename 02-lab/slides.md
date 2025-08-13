@@ -1,4 +1,4 @@
-9# AMPL, JuMP, and Google OR-Tools
+# AMPL, JuMP, and Google OR-Tools
 
 ===
 
