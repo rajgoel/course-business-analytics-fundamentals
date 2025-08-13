@@ -7,7 +7,7 @@
   <script>
     window.MathJax = {
       tex: {
-        inlineMath: [['\\(', '\\)']], // inline math between $...$ is replaced  
+        inlineMath: [['\\(', '\\)']], // inline math between $...$ will be replaced explicitly (see below)  
         displayMath: [['$$', '$$'],['\\[', '\\]']]
       },
       options: {
@@ -40,7 +40,8 @@
         const response = await fetch(file);
         if (!response.ok) throw new Error("Failed to load file");
         var md = await response.text();
-        // Replace $<nonwhitespace>$ with \(<nonwhitespace>\)
+        // Assume inline math $...$ contains no whitespaces or linebreaks, 
+        // and $$...$$ contains at least one whitespace or linebreak
         md = md.replace(/\$([^\s\r\n]+)\$/g, '\\($1\\)');
         // Escape backslashes in \( and \)
         md = md.replace(/\\\(/g, '\\\\(').replace(/\\\)/g, '\\\\)');
