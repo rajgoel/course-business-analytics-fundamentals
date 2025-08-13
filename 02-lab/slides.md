@@ -1,4 +1,4 @@
-# AMPL, JuMP, and Google OR-Tools
+9# AMPL, JuMP, and Google OR-Tools
 
 ===
 
@@ -531,5 +531,4 @@ print("Profit =", result.objective_value())
 ```
 <!-- .element: style="height:600px;" -->
 
-```<!-- .element style="height:600px;" -->
 
