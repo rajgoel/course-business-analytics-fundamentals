@@ -102,7 +102,7 @@ The AMPL Community Edition is free to use and can be obtained from: https://ampl
 
 ===
 
-## Other software
+## Other software (not required)
 
 ---
 
