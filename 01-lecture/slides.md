@@ -243,6 +243,14 @@ Regression can be used to quantify the relationship between input variables and 
 
 ---
 
+### Example: Linear regression
+
+<div data-load="01-lecture/Linear_regression.svg">
+</div>
+
+
+---
+
 ### Classification
 
 Classification assigns data points to predefined categories. A simple method is **$k$-Nearest Neighbors** which relies on a training set that is already classified:
@@ -256,11 +264,11 @@ Classification assigns data points to predefined categories. A simple method is 
 
 ---
 
-### Example: Classification
+### Example: **$k$-Nearest Neighbors**
 
 <svg width="1000" height="800" viewBox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg">
   <!-- k=3 neighbors -->
-  <g class="fragment">
+  <g class="fragment fade-in-then-out">
     <!-- k=3 circle -->
     <circle cx="500" cy="400" r="250" fill="none" stroke="gray" stroke-width="6" stroke-dasharray="12 12"/>
     <text x="640" y="310" font-family="Arial" font-size="36" fill="gray">k=3</text>
@@ -276,6 +284,9 @@ Classification assigns data points to predefined categories. A simple method is 
     <circle cx="500" cy="400" r="360" fill="none" stroke="gray" stroke-width="6" stroke-dasharray="12 12"/>
     <text x="800" y="160" font-family="Arial" font-size="36" fill="gray">k=5</text>
     <!-- Lines from query to nearest neighbors -->
+    <line x1="500" y1="400" x2="500" y2="220" stroke="lightgray" stroke-width="4.5"/>
+    <line x1="500" y1="400" x2="560" y2="510" stroke="lightgray" stroke-width="4.5"/>
+    <line x1="500" y1="400" x2="280" y2="400" stroke="lightgray" stroke-width="4.5"/>
     <line x1="500" y1="400" x2="800" y2="340" stroke="lightgray" stroke-width="4.5"/>
     <line x1="500" y1="400" x2="320" y2="640" stroke="lightgray" stroke-width="4.5"/>
   </g> 
@@ -291,7 +302,7 @@ Classification assigns data points to predefined categories. A simple method is 
   <circle cx="80" cy="520" r="21" fill="firebrick" stroke="black" stroke-width="3"/>
   <circle cx="320" cy="640" r="21" fill="firebrick" stroke="black" stroke-width="3"/>
   <circle cx="800" cy="340" r="21" fill="firebrick" stroke="black" stroke-width="3"/>
-  <circle cx="980" cy="520" r="21" fill="firebrick" stroke="black" stroke-width="3"/>
+  <circle cx="950" cy="520" r="21" fill="firebrick" stroke="black" stroke-width="3"/>
   <circle cx="280" cy="400" r="21" fill="firebrick" stroke="black" stroke-width="3"/>
 
   <!-- Query point -->
