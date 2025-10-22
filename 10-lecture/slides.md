@@ -48,7 +48,7 @@ Syntax and capabilities of CP solvers vary.
 
 Well-known solvers for CP models are:
 
-- [Google OR-Tools: CP-SAT)](https://developers.google.com/optimization/cp/cp_solver)
+- [Google OR-Tools: CP-SAT](https://developers.google.com/optimization/cp/cp_solver)
 - [CPLEX: CP Optimizer](https://www.ibm.com/products/ilog-cplex-optimization-studio/cplex-cp-optimizer)
 - [Hexaly](https://www.hexaly.com/) 
 
