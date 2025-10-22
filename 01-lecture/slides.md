@@ -258,47 +258,47 @@ Classification assigns data points to predefined categories. A simple method is 
 
 ### Example: Classification
 
-<svg width="500" height="400" viewBox="50 100 600 350" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1000" height="800" viewBox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg">
 
   <!-- k=3 neighbors -->
   <g class="fragment">
     <!-- k=3 circle -->
-    <circle cx="330" cy="270" r="125" fill="none" stroke="gray" stroke-width="3" stroke-dasharray="6 6"/>
-    <text x="400" y="225" font-family="Arial" font-size="18" fill="gray">k=3</text>
+    <circle cx="500" cy="400" r="250" fill="none" stroke="gray" stroke-width="6" stroke-dasharray="12 12"/>
+    <text x="640" y="310" font-family="Arial" font-size="36" fill="gray">k=3</text>
     <!-- Lines from query to nearest neighbors -->
-    <line x1="330" y1="270" x2="330" y2="180" stroke="lightgray" stroke-width="2.25"/>
-    <line x1="330" y1="270" x2="360" y2="325" stroke="lightgray" stroke-width="2.25"/>
-    <line x1="330" y1="270" x2="480" y2="240" stroke="lightgray" stroke-width="2.25"/>
+    <line x1="500" y1="400" x2="500" y2="220" stroke="lightgray" stroke-width="4.5"/>
+    <line x1="500" y1="400" x2="560" y2="510" stroke="lightgray" stroke-width="4.5"/>
+    <line x1="500" y1="400" x2="280" y2="400" stroke="lightgray" stroke-width="4.5"/>
   </g> 
 
   <!-- k=5 neighbors -->
   <g class="fragment">
     <!-- k=5 circle -->
-    <circle cx="330" cy="270" r="180" fill="none" stroke="gray" stroke-width="3" stroke-dasharray="6 6"/>
-    <text x="480" y="150" font-family="Arial" font-size="18" fill="gray">k=5</text>
+    <circle cx="500" cy="400" r="360" fill="none" stroke="gray" stroke-width="6" stroke-dasharray="12 12"/>
+    <text x="800" y="160" font-family="Arial" font-size="36" fill="gray">k=5</text>
     <!-- Lines from query to nearest neighbors -->
-    <line x1="330" y1="270" x2="600" y2="225" stroke="lightgray" stroke-width="2.25"/>
-    <line x1="330" y1="270" x2="240" y2="390" stroke="lightgray" stroke-width="2.25"/>
+    <line x1="500" y1="400" x2="800" y2="340" stroke="lightgray" stroke-width="4.5"/>
+    <line x1="500" y1="400" x2="320" y2="640" stroke="lightgray" stroke-width="4.5"/>
   </g> 
 
-  <!-- Red points -->
-  <circle cx="160" cy="150" r="10.5" fill="red" stroke="black" stroke-width="1.5"/>
-  <circle cx="330" cy="180" r="10.5" fill="red" stroke="black" stroke-width="1.5"/>
-  <circle cx="450" cy="90" r="10.5" fill="red" stroke="black" stroke-width="1.5"/>
-  <circle cx="360" cy="325" r="10.5" fill="red" stroke="black" stroke-width="1.5"/>
-  <circle cx="600" cy="225" r="10.5" fill="red" stroke="black" stroke-width="1.5"/>
+  <!-- Light red points -->
+  <circle cx="160" cy="160" r="21" fill="lightcoral" stroke="black" stroke-width="3"/>
+  <circle cx="500" cy="220" r="21" fill="lightcoral" stroke="black" stroke-width="3"/>
+  <circle cx="740" cy="40" r="21" fill="lightcoral" stroke="black" stroke-width="3"/>
+  <circle cx="560" cy="510" r="21" fill="lightcoral" stroke="black" stroke-width="3"/>
+  <circle cx="1040" cy="310" r="21" fill="lightcoral" stroke="black" stroke-width="3"/>
 
-  <!-- Blue points -->
-  <circle cx="120" cy="330" r="10.5" fill="blue" stroke="black" stroke-width="1.5"/>
-  <circle cx="240" cy="390" r="10.5" fill="blue" stroke="black" stroke-width="1.5"/>
-  <circle cx="480" cy="240" r="10.5" fill="blue" stroke="black" stroke-width="1.5"/>
-  <circle cx="570" cy="330" r="10.5" fill="blue" stroke="black" stroke-width="1.5"/>
-  <circle cx="220" cy="270" r="10.5" fill="blue" stroke="black" stroke-width="1.5"/>
+  <!-- Dark red points -->
+  <circle cx="80" cy="520" r="21" fill="firebrick" stroke="black" stroke-width="3"/>
+  <circle cx="320" cy="640" r="21" fill="firebrick" stroke="black" stroke-width="3"/>
+  <circle cx="800" cy="340" r="21" fill="firebrick" stroke="black" stroke-width="3"/>
+  <circle cx="980" cy="520" r="21" fill="firebrick" stroke="black" stroke-width="3"/>
+  <circle cx="280" cy="400" r="21" fill="firebrick" stroke="black" stroke-width="3"/>
 
   <!-- Query point -->
-  <circle cx="330" cy="270" r="10.5" fill="white" stroke="black" stroke-width="1.5"/>
+  <circle cx="500" cy="400" r="21" fill="lightgray" stroke="black" stroke-width="3"/>
 </svg>
-
 
 <!--
 ---
