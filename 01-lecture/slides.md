@@ -258,9 +258,7 @@ Classification assigns data points to predefined categories. A simple method is 
 
 ### Example: Classification
 
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="1000" height="800" viewBox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg">
-
   <!-- k=3 neighbors -->
   <g class="fragment">
     <!-- k=3 circle -->
