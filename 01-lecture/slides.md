@@ -156,7 +156,8 @@ Basic techniques include simple aggregations:
 
 ### Centroid
 
-The **centroid** is the arithmetic mean of multi-dimensional input 
+The **centroid** is the arithmetic mean of multi-dimensional input
+
   $$ x^\text{centroid} = \tfrac{1}{n} \sum_{i=1}^n x_i $$
 
 > [!TIP]
