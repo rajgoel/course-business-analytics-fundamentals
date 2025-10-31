@@ -28,8 +28,8 @@ subject to
 $$x \leq 4$$
 $$y \leq 6$$
 $$3x + 2y \leq 18$$
-$$x \leq 0$$
-$$y \leq 0$$
+$$x \geq 0$$
+$$y \geq 0$$
 
 ---
 
