@@ -94,7 +94,7 @@ AMPL has two types of commands, i.e., a set of commands
 
 ### Model files
 
-Throughout this course we assume that the commands to formulate a model are stored in a separate model file with suffix `.mod`.
+Throughout this course we assume that the commands to formulate a model are stored in a separate model file with suffix `.mod` or `.txt` .
 
 > [!TIP]
 > In your AMPL installation folder, you can find several examples of such model files. These can be opened and modified with any text editor.
@@ -134,7 +134,8 @@ x2 = 6
 ```
 
 - The model is loaded with the command `model`.
-- The problem is solved with the command `solve`.
+- The problem is solved with the command `solve`
+- In case you get an error please use the command `option solver highs` and in the next line the solve command 
 - The solution can be shown with the command `display`.
 - Whenever we change the model, we must tell AMPL to `reset` before we load the model. 
 
