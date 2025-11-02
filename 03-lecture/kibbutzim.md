@@ -34,8 +34,7 @@ will plant the same proportion of its available irrigable land. For example, if 
 plants 150 acres of its 300 acres. However, any combination of the crops may be
 grown at any of the kibbutzim. The job facing the Coordinating Technical Office is to plan
 how many acres to devote to each crop at the respective kibbutzim while satisfying the
-given restrictions. The objective is to maximize the total net return to the Southern Con-
-federation of Kibbutzim as a whole.
+given restrictions. The objective is to maximize the total net return to the Southern Confederation of Kibbutzim as a whole.
 
 **Source:** Hillier, Liebermann: Introduction to Operations Research, 9th Edition, ISBN 978-0-07-337629-5
 
