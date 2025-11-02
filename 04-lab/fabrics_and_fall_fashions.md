@@ -24,7 +24,7 @@ The fall casual fashions include:
 
 |  Clothing Item     | Materials Requirements | Price | Labor and Machine Cost |
 |--------------------|------------------------|-------|------------------------|
-|  Velvet pants      | 3 yards of velvet2, yards of acetate for lining      | $350 | $175 |
+|  Velvet pants      | 3 yards of velvet, 2 yards of acetate for lining      | $350 | $175 |
 | Cotton sweater     | 1.5 yards of cotton                                  | $130 |  $60 |
 | Cotton miniskirt   | 0.5 yard of cotton                                   |  $75 |  $40 | 
 | Velvet shirt       | 1.5 yards of velvet                                  | $200 | $160 | 
