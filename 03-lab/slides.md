@@ -27,8 +27,8 @@ How can we model this decision problem?
 ![Image](03-lab/lizzies_dairy.svg)
 
 > [!TIP]
-> We can use the following variables for nodes A, B, C, D, E. 
-> - $x_i$ represents the amount available at the node $i$
+> We can use the following variables for nodes A, B, C, D, E:
+> - $x_i$ represents the amount available at node $i$
 > - $y_{i,j}$ represents the amount from node $i$ being used for node $j$
 
 ===
