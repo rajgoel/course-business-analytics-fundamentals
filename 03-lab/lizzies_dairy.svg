@@ -1,0 +1,84 @@
+<svg width="700" height="500" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+ onclick="next()">
+
+<defs>
+   <marker id="Arrow" markerWidth="5" markerHeight="5" viewBox="-6 -6 12 12" refX="-2" refY="0" markerUnits="strokeWidth" orient="auto">
+<polygon points="-2,0 -5,5 5,0 -5,-5" fill="black" stroke="black" stroke-width="1px"/>
+</marker>
+</defs>
+
+<g transform="translate(0,30)">
+<g id="arcAC" opacity="1">
+  <path d="M 100,50 L 200,125 L 300,200" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+</g>
+
+<g id="arcBC" opacity="1">
+  <path d="M 100,350 L 200,275 L 300,200" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+</g>
+
+<g id="arcAD" opacity="1">
+  <path d="M 100,50 L 350,75 L 600,100" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+</g>
+
+<g id="arcAE" opacity="1">
+  <path d="M 100,50 L 300,150 L 600,300" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+</g>
+
+<g id="arcBD" opacity="1">
+  <path d="M 100,350 L 300,250 L 600,100" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+</g>
+
+<g id="arcBE" opacity="1">
+  <path d="M 100,350 L 350,325 L 600,300" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+</g>
+
+<g id="arcCD" opacity="1">
+  <path d="M 300,200 L 450,150 L 600,100" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+</g>
+
+<g id="arcCE" opacity="1">
+  <path d="M 300,200 L 450,250 L 600,300" stroke="black" stroke-width="5" marker-mid="url(#Arrow)" />
+</g>
+
+<g id="blankcircles">
+  <circle cx="100" cy="50" r="27.5" style="stroke:none; fill:white;"/>
+  <circle cx="100" cy="350" r="27.5" style="stroke:none; fill:white;"/>
+  <circle cx="300" cy="200" r="27.5" style="stroke:none; fill:white;"/>
+  <circle cx="600" cy="100" r="27.5" style="stroke:none; fill:white;"/>
+  <circle cx="600" cy="300" r="27.5" style="stroke:none; fill:white;"/>
+</g>
+
+<g id="nodeA" opacity="1">
+  <circle id="circleA" cx="100" cy="50" r="25" style="stroke: #000000; stroke-width:5" fill="aliceblue"/>
+  <text x="100" y="65" font-size="40" fill="black" text-anchor="middle"> A </text>
+  <text x="100" y="10" font-size="30" fill="black" text-anchor="middle"> High-fat </text>
+</g>
+
+<g id="nodeB" opacity="1">
+  <circle id="circleB" cx="100" cy="350" r="25" style="stroke: #000000; stroke-width:5" fill="aliceblue"/>
+  <text x="100" y="365" font-size="40" fill="black" text-anchor="middle"> B </text>
+  <text x="100" y="405" font-size="30" fill="black" text-anchor="middle"> Low-fat </text>
+</g>
+
+
+<g id="nodeC" opacity="1">
+  <circle id="circleC" cx="300" cy="200" r="25" style="stroke: #000000; stroke-width:5" fill="aliceblue"/>
+  <text x="300" y="215" font-size="40" fill="black" text-anchor="middle"> C </text>
+  <text x="220" y="210" font-size="30" fill="black" text-anchor="middle"> Cream </text>
+</g>
+
+<g id="nodeD" opacity="1">
+  <circle id="circleD" cx="600" cy="100" r="25" style="stroke: #000000; stroke-width:5" fill="aliceblue"/>
+  <text x="600" y="115" font-size="40" fill="black" text-anchor="middle"> D </text>
+  <text x="600" y="60" font-size="30" fill="black" text-anchor="middle"> Cream cheese </text>
+</g>
+
+<g id="nodeE" opacity="1">
+  <circle id="circleE" cx="600" cy="300" r="25" style="stroke: #000000; stroke-width:5" fill="aliceblue"/>
+  <text x="600" y="315" font-size="40" fill="black" text-anchor="middle"> E </text>
+  <text x="600" y="360" font-size="30" fill="black" text-anchor="middle"> Cottage cheese </text>
+</g>
+
+</g>
+
+</svg>
