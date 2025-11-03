@@ -22,7 +22,7 @@ How can we model this decision problem?
 
 ---
 
-### Example: <a href="markdown-viewer.html?file=03-lab/lizzies_dairy.md" data-preview-link>Lizzie’s Dairy <i class="fa-solid fa-magnifying-glass"></i></a>
+### Production process of <a href="markdown-viewer.html?file=03-lab/lizzies_dairy.md" data-preview-link>Lizzie’s Dairy <i class="fa-solid fa-magnifying-glass"></i></a>
 
 ![Image](03-lab/lizzies_dairy.svg)
 
