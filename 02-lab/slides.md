@@ -125,15 +125,19 @@ capacity3: 3*x1 + 2*x2 <= 18;
 ```ampl[2|3-5|6-8|1|1-8]
 ampl: reset;
 ampl: model wyndor.mod;
+ampl: option solver highs;
 ampl: solve;
-MINOS 5.51: optimal solution found.
-2 iterations, objective 36000
+HiGHS 1.11.0: optimal solution; objective 36000
+1 simplex iterations
+0 barrier iterations
 ampl: display x1, x2;
 x1 = 2
 x2 = 6
 ```
 
 - The model is loaded with the command `model`.
+- This tells AMPL to use the HiGHS solver instead of the default solver `0ption solver highs`.
+- Note: This can vary depending on which solver software you want to use.
 - The problem is solved with the command `solve`.
 - The solution can be shown with the command `display`.
 - Whenever we change the model, we must tell AMPL to `reset` before we load the model. 
