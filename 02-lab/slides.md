@@ -28,7 +28,8 @@ subject to
 $$x \leq 4$$
 $$y \leq 6$$
 $$3x + 2y \leq 18$$
-
+$$x \geq 0$$
+$$y \geq 0$$
 ---
 
 Most solvers use the standard form to solve linear programs, i.e.,
