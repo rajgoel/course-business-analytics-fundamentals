@@ -7,11 +7,11 @@
 An **integer program (IP)** is a linear program in which some or all of the variables are restricted to be integers.
 
 > [!NOTE]
-> Integer programs in which each integer variable can only take a value of 0 or 1  are called **binary programs**.
+> Integer programs in which each integer variable can only take a value of 0 or 1 are called **binary programs**.
 
 ---
 
-As most integer programs do not only contain integer variables, the terms
+As most integer programs do not contain only integer variables, the terms
 - **mixed integer program (MIP)**,
 - **mixed integer linear program (MILP)** and 
 - **integer program (IP)** 
@@ -22,7 +22,7 @@ are often used synonymously.
 
 ## Example: Integer program
 
-maximise $-x + 4y$
+maximize $-x + 4y$
 
 subject to
 
@@ -70,7 +70,7 @@ If the solution of the linear relaxation is not integer, we can try to modify th
 
 ### Example: Linear relaxation of the IP
 
-maximise $-x + 4y$
+maximize $-x + 4y$
 
 subject to
 
@@ -325,7 +325,7 @@ Branch & bound exploits the fact, that a solution to the IP cannot be better tha
 
 ### Example
 
-maximise $-x + 4y$
+maximize $-x + 4y$
 
 subject to
 
