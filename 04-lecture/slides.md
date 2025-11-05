@@ -211,7 +211,7 @@ $$x_k^c \geq 0\ {\rm for\ all}\ k \in K, c\in C$$
 $$K = \lbrace 1,2,3 \rbrace$$
 $$C = \lbrace {\rm sugarbeets}, {\rm cotton}, {\rm sorghum} \rbrace$$
 $$q_1^{\rm land} = 400, q_2^{\rm land} = 600, q_3^{\rm land} = 300$$
-$$q_1^{\rm water} = 600, q_1^{\rm water} = 800, q_3^{\rm water} = 375$$
+$$q_1^{\rm water} = 600, q_2^{\rm water} = 800, q_3^{\rm water} = 375$$
 $$w^{\rm sugarbeets} = 3, w^{\rm cotton} = 2, w^{\rm sorghum} = 1$$
 $$u^{\rm sugarbeets} = 600, u^{\rm cotton} = 500, u^{\rm sorghum} = 325$$
 $$p^{\rm sugarbeets} = 1000, p^{\rm cotton} = 750, p^{\rm sorghum} = 250$$
