@@ -289,7 +289,7 @@ Each branch is an IP with additional constraints and is again solved using branc
 
 ---
 
-Branch & bound exploits the fact, that a solution to the IP cannot be better than the solution of its linear relaxation, i.e. the objective function value of the linear relaxation is a *bound* to the objective function value of the IP.
+Branch & bound exploits the fact that a solution to the IP cannot be better than the solution of its linear relaxation, i.e. the objective function value of the linear relaxation is a *bound* to the objective function value of the IP.
 
 ---
 
@@ -472,7 +472,7 @@ Therefore, our focus is on modelling integer programs and not on knowing the sol
 
 ### Computational effort
 
-The branch & bound approach may have to solve a very large number linear relaxations. Although solving a linear program is generally very fast, solving many of them can require a lot of time.
+The branch & bound approach may have to solve a very large number of linear relaxations. Although solving a linear program is generally very fast, solving many of them can require a lot of time.
 
 ---
 
