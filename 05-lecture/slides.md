@@ -289,7 +289,7 @@ Each branch is an IP with additional constraints and is again solved using branc
 
 ---
 
-Branch & bound exploits the fact, that a solution to the IP cannot be better than the solution of its linear relaxation, i.e. the objective function value of the linear relaxation is a *bound* to the objective function value of the IP.
+Branch & bound exploits the fact that a solution to the IP cannot be better than the solution of its linear relaxation, i.e. the objective function value of the linear relaxation is a *bound* to the objective function value of the IP.
 
 ---
 
