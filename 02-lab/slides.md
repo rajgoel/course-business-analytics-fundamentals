@@ -25,10 +25,15 @@ We write linear programs like
 maximise $3x + 5y$
 
 subject to
+
 $$x \leq 4$$
+
 $$y \leq 6$$
+
 $$3x + 2y \leq 18$$
+
 $$x \geq 0$$
+
 $$y \geq 0$$
 
 ---
@@ -38,7 +43,9 @@ Most solvers use the standard form to solve linear programs, i.e.,
 minimise $c^Tx$
 
 subject to
+
 $$Ax=b$$
+
 $$x \geq 0$$
 
 
@@ -136,15 +143,14 @@ x2 = 6
 ```
 
 - The model is loaded with the command `model`.
-- This tells AMPL to use the HiGHS solver instead of the default solver `0ption solver highs`.
-- Note: This can vary depending on which solver software you want to use.
+- The solver to be used is set with the command `option solver` followed by the chosen solver.
 - The problem is solved with the command `solve`.
 - The solution can be shown with the command `display`.
 - Whenever we change the model, we must tell AMPL to `reset` before we load the model. 
 
 ---
 
-AMPL allows to change the solver used without the need to adapt the model.
+AMPL allows to use different solvers and the output may vary by solver.
 
 ```ampl [3-5]
 ampl: reset;
