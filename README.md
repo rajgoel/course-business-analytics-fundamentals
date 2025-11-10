@@ -60,6 +60,9 @@ R. Fourer, D.M. Gay, B.W. Kernighan. AMPL - A Modeling Language for Mathematical
 
 ## License
 
-MIT licensed
+All original materials in this repository are released under the MIT License (see [LICENSE](LICENSE)).
+
+Some examples, cases, and exercises are adapted, inspired by, or quoted material from textbooks, provided with proper citation for educational purposes.  
+These quoted excerpts are **not covered by the MIT License** and remain the property of their respective copyright holders.
 
 Copyright (C) 2025 Asvin Goel
