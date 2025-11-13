@@ -136,8 +136,8 @@ where
 
 Assume we have a capacity limit $b'$ and we have the option increase the capacity to $b''$. Moreover we have these conditional constraints:
 
-$$\texttt{if } \textit{capacity is increased} \texttt{ then } \sum_{i=1}^n a_i x_i \leq b'$$
-$$\texttt{if } \textit{capacity is not increased} \texttt{ then } \sum_{i=1}^n a_i x_i \leq b''$$
+$$\texttt{if } \textit{capacity is not increased} \texttt{ then } \sum_{i=1}^n a_i x_i \leq b'$$
+$$\texttt{if } \textit{capacity is increased} \texttt{ then } \sum_{i=1}^n a_i x_i \leq b''$$
 
 ---
 
