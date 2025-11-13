@@ -191,7 +191,7 @@ How can we model this decision problem?
 ### Sets and parameters
 
 - Let $I = \lbrace 1, 2, 3 \rbrace$ denote the set of products.
-- Let $j = \lbrace 1, 2 \rbrace$ denote the set of plants.
+- Let $J = \lbrace 1, 2 \rbrace$ denote the set of plants.
 - For each $i \in I$ let $p_i$ denote the profit per unit of product $i$.
 - For each $i \in I$ let $q_i$ denote the sales potential of product $i$.
 - For each $j \in J$ let $u_j$ denote the time available at plant $j$.
