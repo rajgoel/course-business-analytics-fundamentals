@@ -17,7 +17,7 @@ The production cost per unit of each product would be essentially the same in th
 | Unit profit     | 5 T$      | 7 T$      | 3 T$      |                |
 | Sales potential | 7 units   | 5 units   | 9 units   |                |
 
-These data are given in the table, along with other relevant information, including marketing estimates of the number of units of each product that could be sold per week if it is produced. The objective is to choose the products, the plant, and the production rates of the chosen products so as to maximize total profit
+These data are given in the table, along with other relevant information, including marketing estimates of the number of units of each product that could be sold per week if it is produced. The objective is to choose the products, the plant, and the production rates of the chosen products so as to maximize total profit.
 
 **Source:** Hillier, Liebermann: Introduction to Operations Research, 9th Edition, ISBN 978-0-07-337629-5
 
