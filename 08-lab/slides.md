@@ -12,10 +12,9 @@ How can we model this decision problem as a shortest path problem?
 How can we model this decision problem as a minimum flow problem?
 
 > [!NOTE]
-> The minimum flow problem is a close relative of the maximum flow problem
-> with non-negative lower bounds on arc flows. 
+> The minimum flow problem is a close relative of the maximum flow problem. 
 > In the minimum flow problem, we wish to send the minimum amount of flow
-> from the source to the sink, while satisfying given lower on arc flows.
+> from the source to the sink, while satisfying given lower bounds on arc flows.
 
 > [!TIP]
 > Draw the nodes and arcs of the network and indicate the lower bounds on arcs.
