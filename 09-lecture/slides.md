@@ -156,7 +156,8 @@ $$\class{highlight}{\displaystyle\sum_{(j,i)\in A} x_{j,i} \leq q_i \textrm{ for
 
 $$0 \leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
 
-This problem is not a standard minimum cost network flow problem. <!-- .element class="fragment" -->
+> [!CAUTION]
+> This problem is not a standard minimum cost network flow problem.
 
 ---
 
