@@ -12,6 +12,9 @@ $$\sum_{(i,j)\in A} x_{i,j} - \sum_{(j,i)\in A} x_{j,i} = b_i \textrm{ for all }
 
 $$l_{i,j} \leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
 
+> [!IMPORTANT]
+> The minimum cost network flow problem can only be solved if supply and demand are balanced, i.e., if $\displaystyle\sum_{i\in N} b_i = 0$.
+
 ---
 
 Problems which can be modelled as a minimum cost network flow problem can be solved very efficiently, even for very large instances.
