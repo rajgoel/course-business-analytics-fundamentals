@@ -30,7 +30,7 @@ Components of typical networks are for example:
 In many network optimisation problems we have integer constraints, e.g., because we have to decide whether to use an arc or not.
 
 > [!NOTE]
-> Although integer programs can be difficult to solve, network optimisation problems are often easy to solve - eve for huge problems. 
+> Although integer programs can be difficult to solve, network optimisation problems are often easy to solve - even for huge problems. 
 
 ---
 
