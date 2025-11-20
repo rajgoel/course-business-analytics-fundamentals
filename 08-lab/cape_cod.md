@@ -2,7 +2,7 @@
 
 Beverly owns a vacation home in Cape Cod that she wishes to rent for the period May 1st to August 31st. She has solicited a number of bids, each having the following form:
 
-- the day the rental starts (a rental day start at 3 P.M.),
+- the day the rental starts (a rental day starts at 3 P.M.),
 - the day the rental ends (checkout time is noon), and
 - the total amount of the bid (in dollars).
 
