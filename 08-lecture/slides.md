@@ -401,8 +401,49 @@ i.e. all of these problems are special cases.
 
 Thus, also the solution of the special cases will be integer if all parameters are integers.
 
+> [!NOTE]
+> Although, we can solve these problems using the simplex algorithm, there are even more efficient algorithms which exploit the special structure of these problems.
+
 ---
 
-Although, we can solve these problems using the simplex algorithm, there are even more efficient algorithms which exploit the special structure of these problems.
+### AMPL: networkflow.mod ###
 
+```ampl[]
+# Minimum-cost network flow problem
+set Nodes;                            # set of nodes
+set Arcs within (Nodes cross Nodes);  # set of arcs
+param supply { Nodes };               # supply/demand values of nodes
+param costs { Arcs };                 # arc costs
+param lowerbound { Arcs };            # lower bound on the flow along arc
+param upperbound { Arcs };            # upper bound on the flow along arc
+var flow { Arcs };                    # flow along arc
+# Problem
+minimize TotalCosts: sum { (i,j) in Arcs } costs[i,j] * flow[i,j];
+subject to
+FlowConservation { i in Nodes }:
+supply[i] + sum { (j,i) in Arcs } flow[j,i] = sum { (i,j) in Arcs } flow[i,j];
+LowerBounds { (i,j) in Arcs }: flow[i,j] >= lowerbound[i,j];
+UpperBounds { (i,j) in Arcs }: flow[i,j] <= upperbound[i,j];
+```
+
+---
+
+### AMPL: networkflow.dat ###
+
+```ampl[]
+set Nodes:= origin terminal destination;
+set Arcs:= (origin,destination) (origin,terminal) (terminal,destination);
+
+param                supply :=
+ origin                   1
+ destination             -1
+ terminal                 0
+;
+
+param:                costs lowerbound upperbound :=
+ origin destination       3          0   Infinity
+ origin terminal          1          0   Infinity
+ terminal destination     1          0   Infinity
+;
+```
 
