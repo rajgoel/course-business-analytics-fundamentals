@@ -18,7 +18,7 @@ How can we model this decision problem as a min-cost network flow problem?
 ### Example: <a href="markdown-viewer.html?file=09-lab/daisymay.md" data-preview-link>Daisymay Van Line <i class="fa-solid fa-magnifying-glass"></i></a>
 
 > [!TIP]
-> Draw a time-expanded network and include all relevant parameters. For a schedule that can be repeated on a daily basis, the number of aircrafts at time 19:00 at each location must be the same as at time 09:00.
+> Draw a time-expanded network and include all relevant parameters. Make reasonable assumptions for every part of the exercise that may be unclear.
 
 ===
 
