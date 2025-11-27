@@ -26,7 +26,7 @@ ports.
 |             Port A |        |        |      3 |      2 |
 |             Port B |        |        |      2 |      3 |
 |             Port C |      2 |      1 |        |        |
-|             Port C |      1 |      2 |        |        |
+|             Port D |      1 |      2 |        |        |
 
 Every ship brought into service incurs a fixed charge of 5 units.
 
