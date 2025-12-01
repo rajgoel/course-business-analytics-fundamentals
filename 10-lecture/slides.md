@@ -110,7 +110,8 @@ ColumnConstraints {j in 1..9}:
 AreaConstraints {I in 1..9 by 3, J in 1..9 by 3}:
    alldiff {i in I..I+2, j in J..J+2} x[i,j];
    # cells in the same area must be assigned distinct numbers
-```<!-- .element:  style="height:500pt;" -->
+```
+<!-- .element: style="height:500pt;" -->
 
 ---
 
