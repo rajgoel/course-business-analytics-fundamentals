@@ -87,30 +87,30 @@ Rather than sacrificing expressiveness in modelling, sacrificing solution qualit
 
 ```ampl
 param given {1..9, 1..9} integer, in 0..9;
-        # given[i,j] > 0 is the value given for row i, col j
-        # given[i,j] = 0 means no value given
+   # given[i,j] > 0 is the value given for row i, col j
+   # given[i,j] = 0 means no value given
 
 var x {1..9, 1..9} integer, in 1..9;
-        # x[i,j] = the number assigned to the cell in row i, col j
+   # x[i,j] = the number assigned to the cell in row i, col j
 
 subject to 
 
 GivenValues {i in 1..9, j in 1..9: given[i,j] > 0}:
    x[i,j] = given[i,j];
-        # assign given values
+   # assign given values
 
 RowConstraints {i in 1..9}:
    alldiff {j in 1..9} x[i,j];
-        # cells in the same row must be assigned distinct numbers
+   # cells in the same row must be assigned distinct numbers
 
 ColumnConstraints {j in 1..9}:
    alldiff {i in 1..9} x[i,j];
-        # cells in the same column must be assigned distinct numbers
+   # cells in the same column must be assigned distinct numbers
 
 AreaConstraints {I in 1..9 by 3, J in 1..9 by 3}:
    alldiff {i in I..I+2, j in J..J+2} x[i,j];
-        # cells in the same area must be assigned distinct numbers
-```
+   # cells in the same area must be assigned distinct numbers
+```<!-- .element:  style="height:500pt;" -->
 
 ---
 
