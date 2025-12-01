@@ -78,29 +78,39 @@ Rather than sacrificing expressiveness in modelling, sacrificing solution qualit
 
 - In every row all numbers must be different.
 - In every column all numbers must be different.
-- In each of the 9 blocks all numbers must be different.
+- In each of the 9 areas all numbers must be different.
 - The given numbers must not be changed.
 
 ---
 
 ### CP Model: Sudoku
 
-**Sets and variables:**
-- The set of numbers $I = \lbrace 1,2,\ldots,9\rbrace$
-- For each cell $(i,j)$, define a variable $x_{ij} \in I$
+```ampl
+param given {1..9, 1..9} integer, in 0..9;
+        # given[i,j] > 0 is the value given for row i, col j
+        # given[i,j] = 0 means no value given
 
-**Constraints:**
+var x {1..9, 1..9} integer, in 1..9;
+        # x[i,j] = the number assigned to the cell in row i, col j
 
-- If a number is given in cell $(i,j)  \in I \times I$, then fix $x_{ij}$ to that value.
-- For each $i\in I$, all values $x_{i,1}, x_{i,2}, \ldots, x_{i,9}$​ must be different.
-- For each $j\in I$, all values $x_{1,j}, x_{2,j}, \ldots, x_{9,j}$​ must be different.
-- For each $(k,h) \in \lbrace 1,2,3 \rbrace \times \lbrace 1,2,3 \rbrace$, the variables
-  $$\begin{aligned}
- \big\lbrace x_{i,j} \ \mid\ 
-  & i \in \lbrace 1 + 3(h-1), 2 + 3(h-1), 3 + 3(h-1) \rbrace,\\\\
-  & j \in \lbrace 1 + 3(k-1), 2 + 3(k-1), 3 + 3(k-1) \rbrace \  \big\rbrace\\\\
-\end{aligned}$$
-  must be different.
+subject to 
+
+GivenValues {i in 1..9, j in 1..9: given[i,j] > 0}:
+   x[i,j] = given[i,j];
+        # assign given values
+
+RowConstraints {i in 1..9}:
+   alldiff {j in 1..9} x[i,j];
+        # cells in the same row must be assigned distinct numbers
+
+ColumnConstraints {j in 1..9}:
+   alldiff {i in 1..9} x[i,j];
+        # cells in the same column must be assigned distinct numbers
+
+AreaConstraints {I in 1..9 by 3, J in 1..9 by 3}:
+   alldiff {i in I..I+2, j in J..J+2} x[i,j];
+        # cells in the same area must be assigned distinct numbers
+```
 
 ---
 
