@@ -145,7 +145,7 @@ we need to introduce an auxiliary binary variable.
 
 ---
 
-- Let $\hat p_i$ denote the profit per unit of product $i$ in excess in excess of $q_i$.
+- Let $\hat p_i$ denote the profit per unit of product $i$ produced in excess in excess of $q_i$.
 - Let $w_i$ denote a binary variable indicating whether $q_i$ items or more are produced of product $i$.
 
 > [!NOTE]
