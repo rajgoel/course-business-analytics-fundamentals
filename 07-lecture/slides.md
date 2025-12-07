@@ -183,7 +183,7 @@ Extend the model by the new requirement.
 
 ---
 
-- For each $i,j \in I$ with $i \neq j$, let $\bar v_{i,j}$ let $s_{i,j}$ denote the additional production line set-up time.
+- For each $i,j \in I$ with $i \neq j$, let $s_{i,j}$ denote the additional production line set-up time.
 - For each $i,j \in I$ with $i \neq j$, let $\bar v_{i,j}$ denote a binary variable indicating whether products $i$ and $j$ are chosen for production, i.e.
 
 $$v_{i,j} = \left\lbrace \begin{array}{cl}
