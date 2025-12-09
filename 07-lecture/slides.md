@@ -184,7 +184,7 @@ Extend the model by the new requirement.
 ---
 
 - For each $i,j \in I$ with $i \neq j$, let $s_{i,j}$ denote the additional production line set-up time.
-- For each $i,j \in I$ with $i \neq j$, let $\bar v_{i,j}$ denote a binary variable indicating whether products $i$ and $j$ are chosen for production, i.e.
+- For each $i,j \in I$ with $i \neq j$, let $v_{i,j}$ denote a binary variable indicating whether products $i$ and $j$ are chosen for production, i.e.
 
 $$v_{i,j} = \left\lbrace \begin{array}{cl}
 1 & \textrm{if products $i$ and $j$ are chosen for production}\\\\
@@ -204,7 +204,7 @@ $$z_i + z_j \geq 2v_{i,j}.$$
 
 ---
 
-<!-- .slide:  style="font-size:80%" -->
+<!-- .slide:  style="font-size:75%" -->
 
 $$\sum_{i \in I} p_i x_i + \sum_{i \in I}  \hat p_i y_i - \sum_{i \in I} f_i z_i$$
 
@@ -212,7 +212,7 @@ subject to
 
 $$x_i \leq q_i \textrm{ for all } i \in I$$
 $$x_i \geq q_i - M(1- w_i)  \textrm{ for all } i \in I$$ 
-$$\sum_{i \in I} a_i x_i + \sum_{i \in I} \hat a_i y_i \leq u$$
+$$\sum_{i \in I} a_i x_i + \sum_{i \in I} \hat a_i y_i \leq u  - \sum_{i,j \in I : i \neq j} s_{i,j} v_{i,j}$$
 $$y_i \leq Mw_i  \textrm{ for all } i \in I$$ 
 $$x_i \leq Mz_i \textrm{ for all } i \in I$$
 
@@ -220,7 +220,8 @@ $$\class{highlight}{z_i + z_j \leq v_{i,j} + 1}$$
 $$\class{highlight}{z_i + z_j \geq 2v_{i,j}}$$
 
 $$x_i \geq 0 , y_i \geq 0 \textrm{ for all } i\in I$$
-$$z_i \in \lbrace 0,1 \rbrace, w_i \in \lbrace 0,1 \rbrace, \class{highlight}{v_{i,j} \in \lbrace 0,1 \rbrace} \textrm{ for all } i\in I$$
+$$z_i \in \lbrace 0,1 \rbrace, w_i \in \lbrace 0,1 \rbrace, \textrm{ for all } i\in I$$
+$$\class{highlight}{v_{i,j} \in \lbrace 0,1 \rbrace \textrm{ for all } i,j\in I : i \neq j}$$
 
 where $M$ is a sufficiently large number.
 
