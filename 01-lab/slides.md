@@ -27,7 +27,7 @@ Grading will be based on:
 On https://e-assignments.net you will find a collection of self-study exercises, helping you to learn how to model optimisation problems.
 
 > [!IMPORTANT]
-> You must use your KLU email address to register. Make sure to meet the exercise deadlines where provided!
+> You must use your KLU email address to register. Make sure to meet the **exercise deadlines** where provided!
 
 
 ---
