@@ -59,7 +59,7 @@ $$+ 750 (x_1^{\rm cotton} + x_2^{\rm cotton} +x_3^{\rm cotton})$$ <!-- .element:
 $$+ 250 (x_1^{\rm sorghum} + x_2^{\rm sorghum} +x_3^{\rm sorghum})$$ <!-- .element: class="fragment"  -->
 
 > [!IMPORTANT]
-> Never forget to state whether you want to maximise or minmise.
+> Never forget to state whether you want to maximise or minimise.
 <!-- .element: class="fragment"-->
 
 ---
