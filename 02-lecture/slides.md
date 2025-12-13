@@ -659,7 +659,7 @@ What can we do if we have constraints of type ≤ or ≥? <!-- .element: class="
 
 #### Slack variables for ≤ constraints ####
 
-Any ≤ constraints constraint can be converted into an equation by introducing a non-negative slack variable.
+Any ≤ constraint can be converted into an equation by introducing a non-negative slack variable.
 
 <div class="fragment">
 
