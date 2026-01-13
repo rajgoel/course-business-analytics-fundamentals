@@ -227,7 +227,7 @@ These copies are then connected by arcs in such a way that the time required to 
 <!--
 {
 "nodes": [    
-    { "data": { "id": "time", "label": "← space →" }, "position": { "x": 250, "y": 450 }, "classes": "text" },
+    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
     { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
     { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 } },
     { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 } },
