@@ -88,7 +88,7 @@ function showGraph(container,options) {
 		        'text-opacity': 1,
 		        'text-valign': 'center',
 		        'text-halign': 'center',
-		        'text-rotation': '90deg'
+		        'text-rotation': '270deg'
 		      }
 		},
 		{

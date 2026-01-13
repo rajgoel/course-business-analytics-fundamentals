@@ -219,7 +219,7 @@ These copies are then connected by arcs in such a way that the time required to 
 
 ---
 
-### Time expansion of nodes
+### Time-space network
 
 <!-- .slide: data-transition="slide-in fade-out" -->
 
@@ -257,7 +257,7 @@ These copies are then connected by arcs in such a way that the time required to 
 
 ---
 
-### Arcs with traversal times (for trips starting on day 1)
+### Arcs for trips starting on day 1
 
 <!-- .slide: data-transition="fade" -->
 
@@ -265,6 +265,8 @@ These copies are then connected by arcs in such a way that the time required to 
 <!--
 {
 "nodes": [    
+    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
+    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
     { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 }, "classes": "highlight" },
     { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 } },
     { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
@@ -298,7 +300,7 @@ These copies are then connected by arcs in such a way that the time required to 
 
 ---
 
-### Arcs with traversal times (for trips starting on day 1 or 2)
+### Arcs for trips starting on day 1 or 2
 
 <!-- .slide: data-transition="fade" -->
 
@@ -306,6 +308,8 @@ These copies are then connected by arcs in such a way that the time required to 
 <!--
 {
 "nodes": [    
+    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
+    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
     { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 }, "classes": "highlight" },
     { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 }, "classes": "highlight" },
     { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
@@ -341,7 +345,7 @@ These copies are then connected by arcs in such a way that the time required to 
 
 ---
 
-### Arcs with traversal times (for trips starting on any day)
+### Arcs for trips starting on any day
 
 <!-- .slide: data-transition="fade" -->
 
@@ -349,6 +353,8 @@ These copies are then connected by arcs in such a way that the time required to 
 <!--
 {
 "nodes": [    
+    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
+    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
     { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 }, "classes": "highlight" },
     { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 }, "classes": "highlight" },
     { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
@@ -399,6 +405,8 @@ These copies are then connected by arcs in such a way that the time required to 
 <!--
 {
 "nodes": [    
+    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
+    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
     { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 }, "classes": "highlight" },
     { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 }, "classes": "highlight" },
     { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
@@ -465,6 +473,8 @@ These copies are then connected by arcs in such a way that the time required to 
 <!--
 {
 "nodes": [    
+    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
+    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
     { "data": { "id": "n11", "label": 70 }, "position": { "x": 100, "y": 0 }, "classes": "highlight", "css": { "text-halign": "left", "text-valign": "center", "text-margin-x": -5, "font-size": 10 } },
     { "data": { "id": "n12", "label": 80 }, "position": { "x": 100, "y": 50 }, "classes": "highlight", "css": { "text-halign": "left", "text-valign": "center", "text-margin-x": -5, "font-size": 10 } },
     { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
@@ -533,6 +543,8 @@ Suppose we can use a direct transport mode that can be used to ship an unlimited
 <!--
 {
 "nodes": [    
+    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
+    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
     { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 } },
     { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 } },
     { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
@@ -600,6 +612,8 @@ Suppose we can use a direct transport mode that can be used to ship an unlimited
 <!--
 {
 "nodes": [    
+    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
+    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
     { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 } },
     { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 } },
     { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
@@ -673,6 +687,8 @@ Suppose we have upper bounds on supply and demand as shown below.
 <!--
 {
 "nodes": [    
+    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
+    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
     { "data": { "id": "n11", "label": "≤70" }, "position": { "x": 100, "y": 0 }, "css": { "text-halign": "left", "text-valign": "center", "text-margin-x": -5, "font-size": 10, "color": "firebrick" } },
     { "data": { "id": "n12", "label": "≤80" }, "position": { "x": 100, "y": 50 }, "css": { "text-halign": "left", "text-valign": "center", "text-margin-x": -5, "font-size": 10, "color": "firebrick" } },
     { "data": { "id": "n13", "label": "≤60" }, "position": { "x": 100, "y": 100 }, "css": { "text-halign": "left", "text-valign": "center", "text-margin-x": -5, "font-size": 10, "color": "firebrick" } },
@@ -738,6 +754,8 @@ We can use dummy nodes and arcs to model the upper bounds.
 <!--
 {
 "nodes": [    
+    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
+    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
     { "data": { "id": "source" }, "position": { "x": 0, "y": 100 }, "classes": "highlight"},
     { "data": { "id": "sink" }, "position": { "x": 500, "y": 100 }, "classes": "highlight"},
     { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 } },
@@ -816,6 +834,8 @@ Suppose we can fulfil the demand of any period at a later point in time and have
 <!--
 {
 "nodes": [    
+    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
+    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
     { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 } },
     { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 } },
     { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
@@ -881,6 +901,8 @@ We can use arcs traveling backwards in time to consider backlogging.
 <!--
 {
 "nodes": [    
+    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
+    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
     { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 } },
     { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 } },
     { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
@@ -951,6 +973,8 @@ Suppose we want to restrict backlogging to at most one day.
 <!--
 {
 "nodes": [    
+    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
+    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
     { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 } },
     { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 } },
     { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
@@ -973,6 +997,8 @@ Suppose we want to restrict backlogging to at most one day.
     { "data": { "id": "n45" }, "position": { "x": 400, "y": 200 }, "classes": "highlight" }
 ],
 "edges": [    
+    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
+    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
     { "data": { "id": "n11-n22", "source": "n11", "target": "n22" } },
     { "data": { "id": "n22-n33", "source": "n22", "target": "n33" } },
     { "data": { "id": "n33-n44", "source": "n33", "target": "n44" } },
@@ -1020,6 +1046,8 @@ We can split the demand nodes to consider backlogging of at most one day.
 <!--
 {
 "nodes": [    
+    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
+    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
     { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 } },
     { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 } },
     { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
