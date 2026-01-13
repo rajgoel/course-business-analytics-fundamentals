@@ -65,7 +65,7 @@ function showGraph(container,options) {
         	      }
         	},
 		{
-		      selector: '.text-only',
+		      selector: '.text',
 		      css: {
 		        'width': 1,
 		        'height': 1,
@@ -75,6 +75,20 @@ function showGraph(container,options) {
 		        'text-opacity': 1,
 		        'text-valign': 'center',
 		        'text-halign': 'center'
+		      }
+		},
+		{
+		      selector: '.text-rotated',
+		      css: {
+		        'width': 1,
+		        'height': 1,
+		        'background-opacity': 0,
+		        'border-width': 0,
+		        'content': 'data(label)',
+		        'text-opacity': 1,
+		        'text-valign': 'center',
+		        'text-halign': 'center',
+		        'text-rotation': '90deg'
 		      }
 		},
 		{
