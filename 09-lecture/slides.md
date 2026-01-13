@@ -8,7 +8,7 @@ minimise $\displaystyle\sum_{(i,j)\in A} c_{i,j} x_{i,j}$
 
 subject to
 
-$$\sum_{(i,j)\in A} x_{i,j} - \sum_{(j,i)\in A} x_{j,i} = b_i \textrm{ for all } i\in N$$
+$$\sum_{j \in N : (i,j)\in A} x_{i,j} - \sum_{j \in N : (j,i)\in A} x_{j,i} = b_i \textrm{ for all } i\in N$$
 
 $$l_{i,j} \leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
 
@@ -150,9 +150,9 @@ minimise $$\displaystyle\sum_{(i,j)\in A} c_{i,j} x_{i,j}$$
 
 subject to
 
-$$\displaystyle\sum_{(i,j)\in A} x_{i,j} - \displaystyle\sum_{(j,i)\in A} x_{j,i} = b_i \textrm{ for all } i\in N$$
+$$\displaystyle\sum_{j \in N : (i,j)\in A} x_{i,j} - \displaystyle\sum_{j \in N : (j,i)\in A} x_{j,i} = b_i \textrm{ for all } i\in N$$
 
-$$\class{highlight}{\displaystyle\sum_{(j,i)\in A} x_{j,i} \leq q_i \textrm{ for all } i\in N}$$
+$$\class{highlight}{\displaystyle\sum_{j \in N : (j,i)\in A} x_{j,i} \leq q_i \textrm{ for all } i\in N}$$
 
 $$0 \leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
 

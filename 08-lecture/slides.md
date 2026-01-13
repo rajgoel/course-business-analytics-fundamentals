@@ -108,15 +108,15 @@ minimise $$\displaystyle\sum_{(i,j)\in A} c_{i,j} x_{i,j}$$
 
 We want to use exactly one arc leaving the origin and one arc reaching the destination, i.e.  
 
-$$\sum_{(s,i)\in A} x_{s,i} = 1$$
+$$\sum_{i \in N : (s,i)\in A} x_{s,i} = 1$$
 
-$$\sum_{(i,t)\in A} x_{i,t} = 1$$
+$$\sum_{i \in N : (i,t)\in A} x_{i,t} = 1$$
 
 ---
 
 For all nodes (except for $s$ and $t$) the number of incoming and outgoing arcs used must be the same, i.e. 
 
-$$\sum_{(j,i)\in A} x_{j,i} = \sum_{(i,j)\in A} x_{i,j} \textrm{ for all } i\in N\setminus \lbrace s,t \rbrace.$$
+$$\sum_{j \in N : (j,i)\in A} x_{j,i} = \sum_{j \in N : (i,j)\in A} x_{i,j} \textrm{ for all } i\in N\setminus \lbrace s,t \rbrace.$$
 
 
 ---
@@ -127,9 +127,9 @@ minimise $\displaystyle\sum_{(i,j)\in A} c_{i,j} x_{i,j}$
 
 subject to
 
-$$\sum_{(s,j)\in A} x_{s,j} = 1 \textrm{ and } \sum_{(i,t)\in A} x_{i,t} = 1$$
+$$\sum_{j \in N :(s,j)\in A} x_{s,j} = 1 \textrm{ and } \sum_{i \in N :(i,t)\in A} x_{i,t} = 1$$
 
-$$\sum_{(j,i)\in A} x_{j,i} = \sum_{(i,j)\in A} x_{i,j} \textrm{ for all } i\in N\setminus \lbrace s,t \rbrace$$
+$$\sum_{j \in N :(j,i)\in A} x_{j,i} = \sum_{j \in N :(i,j)\in A} x_{i,j} \textrm{ for all } i\in N\setminus \lbrace s,t \rbrace$$
 
 $$x_{i,j} \in \lbrace 0,1 \rbrace \textrm{ for all } (i,j)\in A$$
 
@@ -177,13 +177,13 @@ The maximum flow problem can be modelled using linear variables $x_{i,j}$ indica
 
 For all nodes (except for $s$ and $t$) the total incoming flow must be the same as the total outgoing flow, i.e. 
 
-$$\sum_{(i,j)\in A} x_{i,j} = \sum_{(j,i)\in A} x_{j,i} \textrm{ for all } i\in N \setminus\lbrace s,t \rbrace$$
+$$\sum_{j \in N : (i,j)\in A} x_{i,j} = \sum_{j \in N : (j,i)\in A} x_{j,i} \textrm{ for all } i\in N \setminus\lbrace s,t \rbrace$$
 
 ---
 
 The objective is to maximise the flow from $s$ to $t$, which must be the same as the total flow out of the origin node $s$, i.e.
 
-maximise $$\displaystyle\sum_{(s,j)\in A} x_{s,j}$$
+maximise $$\displaystyle\sum_{j \in N : (s,j)\in A} x_{s,j}$$
 
 ---
 
@@ -195,11 +195,11 @@ $$0\leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
 
 ### Linear program for the maximum flow problem
 
-maximise $\displaystyle\sum_{(s,j)\in A} x_{s,j}$
+maximise $\displaystyle\sum_{j \in N : (s,j)\in A} x_{s,j}$
 
 subject to
 
-$$\sum_{(i,j)\in A} x_{i,j} = \sum_{(j,i)\in A} x_{j,i} \textrm{ for all } i\in N \setminus\lbrace s,t \rbrace$$
+$$\sum_{j \in N : (i,j)\in A} x_{i,j} = \sum_{j \in N : (j,i)\in A} x_{j,i} \textrm{ for all } i\in N \setminus\lbrace s,t \rbrace$$
 
 $$0\leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
 
@@ -252,9 +252,9 @@ minimise $\displaystyle\sum_{(i,j)\in  N' \times N''} c_{i,j} x_{i,j}$
 
 Each node in $N'$ must be assigned to exactly one node in $N''$ and vice versa, i.e.  
 
-$$\sum_{(i,j)\in N' \times N''} x_{i,j} = 1 \textrm{ for all } i \in N'$$
+$$\sum_{j \in N''} x_{i,j} = 1 \textrm{ for all } i \in N'$$
 
-$$\sum_{(i,j)\in N' \times N''} x_{i,j} = 1 \textrm{ for all } j \in N''$$
+$$\sum_{i \in N'} x_{i,j} = 1 \textrm{ for all } j \in N''$$
 
 ---
 
@@ -264,9 +264,9 @@ minimise $\displaystyle\sum_{(i,j)\in N' \times N''} c_{i,j} x_{i,j}$
 
 subject to
 
-$$\sum_{(i,j)\in N' \times N''} x_{i,j} = 1 \textrm{ for all } i \in N'$$
+$$\sum_{j \in N''} x_{i,j} = 1 \textrm{ for all } i \in N'$$
 
-$$\sum_{(i,j)\in N' \times N''} x_{i,j} = 1 \textrm{ for all } j \in N''$$
+$$\sum_{i \in N'} x_{i,j} = 1 \textrm{ for all } j \in N''$$
 
 $$x_{i,j} \in \lbrace 0,1 \rbrace \textrm{ for all } (i,j)\in  N' \times N''$$
 
@@ -303,9 +303,9 @@ minimise $\displaystyle\sum_{(i,j)\in  N' \times N''} c_{i,j} x_{i,j}$
 
 The supply of each node in $N'$ and the demand of each node $j\in N''$ must be matched, i.e.  
 
-$$\sum_{(i,j)\in N' \times N''} x_{i,j} = s_i \textrm{ for all } i \in N'$$
+$$\sum_{j \in N''} x_{i,j} = s_i \textrm{ for all } i \in N'$$
 
-$$\sum_{(i,j)\in N' \times N''} x_{i,j} = d_j \textrm{ for all } j \in N''$$
+$$\sum_{i \in N'} x_{i,j} = d_j \textrm{ for all } j \in N''$$
 
 
 ---
@@ -316,9 +316,9 @@ minimise $\displaystyle\sum_{(i,j)\in N' \times N''} c_{i,j} x_{i,j}$
 
 subject to
 
-$$\sum_{(i,j)\in N' \times N''} x_{i,j} = s_i \textrm{ for all } i \in N'$$
+$$\sum_{j \in N''} x_{i,j} = s_i \textrm{ for all } i \in N'$$
 
-$$\sum_{(i,j)\in N' \times N''} x_{i,j} = d_j \textrm{ for all } j \in N''$$
+$$\sum_{i \in N'} x_{i,j} = d_j \textrm{ for all } j \in N''$$
 
 $$0\leq x_{i,j} \textrm{ for all } (i,j)\in  N' \times N''$$
 
@@ -347,7 +347,7 @@ The minimum-cost network flow problem can be modelled using linear variables $x_
 
 For each node $i \in N$ the difference between the total outgoing and incoming flow must be equal to the supply $b_i$, i.e. 
 
-$$\underbrace{\sum_{(i,j)\in A} x_{i,j}}\_{\textrm{flow out of } i} - \underbrace{\sum_{(j,i)\in A} x_{j,i}}\_{\textrm{flow into } i} = b_i \textrm{ for all } i\in N$$
+$$\underbrace{\sum_{j \in N : (i,j)\in A} x_{i,j}}\_{\textrm{flow out of } i} - \underbrace{\sum_{j \in N : (j,i)\in A} x_{j,i}}\_{\textrm{flow into } i} = b_i \textrm{ for all } i\in N$$
 
 ---
 
@@ -369,7 +369,7 @@ minimise $\displaystyle\sum_{(i,j)\in A} c_{i,j} x_{i,j}$
 
 subject to
 
-$$\sum_{(i,j)\in A} x_{i,j} - \sum_{(j,i)\in A} x_{j,i} = b_i \textrm{ for all } i\in N$$
+$$\sum_{j \in N : (i,j)\in A} x_{i,j} - \sum_{j \in N : (j,i)\in A} x_{j,i} = b_i \textrm{ for all } i\in N$$
 
 $$l_{i,j} \leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
 
