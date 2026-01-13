@@ -409,22 +409,22 @@ These copies are then connected by arcs in such a way that the time required to 
     { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
     { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 }, "classes": "highlight" },
     { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 }, "classes": "highlight" },
-    { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
-    { "data": { "id": "n14" }, "position": { "x": 100, "y": 150 } },
-    { "data": { "id": "n15" }, "position": { "x": 100, "y": 200 } },
-    { "data": { "id": "n21" }, "position": { "x": 200, "y": 0 } },
+    { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 }, "classes": "highlight" },
+    { "data": { "id": "n14" }, "position": { "x": 100, "y": 150 }, "classes": "highlight" },
+    { "data": { "id": "n15" }, "position": { "x": 100, "y": 200 }, "classes": "highlight" },
+    { "data": { "id": "n21" }, "position": { "x": 200, "y": 0 }, "classes": "highlight" },
     { "data": { "id": "n22" }, "position": { "x": 200, "y": 50 }, "classes": "highlight" },
     { "data": { "id": "n23" }, "position": { "x": 200, "y": 100 }, "classes": "highlight" },
-    { "data": { "id": "n24" }, "position": { "x": 200, "y": 150 } },
-    { "data": { "id": "n25" }, "position": { "x": 200, "y": 200 } },
-    { "data": { "id": "n31" }, "position": { "x": 300, "y": 0 } },
-    { "data": { "id": "n32" }, "position": { "x": 300, "y": 50 } },
+    { "data": { "id": "n24" }, "position": { "x": 200, "y": 150 }, "classes": "highlight" },
+    { "data": { "id": "n25" }, "position": { "x": 200, "y": 200 }, "classes": "highlight" },
+    { "data": { "id": "n31" }, "position": { "x": 300, "y": 0 }, "classes": "highlight" },
+    { "data": { "id": "n32" }, "position": { "x": 300, "y": 50 }, "classes": "highlight" },
     { "data": { "id": "n33" }, "position": { "x": 300, "y": 100 }, "classes": "highlight" },
     { "data": { "id": "n34" }, "position": { "x": 300, "y": 150 }, "classes": "highlight" },
-    { "data": { "id": "n35" }, "position": { "x": 300, "y": 200 } },
-    { "data": { "id": "n41" }, "position": { "x": 400, "y": 0 } },
-    { "data": { "id": "n42" }, "position": { "x": 400, "y": 50 } },
-    { "data": { "id": "n43" }, "position": { "x": 400, "y": 100 } },
+    { "data": { "id": "n35" }, "position": { "x": 300, "y": 200 }, "classes": "highlight" },
+    { "data": { "id": "n41" }, "position": { "x": 400, "y": 0 }, "classes": "highlight" },
+    { "data": { "id": "n42" }, "position": { "x": 400, "y": 50 }, "classes": "highlight" },
+    { "data": { "id": "n43" }, "position": { "x": 400, "y": 100 }, "classes": "highlight" },
     { "data": { "id": "n44" }, "position": { "x": 400, "y": 150 }, "classes": "highlight" },
     { "data": { "id": "n45" }, "position": { "x": 400, "y": 200 }, "classes": "highlight" }
 ],
@@ -746,7 +746,7 @@ Suppose we have upper bounds on supply and demand as shown below.
 
 ---
 
-### Time-expanded minimum cost network flow problem with upper bounds on supply and demand
+### Minimum-cost network flow problem with upper bounds on supply and demand
 
 We can use dummy nodes and arcs to model the upper bounds.
 
@@ -891,7 +891,7 @@ Suppose we can fulfil the demand of any period at a later point in time and have
 
 ---
 
-### Time-expanded minimum cost network flow problem with backlogging
+### Minimum cost network flow problem with backlogging
 
 We can use arcs traveling backwards in time to consider backlogging.
 
@@ -1036,7 +1036,7 @@ Suppose we want to restrict backlogging to at most one day.
 
 ---
 
-### Time-expanded minimum cost network flow problem with restricted backlogging
+### Minimum cost network flow problem with restricted backlogging
 
 We can split the demand nodes to consider backlogging of at most one day.
 
