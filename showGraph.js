@@ -65,6 +65,19 @@ function showGraph(container,options) {
         	      }
         	},
 		{
+		      selector: '.text-only',
+		      css: {
+		        'width': 1,
+		        'height': 1,
+		        'background-opacity': 0,
+		        'border-width': 0,
+		        'content': 'data(label)',
+		        'text-opacity': 1,
+		        'text-valign': 'center',
+		        'text-halign': 'center'
+		      }
+		},
+		{
 		      selector: ':selected',
 		      css: {
 		        'background-color': 'firebrick',
