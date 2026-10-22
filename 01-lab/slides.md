@@ -85,20 +85,7 @@ All **Pull Requests** that are merged are eligible for a bonus. Depending on the
 AMPL is a language for describing optimisation problems in a way that closely mirrors mathematical notation on paper.
 
 > [!NOTE]
-> No programming skills are required to use AMPL.
-
----
-
-### AMPL Community Edition
-
-The AMPL Community Edition is free to use and can be obtained from: https://ampl.com/community-edition/
-
-> [!TIP]
-> In Step 1: Download AMPL & Solvers:  
->  - Select: `Other`
->  - Select: Your operating system (Windows/MacOS/Linux)
->  - Download AMPL Installer (Windows/MacOS) or bundle (Linux)
->  - Install AMPL and activate your license
+> AMPL is free to use for students and can be obtained from: https://ampl.com
 
 ===
 
