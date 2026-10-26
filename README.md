@@ -56,6 +56,8 @@ On successful completion of this module, students
 
 F. Hillier, G. Lieberman. Introduction to Operations Research, McGraw-Hill Higher Education, 2024, ISBN 9781264856961
 
+H. P. Williams. Model Building in Mathematical Programming, 5th Edition, 2013, ISBN: 978-1-118-44333-0
+
 R. Fourer, D.M. Gay, B.W. Kernighan. AMPL - A Modeling Language for Mathematical Programming, Second Edition, https://ampl.com/resources/books/ampl-book/
 
 ## License
