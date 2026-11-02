@@ -600,6 +600,18 @@ $$x_1 \geq 0, x_2 \geq 0$$
 
 ===
 
+### Example: <a href="markdown-viewer.html?file=03-lab/weenies_and_buns.md" data-preview-link>Weenies and Buns <i class="fa-solid fa-magnifying-glass"></i></a>
+
+How can we model this decision problem?
+
+> [!TIP]
+> The model must contain the following:
+> - **Variables:** What are the decisions that can be taken?
+> - **Objective:** What is the goal?
+> - **Constraints:** What are the restrictions on the decisions?
+
+===
+
 ## Standard form of linear programming
 
 ---
@@ -751,4 +763,6 @@ The different ways of formulating a linear program can be used interchangeably.
 
 > [!NOTE]
 > Depending on the specific context one or another way of formulating a LP may be preferable.
+
+
 
