@@ -600,7 +600,7 @@ $$x_1 \geq 0, x_2 \geq 0$$
 
 ===
 
-### Example: <a href="markdown-viewer.html?file=03-lab/weenies_and_buns.md" data-preview-link>Weenies and Buns <i class="fa-solid fa-magnifying-glass"></i></a>
+### Example: <a href="markdown-viewer.html?file=02-lecture/weenies_and_buns.md" data-preview-link>Weenies and Buns <i class="fa-solid fa-magnifying-glass"></i></a>
 
 How can we model this decision problem?
 
