@@ -543,3 +543,4 @@ for p in products:
  
 ### Case study: <a href="markdown-viewer.html?file=04-lab/fabrics_and_fall_fashions.md" data-preview-link>Fabrics and Fall Fashions <i class="fa-solid fa-magnifying-glass"></i></a>
 
+Model and solve this in AMPL.

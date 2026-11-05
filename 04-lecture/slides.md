@@ -218,3 +218,9 @@ $$p^{\rm sugarbeets} = 1000, p^{\rm cotton} = 750, p^{\rm sorghum} = 250$$
 </div>
 </div>
 
+===
+
+ 
+### Case study: <a href="markdown-viewer.html?file=04-lecture/fabrics_and_fall_fashions.md" data-preview-link>Fabrics and Fall Fashions <i class="fa-solid fa-magnifying-glass"></i></a>
+
+Model this as a linear program.
