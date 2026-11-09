@@ -46,6 +46,19 @@ $x$ and $y$ are integers
 
 ===
 
+### Example: <a href="markdown-viewer.html?file=05-lecture/vincent_cardoza.md" data-preview-link>Vincent Cardoza <i class="fa-solid fa-magnifying-glass"></i></a>
+
+How can we model and solve this decision problem?
+
+> [!TIP]
+> The model must contain the following:
+> - **Variables:** What are the decisions that can be taken?
+> - **Objective:** What is the goal?
+> - **Constraints:** What are the restrictions on the decisions?
+
+
+===
+
 
 ## Linear relaxation
 

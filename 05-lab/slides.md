@@ -38,18 +38,6 @@ How can we model this decision problem?
 
 ===
 
-### Example: <a href="markdown-viewer.html?file=05-lab/vincent_cardoza.md" data-preview-link>Vincent Cardoza <i class="fa-solid fa-magnifying-glass"></i></a>
-
-How can we model this decision problem?
-
-> [!TIP]
-> The model must contain the following:
-> - **Variables:** What are the decisions that can be taken?
-> - **Objective:** What is the goal?
-> - **Constraints:** What are the restrictions on the decisions?
-
-===
-
 ### Example: <a href="markdown-viewer.html?file=05-lab/northeastern_airlines.md" data-preview-link>Northeastern Airlines <i class="fa-solid fa-magnifying-glass"></i></a>
 
 How can we model this decision problem?
