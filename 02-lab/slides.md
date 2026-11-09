@@ -409,7 +409,7 @@ model wyndor.mod;
 option solver gurobi;
 solve;
 # print profit with 2 digits after the decimal point
-printf "The profit is %.2f\n", profit; 
+printf "The profit is %.2f.\n", profit;
 # print variable values as integers
 printf "The number of doors and windows are %d and %d.\n", x1, x2;
 ```
