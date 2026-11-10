@@ -496,7 +496,7 @@ Therefore, our focus is on modelling integer programs and not on knowing the sol
 
 ### Computational effort
 
-The branch & bound approach may have to solve a very large number linear relaxations. Although solving a linear program is generally very fast, solving many of them can require a lot of time.
+The branch & bound approach may have to solve a very large number of linear relaxations. Although solving a linear program is generally very fast, solving many of them can require a lot of time.
 
 ---
 
