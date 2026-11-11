@@ -309,7 +309,7 @@ When? <!-- .element: class="fragment" -->
 
 ---
 
-A LP has multiple optimal solutions if **at least two corner points** have the same objective function value.
+A LP has multiple optimal solutions if **at least two corner points** are optimal, i.e., have the same optimal objective function value.
 
 
 ===
