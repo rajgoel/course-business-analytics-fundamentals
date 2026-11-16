@@ -59,7 +59,7 @@ AMPL automatically does the translation for us.
 
 AMPL has interfaces to various different solvers, e.g.
 
-- open source solvers: e.g. `lpopt`, `highs`, or `cbc`
+- open source solvers: e.g. `ipopt`, `highs`, or `cbc`
 - commercial solvers: e.g. `minos`, `cplex`, `gurobi`
 
 
