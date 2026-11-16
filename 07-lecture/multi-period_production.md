@@ -1,7 +1,7 @@
 # Multi-period production planning
 
 A factory works 24 hours a day, 7 days a week producing four products.
-Only one product can be produced at a time and throughout each day, the same product is produced (and then the next day either the same product is produced or the factory produces a different product).
+Only one product can be produced at a time and the same product is produced throughout each day (and then the next day either the same product is produced or the factory produces a different product).
 
 The number of units produced per hour depends on the product: 
 
