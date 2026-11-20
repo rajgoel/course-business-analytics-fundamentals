@@ -160,7 +160,7 @@ $$\sum_{i \in I} p_i x_i + \sum_{i \in I}  \class{highlight}{\hat p_i} y_i - \su
 subject to
 
 $$x_i \leq q_i \textrm{ for all } i \in I$$
-$$\class{highlight}{x_i \geq q_i - M(1- w_i)  \textrm{ for all } i \in I}$$ 
+$$\class{highlight}{x_i \geq q_i - M(1- w_i)  \textrm{ for all } i \in I : q_i < \infty}$$ 
 $$\sum_{i \in I} a_i x_i + \sum_{i \in I} \hat a_i y_i \leq u$$
 $$\class{highlight}{y_i \leq Mw_i  \textrm{ for all } i \in I}$$ 
 $$x_i \leq Mz_i \textrm{ for all } i \in I$$
@@ -211,7 +211,7 @@ $$\sum_{i \in I} p_i x_i + \sum_{i \in I}  \hat p_i y_i - \sum_{i \in I} f_i z_i
 subject to
 
 $$x_i \leq q_i \textrm{ for all } i \in I$$
-$$x_i \geq q_i - M(1- w_i)  \textrm{ for all } i \in I$$ 
+$$x_i \geq q_i - M(1- w_i)  \textrm{ for all } i \in I  : q_i < \infty$$ 
 $$\sum_{i \in I} a_i x_i + \sum_{i \in I} \hat a_i y_i \leq u  - \sum_{i,j \in I : i \neq j} s_{i,j} v_{i,j}$$
 $$y_i \leq Mw_i  \textrm{ for all } i \in I$$ 
 $$x_i \leq Mz_i \textrm{ for all } i \in I$$
