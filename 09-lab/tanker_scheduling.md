@@ -4,8 +4,7 @@ A steamship company has contracted to deliver perishable goods between several
 different origin-destination pairs. Since the cargo is perishable, the customers have
 specified precise dates (i.e., delivery dates) when the shipments must reach their
 destinations. (The cargoes may not arrive early or late.) The steamship company
-wants to determine the minimum number of ships needed to meet the delivery dates
-of the shiploads.
+wants to determine the shipments to be fulfilled and the number of ships needed.
 
 We consider an example with four shipments; each shipment is a full shipload with the characteristics shown below. For example, as specified by the first row in this figure, the company must deliver one shipload available at port A and destined for port C on day 3. 
 
