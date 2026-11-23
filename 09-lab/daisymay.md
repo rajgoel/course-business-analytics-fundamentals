@@ -15,7 +15,7 @@ the week, the loads described in below table must be shipped.
 | Phil.–Wash. |        |       2 |           |          |      2 |
 | N.Y.–Phil.  |      3 |       2 |           |          |        |
 | N.Y.–Wash.  |        |         |         2 |        2 |        |
-| N.Y.–Phil.  |      1 |         |           |          |        |
+| Wash.–Phil. |      1 |         |           |          |        | ##By Alex Ocnean, group A, initially NY - Phil. appeared twice and Wash - Phil route was missing
 | Wash.–N.Y.  |        |         |         1 |          |      1 |
 
 On Monday, for example, two trucks must be sent from
