@@ -208,7 +208,7 @@ $$0\leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
 
 ## Assignment problem
 
-Given two sets $N'$ and $N''$ with the same number of nodes, the *assignment problem* is the problem of finding an assignment of each node in $N'$ to exactly one node in $N''$ with the goal of minimising the total costs, where each possible assignmemt of a node $i\in N'$ to node $j\in N''$ incurs a given cost $c_{i,j}$.
+Given two sets $N'$ and $N''$ with the same number of nodes, the *assignment problem* is the problem of finding an assignment of each node in $N'$ to exactly one node in $N''$ with the goal of minimising the total costs, where each possible assignment of a node $i\in N'$ to node $j\in N''$ incurs a given cost $c_{i,j}$.
 
 ---
 
