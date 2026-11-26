@@ -116,7 +116,16 @@ fetch('course.json')
     /******************************************
      * Initialize Reveal
      ******************************************/   
-	RevealConfig.anything = [ { className: "graph", initialize: showGraph } ];
+	RevealConfig.anything = [ {
+	  className: "netflow",
+	  defaults: { unit: 100, radius: 20, labelOffset: 6 },
+	  initialize: (container, options) => {
+	    if ( !options ) return console.error("netflow: invalid JSON in", container);
+	    NetFlow.draw(container, options);
+	    // diagrams are drawn after Reveal is ready, so register any fragments
+	    if ( container.querySelector(".fragment") ) Reveal.sync();
+	  }
+	} ];
     Reveal.initialize(RevealConfig)
     .then(() => {
       // Admonitions

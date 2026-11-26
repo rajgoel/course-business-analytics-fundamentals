@@ -169,3 +169,23 @@ blockquote.admonition ul {
 }
 
 
+
+/*********************************************
+ * Network diagrams (netflow.js)
+ *********************************************/
+
+.reveal .netflow {
+  --nf-fill: aliceblue;
+  --nf-node-font: 0.8em;
+  --nf-arc-font: 0.7em;
+  margin: 20px auto;
+}
+.reveal .netflow .nf-node { border-width: 2px; }
+.reveal .netflow .nf-line { stroke-width: 2; }
+.reveal .netflow .fade { opacity: 0.3; }
+.reveal .netflow .accent { --nf-stroke: firebrick; color: firebrick; }
+.reveal .netflow .nf-node.filled { background: firebrick; color: white; }
+/* label-only nodes */
+.reveal .netflow .nf-node.text,
+.reveal .netflow .nf-node.text-rotated { border: none; background: none; }
+.reveal .netflow .nf-node.text-rotated .nf-label { transform: rotate(-90deg); }

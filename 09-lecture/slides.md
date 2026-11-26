@@ -41,7 +41,35 @@ Modelling an optimisation problem as a minimum cost network flow problem has the
 ---
 
 
-<img class="stretch" src="09-lecture/mincostflowproblem.svg"></img>
+<div class="netflow">
+<!--
+{
+"unit": 130,
+"radius": 30,
+"nodes": [
+  {"id": "1", "x": 0, "y": 1.5, "label": "1"},
+  {"id": "2", "x": 2.5, "y": 3, "label": "2"},
+  {"id": "3", "x": 2.5, "y": 0, "label": "3"},
+  {"id": "4", "x": 5, "y": 3, "label": "4"},
+  {"id": "5", "x": 5, "y": 0, "label": "5"},
+  {"id": "1_supply", "x": -0.5, "y": 1.5, "shape": "rect", "w": 1, "h": 1, "label": "23", "class": "text"},
+  {"id": "2_supply", "x": 2.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "5", "class": "text"},
+  {"id": "3_supply", "x": 2.5, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-7", "class": "text"},
+  {"id": "4_supply", "x": 5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "-2", "class": "text"},
+  {"id": "5_supply", "x": 5, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-19", "class": "text"}
+],
+"arcs": [
+  {"from": "1", "to": "2", "label": "(7, 0, 30)"},
+  {"from": "1", "to": "3", "label": "(6, 0, 20)", "swap": true},
+  {"from": "2", "to": "3", "label": "(5, 0, 25)", "swap": true},
+  {"from": "2", "to": "4", "label": "(4, 0, 10)"},
+  {"from": "3", "to": "4", "label": "(2, 0, 20)", "pos": 0.7},
+  {"from": "3", "to": "5", "label": "(2, 0, 25)", "swap": true},
+  {"from": "4", "to": "5", "label": "(1, 0, 20)"}
+]
+}
+-->
+</div>
 
 <small>
 Numbers next to the nodes indicate supply/demand values, numbers next to the arcs indicate costs, lower bound, and upper bound.
@@ -69,7 +97,34 @@ Model this problem as a minimum cost network flow problem.
 
 ### Solution: Transportation to warehouses
 
-<img class="stretch" src="09-lecture/mincostflowproblemwithouttransshipment.svg"></img>
+<div class="netflow">
+<!--
+{
+"unit": 120,
+"radius": 30,
+"nodes": [
+  {"id": "1", "x": 1.5, "y": 3, "label": "1"},
+  {"id": "2", "x": 4.5, "y": 3, "label": "2"},
+  {"id": "A", "x": 0, "y": 0, "label": "A"},
+  {"id": "B", "x": 3, "y": 0, "label": "B"},
+  {"id": "C", "x": 6, "y": 0, "label": "C"},
+  {"id": "1_supply", "x": 1.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "80", "class": "text"},
+  {"id": "2_supply", "x": 4.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "130", "class": "text"},
+  {"id": "A_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-60", "class": "text"},
+  {"id": "B_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-80", "class": "text"},
+  {"id": "C_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-70", "class": "text"}
+],
+"arcs": [
+  {"from": "1", "to": "A"},
+  {"from": "1", "to": "B"},
+  {"from": "1", "to": "C"},
+  {"from": "2", "to": "A"},
+  {"from": "2", "to": "B"},
+  {"from": "2", "to": "C"}
+]
+}
+-->
+</div>
 
 <small>
 Numbers next to the nodes indicate supply/demand values. All arcs have a lower bound of zero and an infinite upper bound. The costs of each arc can be found in the table.
@@ -99,7 +154,40 @@ Model this problem as a minimum cost network flow problem.
 
 ### Solution: Transportation to warehouses with distribution centre
 
-<img class="stretch" src="09-lecture/mincostflowproblemwithtransshipment.svg"></img>
+<div class="netflow">
+<!--
+{
+"unit": 120,
+"radius": 30,
+"nodes": [
+  {"id": "1", "x": 1.5, "y": 3, "label": "1"},
+  {"id": "2", "x": 4.5, "y": 3, "label": "2"},
+  {"id": "A", "x": 0, "y": 0, "label": "A"},
+  {"id": "B", "x": 3, "y": 0, "label": "B"},
+  {"id": "C", "x": 6, "y": 0, "label": "C"},
+  {"id": "D", "x": 3, "y": 2.5, "label": "D"},
+  {"id": "1_supply", "x": 1.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "80", "class": "text"},
+  {"id": "2_supply", "x": 4.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "130", "class": "text"},
+  {"id": "A_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-60", "class": "text"},
+  {"id": "B_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-80", "class": "text"},
+  {"id": "C_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-70", "class": "text"}
+],
+"arcs": [
+  {"from": "1", "to": "A"},
+  {"from": "1", "to": "B"},
+  {"from": "1", "to": "C"},
+  {"from": "2", "to": "A"},
+  {"from": "2", "to": "B"},
+  {"from": "2", "to": "C"},
+  {"from": "1", "to": "D"},
+  {"from": "2", "to": "D"},
+  {"from": "D", "to": "A"},
+  {"from": "D", "to": "B"},
+  {"from": "D", "to": "C"}
+]
+}
+-->
+</div>
 
 <small>
 Numbers next to the nodes indicate supply/demand values. All arcs have a lower bound of zero and an infinite upper bound. The costs of direct arcs from a factory to a warehouse can be found in the table. The costs of arcs from either factory to the distribution centre are 5. The costs of arcs from the distribution centre to a warehouse are zero.   
@@ -117,7 +205,34 @@ Can we model this problem as a minimum cost network flow problem?
 
 ### Example: Balanced network with dummy node
 
-<img class="stretch" src="09-lecture/unbalancedtransportationproblem.svg"></img>
+<div class="netflow">
+<!--
+{
+"unit": 130,
+"radius": 30,
+"nodes": [
+  {"id": "1", "x": 0, "y": 3, "label": "1"},
+  {"id": "2", "x": 3, "y": 3, "label": "2"},
+  {"id": "N", "x": 0, "y": 0, "label": "N"},
+  {"id": "S", "x": 3, "y": 0, "label": "S"},
+  {"id": "X", "x": 6, "y": 0, "label": "", "class": "fade"},
+  {"id": "1_supply", "x": 0, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "100", "class": "text"},
+  {"id": "2_supply", "x": 3, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "100", "class": "text"},
+  {"id": "N_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-70", "class": "text"},
+  {"id": "S_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-120", "class": "text"},
+  {"id": "X_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-10", "class": "text fade"}
+],
+"arcs": [
+  {"from": "1", "to": "N", "label": "11", "pos": 0.3, "swap": true},
+  {"from": "1", "to": "S", "label": "13", "pos": 0.3, "swap": true},
+  {"from": "1", "to": "X", "label": "0", "pos": 0.25, "swap": true, "class": "fade"},
+  {"from": "2", "to": "N", "label": "8", "pos": 0.2, "swap": true},
+  {"from": "2", "to": "S", "label": "10", "pos": 0.2, "swap": true},
+  {"from": "2", "to": "X", "label": "0", "pos": 0.2, "class": "fade"}
+]
+}
+-->
+</div>
 
 <small>
 Numbers next to the nodes indicate supply/demand values. Numbers next to the arcs indicate costs. All arcs have a lower bound of zero and an infinite upper bound.
@@ -138,7 +253,40 @@ If the network is unbalanced, i.e., if the total supply does not match the total
 ### Example: Minimum cost network flow problem with capacity constraints
 
 
-<img class="stretch" src="09-lecture/mincostflowproblemwithcapacitatednode.svg"></img>
+<div class="netflow">
+<!--
+{
+"unit": 120,
+"radius": 30,
+"nodes": [
+  {"id": "1", "x": 1.5, "y": 3, "label": "1"},
+  {"id": "2", "x": 4.5, "y": 3, "label": "2"},
+  {"id": "A", "x": 0, "y": 0, "label": "A"},
+  {"id": "B", "x": 3, "y": 0, "label": "B"},
+  {"id": "C", "x": 6, "y": 0, "label": "C"},
+  {"id": "D", "x": 3, "y": 2.5, "label": "D", "class": "filled"},
+  {"id": "1_supply", "x": 1.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "80", "class": "text"},
+  {"id": "2_supply", "x": 4.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "130", "class": "text"},
+  {"id": "A_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-60", "class": "text"},
+  {"id": "B_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-80", "class": "text"},
+  {"id": "C_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-70", "class": "text"}
+],
+"arcs": [
+  {"from": "1", "to": "A"},
+  {"from": "1", "to": "B"},
+  {"from": "1", "to": "C"},
+  {"from": "2", "to": "A"},
+  {"from": "2", "to": "B"},
+  {"from": "2", "to": "C"},
+  {"from": "1", "to": "D"},
+  {"from": "2", "to": "D"},
+  {"from": "D", "to": "A"},
+  {"from": "D", "to": "B"},
+  {"from": "D", "to": "C"}
+]
+}
+-->
+</div>
 
 Assume the total flow through node D is restricted due to capacity constraints.
 
@@ -171,7 +319,42 @@ We can formulate a standard minimum cost network flow problem by
 
 ### Example: Minimum cost network flow problem after node splitting
 
-<img class="stretch" src="09-lecture/mincostflowproblemwithsplitnode.svg"></img>
+<div class="netflow">
+<!--
+{
+"unit": 120,
+"radius": 30,
+"nodes": [
+  {"id": "1", "x": 1.5, "y": 3, "label": "1"},
+  {"id": "2", "x": 4.5, "y": 3, "label": "2"},
+  {"id": "A", "x": 0, "y": 0, "label": "A"},
+  {"id": "B", "x": 3, "y": 0, "label": "B"},
+  {"id": "C", "x": 6, "y": 0, "label": "C"},
+  {"id": "D", "x": 3, "y": 2.5, "label": "D"},
+  {"id": "E", "x": 3, "y": 1, "label": "E"},
+  {"id": "1_supply", "x": 1.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "100", "class": "text"},
+  {"id": "2_supply", "x": 4.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "100", "class": "text"},
+  {"id": "A_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-70", "class": "text"},
+  {"id": "B_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-120", "class": "text"},
+  {"id": "C_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-10", "class": "text"}
+],
+"arcs": [
+  {"from": "1", "to": "A"},
+  {"from": "1", "to": "B"},
+  {"from": "1", "to": "C"},
+  {"from": "2", "to": "A"},
+  {"from": "2", "to": "B"},
+  {"from": "2", "to": "C"},
+  {"from": "1", "to": "D"},
+  {"from": "2", "to": "D"},
+  {"from": "D", "to": "E", "class": "accent"},
+  {"from": "E", "to": "A"},
+  {"from": "E", "to": "B"},
+  {"from": "E", "to": "C"}
+]
+}
+-->
+</div>
 
 Now the capacity constraint is on the arc and not on the node.
 
@@ -188,19 +371,21 @@ In transportation networks we usually have to consider the time required to trav
 ### Networks with traversal times
 
 
-<div class="graph" style="height: 200px; width: 1280px;">
+<div class="netflow" style="--nf-arc-font: 0.55em;">
 <!--
 {
-"nodes": [    
-    { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 } },
-    { "data": { "id": "n21" }, "position": { "x": 200, "y": 0 } },
-    { "data": { "id": "n31" }, "position": { "x": 300, "y": 0 } },
-    { "data": { "id": "n41" }, "position": { "x": 400, "y": 0 } }
+"unit": 100,
+"radius": 20,
+"nodes": [
+  {"id": "n11", "x": 2, "y": 4},
+  {"id": "n21", "x": 4, "y": 4},
+  {"id": "n31", "x": 6, "y": 4},
+  {"id": "n41", "x": 8, "y": 4}
 ],
-"edges": [    
-    { "data": { "id": "n11-n21", "source": "n11", "target": "n21", "label": "1 day" } },
-    { "data": { "id": "n21-n31", "source": "n21", "target": "n31", "label": "1 day" } },
-    { "data": { "id": "n31-n41", "source": "n31", "target": "n41", "label": "1 day" } }
+"arcs": [
+  {"from": "n11", "to": "n21", "label": "1 day"},
+  {"from": "n21", "to": "n31", "label": "1 day"},
+  {"from": "n31", "to": "n41", "label": "1 day"}
 ]
 }
 -->
@@ -223,34 +408,37 @@ These copies are then connected by arcs in such a way that the time required to 
 
 <!-- .slide: data-transition="slide-in fade-out" -->
 
-<div class="graph" style="height: 600px; width: 1280px;">
+<div class="netflow" style="--nf-arc-font: 0.55em;">
 <!--
 {
-"nodes": [    
-    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
-    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
-    { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 } },
-    { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 } },
-    { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
-    { "data": { "id": "n14" }, "position": { "x": 100, "y": 150 } },
-    { "data": { "id": "n15" }, "position": { "x": 100, "y": 200 } },
-    { "data": { "id": "n21" }, "position": { "x": 200, "y": 0 } },
-    { "data": { "id": "n22" }, "position": { "x": 200, "y": 50 } },
-    { "data": { "id": "n23" }, "position": { "x": 200, "y": 100 } },
-    { "data": { "id": "n24" }, "position": { "x": 200, "y": 150 } },
-    { "data": { "id": "n25" }, "position": { "x": 200, "y": 200 } },
-    { "data": { "id": "n31" }, "position": { "x": 300, "y": 0 } },
-    { "data": { "id": "n32" }, "position": { "x": 300, "y": 50 } },
-    { "data": { "id": "n33" }, "position": { "x": 300, "y": 100 } },
-    { "data": { "id": "n34" }, "position": { "x": 300, "y": 150 } },
-    { "data": { "id": "n35" }, "position": { "x": 300, "y": 200 } },
-    { "data": { "id": "n41" }, "position": { "x": 400, "y": 0 } },
-    { "data": { "id": "n42" }, "position": { "x": 400, "y": 50 } },
-    { "data": { "id": "n43" }, "position": { "x": 400, "y": 100 } },
-    { "data": { "id": "n44" }, "position": { "x": 400, "y": 150 } },
-    { "data": { "id": "n45" }, "position": { "x": 400, "y": 200 } }
+"unit": 110,
+"radius": 20,
+"nodes": [
+  {"id": "space", "x": 5, "y": -1, "shape": "rect", "w": 1, "h": 1, "label": "← space →", "class": "text"},
+  {"id": "time", "x": 0.6, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "← time →", "class": "text-rotated"},
+  {"id": "n11", "x": 2, "y": 4, "class": "fade"},
+  {"id": "n12", "x": 2, "y": 3, "class": "fade"},
+  {"id": "n13", "x": 2, "y": 2, "class": "fade"},
+  {"id": "n14", "x": 2, "y": 1, "class": "fade"},
+  {"id": "n15", "x": 2, "y": 0, "class": "fade"},
+  {"id": "n21", "x": 4, "y": 4, "class": "fade"},
+  {"id": "n22", "x": 4, "y": 3, "class": "fade"},
+  {"id": "n23", "x": 4, "y": 2, "class": "fade"},
+  {"id": "n24", "x": 4, "y": 1, "class": "fade"},
+  {"id": "n25", "x": 4, "y": 0, "class": "fade"},
+  {"id": "n31", "x": 6, "y": 4, "class": "fade"},
+  {"id": "n32", "x": 6, "y": 3, "class": "fade"},
+  {"id": "n33", "x": 6, "y": 2, "class": "fade"},
+  {"id": "n34", "x": 6, "y": 1, "class": "fade"},
+  {"id": "n35", "x": 6, "y": 0, "class": "fade"},
+  {"id": "n41", "x": 8, "y": 4, "class": "fade"},
+  {"id": "n42", "x": 8, "y": 3, "class": "fade"},
+  {"id": "n43", "x": 8, "y": 2, "class": "fade"},
+  {"id": "n44", "x": 8, "y": 1, "class": "fade"},
+  {"id": "n45", "x": 8, "y": 0, "class": "fade"}
 ],
-"edges": []
+"arcs": [
+]
 }
 -->
 </div>
@@ -261,37 +449,39 @@ These copies are then connected by arcs in such a way that the time required to 
 
 <!-- .slide: data-transition="fade" -->
 
-<div class="graph" style="height: 600px; width: 1280px;">
+<div class="netflow" style="--nf-arc-font: 0.55em;">
 <!--
 {
-"nodes": [    
-    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
-    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
-    { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 }, "classes": "highlight" },
-    { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 } },
-    { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
-    { "data": { "id": "n14" }, "position": { "x": 100, "y": 150 } },
-    { "data": { "id": "n15" }, "position": { "x": 100, "y": 200 } },
-    { "data": { "id": "n21" }, "position": { "x": 200, "y": 0 } },
-    { "data": { "id": "n22" }, "position": { "x": 200, "y": 50 }, "classes": "highlight" },
-    { "data": { "id": "n23" }, "position": { "x": 200, "y": 100 } },
-    { "data": { "id": "n24" }, "position": { "x": 200, "y": 150 } },
-    { "data": { "id": "n25" }, "position": { "x": 200, "y": 200 } },
-    { "data": { "id": "n31" }, "position": { "x": 300, "y": 0 } },
-    { "data": { "id": "n32" }, "position": { "x": 300, "y": 50 } },
-    { "data": { "id": "n33" }, "position": { "x": 300, "y": 100 }, "classes": "highlight" },
-    { "data": { "id": "n34" }, "position": { "x": 300, "y": 150 } },
-    { "data": { "id": "n35" }, "position": { "x": 300, "y": 200 } },
-    { "data": { "id": "n41" }, "position": { "x": 400, "y": 0 } },
-    { "data": { "id": "n42" }, "position": { "x": 400, "y": 50 } },
-    { "data": { "id": "n43" }, "position": { "x": 400, "y": 100 } },
-    { "data": { "id": "n44" }, "position": { "x": 400, "y": 150 }, "classes": "highlight" },
-    { "data": { "id": "n45" }, "position": { "x": 400, "y": 200 } }
+"unit": 110,
+"radius": 20,
+"nodes": [
+  {"id": "space", "x": 5, "y": -1, "shape": "rect", "w": 1, "h": 1, "label": "← space →", "class": "text"},
+  {"id": "time", "x": 0.6, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "← time →", "class": "text-rotated"},
+  {"id": "n11", "x": 2, "y": 4},
+  {"id": "n12", "x": 2, "y": 3, "class": "fade"},
+  {"id": "n13", "x": 2, "y": 2, "class": "fade"},
+  {"id": "n14", "x": 2, "y": 1, "class": "fade"},
+  {"id": "n15", "x": 2, "y": 0, "class": "fade"},
+  {"id": "n21", "x": 4, "y": 4, "class": "fade"},
+  {"id": "n22", "x": 4, "y": 3},
+  {"id": "n23", "x": 4, "y": 2, "class": "fade"},
+  {"id": "n24", "x": 4, "y": 1, "class": "fade"},
+  {"id": "n25", "x": 4, "y": 0, "class": "fade"},
+  {"id": "n31", "x": 6, "y": 4, "class": "fade"},
+  {"id": "n32", "x": 6, "y": 3, "class": "fade"},
+  {"id": "n33", "x": 6, "y": 2},
+  {"id": "n34", "x": 6, "y": 1, "class": "fade"},
+  {"id": "n35", "x": 6, "y": 0, "class": "fade"},
+  {"id": "n41", "x": 8, "y": 4, "class": "fade"},
+  {"id": "n42", "x": 8, "y": 3, "class": "fade"},
+  {"id": "n43", "x": 8, "y": 2, "class": "fade"},
+  {"id": "n44", "x": 8, "y": 1},
+  {"id": "n45", "x": 8, "y": 0, "class": "fade"}
 ],
-"edges": [    
-    { "data": { "id": "n11-n22", "source": "n11", "target": "n22", "label": "1 day" }, "classes": "highlight" },
-    { "data": { "id": "n22-n33", "source": "n22", "target": "n33", "label": "1 day" }, "classes": "highlight" },
-    { "data": { "id": "n33-n44", "source": "n33", "target": "n44", "label": "1 day" }, "classes": "highlight" }
+"arcs": [
+  {"from": "n11", "to": "n22", "label": "1 day"},
+  {"from": "n22", "to": "n33", "label": "1 day"},
+  {"from": "n33", "to": "n44", "label": "1 day"}
 ]
 }
 -->
@@ -304,40 +494,42 @@ These copies are then connected by arcs in such a way that the time required to 
 
 <!-- .slide: data-transition="fade" -->
 
-<div class="graph" style="height: 600px; width: 1280px;">
+<div class="netflow" style="--nf-arc-font: 0.55em;">
 <!--
 {
-"nodes": [    
-    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
-    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
-    { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 }, "classes": "highlight" },
-    { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 }, "classes": "highlight" },
-    { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
-    { "data": { "id": "n14" }, "position": { "x": 100, "y": 150 } },
-    { "data": { "id": "n15" }, "position": { "x": 100, "y": 200 } },
-    { "data": { "id": "n21" }, "position": { "x": 200, "y": 0 } },
-    { "data": { "id": "n22" }, "position": { "x": 200, "y": 50 }, "classes": "highlight" },
-    { "data": { "id": "n23" }, "position": { "x": 200, "y": 100 }, "classes": "highlight" },
-    { "data": { "id": "n24" }, "position": { "x": 200, "y": 150 } },
-    { "data": { "id": "n25" }, "position": { "x": 200, "y": 200 } },
-    { "data": { "id": "n31" }, "position": { "x": 300, "y": 0 } },
-    { "data": { "id": "n32" }, "position": { "x": 300, "y": 50 } },
-    { "data": { "id": "n33" }, "position": { "x": 300, "y": 100 }, "classes": "highlight" },
-    { "data": { "id": "n34" }, "position": { "x": 300, "y": 150 }, "classes": "highlight" },
-    { "data": { "id": "n35" }, "position": { "x": 300, "y": 200 } },
-    { "data": { "id": "n41" }, "position": { "x": 400, "y": 0 } },
-    { "data": { "id": "n42" }, "position": { "x": 400, "y": 50 } },
-    { "data": { "id": "n43" }, "position": { "x": 400, "y": 100 } },
-    { "data": { "id": "n44" }, "position": { "x": 400, "y": 150 }, "classes": "highlight" },
-    { "data": { "id": "n45" }, "position": { "x": 400, "y": 200 }, "classes": "highlight" }
+"unit": 110,
+"radius": 20,
+"nodes": [
+  {"id": "space", "x": 5, "y": -1, "shape": "rect", "w": 1, "h": 1, "label": "← space →", "class": "text"},
+  {"id": "time", "x": 0.6, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "← time →", "class": "text-rotated"},
+  {"id": "n11", "x": 2, "y": 4},
+  {"id": "n12", "x": 2, "y": 3},
+  {"id": "n13", "x": 2, "y": 2, "class": "fade"},
+  {"id": "n14", "x": 2, "y": 1, "class": "fade"},
+  {"id": "n15", "x": 2, "y": 0, "class": "fade"},
+  {"id": "n21", "x": 4, "y": 4, "class": "fade"},
+  {"id": "n22", "x": 4, "y": 3},
+  {"id": "n23", "x": 4, "y": 2},
+  {"id": "n24", "x": 4, "y": 1, "class": "fade"},
+  {"id": "n25", "x": 4, "y": 0, "class": "fade"},
+  {"id": "n31", "x": 6, "y": 4, "class": "fade"},
+  {"id": "n32", "x": 6, "y": 3, "class": "fade"},
+  {"id": "n33", "x": 6, "y": 2},
+  {"id": "n34", "x": 6, "y": 1},
+  {"id": "n35", "x": 6, "y": 0, "class": "fade"},
+  {"id": "n41", "x": 8, "y": 4, "class": "fade"},
+  {"id": "n42", "x": 8, "y": 3, "class": "fade"},
+  {"id": "n43", "x": 8, "y": 2, "class": "fade"},
+  {"id": "n44", "x": 8, "y": 1},
+  {"id": "n45", "x": 8, "y": 0}
 ],
-"edges": [    
-    { "data": { "id": "n11-n22", "source": "n11", "target": "n22", "label": "1 day" }, "classes": "highlight" },
-    { "data": { "id": "n22-n33", "source": "n22", "target": "n33", "label": "1 day" }, "classes": "highlight" },
-    { "data": { "id": "n33-n44", "source": "n33", "target": "n44", "label": "1 day" }, "classes": "highlight" },
-    { "data": { "id": "n12-n23", "source": "n12", "target": "n23", "label": "1 day" }, "classes": "highlight" },
-    { "data": { "id": "n22-n34", "source": "n23", "target": "n34", "label": "1 day" }, "classes": "highlight" },
-    { "data": { "id": "n33-n45", "source": "n34", "target": "n45", "label": "1 day" }, "classes": "highlight" }
+"arcs": [
+  {"from": "n11", "to": "n22", "label": "1 day"},
+  {"from": "n22", "to": "n33", "label": "1 day"},
+  {"from": "n33", "to": "n44", "label": "1 day"},
+  {"from": "n12", "to": "n23", "label": "1 day"},
+  {"from": "n23", "to": "n34", "label": "1 day"},
+  {"from": "n34", "to": "n45", "label": "1 day"}
 ]
 }
 -->
@@ -349,46 +541,48 @@ These copies are then connected by arcs in such a way that the time required to 
 
 <!-- .slide: data-transition="fade" -->
 
-<div class="graph" style="height: 600px; width: 1280px;">
+<div class="netflow" style="--nf-arc-font: 0.55em;">
 <!--
 {
-"nodes": [    
-    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
-    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
-    { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 }, "classes": "highlight" },
-    { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 }, "classes": "highlight" },
-    { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
-    { "data": { "id": "n14" }, "position": { "x": 100, "y": 150 } },
-    { "data": { "id": "n15" }, "position": { "x": 100, "y": 200 } },
-    { "data": { "id": "n21" }, "position": { "x": 200, "y": 0 } },
-    { "data": { "id": "n22" }, "position": { "x": 200, "y": 50 }, "classes": "highlight" },
-    { "data": { "id": "n23" }, "position": { "x": 200, "y": 100 }, "classes": "highlight" },
-    { "data": { "id": "n24" }, "position": { "x": 200, "y": 150 } },
-    { "data": { "id": "n25" }, "position": { "x": 200, "y": 200 } },
-    { "data": { "id": "n31" }, "position": { "x": 300, "y": 0 } },
-    { "data": { "id": "n32" }, "position": { "x": 300, "y": 50 } },
-    { "data": { "id": "n33" }, "position": { "x": 300, "y": 100 }, "classes": "highlight" },
-    { "data": { "id": "n34" }, "position": { "x": 300, "y": 150 }, "classes": "highlight" },
-    { "data": { "id": "n35" }, "position": { "x": 300, "y": 200 } },
-    { "data": { "id": "n41" }, "position": { "x": 400, "y": 0 } },
-    { "data": { "id": "n42" }, "position": { "x": 400, "y": 50 } },
-    { "data": { "id": "n43" }, "position": { "x": 400, "y": 100 } },
-    { "data": { "id": "n44" }, "position": { "x": 400, "y": 150 }, "classes": "highlight" },
-    { "data": { "id": "n45" }, "position": { "x": 400, "y": 200 }, "classes": "highlight" }
+"unit": 110,
+"radius": 20,
+"nodes": [
+  {"id": "space", "x": 5, "y": -1, "shape": "rect", "w": 1, "h": 1, "label": "← space →", "class": "text"},
+  {"id": "time", "x": 0.6, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "← time →", "class": "text-rotated"},
+  {"id": "n11", "x": 2, "y": 4},
+  {"id": "n12", "x": 2, "y": 3},
+  {"id": "n13", "x": 2, "y": 2, "class": "fade"},
+  {"id": "n14", "x": 2, "y": 1, "class": "fade"},
+  {"id": "n15", "x": 2, "y": 0, "class": "fade"},
+  {"id": "n21", "x": 4, "y": 4, "class": "fade"},
+  {"id": "n22", "x": 4, "y": 3},
+  {"id": "n23", "x": 4, "y": 2},
+  {"id": "n24", "x": 4, "y": 1, "class": "fade"},
+  {"id": "n25", "x": 4, "y": 0, "class": "fade"},
+  {"id": "n31", "x": 6, "y": 4, "class": "fade"},
+  {"id": "n32", "x": 6, "y": 3, "class": "fade"},
+  {"id": "n33", "x": 6, "y": 2},
+  {"id": "n34", "x": 6, "y": 1},
+  {"id": "n35", "x": 6, "y": 0, "class": "fade"},
+  {"id": "n41", "x": 8, "y": 4, "class": "fade"},
+  {"id": "n42", "x": 8, "y": 3, "class": "fade"},
+  {"id": "n43", "x": 8, "y": 2, "class": "fade"},
+  {"id": "n44", "x": 8, "y": 1},
+  {"id": "n45", "x": 8, "y": 0}
 ],
-"edges": [    
-    { "data": { "id": "n11-n22", "source": "n11", "target": "n22" }, "classes": "highlight" },
-    { "data": { "id": "n22-n33", "source": "n22", "target": "n33" }, "classes": "highlight" },
-    { "data": { "id": "n33-n44", "source": "n33", "target": "n44" }, "classes": "highlight" },
-    { "data": { "id": "n12-n23", "source": "n12", "target": "n23" }, "classes": "highlight" },
-    { "data": { "id": "n22-n34", "source": "n23", "target": "n34" }, "classes": "highlight" },
-    { "data": { "id": "n33-n45", "source": "n34", "target": "n45" }, "classes": "highlight" },
-    { "data": { "id": "n21-n32", "source": "n21", "target": "n32" } },
-    { "data": { "id": "n31-n42", "source": "n31", "target": "n42" } },
-    { "data": { "id": "n32-n43", "source": "n32", "target": "n43" } },
-    { "data": { "id": "n13-n24", "source": "n13", "target": "n24" } },
-    { "data": { "id": "n24-n35", "source": "n24", "target": "n35" } },
-    { "data": { "id": "n14-n25", "source": "n14", "target": "n25" } }
+"arcs": [
+  {"from": "n11", "to": "n22"},
+  {"from": "n22", "to": "n33"},
+  {"from": "n33", "to": "n44"},
+  {"from": "n12", "to": "n23"},
+  {"from": "n23", "to": "n34"},
+  {"from": "n34", "to": "n45"},
+  {"from": "n21", "to": "n32", "class": "fade"},
+  {"from": "n31", "to": "n42", "class": "fade"},
+  {"from": "n32", "to": "n43", "class": "fade"},
+  {"from": "n13", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n35", "class": "fade"},
+  {"from": "n14", "to": "n25", "class": "fade"}
 ]
 }
 -->
@@ -401,62 +595,64 @@ These copies are then connected by arcs in such a way that the time required to 
 
 <!-- .slide: data-transition="fade" -->
 
-<div class="graph" style="height: 600px; width: 1280px;">
+<div class="netflow" style="--nf-arc-font: 0.55em;">
 <!--
 {
-"nodes": [    
-    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
-    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
-    { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 }, "classes": "highlight" },
-    { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 }, "classes": "highlight" },
-    { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 }, "classes": "highlight" },
-    { "data": { "id": "n14" }, "position": { "x": 100, "y": 150 }, "classes": "highlight" },
-    { "data": { "id": "n15" }, "position": { "x": 100, "y": 200 }, "classes": "highlight" },
-    { "data": { "id": "n21" }, "position": { "x": 200, "y": 0 }, "classes": "highlight" },
-    { "data": { "id": "n22" }, "position": { "x": 200, "y": 50 }, "classes": "highlight" },
-    { "data": { "id": "n23" }, "position": { "x": 200, "y": 100 }, "classes": "highlight" },
-    { "data": { "id": "n24" }, "position": { "x": 200, "y": 150 }, "classes": "highlight" },
-    { "data": { "id": "n25" }, "position": { "x": 200, "y": 200 }, "classes": "highlight" },
-    { "data": { "id": "n31" }, "position": { "x": 300, "y": 0 }, "classes": "highlight" },
-    { "data": { "id": "n32" }, "position": { "x": 300, "y": 50 }, "classes": "highlight" },
-    { "data": { "id": "n33" }, "position": { "x": 300, "y": 100 }, "classes": "highlight" },
-    { "data": { "id": "n34" }, "position": { "x": 300, "y": 150 }, "classes": "highlight" },
-    { "data": { "id": "n35" }, "position": { "x": 300, "y": 200 }, "classes": "highlight" },
-    { "data": { "id": "n41" }, "position": { "x": 400, "y": 0 }, "classes": "highlight" },
-    { "data": { "id": "n42" }, "position": { "x": 400, "y": 50 }, "classes": "highlight" },
-    { "data": { "id": "n43" }, "position": { "x": 400, "y": 100 }, "classes": "highlight" },
-    { "data": { "id": "n44" }, "position": { "x": 400, "y": 150 }, "classes": "highlight" },
-    { "data": { "id": "n45" }, "position": { "x": 400, "y": 200 }, "classes": "highlight" }
+"unit": 110,
+"radius": 20,
+"nodes": [
+  {"id": "space", "x": 5, "y": -1, "shape": "rect", "w": 1, "h": 1, "label": "← space →", "class": "text"},
+  {"id": "time", "x": 0.6, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "← time →", "class": "text-rotated"},
+  {"id": "n11", "x": 2, "y": 4},
+  {"id": "n12", "x": 2, "y": 3},
+  {"id": "n13", "x": 2, "y": 2},
+  {"id": "n14", "x": 2, "y": 1},
+  {"id": "n15", "x": 2, "y": 0},
+  {"id": "n21", "x": 4, "y": 4},
+  {"id": "n22", "x": 4, "y": 3},
+  {"id": "n23", "x": 4, "y": 2},
+  {"id": "n24", "x": 4, "y": 1},
+  {"id": "n25", "x": 4, "y": 0},
+  {"id": "n31", "x": 6, "y": 4},
+  {"id": "n32", "x": 6, "y": 3},
+  {"id": "n33", "x": 6, "y": 2},
+  {"id": "n34", "x": 6, "y": 1},
+  {"id": "n35", "x": 6, "y": 0},
+  {"id": "n41", "x": 8, "y": 4},
+  {"id": "n42", "x": 8, "y": 3},
+  {"id": "n43", "x": 8, "y": 2},
+  {"id": "n44", "x": 8, "y": 1},
+  {"id": "n45", "x": 8, "y": 0}
 ],
-"edges": [    
-    { "data": { "id": "n11-n22", "source": "n11", "target": "n22" } },
-    { "data": { "id": "n22-n33", "source": "n22", "target": "n33" } },
-    { "data": { "id": "n33-n44", "source": "n33", "target": "n44" } },
-    { "data": { "id": "n12-n23", "source": "n12", "target": "n23" } },
-    { "data": { "id": "n22-n34", "source": "n23", "target": "n34" } },
-    { "data": { "id": "n33-n45", "source": "n34", "target": "n45" } },
-    { "data": { "id": "n21-n32", "source": "n21", "target": "n32" } },
-    { "data": { "id": "n31-n42", "source": "n31", "target": "n42" } },
-    { "data": { "id": "n32-n43", "source": "n32", "target": "n43" } },
-    { "data": { "id": "n13-n24", "source": "n13", "target": "n24" } },
-    { "data": { "id": "n24-n35", "source": "n24", "target": "n35" } },
-    { "data": { "id": "n14-n25", "source": "n14", "target": "n25" } },
-    { "data": { "id": "n11-n12", "source": "n11", "target": "n12" }, "classes": "highlight" },
-    { "data": { "id": "n12-n13", "source": "n12", "target": "n13" }, "classes": "highlight" },
-    { "data": { "id": "n13-n14", "source": "n13", "target": "n14" }, "classes": "highlight" },
-    { "data": { "id": "n14-n15", "source": "n14", "target": "n15" }, "classes": "highlight" },
-    { "data": { "id": "n21-n22", "source": "n21", "target": "n22" }, "classes": "highlight" },
-    { "data": { "id": "n22-n23", "source": "n22", "target": "n23" }, "classes": "highlight" },
-    { "data": { "id": "n23-n24", "source": "n23", "target": "n24" }, "classes": "highlight" },
-    { "data": { "id": "n24-n25", "source": "n24", "target": "n25" }, "classes": "highlight" },
-    { "data": { "id": "n31-n32", "source": "n31", "target": "n32" }, "classes": "highlight" },
-    { "data": { "id": "n32-n33", "source": "n32", "target": "n33" }, "classes": "highlight" },
-    { "data": { "id": "n33-n34", "source": "n33", "target": "n34" }, "classes": "highlight" },
-    { "data": { "id": "n34-n35", "source": "n34", "target": "n35" }, "classes": "highlight" },
-    { "data": { "id": "n41-n42", "source": "n41", "target": "n42" }, "classes": "highlight" },
-    { "data": { "id": "n42-n43", "source": "n42", "target": "n43" }, "classes": "highlight" },
-    { "data": { "id": "n43-n44", "source": "n43", "target": "n44" }, "classes": "highlight" },
-    { "data": { "id": "n44-n45", "source": "n44", "target": "n45" }, "classes": "highlight" }
+"arcs": [
+  {"from": "n11", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n44", "class": "fade"},
+  {"from": "n12", "to": "n23", "class": "fade"},
+  {"from": "n23", "to": "n34", "class": "fade"},
+  {"from": "n34", "to": "n45", "class": "fade"},
+  {"from": "n21", "to": "n32", "class": "fade"},
+  {"from": "n31", "to": "n42", "class": "fade"},
+  {"from": "n32", "to": "n43", "class": "fade"},
+  {"from": "n13", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n35", "class": "fade"},
+  {"from": "n14", "to": "n25", "class": "fade"},
+  {"from": "n11", "to": "n12"},
+  {"from": "n12", "to": "n13"},
+  {"from": "n13", "to": "n14"},
+  {"from": "n14", "to": "n15"},
+  {"from": "n21", "to": "n22"},
+  {"from": "n22", "to": "n23"},
+  {"from": "n23", "to": "n24"},
+  {"from": "n24", "to": "n25"},
+  {"from": "n31", "to": "n32"},
+  {"from": "n32", "to": "n33"},
+  {"from": "n33", "to": "n34"},
+  {"from": "n34", "to": "n35"},
+  {"from": "n41", "to": "n42"},
+  {"from": "n42", "to": "n43"},
+  {"from": "n43", "to": "n44"},
+  {"from": "n44", "to": "n45"}
 ]
 }
 -->
@@ -469,62 +665,72 @@ These copies are then connected by arcs in such a way that the time required to 
 
 <!-- .slide: data-transition="fade-in slide-out" -->
 
-<div class="graph" style="height: 600px; width: 1280px;">
+<div class="netflow" style="--nf-arc-font: 0.55em;">
 <!--
 {
-"nodes": [    
-    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
-    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
-    { "data": { "id": "n11", "label": 70 }, "position": { "x": 100, "y": 0 }, "classes": "highlight", "css": { "text-halign": "left", "text-valign": "center", "text-margin-x": -5, "font-size": 10 } },
-    { "data": { "id": "n12", "label": 80 }, "position": { "x": 100, "y": 50 }, "classes": "highlight", "css": { "text-halign": "left", "text-valign": "center", "text-margin-x": -5, "font-size": 10 } },
-    { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
-    { "data": { "id": "n14" }, "position": { "x": 100, "y": 150 } },
-    { "data": { "id": "n15" }, "position": { "x": 100, "y": 200 } },
-    { "data": { "id": "n21" }, "position": { "x": 200, "y": 0 } },
-    { "data": { "id": "n22", "label": 0 }, "position": { "x": 200, "y": 50 }, "classes": "highlight", "css": { "text-halign": "left", "text-valign": "top", "text-margin-x": 5, "font-size": 10 } },
-    { "data": { "id": "n23", "label": 0 }, "position": { "x": 200, "y": 100 }, "classes": "highlight", "css": { "text-halign": "left", "text-valign": "top", "text-margin-x": 5, "font-size": 10 } },
-    { "data": { "id": "n24" }, "position": { "x": 200, "y": 150 } },
-    { "data": { "id": "n25" }, "position": { "x": 200, "y": 200 } },
-    { "data": { "id": "n31" }, "position": { "x": 300, "y": 0 } },
-    { "data": { "id": "n32" }, "position": { "x": 300, "y": 50 } },
-    { "data": { "id": "n33", "label": 0 }, "position": { "x": 300, "y": 100 }, "classes": "highlight", "css": { "text-halign": "left", "text-valign": "top", "text-margin-x": 5, "font-size": 10 } },
-    { "data": { "id": "n34", "label": 0 }, "position": { "x": 300, "y": 150 }, "classes": "highlight", "css": { "text-halign": "left", "text-valign": "top", "text-margin-x": 5, "font-size": 10 } },
-    { "data": { "id": "n35" }, "position": { "x": 300, "y": 200 } },
-    { "data": { "id": "n41" }, "position": { "x": 400, "y": 0 } },
-    { "data": { "id": "n42" }, "position": { "x": 400, "y": 50 } },
-    { "data": { "id": "n43" }, "position": { "x": 400, "y": 100 } },
-    { "data": { "id": "n44", "label": -60 }, "position": { "x": 400, "y": 150 }, "classes": "highlight", "css": { "text-halign": "right", "text-valign": "center", "text-margin-x": 5, "font-size": 10 } },
-    { "data": { "id": "n45", "label": -90 }, "position": { "x": 400, "y": 200 }, "classes": "highlight", "css": { "text-halign": "right", "text-valign": "center", "text-margin-x": 5, "font-size": 10 } }
+"unit": 110,
+"radius": 20,
+"nodes": [
+  {"id": "space", "x": 5, "y": -1, "shape": "rect", "w": 1, "h": 1, "label": "← space →", "class": "text"},
+  {"id": "time", "x": 0.6, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "← time →", "class": "text-rotated"},
+  {"id": "n11", "x": 2, "y": 4},
+  {"id": "n12", "x": 2, "y": 3},
+  {"id": "n13", "x": 2, "y": 2, "class": "fade"},
+  {"id": "n14", "x": 2, "y": 1, "class": "fade"},
+  {"id": "n15", "x": 2, "y": 0, "class": "fade"},
+  {"id": "n21", "x": 4, "y": 4, "class": "fade"},
+  {"id": "n22", "x": 4, "y": 3},
+  {"id": "n23", "x": 4, "y": 2},
+  {"id": "n24", "x": 4, "y": 1, "class": "fade"},
+  {"id": "n25", "x": 4, "y": 0, "class": "fade"},
+  {"id": "n31", "x": 6, "y": 4, "class": "fade"},
+  {"id": "n32", "x": 6, "y": 3, "class": "fade"},
+  {"id": "n33", "x": 6, "y": 2},
+  {"id": "n34", "x": 6, "y": 1},
+  {"id": "n35", "x": 6, "y": 0, "class": "fade"},
+  {"id": "n41", "x": 8, "y": 4, "class": "fade"},
+  {"id": "n42", "x": 8, "y": 3, "class": "fade"},
+  {"id": "n43", "x": 8, "y": 2, "class": "fade"},
+  {"id": "n44", "x": 8, "y": 1},
+  {"id": "n45", "x": 8, "y": 0},
+  {"id": "n11_label", "x": 1.45, "y": 4, "shape": "rect", "w": 1, "h": 1, "label": "70", "class": "text"},
+  {"id": "n12_label", "x": 1.45, "y": 3, "shape": "rect", "w": 1, "h": 1, "label": "80", "class": "text"},
+  {"id": "n22_label", "x": 3.58, "y": 2.9, "shape": "rect", "w": 1, "h": 1, "label": "0", "class": "text"},
+  {"id": "n23_label", "x": 3.58, "y": 1.9, "shape": "rect", "w": 1, "h": 1, "label": "0", "class": "text"},
+  {"id": "n33_label", "x": 5.58, "y": 1.9, "shape": "rect", "w": 1, "h": 1, "label": "0", "class": "text"},
+  {"id": "n34_label", "x": 5.58, "y": 0.9, "shape": "rect", "w": 1, "h": 1, "label": "0", "class": "text"},
+  {"id": "n44_label", "x": 8.55, "y": 1, "shape": "rect", "w": 1, "h": 1, "label": "-60", "class": "text"},
+  {"id": "n45_label", "x": 8.55, "y": 0, "shape": "rect", "w": 1, "h": 1, "label": "-90", "class": "text"}
 ],
-"edges": [    
-    { "data": { "id": "n11-n22", "source": "n11", "target": "n22", "label": "(10,0,100)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "n22-n33", "source": "n22", "target": "n33", "label": "(50,0,100)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "n33-n44", "source": "n33", "target": "n44", "label": "(10,0,100)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "n12-n23", "source": "n12", "target": "n23", "label": "(10,0,100)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "n22-n34", "source": "n23", "target": "n34", "label": "(50,0,100)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "n33-n45", "source": "n34", "target": "n45", "label": "(10,0,100)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "n21-n32", "source": "n21", "target": "n32" } },
-    { "data": { "id": "n31-n42", "source": "n31", "target": "n42" } },
-    { "data": { "id": "n32-n43", "source": "n32", "target": "n43" } },
-    { "data": { "id": "n13-n24", "source": "n13", "target": "n24" } },
-    { "data": { "id": "n24-n35", "source": "n24", "target": "n35" } },
-    { "data": { "id": "n14-n25", "source": "n14", "target": "n25" } },
-    { "data": { "id": "n11-n12", "source": "n11", "target": "n12", "label": "(0,0,∞)" }, "classes": "highlight", "css": { "font-size": 10, "text-rotation": "none","text-halign": "left", "text-valign": "center", "text-margin-x": -18, "text-margin-y": 0} },
-    { "data": { "id": "n12-n13", "source": "n12", "target": "n13" } },
-    { "data": { "id": "n13-n14", "source": "n13", "target": "n14" } },
-    { "data": { "id": "n14-n15", "source": "n14", "target": "n15" } },
-    { "data": { "id": "n21-n22", "source": "n21", "target": "n22" } },
-    { "data": { "id": "n22-n23", "source": "n22", "target": "n23", "label": "(0,0,∞)" }, "classes": "highlight", "css": { "font-size": 10, "text-rotation": "none","text-halign": "right", "text-valign": "center", "text-margin-x": 18, "text-margin-y": 0} },
-    { "data": { "id": "n23-n24", "source": "n23", "target": "n24" } },
-    { "data": { "id": "n24-n25", "source": "n24", "target": "n25" } },
-    { "data": { "id": "n31-n32", "source": "n31", "target": "n32" } },
-    { "data": { "id": "n32-n33", "source": "n32", "target": "n33" } },
-    { "data": { "id": "n33-n34", "source": "n33", "target": "n34", "label": "(0,0,∞)" }, "classes": "highlight", "css": { "font-size": 10, "text-rotation": "none","text-halign": "right", "text-valign": "center", "text-margin-x": 18, "text-margin-y": 0} },
-    { "data": { "id": "n34-n35", "source": "n34", "target": "n35" } },
-    { "data": { "id": "n41-n42", "source": "n41", "target": "n42" } },
-    { "data": { "id": "n42-n43", "source": "n42", "target": "n43" } },
-    { "data": { "id": "n43-n44", "source": "n43", "target": "n44" } },
-    { "data": { "id": "n44-n45", "source": "n44", "target": "n45", "label": "(0,0,∞)" }, "classes": "highlight", "css": { "font-size": 10, "text-rotation": "none","text-halign": "right", "text-valign": "center", "text-margin-x": 18, "text-margin-y": 0} }
+"arcs": [
+  {"from": "n11", "to": "n22", "label": "(10,0,100)"},
+  {"from": "n22", "to": "n33", "label": "(50,0,100)"},
+  {"from": "n33", "to": "n44", "label": "(10,0,100)"},
+  {"from": "n12", "to": "n23", "label": "(10,0,100)"},
+  {"from": "n23", "to": "n34", "label": "(50,0,100)"},
+  {"from": "n34", "to": "n45", "label": "(10,0,100)"},
+  {"from": "n21", "to": "n32", "class": "fade"},
+  {"from": "n31", "to": "n42", "class": "fade"},
+  {"from": "n32", "to": "n43", "class": "fade"},
+  {"from": "n13", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n35", "class": "fade"},
+  {"from": "n14", "to": "n25", "class": "fade"},
+  {"from": "n11", "to": "n12", "label": "(0,0,∞)", "swap": true},
+  {"from": "n12", "to": "n13", "class": "fade"},
+  {"from": "n13", "to": "n14", "class": "fade"},
+  {"from": "n14", "to": "n15", "class": "fade"},
+  {"from": "n21", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n23", "label": "(0,0,∞)"},
+  {"from": "n23", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n25", "class": "fade"},
+  {"from": "n31", "to": "n32", "class": "fade"},
+  {"from": "n32", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n34", "label": "(0,0,∞)"},
+  {"from": "n34", "to": "n35", "class": "fade"},
+  {"from": "n41", "to": "n42", "class": "fade"},
+  {"from": "n42", "to": "n43", "class": "fade"},
+  {"from": "n43", "to": "n44", "class": "fade"},
+  {"from": "n44", "to": "n45", "label": "(0,0,∞)"}
 ]
 }
 -->
@@ -539,62 +745,64 @@ Numbers next to the nodes indicate supply/demand values. Numbers next to the arc
 
 Suppose we can use a direct transport mode that can be used to ship an unlimited amount of items from the origin to the destination within 2 days and at a cost of 100 per item.  
 
-<div class="graph" style="height: 500px; width: 1280px;">
+<div class="netflow" style="--nf-arc-font: 0.55em;">
 <!--
 {
-"nodes": [    
-    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
-    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
-    { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 } },
-    { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 } },
-    { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
-    { "data": { "id": "n14" }, "position": { "x": 100, "y": 150 } },
-    { "data": { "id": "n15" }, "position": { "x": 100, "y": 200 } },
-    { "data": { "id": "n21" }, "position": { "x": 200, "y": 0 } },
-    { "data": { "id": "n22" }, "position": { "x": 200, "y": 50 } },
-    { "data": { "id": "n23" }, "position": { "x": 200, "y": 100 } },
-    { "data": { "id": "n24" }, "position": { "x": 200, "y": 150 } },
-    { "data": { "id": "n25" }, "position": { "x": 200, "y": 200 } },
-    { "data": { "id": "n31" }, "position": { "x": 300, "y": 0 } },
-    { "data": { "id": "n32" }, "position": { "x": 300, "y": 50 } },
-    { "data": { "id": "n33" }, "position": { "x": 300, "y": 100 } },
-    { "data": { "id": "n34" }, "position": { "x": 300, "y": 150 } },
-    { "data": { "id": "n35" }, "position": { "x": 300, "y": 200 } },
-    { "data": { "id": "n41" }, "position": { "x": 400, "y": 0 } },
-    { "data": { "id": "n42" }, "position": { "x": 400, "y": 50 } },
-    { "data": { "id": "n43" }, "position": { "x": 400, "y": 100 } },
-    { "data": { "id": "n44" }, "position": { "x": 400, "y": 150 } },
-    { "data": { "id": "n45" }, "position": { "x": 400, "y": 200 } }
+"unit": 90,
+"radius": 17,
+"nodes": [
+  {"id": "space", "x": 5, "y": -1, "shape": "rect", "w": 1, "h": 1, "label": "← space →", "class": "text"},
+  {"id": "time", "x": 0.6, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "← time →", "class": "text-rotated"},
+  {"id": "n11", "x": 2, "y": 4, "class": "fade"},
+  {"id": "n12", "x": 2, "y": 3, "class": "fade"},
+  {"id": "n13", "x": 2, "y": 2, "class": "fade"},
+  {"id": "n14", "x": 2, "y": 1, "class": "fade"},
+  {"id": "n15", "x": 2, "y": 0, "class": "fade"},
+  {"id": "n21", "x": 4, "y": 4, "class": "fade"},
+  {"id": "n22", "x": 4, "y": 3, "class": "fade"},
+  {"id": "n23", "x": 4, "y": 2, "class": "fade"},
+  {"id": "n24", "x": 4, "y": 1, "class": "fade"},
+  {"id": "n25", "x": 4, "y": 0, "class": "fade"},
+  {"id": "n31", "x": 6, "y": 4, "class": "fade"},
+  {"id": "n32", "x": 6, "y": 3, "class": "fade"},
+  {"id": "n33", "x": 6, "y": 2, "class": "fade"},
+  {"id": "n34", "x": 6, "y": 1, "class": "fade"},
+  {"id": "n35", "x": 6, "y": 0, "class": "fade"},
+  {"id": "n41", "x": 8, "y": 4, "class": "fade"},
+  {"id": "n42", "x": 8, "y": 3, "class": "fade"},
+  {"id": "n43", "x": 8, "y": 2, "class": "fade"},
+  {"id": "n44", "x": 8, "y": 1, "class": "fade"},
+  {"id": "n45", "x": 8, "y": 0, "class": "fade"}
 ],
-"edges": [    
-    { "data": { "id": "n11-n22", "source": "n11", "target": "n22" } },
-    { "data": { "id": "n22-n33", "source": "n22", "target": "n33" } },
-    { "data": { "id": "n33-n44", "source": "n33", "target": "n44" } },
-    { "data": { "id": "n12-n23", "source": "n12", "target": "n23" } },
-    { "data": { "id": "n22-n34", "source": "n23", "target": "n34" } },
-    { "data": { "id": "n33-n45", "source": "n34", "target": "n45" } },
-    { "data": { "id": "n21-n32", "source": "n21", "target": "n32" } },
-    { "data": { "id": "n31-n42", "source": "n31", "target": "n42" } },
-    { "data": { "id": "n32-n43", "source": "n32", "target": "n43" } },
-    { "data": { "id": "n13-n24", "source": "n13", "target": "n24" } },
-    { "data": { "id": "n24-n35", "source": "n24", "target": "n35" } },
-    { "data": { "id": "n14-n25", "source": "n14", "target": "n25" } },
-    { "data": { "id": "n11-n12", "source": "n11", "target": "n12" } },
-    { "data": { "id": "n12-n13", "source": "n12", "target": "n13" } },
-    { "data": { "id": "n13-n14", "source": "n13", "target": "n14" } },
-    { "data": { "id": "n14-n15", "source": "n14", "target": "n15" } },
-    { "data": { "id": "n21-n22", "source": "n21", "target": "n22" } },
-    { "data": { "id": "n22-n23", "source": "n22", "target": "n23" } },
-    { "data": { "id": "n23-n24", "source": "n23", "target": "n24" } },
-    { "data": { "id": "n24-n25", "source": "n24", "target": "n25" } },
-    { "data": { "id": "n31-n32", "source": "n31", "target": "n32" } },
-    { "data": { "id": "n32-n33", "source": "n32", "target": "n33" } },
-    { "data": { "id": "n33-n34", "source": "n33", "target": "n34" } },
-    { "data": { "id": "n34-n35", "source": "n34", "target": "n35" } },
-    { "data": { "id": "n41-n42", "source": "n41", "target": "n42" } },
-    { "data": { "id": "n42-n43", "source": "n42", "target": "n43" } },
-    { "data": { "id": "n43-n44", "source": "n43", "target": "n44" } },
-    { "data": { "id": "n44-n45", "source": "n44", "target": "n45" } }
+"arcs": [
+  {"from": "n11", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n44", "class": "fade"},
+  {"from": "n12", "to": "n23", "class": "fade"},
+  {"from": "n23", "to": "n34", "class": "fade"},
+  {"from": "n34", "to": "n45", "class": "fade"},
+  {"from": "n21", "to": "n32", "class": "fade"},
+  {"from": "n31", "to": "n42", "class": "fade"},
+  {"from": "n32", "to": "n43", "class": "fade"},
+  {"from": "n13", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n35", "class": "fade"},
+  {"from": "n14", "to": "n25", "class": "fade"},
+  {"from": "n11", "to": "n12", "class": "fade"},
+  {"from": "n12", "to": "n13", "class": "fade"},
+  {"from": "n13", "to": "n14", "class": "fade"},
+  {"from": "n14", "to": "n15", "class": "fade"},
+  {"from": "n21", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n23", "class": "fade"},
+  {"from": "n23", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n25", "class": "fade"},
+  {"from": "n31", "to": "n32", "class": "fade"},
+  {"from": "n32", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n34", "class": "fade"},
+  {"from": "n34", "to": "n35", "class": "fade"},
+  {"from": "n41", "to": "n42", "class": "fade"},
+  {"from": "n42", "to": "n43", "class": "fade"},
+  {"from": "n43", "to": "n44", "class": "fade"},
+  {"from": "n44", "to": "n45", "class": "fade"}
 ]
 }
 -->
@@ -608,65 +816,67 @@ How do you include this additional transport option?
 
 Suppose we can use a direct transport mode that can be used to ship an unlimited amount of items from the origin to the destination within 2 days and at a cost of 100 per item.
 
-<div class="graph" style="height: 500px; width: 1280px;">
+<div class="netflow" style="--nf-arc-font: 0.55em;">
 <!--
 {
-"nodes": [    
-    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
-    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
-    { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 } },
-    { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 } },
-    { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
-    { "data": { "id": "n14" }, "position": { "x": 100, "y": 150 } },
-    { "data": { "id": "n15" }, "position": { "x": 100, "y": 200 } },
-    { "data": { "id": "n21" }, "position": { "x": 200, "y": 0 } },
-    { "data": { "id": "n22" }, "position": { "x": 200, "y": 50 } },
-    { "data": { "id": "n23" }, "position": { "x": 200, "y": 100 } },
-    { "data": { "id": "n24" }, "position": { "x": 200, "y": 150 } },
-    { "data": { "id": "n25" }, "position": { "x": 200, "y": 200 } },
-    { "data": { "id": "n31" }, "position": { "x": 300, "y": 0 } },
-    { "data": { "id": "n32" }, "position": { "x": 300, "y": 50 } },
-    { "data": { "id": "n33" }, "position": { "x": 300, "y": 100 } },
-    { "data": { "id": "n34" }, "position": { "x": 300, "y": 150 } },
-    { "data": { "id": "n35" }, "position": { "x": 300, "y": 200 } },
-    { "data": { "id": "n41" }, "position": { "x": 400, "y": 0 } },
-    { "data": { "id": "n42" }, "position": { "x": 400, "y": 50 } },
-    { "data": { "id": "n43" }, "position": { "x": 400, "y": 100 } },
-    { "data": { "id": "n44" }, "position": { "x": 400, "y": 150 } },
-    { "data": { "id": "n45" }, "position": { "x": 400, "y": 200 } }
+"unit": 90,
+"radius": 17,
+"nodes": [
+  {"id": "space", "x": 5, "y": -1, "shape": "rect", "w": 1, "h": 1, "label": "← space →", "class": "text"},
+  {"id": "time", "x": 0.6, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "← time →", "class": "text-rotated"},
+  {"id": "n11", "x": 2, "y": 4, "class": "fade"},
+  {"id": "n12", "x": 2, "y": 3, "class": "fade"},
+  {"id": "n13", "x": 2, "y": 2, "class": "fade"},
+  {"id": "n14", "x": 2, "y": 1, "class": "fade"},
+  {"id": "n15", "x": 2, "y": 0, "class": "fade"},
+  {"id": "n21", "x": 4, "y": 4, "class": "fade"},
+  {"id": "n22", "x": 4, "y": 3, "class": "fade"},
+  {"id": "n23", "x": 4, "y": 2, "class": "fade"},
+  {"id": "n24", "x": 4, "y": 1, "class": "fade"},
+  {"id": "n25", "x": 4, "y": 0, "class": "fade"},
+  {"id": "n31", "x": 6, "y": 4, "class": "fade"},
+  {"id": "n32", "x": 6, "y": 3, "class": "fade"},
+  {"id": "n33", "x": 6, "y": 2, "class": "fade"},
+  {"id": "n34", "x": 6, "y": 1, "class": "fade"},
+  {"id": "n35", "x": 6, "y": 0, "class": "fade"},
+  {"id": "n41", "x": 8, "y": 4, "class": "fade"},
+  {"id": "n42", "x": 8, "y": 3, "class": "fade"},
+  {"id": "n43", "x": 8, "y": 2, "class": "fade"},
+  {"id": "n44", "x": 8, "y": 1, "class": "fade"},
+  {"id": "n45", "x": 8, "y": 0, "class": "fade"}
 ],
-"edges": [    
-    { "data": { "id": "n11-n22", "source": "n11", "target": "n22" } },
-    { "data": { "id": "n22-n33", "source": "n22", "target": "n33" } },
-    { "data": { "id": "n33-n44", "source": "n33", "target": "n44" } },
-    { "data": { "id": "n12-n23", "source": "n12", "target": "n23" } },
-    { "data": { "id": "n22-n34", "source": "n23", "target": "n34" } },
-    { "data": { "id": "n33-n45", "source": "n34", "target": "n45" } },
-    { "data": { "id": "n21-n32", "source": "n21", "target": "n32" } },
-    { "data": { "id": "n31-n42", "source": "n31", "target": "n42" } },
-    { "data": { "id": "n32-n43", "source": "n32", "target": "n43" } },
-    { "data": { "id": "n13-n24", "source": "n13", "target": "n24" } },
-    { "data": { "id": "n24-n35", "source": "n24", "target": "n35" } },
-    { "data": { "id": "n14-n25", "source": "n14", "target": "n25" } },
-    { "data": { "id": "n11-n12", "source": "n11", "target": "n12" } },
-    { "data": { "id": "n12-n13", "source": "n12", "target": "n13" } },
-    { "data": { "id": "n13-n14", "source": "n13", "target": "n14" } },
-    { "data": { "id": "n14-n15", "source": "n14", "target": "n15" } },
-    { "data": { "id": "n21-n22", "source": "n21", "target": "n22" } },
-    { "data": { "id": "n22-n23", "source": "n22", "target": "n23" } },
-    { "data": { "id": "n23-n24", "source": "n23", "target": "n24" } },
-    { "data": { "id": "n24-n25", "source": "n24", "target": "n25" } },
-    { "data": { "id": "n31-n32", "source": "n31", "target": "n32" } },
-    { "data": { "id": "n32-n33", "source": "n32", "target": "n33" } },
-    { "data": { "id": "n33-n34", "source": "n33", "target": "n34" } },
-    { "data": { "id": "n34-n35", "source": "n34", "target": "n35" } },
-    { "data": { "id": "n41-n42", "source": "n41", "target": "n42" } },
-    { "data": { "id": "n42-n43", "source": "n42", "target": "n43" } },
-    { "data": { "id": "n43-n44", "source": "n43", "target": "n44" } },
-    { "data": { "id": "n44-n45", "source": "n44", "target": "n45" } },
-    { "data": { "id": "n11-n43", "source": "n11", "target": "n43", "label": "(100,0,∞)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "n12-n44", "source": "n12", "target": "n44", "label": "(100,0,∞)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "n13-n45", "source": "n13", "target": "n45", "label": "(100,0,∞)" }, "classes": "highlight", "css": { "font-size": 10 } }
+"arcs": [
+  {"from": "n11", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n44", "class": "fade"},
+  {"from": "n12", "to": "n23", "class": "fade"},
+  {"from": "n23", "to": "n34", "class": "fade"},
+  {"from": "n34", "to": "n45", "class": "fade"},
+  {"from": "n21", "to": "n32", "class": "fade"},
+  {"from": "n31", "to": "n42", "class": "fade"},
+  {"from": "n32", "to": "n43", "class": "fade"},
+  {"from": "n13", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n35", "class": "fade"},
+  {"from": "n14", "to": "n25", "class": "fade"},
+  {"from": "n11", "to": "n12", "class": "fade"},
+  {"from": "n12", "to": "n13", "class": "fade"},
+  {"from": "n13", "to": "n14", "class": "fade"},
+  {"from": "n14", "to": "n15", "class": "fade"},
+  {"from": "n21", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n23", "class": "fade"},
+  {"from": "n23", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n25", "class": "fade"},
+  {"from": "n31", "to": "n32", "class": "fade"},
+  {"from": "n32", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n34", "class": "fade"},
+  {"from": "n34", "to": "n35", "class": "fade"},
+  {"from": "n41", "to": "n42", "class": "fade"},
+  {"from": "n42", "to": "n43", "class": "fade"},
+  {"from": "n43", "to": "n44", "class": "fade"},
+  {"from": "n44", "to": "n45", "class": "fade"},
+  {"from": "n11", "to": "n43", "label": "(100,0,∞)"},
+  {"from": "n12", "to": "n44", "label": "(100,0,∞)"},
+  {"from": "n13", "to": "n45", "label": "(100,0,∞)"}
 ]
 }
 -->
@@ -683,62 +893,74 @@ Suppose we can use a direct transport mode that can be used to ship an unlimited
 
 Suppose we have upper bounds on supply and demand as shown below.
 
-<div class="graph" style="height: 500px; width: 1280px;">
+<div class="netflow" style="--nf-arc-font: 0.55em;">
 <!--
 {
-"nodes": [    
-    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
-    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
-    { "data": { "id": "n11", "label": "≤70" }, "position": { "x": 100, "y": 0 }, "css": { "text-halign": "left", "text-valign": "center", "text-margin-x": -5, "font-size": 10, "color": "firebrick" } },
-    { "data": { "id": "n12", "label": "≤80" }, "position": { "x": 100, "y": 50 }, "css": { "text-halign": "left", "text-valign": "center", "text-margin-x": -5, "font-size": 10, "color": "firebrick" } },
-    { "data": { "id": "n13", "label": "≤60" }, "position": { "x": 100, "y": 100 }, "css": { "text-halign": "left", "text-valign": "center", "text-margin-x": -5, "font-size": 10, "color": "firebrick" } },
-    { "data": { "id": "n14", "label": "≤90" }, "position": { "x": 100, "y": 150 }, "css": { "text-halign": "left", "text-valign": "center", "text-margin-x": -5, "font-size": 10, "color": "firebrick" } },
-    { "data": { "id": "n15", "label": "≤50" }, "position": { "x": 100, "y": 200 }, "css": { "text-halign": "left", "text-valign": "center", "text-margin-x": -5, "font-size": 10, "color": "firebrick" } },
-    { "data": { "id": "n21" }, "position": { "x": 200, "y": 0 } },
-    { "data": { "id": "n22" }, "position": { "x": 200, "y": 50 } },
-    { "data": { "id": "n23" }, "position": { "x": 200, "y": 100 } },
-    { "data": { "id": "n24" }, "position": { "x": 200, "y": 150 } },
-    { "data": { "id": "n25" }, "position": { "x": 200, "y": 200 } },
-    { "data": { "id": "n31" }, "position": { "x": 300, "y": 0 } },
-    { "data": { "id": "n32" }, "position": { "x": 300, "y": 50 } },
-    { "data": { "id": "n33" }, "position": { "x": 300, "y": 100 } },
-    { "data": { "id": "n34" }, "position": { "x": 300, "y": 150 } },
-    { "data": { "id": "n35" }, "position": { "x": 300, "y": 200 } },
-    { "data": { "id": "n41", "label": "≤50" }, "position": { "x": 400, "y": 0 }, "css": { "text-halign": "right", "text-valign": "center", "text-margin-x": 5, "font-size": 10, "color": "firebrick" } },
-    { "data": { "id": "n42", "label": "≤60" }, "position": { "x": 400, "y": 50 }, "css": { "text-halign": "right", "text-valign": "center", "text-margin-x": 5, "font-size": 10, "color": "firebrick" } },
-    { "data": { "id": "n43", "label": "≤90" }, "position": { "x": 400, "y": 100 }, "css": { "text-halign": "right", "text-valign": "center", "text-margin-x": 5, "font-size": 10, "color": "firebrick" } },
-    { "data": { "id": "n44", "label": "≤70" }, "position": { "x": 400, "y": 150 }, "css": { "text-halign": "right", "text-valign": "center", "text-margin-x": 5, "font-size": 10, "color": "firebrick" } },
-    { "data": { "id": "n45", "label": "≤80" }, "position": { "x": 400, "y": 200 }, "css": { "text-halign": "right", "text-valign": "center", "text-margin-x": 5, "font-size": 10, "color": "firebrick" } }
+"unit": 90,
+"radius": 17,
+"nodes": [
+  {"id": "space", "x": 5, "y": -1, "shape": "rect", "w": 1, "h": 1, "label": "← space →", "class": "text"},
+  {"id": "time", "x": 0.6, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "← time →", "class": "text-rotated"},
+  {"id": "n11", "x": 2, "y": 4, "class": "fade"},
+  {"id": "n12", "x": 2, "y": 3, "class": "fade"},
+  {"id": "n13", "x": 2, "y": 2, "class": "fade"},
+  {"id": "n14", "x": 2, "y": 1, "class": "fade"},
+  {"id": "n15", "x": 2, "y": 0, "class": "fade"},
+  {"id": "n21", "x": 4, "y": 4, "class": "fade"},
+  {"id": "n22", "x": 4, "y": 3, "class": "fade"},
+  {"id": "n23", "x": 4, "y": 2, "class": "fade"},
+  {"id": "n24", "x": 4, "y": 1, "class": "fade"},
+  {"id": "n25", "x": 4, "y": 0, "class": "fade"},
+  {"id": "n31", "x": 6, "y": 4, "class": "fade"},
+  {"id": "n32", "x": 6, "y": 3, "class": "fade"},
+  {"id": "n33", "x": 6, "y": 2, "class": "fade"},
+  {"id": "n34", "x": 6, "y": 1, "class": "fade"},
+  {"id": "n35", "x": 6, "y": 0, "class": "fade"},
+  {"id": "n41", "x": 8, "y": 4, "class": "fade"},
+  {"id": "n42", "x": 8, "y": 3, "class": "fade"},
+  {"id": "n43", "x": 8, "y": 2, "class": "fade"},
+  {"id": "n44", "x": 8, "y": 1, "class": "fade"},
+  {"id": "n45", "x": 8, "y": 0, "class": "fade"},
+  {"id": "n11_label", "x": 1.45, "y": 4, "shape": "rect", "w": 1, "h": 1, "label": "≤70", "class": "text accent"},
+  {"id": "n12_label", "x": 1.45, "y": 3, "shape": "rect", "w": 1, "h": 1, "label": "≤80", "class": "text accent"},
+  {"id": "n13_label", "x": 1.45, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "≤60", "class": "text accent"},
+  {"id": "n14_label", "x": 1.45, "y": 1, "shape": "rect", "w": 1, "h": 1, "label": "≤90", "class": "text accent"},
+  {"id": "n15_label", "x": 1.45, "y": 0, "shape": "rect", "w": 1, "h": 1, "label": "≤50", "class": "text accent"},
+  {"id": "n41_label", "x": 8.55, "y": 4, "shape": "rect", "w": 1, "h": 1, "label": "≤50", "class": "text accent"},
+  {"id": "n42_label", "x": 8.55, "y": 3, "shape": "rect", "w": 1, "h": 1, "label": "≤60", "class": "text accent"},
+  {"id": "n43_label", "x": 8.55, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "≤90", "class": "text accent"},
+  {"id": "n44_label", "x": 8.55, "y": 1, "shape": "rect", "w": 1, "h": 1, "label": "≤70", "class": "text accent"},
+  {"id": "n45_label", "x": 8.55, "y": 0, "shape": "rect", "w": 1, "h": 1, "label": "≤80", "class": "text accent"}
 ],
-"edges": [    
-    { "data": { "id": "n11-n22", "source": "n11", "target": "n22" } },
-    { "data": { "id": "n22-n33", "source": "n22", "target": "n33" } },
-    { "data": { "id": "n33-n44", "source": "n33", "target": "n44" } },
-    { "data": { "id": "n12-n23", "source": "n12", "target": "n23" } },
-    { "data": { "id": "n22-n34", "source": "n23", "target": "n34" } },
-    { "data": { "id": "n33-n45", "source": "n34", "target": "n45" } },
-    { "data": { "id": "n21-n32", "source": "n21", "target": "n32" } },
-    { "data": { "id": "n31-n42", "source": "n31", "target": "n42" } },
-    { "data": { "id": "n32-n43", "source": "n32", "target": "n43" } },
-    { "data": { "id": "n13-n24", "source": "n13", "target": "n24" } },
-    { "data": { "id": "n24-n35", "source": "n24", "target": "n35" } },
-    { "data": { "id": "n14-n25", "source": "n14", "target": "n25" } },
-    { "data": { "id": "n11-n12", "source": "n11", "target": "n12" } },
-    { "data": { "id": "n12-n13", "source": "n12", "target": "n13" } },
-    { "data": { "id": "n13-n14", "source": "n13", "target": "n14" } },
-    { "data": { "id": "n14-n15", "source": "n14", "target": "n15" } },
-    { "data": { "id": "n21-n22", "source": "n21", "target": "n22" } },
-    { "data": { "id": "n22-n23", "source": "n22", "target": "n23" } },
-    { "data": { "id": "n23-n24", "source": "n23", "target": "n24" } },
-    { "data": { "id": "n24-n25", "source": "n24", "target": "n25" } },
-    { "data": { "id": "n31-n32", "source": "n31", "target": "n32" } },
-    { "data": { "id": "n32-n33", "source": "n32", "target": "n33" } },
-    { "data": { "id": "n33-n34", "source": "n33", "target": "n34" } },
-    { "data": { "id": "n34-n35", "source": "n34", "target": "n35" } },
-    { "data": { "id": "n41-n42", "source": "n41", "target": "n42" } },
-    { "data": { "id": "n42-n43", "source": "n42", "target": "n43" } },
-    { "data": { "id": "n43-n44", "source": "n43", "target": "n44" } },
-    { "data": { "id": "n44-n45", "source": "n44", "target": "n45" } }
+"arcs": [
+  {"from": "n11", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n44", "class": "fade"},
+  {"from": "n12", "to": "n23", "class": "fade"},
+  {"from": "n23", "to": "n34", "class": "fade"},
+  {"from": "n34", "to": "n45", "class": "fade"},
+  {"from": "n21", "to": "n32", "class": "fade"},
+  {"from": "n31", "to": "n42", "class": "fade"},
+  {"from": "n32", "to": "n43", "class": "fade"},
+  {"from": "n13", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n35", "class": "fade"},
+  {"from": "n14", "to": "n25", "class": "fade"},
+  {"from": "n11", "to": "n12", "class": "fade"},
+  {"from": "n12", "to": "n13", "class": "fade"},
+  {"from": "n13", "to": "n14", "class": "fade"},
+  {"from": "n14", "to": "n15", "class": "fade"},
+  {"from": "n21", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n23", "class": "fade"},
+  {"from": "n23", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n25", "class": "fade"},
+  {"from": "n31", "to": "n32", "class": "fade"},
+  {"from": "n32", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n34", "class": "fade"},
+  {"from": "n34", "to": "n35", "class": "fade"},
+  {"from": "n41", "to": "n42", "class": "fade"},
+  {"from": "n42", "to": "n43", "class": "fade"},
+  {"from": "n43", "to": "n44", "class": "fade"},
+  {"from": "n44", "to": "n45", "class": "fade"}
 ]
 }
 -->
@@ -750,73 +972,75 @@ Suppose we have upper bounds on supply and demand as shown below.
 
 We can use dummy nodes and arcs to model the upper bounds.
 
-<div class="graph" style="height: 500px; width: 1280px;">
+<div class="netflow" style="--nf-arc-font: 0.55em;">
 <!--
 {
-"nodes": [    
-    { "data": { "id": "source" }, "position": { "x": 0, "y": 100 }, "classes": "highlight"},
-    { "data": { "id": "sink" }, "position": { "x": 500, "y": 100 }, "classes": "highlight"},
-    { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 } },
-    { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 } },
-    { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
-    { "data": { "id": "n14" }, "position": { "x": 100, "y": 150 } },
-    { "data": { "id": "n15" }, "position": { "x": 100, "y": 200 } },
-    { "data": { "id": "n21" }, "position": { "x": 200, "y": 0 } },
-    { "data": { "id": "n22" }, "position": { "x": 200, "y": 50 } },
-    { "data": { "id": "n23" }, "position": { "x": 200, "y": 100 } },
-    { "data": { "id": "n24" }, "position": { "x": 200, "y": 150 } },
-    { "data": { "id": "n25" }, "position": { "x": 200, "y": 200 } },
-    { "data": { "id": "n31" }, "position": { "x": 300, "y": 0 } },
-    { "data": { "id": "n32" }, "position": { "x": 300, "y": 50 } },
-    { "data": { "id": "n33" }, "position": { "x": 300, "y": 100 } },
-    { "data": { "id": "n34" }, "position": { "x": 300, "y": 150 } },
-    { "data": { "id": "n35" }, "position": { "x": 300, "y": 200 } },
-    { "data": { "id": "n41" }, "position": { "x": 400, "y": 0 } },
-    { "data": { "id": "n42" }, "position": { "x": 400, "y": 50 } },
-    { "data": { "id": "n43" }, "position": { "x": 400, "y": 100 } },
-    { "data": { "id": "n44" }, "position": { "x": 400, "y": 150 } },
-    { "data": { "id": "n45" }, "position": { "x": 400, "y": 200 } }
+"unit": 90,
+"radius": 17,
+"nodes": [
+  {"id": "source", "x": 0, "y": 2},
+  {"id": "sink", "x": 10, "y": 2},
+  {"id": "n11", "x": 2, "y": 4, "class": "fade"},
+  {"id": "n12", "x": 2, "y": 3, "class": "fade"},
+  {"id": "n13", "x": 2, "y": 2, "class": "fade"},
+  {"id": "n14", "x": 2, "y": 1, "class": "fade"},
+  {"id": "n15", "x": 2, "y": 0, "class": "fade"},
+  {"id": "n21", "x": 4, "y": 4, "class": "fade"},
+  {"id": "n22", "x": 4, "y": 3, "class": "fade"},
+  {"id": "n23", "x": 4, "y": 2, "class": "fade"},
+  {"id": "n24", "x": 4, "y": 1, "class": "fade"},
+  {"id": "n25", "x": 4, "y": 0, "class": "fade"},
+  {"id": "n31", "x": 6, "y": 4, "class": "fade"},
+  {"id": "n32", "x": 6, "y": 3, "class": "fade"},
+  {"id": "n33", "x": 6, "y": 2, "class": "fade"},
+  {"id": "n34", "x": 6, "y": 1, "class": "fade"},
+  {"id": "n35", "x": 6, "y": 0, "class": "fade"},
+  {"id": "n41", "x": 8, "y": 4, "class": "fade"},
+  {"id": "n42", "x": 8, "y": 3, "class": "fade"},
+  {"id": "n43", "x": 8, "y": 2, "class": "fade"},
+  {"id": "n44", "x": 8, "y": 1, "class": "fade"},
+  {"id": "n45", "x": 8, "y": 0, "class": "fade"}
 ],
-"edges": [    
-    { "data": { "id": "sink-source", "source": "sink", "target": "source", "label": "(0,0,∞)", "curve": -400 }, "classes": "highlight", "css": { "font-size": 10} },
-    { "data": { "id": "source-n11", "source": "source", "target": "n11", "label": "(•,0,70)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "source-n12", "source": "source", "target": "n12", "label": "(•,0,80)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "source-n13", "source": "source", "target": "n13", "label": "(•,0,60)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "source-n14", "source": "source", "target": "n14", "label": "(•,0,90)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "source-n15", "source": "source", "target": "n15", "label": "(•,0,50)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "n41-sink", "source": "n41", "target": "sink", "label": "(•,0,50)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "n42-sink", "source": "n42", "target": "sink", "label": "(•,0,60)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "n43-sink", "source": "n43", "target": "sink", "label": "(•,0,90)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "n44-sink", "source": "n44", "target": "sink", "label": "(•,0,70)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "n45-sink", "source": "n45", "target": "sink", "label": "(•,0,80)" }, "classes": "highlight", "css": { "font-size": 10 } },
-    { "data": { "id": "n11-n22", "source": "n11", "target": "n22" } },
-    { "data": { "id": "n22-n33", "source": "n22", "target": "n33" } },
-    { "data": { "id": "n33-n44", "source": "n33", "target": "n44" } },
-    { "data": { "id": "n12-n23", "source": "n12", "target": "n23" } },
-    { "data": { "id": "n22-n34", "source": "n23", "target": "n34" } },
-    { "data": { "id": "n33-n45", "source": "n34", "target": "n45" } },
-    { "data": { "id": "n21-n32", "source": "n21", "target": "n32" } },
-    { "data": { "id": "n31-n42", "source": "n31", "target": "n42" } },
-    { "data": { "id": "n32-n43", "source": "n32", "target": "n43" } },
-    { "data": { "id": "n13-n24", "source": "n13", "target": "n24" } },
-    { "data": { "id": "n24-n35", "source": "n24", "target": "n35" } },
-    { "data": { "id": "n14-n25", "source": "n14", "target": "n25" } },
-    { "data": { "id": "n11-n12", "source": "n11", "target": "n12" } },
-    { "data": { "id": "n12-n13", "source": "n12", "target": "n13" } },
-    { "data": { "id": "n13-n14", "source": "n13", "target": "n14" } },
-    { "data": { "id": "n14-n15", "source": "n14", "target": "n15" } },
-    { "data": { "id": "n21-n22", "source": "n21", "target": "n22" } },
-    { "data": { "id": "n22-n23", "source": "n22", "target": "n23" } },
-    { "data": { "id": "n23-n24", "source": "n23", "target": "n24" } },
-    { "data": { "id": "n24-n25", "source": "n24", "target": "n25" } },
-    { "data": { "id": "n31-n32", "source": "n31", "target": "n32" } },
-    { "data": { "id": "n32-n33", "source": "n32", "target": "n33" } },
-    { "data": { "id": "n33-n34", "source": "n33", "target": "n34" } },
-    { "data": { "id": "n34-n35", "source": "n34", "target": "n35" } },
-    { "data": { "id": "n41-n42", "source": "n41", "target": "n42" } },
-    { "data": { "id": "n42-n43", "source": "n42", "target": "n43" } },
-    { "data": { "id": "n43-n44", "source": "n43", "target": "n44" } },
-    { "data": { "id": "n44-n45", "source": "n44", "target": "n45" } }
+"arcs": [
+  {"from": "sink", "to": "source", "bend": 60, "looseness": 1.2, "label": "(0,0,∞)"},
+  {"from": "source", "to": "n11", "label": "(•,0,70)", "pos": 0.7},
+  {"from": "source", "to": "n12", "label": "(•,0,80)", "pos": 0.7},
+  {"from": "source", "to": "n13", "label": "(•,0,60)", "pos": 0.7},
+  {"from": "source", "to": "n14", "label": "(•,0,90)", "pos": 0.7},
+  {"from": "source", "to": "n15", "label": "(•,0,50)", "pos": 0.7},
+  {"from": "n41", "to": "sink", "label": "(•,0,50)", "pos": 0.3},
+  {"from": "n42", "to": "sink", "label": "(•,0,60)", "pos": 0.3},
+  {"from": "n43", "to": "sink", "label": "(•,0,90)", "pos": 0.3},
+  {"from": "n44", "to": "sink", "label": "(•,0,70)", "pos": 0.3},
+  {"from": "n45", "to": "sink", "label": "(•,0,80)", "pos": 0.3},
+  {"from": "n11", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n44", "class": "fade"},
+  {"from": "n12", "to": "n23", "class": "fade"},
+  {"from": "n23", "to": "n34", "class": "fade"},
+  {"from": "n34", "to": "n45", "class": "fade"},
+  {"from": "n21", "to": "n32", "class": "fade"},
+  {"from": "n31", "to": "n42", "class": "fade"},
+  {"from": "n32", "to": "n43", "class": "fade"},
+  {"from": "n13", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n35", "class": "fade"},
+  {"from": "n14", "to": "n25", "class": "fade"},
+  {"from": "n11", "to": "n12", "class": "fade"},
+  {"from": "n12", "to": "n13", "class": "fade"},
+  {"from": "n13", "to": "n14", "class": "fade"},
+  {"from": "n14", "to": "n15", "class": "fade"},
+  {"from": "n21", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n23", "class": "fade"},
+  {"from": "n23", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n25", "class": "fade"},
+  {"from": "n31", "to": "n32", "class": "fade"},
+  {"from": "n32", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n34", "class": "fade"},
+  {"from": "n34", "to": "n35", "class": "fade"},
+  {"from": "n41", "to": "n42", "class": "fade"},
+  {"from": "n42", "to": "n43", "class": "fade"},
+  {"from": "n43", "to": "n44", "class": "fade"},
+  {"from": "n44", "to": "n45", "class": "fade"}
 ]
 }
 -->
@@ -828,62 +1052,64 @@ We can use dummy nodes and arcs to model the upper bounds.
 
 Suppose we can fulfil the demand of any period at a later point in time and have to pay a penalty of $p$ for each day of the delay.
 
-<div class="graph" style="height: 500px; width: 1280px;">
+<div class="netflow" style="--nf-arc-font: 0.55em;">
 <!--
 {
-"nodes": [    
-    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
-    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
-    { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 } },
-    { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 } },
-    { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
-    { "data": { "id": "n14" }, "position": { "x": 100, "y": 150 } },
-    { "data": { "id": "n15" }, "position": { "x": 100, "y": 200 } },
-    { "data": { "id": "n21" }, "position": { "x": 200, "y": 0 } },
-    { "data": { "id": "n22" }, "position": { "x": 200, "y": 50 } },
-    { "data": { "id": "n23" }, "position": { "x": 200, "y": 100 } },
-    { "data": { "id": "n24" }, "position": { "x": 200, "y": 150 } },
-    { "data": { "id": "n25" }, "position": { "x": 200, "y": 200 } },
-    { "data": { "id": "n31" }, "position": { "x": 300, "y": 0 } },
-    { "data": { "id": "n32" }, "position": { "x": 300, "y": 50 } },
-    { "data": { "id": "n33" }, "position": { "x": 300, "y": 100 } },
-    { "data": { "id": "n34" }, "position": { "x": 300, "y": 150 } },
-    { "data": { "id": "n35" }, "position": { "x": 300, "y": 200 } },
-    { "data": { "id": "n41" }, "position": { "x": 400, "y": 0 }, "classes": "highlight" },
-    { "data": { "id": "n42" }, "position": { "x": 400, "y": 50 }, "classes": "highlight" },
-    { "data": { "id": "n43" }, "position": { "x": 400, "y": 100 }, "classes": "highlight" },
-    { "data": { "id": "n44" }, "position": { "x": 400, "y": 150 }, "classes": "highlight" },
-    { "data": { "id": "n45" }, "position": { "x": 400, "y": 200 }, "classes": "highlight" }
+"unit": 90,
+"radius": 17,
+"nodes": [
+  {"id": "space", "x": 5, "y": -1, "shape": "rect", "w": 1, "h": 1, "label": "← space →", "class": "text"},
+  {"id": "time", "x": 0.6, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "← time →", "class": "text-rotated"},
+  {"id": "n11", "x": 2, "y": 4, "class": "fade"},
+  {"id": "n12", "x": 2, "y": 3, "class": "fade"},
+  {"id": "n13", "x": 2, "y": 2, "class": "fade"},
+  {"id": "n14", "x": 2, "y": 1, "class": "fade"},
+  {"id": "n15", "x": 2, "y": 0, "class": "fade"},
+  {"id": "n21", "x": 4, "y": 4, "class": "fade"},
+  {"id": "n22", "x": 4, "y": 3, "class": "fade"},
+  {"id": "n23", "x": 4, "y": 2, "class": "fade"},
+  {"id": "n24", "x": 4, "y": 1, "class": "fade"},
+  {"id": "n25", "x": 4, "y": 0, "class": "fade"},
+  {"id": "n31", "x": 6, "y": 4, "class": "fade"},
+  {"id": "n32", "x": 6, "y": 3, "class": "fade"},
+  {"id": "n33", "x": 6, "y": 2, "class": "fade"},
+  {"id": "n34", "x": 6, "y": 1, "class": "fade"},
+  {"id": "n35", "x": 6, "y": 0, "class": "fade"},
+  {"id": "n41", "x": 8, "y": 4},
+  {"id": "n42", "x": 8, "y": 3},
+  {"id": "n43", "x": 8, "y": 2},
+  {"id": "n44", "x": 8, "y": 1},
+  {"id": "n45", "x": 8, "y": 0}
 ],
-"edges": [    
-    { "data": { "id": "n11-n22", "source": "n11", "target": "n22" } },
-    { "data": { "id": "n22-n33", "source": "n22", "target": "n33" } },
-    { "data": { "id": "n33-n44", "source": "n33", "target": "n44" } },
-    { "data": { "id": "n12-n23", "source": "n12", "target": "n23" } },
-    { "data": { "id": "n22-n34", "source": "n23", "target": "n34" } },
-    { "data": { "id": "n33-n45", "source": "n34", "target": "n45" } },
-    { "data": { "id": "n21-n32", "source": "n21", "target": "n32" } },
-    { "data": { "id": "n31-n42", "source": "n31", "target": "n42" } },
-    { "data": { "id": "n32-n43", "source": "n32", "target": "n43" } },
-    { "data": { "id": "n13-n24", "source": "n13", "target": "n24" } },
-    { "data": { "id": "n24-n35", "source": "n24", "target": "n35" } },
-    { "data": { "id": "n14-n25", "source": "n14", "target": "n25" } },
-    { "data": { "id": "n11-n12", "source": "n11", "target": "n12" } },
-    { "data": { "id": "n12-n13", "source": "n12", "target": "n13" } },
-    { "data": { "id": "n13-n14", "source": "n13", "target": "n14" } },
-    { "data": { "id": "n14-n15", "source": "n14", "target": "n15" } },
-    { "data": { "id": "n21-n22", "source": "n21", "target": "n22" } },
-    { "data": { "id": "n22-n23", "source": "n22", "target": "n23" } },
-    { "data": { "id": "n23-n24", "source": "n23", "target": "n24" } },
-    { "data": { "id": "n24-n25", "source": "n24", "target": "n25" } },
-    { "data": { "id": "n31-n32", "source": "n31", "target": "n32" } },
-    { "data": { "id": "n32-n33", "source": "n32", "target": "n33" } },
-    { "data": { "id": "n33-n34", "source": "n33", "target": "n34" } },
-    { "data": { "id": "n34-n35", "source": "n34", "target": "n35" } },
-    { "data": { "id": "n41-n42", "source": "n41", "target": "n42" } },
-    { "data": { "id": "n42-n43", "source": "n42", "target": "n43" } },
-    { "data": { "id": "n43-n44", "source": "n43", "target": "n44" } },
-    { "data": { "id": "n44-n45", "source": "n44", "target": "n45" } }
+"arcs": [
+  {"from": "n11", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n44", "class": "fade"},
+  {"from": "n12", "to": "n23", "class": "fade"},
+  {"from": "n23", "to": "n34", "class": "fade"},
+  {"from": "n34", "to": "n45", "class": "fade"},
+  {"from": "n21", "to": "n32", "class": "fade"},
+  {"from": "n31", "to": "n42", "class": "fade"},
+  {"from": "n32", "to": "n43", "class": "fade"},
+  {"from": "n13", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n35", "class": "fade"},
+  {"from": "n14", "to": "n25", "class": "fade"},
+  {"from": "n11", "to": "n12", "class": "fade"},
+  {"from": "n12", "to": "n13", "class": "fade"},
+  {"from": "n13", "to": "n14", "class": "fade"},
+  {"from": "n14", "to": "n15", "class": "fade"},
+  {"from": "n21", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n23", "class": "fade"},
+  {"from": "n23", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n25", "class": "fade"},
+  {"from": "n31", "to": "n32", "class": "fade"},
+  {"from": "n32", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n34", "class": "fade"},
+  {"from": "n34", "to": "n35", "class": "fade"},
+  {"from": "n41", "to": "n42", "class": "fade"},
+  {"from": "n42", "to": "n43", "class": "fade"},
+  {"from": "n43", "to": "n44", "class": "fade"},
+  {"from": "n44", "to": "n45", "class": "fade"}
 ]
 }
 -->
@@ -895,66 +1121,68 @@ Suppose we can fulfil the demand of any period at a later point in time and have
 
 We can use arcs traveling backwards in time to consider backlogging.
 
-<div class="graph" style="height: 500px; width: 1280px;">
+<div class="netflow" style="--nf-arc-font: 0.55em;">
 <!--
 {
-"nodes": [    
-    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
-    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
-    { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 } },
-    { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 } },
-    { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
-    { "data": { "id": "n14" }, "position": { "x": 100, "y": 150 } },
-    { "data": { "id": "n15" }, "position": { "x": 100, "y": 200 } },
-    { "data": { "id": "n21" }, "position": { "x": 200, "y": 0 } },
-    { "data": { "id": "n22" }, "position": { "x": 200, "y": 50 } },
-    { "data": { "id": "n23" }, "position": { "x": 200, "y": 100 } },
-    { "data": { "id": "n24" }, "position": { "x": 200, "y": 150 } },
-    { "data": { "id": "n25" }, "position": { "x": 200, "y": 200 } },
-    { "data": { "id": "n31" }, "position": { "x": 300, "y": 0 } },
-    { "data": { "id": "n32" }, "position": { "x": 300, "y": 50 } },
-    { "data": { "id": "n33" }, "position": { "x": 300, "y": 100 } },
-    { "data": { "id": "n34" }, "position": { "x": 300, "y": 150 } },
-    { "data": { "id": "n35" }, "position": { "x": 300, "y": 200 } },
-    { "data": { "id": "n41" }, "position": { "x": 400, "y": 0 }, "classes": "highlight" },
-    { "data": { "id": "n42" }, "position": { "x": 400, "y": 50 }, "classes": "highlight" },
-    { "data": { "id": "n43" }, "position": { "x": 400, "y": 100 }, "classes": "highlight" },
-    { "data": { "id": "n44" }, "position": { "x": 400, "y": 150 }, "classes": "highlight" },
-    { "data": { "id": "n45" }, "position": { "x": 400, "y": 200 }, "classes": "highlight" }
+"unit": 90,
+"radius": 17,
+"nodes": [
+  {"id": "space", "x": 5, "y": -1, "shape": "rect", "w": 1, "h": 1, "label": "← space →", "class": "text"},
+  {"id": "time", "x": 0.6, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "← time →", "class": "text-rotated"},
+  {"id": "n11", "x": 2, "y": 4, "class": "fade"},
+  {"id": "n12", "x": 2, "y": 3, "class": "fade"},
+  {"id": "n13", "x": 2, "y": 2, "class": "fade"},
+  {"id": "n14", "x": 2, "y": 1, "class": "fade"},
+  {"id": "n15", "x": 2, "y": 0, "class": "fade"},
+  {"id": "n21", "x": 4, "y": 4, "class": "fade"},
+  {"id": "n22", "x": 4, "y": 3, "class": "fade"},
+  {"id": "n23", "x": 4, "y": 2, "class": "fade"},
+  {"id": "n24", "x": 4, "y": 1, "class": "fade"},
+  {"id": "n25", "x": 4, "y": 0, "class": "fade"},
+  {"id": "n31", "x": 6, "y": 4, "class": "fade"},
+  {"id": "n32", "x": 6, "y": 3, "class": "fade"},
+  {"id": "n33", "x": 6, "y": 2, "class": "fade"},
+  {"id": "n34", "x": 6, "y": 1, "class": "fade"},
+  {"id": "n35", "x": 6, "y": 0, "class": "fade"},
+  {"id": "n41", "x": 8, "y": 4},
+  {"id": "n42", "x": 8, "y": 3},
+  {"id": "n43", "x": 8, "y": 2},
+  {"id": "n44", "x": 8, "y": 1},
+  {"id": "n45", "x": 8, "y": 0}
 ],
-"edges": [    
-    { "data": { "id": "n11-n22", "source": "n11", "target": "n22" } },
-    { "data": { "id": "n22-n33", "source": "n22", "target": "n33" } },
-    { "data": { "id": "n33-n44", "source": "n33", "target": "n44" } },
-    { "data": { "id": "n12-n23", "source": "n12", "target": "n23" } },
-    { "data": { "id": "n22-n34", "source": "n23", "target": "n34" } },
-    { "data": { "id": "n33-n45", "source": "n34", "target": "n45" } },
-    { "data": { "id": "n21-n32", "source": "n21", "target": "n32" } },
-    { "data": { "id": "n31-n42", "source": "n31", "target": "n42" } },
-    { "data": { "id": "n32-n43", "source": "n32", "target": "n43" } },
-    { "data": { "id": "n13-n24", "source": "n13", "target": "n24" } },
-    { "data": { "id": "n24-n35", "source": "n24", "target": "n35" } },
-    { "data": { "id": "n14-n25", "source": "n14", "target": "n25" } },
-    { "data": { "id": "n11-n12", "source": "n11", "target": "n12" } },
-    { "data": { "id": "n12-n13", "source": "n12", "target": "n13" } },
-    { "data": { "id": "n13-n14", "source": "n13", "target": "n14" } },
-    { "data": { "id": "n14-n15", "source": "n14", "target": "n15" } },
-    { "data": { "id": "n21-n22", "source": "n21", "target": "n22" } },
-    { "data": { "id": "n22-n23", "source": "n22", "target": "n23" } },
-    { "data": { "id": "n23-n24", "source": "n23", "target": "n24" } },
-    { "data": { "id": "n24-n25", "source": "n24", "target": "n25" } },
-    { "data": { "id": "n31-n32", "source": "n31", "target": "n32" } },
-    { "data": { "id": "n32-n33", "source": "n32", "target": "n33" } },
-    { "data": { "id": "n33-n34", "source": "n33", "target": "n34" } },
-    { "data": { "id": "n34-n35", "source": "n34", "target": "n35" } },
-    { "data": { "id": "n41-n42", "source": "n41", "target": "n42", "curve": 0 } },
-    { "data": { "id": "n42-n43", "source": "n42", "target": "n43", "curve": 0 } },
-    { "data": { "id": "n43-n44", "source": "n43", "target": "n44", "curve": 0 } },
-    { "data": { "id": "n44-n45", "source": "n44", "target": "n45", "curve": 0 } },
-    { "data": { "id": "n42-n41", "source": "n42", "target": "n41", "label": "(p,0,∞)", "curve": 20 }, "classes": "highlight", "css": { "font-size": 10, "text-rotation": "none","text-halign": "right", "text-valign": "center", "text-margin-x": 18, "text-margin-y": 0 } },
-    { "data": { "id": "n43-n42", "source": "n43", "target": "n42", "label": "(p,0,∞)", "curve": 20 }, "classes": "highlight", "css": { "font-size": 10, "text-rotation": "none","text-halign": "right", "text-valign": "center", "text-margin-x": 18, "text-margin-y": 0 } },
-    { "data": { "id": "n44-n43", "source": "n44", "target": "n43", "label": "(p,0,∞)", "curve": 20 }, "classes": "highlight", "css": { "font-size": 10, "text-rotation": "none","text-halign": "right", "text-valign": "center", "text-margin-x": 18, "text-margin-y": 0 } },
-    { "data": { "id": "n45-n44", "source": "n45", "target": "n44", "label": "(p,0,∞)", "curve": 20 }, "classes": "highlight", "css": { "font-size": 10, "text-rotation": "none","text-halign": "right", "text-valign": "center", "text-margin-x": 18, "text-margin-y": 0 } }
+"arcs": [
+  {"from": "n11", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n44", "class": "fade"},
+  {"from": "n12", "to": "n23", "class": "fade"},
+  {"from": "n23", "to": "n34", "class": "fade"},
+  {"from": "n34", "to": "n45", "class": "fade"},
+  {"from": "n21", "to": "n32", "class": "fade"},
+  {"from": "n31", "to": "n42", "class": "fade"},
+  {"from": "n32", "to": "n43", "class": "fade"},
+  {"from": "n13", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n35", "class": "fade"},
+  {"from": "n14", "to": "n25", "class": "fade"},
+  {"from": "n11", "to": "n12", "class": "fade"},
+  {"from": "n12", "to": "n13", "class": "fade"},
+  {"from": "n13", "to": "n14", "class": "fade"},
+  {"from": "n14", "to": "n15", "class": "fade"},
+  {"from": "n21", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n23", "class": "fade"},
+  {"from": "n23", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n25", "class": "fade"},
+  {"from": "n31", "to": "n32", "class": "fade"},
+  {"from": "n32", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n34", "class": "fade"},
+  {"from": "n34", "to": "n35", "class": "fade"},
+  {"from": "n41", "to": "n42", "class": "fade"},
+  {"from": "n42", "to": "n43", "class": "fade"},
+  {"from": "n43", "to": "n44", "class": "fade"},
+  {"from": "n44", "to": "n45", "class": "fade"},
+  {"from": "n42", "to": "n41", "bend": -30, "label": "(p,0,∞)", "swap": true},
+  {"from": "n43", "to": "n42", "bend": -30, "label": "(p,0,∞)", "swap": true},
+  {"from": "n44", "to": "n43", "bend": -30, "label": "(p,0,∞)", "swap": true},
+  {"from": "n45", "to": "n44", "bend": -30, "label": "(p,0,∞)", "swap": true}
 ]
 }
 -->
@@ -967,68 +1195,68 @@ We can use arcs traveling backwards in time to consider backlogging.
 
 Suppose we want to restrict backlogging to at most one day.
 
-<div class="graph" style="height: 500px; width: 1280px;">
+<div class="netflow" style="--nf-arc-font: 0.55em;">
 <!--
 {
-"nodes": [    
-    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
-    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
-    { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 } },
-    { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 } },
-    { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
-    { "data": { "id": "n14" }, "position": { "x": 100, "y": 150 } },
-    { "data": { "id": "n15" }, "position": { "x": 100, "y": 200 } },
-    { "data": { "id": "n21" }, "position": { "x": 200, "y": 0 } },
-    { "data": { "id": "n22" }, "position": { "x": 200, "y": 50 } },
-    { "data": { "id": "n23" }, "position": { "x": 200, "y": 100 } },
-    { "data": { "id": "n24" }, "position": { "x": 200, "y": 150 } },
-    { "data": { "id": "n25" }, "position": { "x": 200, "y": 200 } },
-    { "data": { "id": "n31" }, "position": { "x": 300, "y": 0 } },
-    { "data": { "id": "n32" }, "position": { "x": 300, "y": 50 } },
-    { "data": { "id": "n33" }, "position": { "x": 300, "y": 100 } },
-    { "data": { "id": "n34" }, "position": { "x": 300, "y": 150 } },
-    { "data": { "id": "n35" }, "position": { "x": 300, "y": 200 } },
-    { "data": { "id": "n41" }, "position": { "x": 400, "y": 0 }, "classes": "highlight" },
-    { "data": { "id": "n42" }, "position": { "x": 400, "y": 50 }, "classes": "highlight" },
-    { "data": { "id": "n43" }, "position": { "x": 400, "y": 100 }, "classes": "highlight" },
-    { "data": { "id": "n44" }, "position": { "x": 400, "y": 150 }, "classes": "highlight" },
-    { "data": { "id": "n45" }, "position": { "x": 400, "y": 200 }, "classes": "highlight" }
+"unit": 90,
+"radius": 17,
+"nodes": [
+  {"id": "space", "x": 5, "y": -1, "shape": "rect", "w": 1, "h": 1, "label": "← space →", "class": "text"},
+  {"id": "time", "x": 0.6, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "← time →", "class": "text-rotated"},
+  {"id": "n11", "x": 2, "y": 4, "class": "fade"},
+  {"id": "n12", "x": 2, "y": 3, "class": "fade"},
+  {"id": "n13", "x": 2, "y": 2, "class": "fade"},
+  {"id": "n14", "x": 2, "y": 1, "class": "fade"},
+  {"id": "n15", "x": 2, "y": 0, "class": "fade"},
+  {"id": "n21", "x": 4, "y": 4, "class": "fade"},
+  {"id": "n22", "x": 4, "y": 3, "class": "fade"},
+  {"id": "n23", "x": 4, "y": 2, "class": "fade"},
+  {"id": "n24", "x": 4, "y": 1, "class": "fade"},
+  {"id": "n25", "x": 4, "y": 0, "class": "fade"},
+  {"id": "n31", "x": 6, "y": 4, "class": "fade"},
+  {"id": "n32", "x": 6, "y": 3, "class": "fade"},
+  {"id": "n33", "x": 6, "y": 2, "class": "fade"},
+  {"id": "n34", "x": 6, "y": 1, "class": "fade"},
+  {"id": "n35", "x": 6, "y": 0, "class": "fade"},
+  {"id": "n41", "x": 8, "y": 4},
+  {"id": "n42", "x": 8, "y": 3},
+  {"id": "n43", "x": 8, "y": 2},
+  {"id": "n44", "x": 8, "y": 1},
+  {"id": "n45", "x": 8, "y": 0}
 ],
-"edges": [    
-    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
-    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
-    { "data": { "id": "n11-n22", "source": "n11", "target": "n22" } },
-    { "data": { "id": "n22-n33", "source": "n22", "target": "n33" } },
-    { "data": { "id": "n33-n44", "source": "n33", "target": "n44" } },
-    { "data": { "id": "n12-n23", "source": "n12", "target": "n23" } },
-    { "data": { "id": "n22-n34", "source": "n23", "target": "n34" } },
-    { "data": { "id": "n33-n45", "source": "n34", "target": "n45" } },
-    { "data": { "id": "n21-n32", "source": "n21", "target": "n32" } },
-    { "data": { "id": "n31-n42", "source": "n31", "target": "n42" } },
-    { "data": { "id": "n32-n43", "source": "n32", "target": "n43" } },
-    { "data": { "id": "n13-n24", "source": "n13", "target": "n24" } },
-    { "data": { "id": "n24-n35", "source": "n24", "target": "n35" } },
-    { "data": { "id": "n14-n25", "source": "n14", "target": "n25" } },
-    { "data": { "id": "n11-n12", "source": "n11", "target": "n12" } },
-    { "data": { "id": "n12-n13", "source": "n12", "target": "n13" } },
-    { "data": { "id": "n13-n14", "source": "n13", "target": "n14" } },
-    { "data": { "id": "n14-n15", "source": "n14", "target": "n15" } },
-    { "data": { "id": "n21-n22", "source": "n21", "target": "n22" } },
-    { "data": { "id": "n22-n23", "source": "n22", "target": "n23" } },
-    { "data": { "id": "n23-n24", "source": "n23", "target": "n24" } },
-    { "data": { "id": "n24-n25", "source": "n24", "target": "n25" } },
-    { "data": { "id": "n31-n32", "source": "n31", "target": "n32" } },
-    { "data": { "id": "n32-n33", "source": "n32", "target": "n33" } },
-    { "data": { "id": "n33-n34", "source": "n33", "target": "n34" } },
-    { "data": { "id": "n34-n35", "source": "n34", "target": "n35" } },
-    { "data": { "id": "n41-n42", "source": "n41", "target": "n42", "curve": 0 } },
-    { "data": { "id": "n42-n43", "source": "n42", "target": "n43", "curve": 0 } },
-    { "data": { "id": "n43-n44", "source": "n43", "target": "n44", "curve": 0 } },
-    { "data": { "id": "n44-n45", "source": "n44", "target": "n45", "curve": 0 } },
-    { "data": { "id": "n42-n41", "source": "n42", "target": "n41", "label": "(p,0,∞)", "curve": 20 }, "classes": "highlight", "css": { "font-size": 10, "text-rotation": "none","text-halign": "right", "text-valign": "center", "text-margin-x": 18, "text-margin-y": 0 } },
-    { "data": { "id": "n43-n42", "source": "n43", "target": "n42", "label": "(p,0,∞)", "curve": 20 }, "classes": "highlight", "css": { "font-size": 10, "text-rotation": "none","text-halign": "right", "text-valign": "center", "text-margin-x": 18, "text-margin-y": 0 } },
-    { "data": { "id": "n44-n43", "source": "n44", "target": "n43", "label": "(p,0,∞)", "curve": 20 }, "classes": "highlight", "css": { "font-size": 10, "text-rotation": "none","text-halign": "right", "text-valign": "center", "text-margin-x": 18, "text-margin-y": 0 } },
-    { "data": { "id": "n45-n44", "source": "n45", "target": "n44", "label": "(p,0,∞)", "curve": 20 }, "classes": "highlight", "css": { "font-size": 10, "text-rotation": "none","text-halign": "right", "text-valign": "center", "text-margin-x": 18, "text-margin-y": 0 } }
+"arcs": [
+  {"from": "n11", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n44", "class": "fade"},
+  {"from": "n12", "to": "n23", "class": "fade"},
+  {"from": "n23", "to": "n34", "class": "fade"},
+  {"from": "n34", "to": "n45", "class": "fade"},
+  {"from": "n21", "to": "n32", "class": "fade"},
+  {"from": "n31", "to": "n42", "class": "fade"},
+  {"from": "n32", "to": "n43", "class": "fade"},
+  {"from": "n13", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n35", "class": "fade"},
+  {"from": "n14", "to": "n25", "class": "fade"},
+  {"from": "n11", "to": "n12", "class": "fade"},
+  {"from": "n12", "to": "n13", "class": "fade"},
+  {"from": "n13", "to": "n14", "class": "fade"},
+  {"from": "n14", "to": "n15", "class": "fade"},
+  {"from": "n21", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n23", "class": "fade"},
+  {"from": "n23", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n25", "class": "fade"},
+  {"from": "n31", "to": "n32", "class": "fade"},
+  {"from": "n32", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n34", "class": "fade"},
+  {"from": "n34", "to": "n35", "class": "fade"},
+  {"from": "n41", "to": "n42", "class": "fade"},
+  {"from": "n42", "to": "n43", "class": "fade"},
+  {"from": "n43", "to": "n44", "class": "fade"},
+  {"from": "n44", "to": "n45", "class": "fade"},
+  {"from": "n42", "to": "n41", "bend": -30, "label": "(p,0,∞)", "swap": true},
+  {"from": "n43", "to": "n42", "bend": -30, "label": "(p,0,∞)", "swap": true},
+  {"from": "n44", "to": "n43", "bend": -30, "label": "(p,0,∞)", "swap": true},
+  {"from": "n45", "to": "n44", "bend": -30, "label": "(p,0,∞)", "swap": true}
 ]
 }
 -->
@@ -1040,76 +1268,78 @@ Suppose we want to restrict backlogging to at most one day.
 
 We can split the demand nodes to consider backlogging of at most one day.
 
-<div class="graph" style="height: 500px; width: 1280px;">
+<div class="netflow" style="--nf-arc-font: 0.55em;">
 <!--
 {
-"nodes": [    
-    { "data": { "id": "space", "label": "← space →" }, "position": { "x": 250, "y": 250 }, "classes": "text" },
-    { "data": { "id": "time", "label": "← time →" }, "position": { "x": 50, "y": 100 }, "classes": "text-rotated" },
-    { "data": { "id": "n11" }, "position": { "x": 100, "y": 0 } },
-    { "data": { "id": "n12" }, "position": { "x": 100, "y": 50 } },
-    { "data": { "id": "n13" }, "position": { "x": 100, "y": 100 } },
-    { "data": { "id": "n14" }, "position": { "x": 100, "y": 150 } },
-    { "data": { "id": "n15" }, "position": { "x": 100, "y": 200 } },
-    { "data": { "id": "n21" }, "position": { "x": 200, "y": 0 } },
-    { "data": { "id": "n22" }, "position": { "x": 200, "y": 50 } },
-    { "data": { "id": "n23" }, "position": { "x": 200, "y": 100 } },
-    { "data": { "id": "n24" }, "position": { "x": 200, "y": 150 } },
-    { "data": { "id": "n25" }, "position": { "x": 200, "y": 200 } },
-    { "data": { "id": "n31" }, "position": { "x": 300, "y": 0 } },
-    { "data": { "id": "n32" }, "position": { "x": 300, "y": 50 } },
-    { "data": { "id": "n33" }, "position": { "x": 300, "y": 100 } },
-    { "data": { "id": "n34" }, "position": { "x": 300, "y": 150 } },
-    { "data": { "id": "n35" }, "position": { "x": 300, "y": 200 } },
-    { "data": { "id": "n41" }, "position": { "x": 400, "y": 0 }, "classes": "highlight" },
-    { "data": { "id": "n42" }, "position": { "x": 400, "y": 50 }, "classes": "highlight" },
-    { "data": { "id": "n43" }, "position": { "x": 400, "y": 100 }, "classes": "highlight" },
-    { "data": { "id": "n44" }, "position": { "x": 400, "y": 150 }, "classes": "highlight" },
-    { "data": { "id": "n45" }, "position": { "x": 400, "y": 200 }, "classes": "highlight" },
-    { "data": { "id": "n51" }, "position": { "x": 450, "y": 0 }, "classes": "highlight" },
-    { "data": { "id": "n52" }, "position": { "x": 450, "y": 50 }, "classes": "highlight" },
-    { "data": { "id": "n53" }, "position": { "x": 450, "y": 100 }, "classes": "highlight" },
-    { "data": { "id": "n54" }, "position": { "x": 450, "y": 150 }, "classes": "highlight" },
-    { "data": { "id": "n55" }, "position": { "x": 450, "y": 200 }, "classes": "highlight" }
+"unit": 90,
+"radius": 17,
+"nodes": [
+  {"id": "space", "x": 5, "y": -1, "shape": "rect", "w": 1, "h": 1, "label": "← space →", "class": "text"},
+  {"id": "time", "x": 0.6, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "← time →", "class": "text-rotated"},
+  {"id": "n11", "x": 2, "y": 4, "class": "fade"},
+  {"id": "n12", "x": 2, "y": 3, "class": "fade"},
+  {"id": "n13", "x": 2, "y": 2, "class": "fade"},
+  {"id": "n14", "x": 2, "y": 1, "class": "fade"},
+  {"id": "n15", "x": 2, "y": 0, "class": "fade"},
+  {"id": "n21", "x": 4, "y": 4, "class": "fade"},
+  {"id": "n22", "x": 4, "y": 3, "class": "fade"},
+  {"id": "n23", "x": 4, "y": 2, "class": "fade"},
+  {"id": "n24", "x": 4, "y": 1, "class": "fade"},
+  {"id": "n25", "x": 4, "y": 0, "class": "fade"},
+  {"id": "n31", "x": 6, "y": 4, "class": "fade"},
+  {"id": "n32", "x": 6, "y": 3, "class": "fade"},
+  {"id": "n33", "x": 6, "y": 2, "class": "fade"},
+  {"id": "n34", "x": 6, "y": 1, "class": "fade"},
+  {"id": "n35", "x": 6, "y": 0, "class": "fade"},
+  {"id": "n41", "x": 8, "y": 4},
+  {"id": "n42", "x": 8, "y": 3},
+  {"id": "n43", "x": 8, "y": 2},
+  {"id": "n44", "x": 8, "y": 1},
+  {"id": "n45", "x": 8, "y": 0},
+  {"id": "n51", "x": 9, "y": 4},
+  {"id": "n52", "x": 9, "y": 3},
+  {"id": "n53", "x": 9, "y": 2},
+  {"id": "n54", "x": 9, "y": 1},
+  {"id": "n55", "x": 9, "y": 0}
 ],
-"edges": [    
-    { "data": { "id": "n11-n22", "source": "n11", "target": "n22" } },
-    { "data": { "id": "n22-n33", "source": "n22", "target": "n33" } },
-    { "data": { "id": "n33-n44", "source": "n33", "target": "n44" } },
-    { "data": { "id": "n12-n23", "source": "n12", "target": "n23" } },
-    { "data": { "id": "n22-n34", "source": "n23", "target": "n34" } },
-    { "data": { "id": "n33-n45", "source": "n34", "target": "n45" } },
-    { "data": { "id": "n21-n32", "source": "n21", "target": "n32" } },
-    { "data": { "id": "n31-n42", "source": "n31", "target": "n42" } },
-    { "data": { "id": "n32-n43", "source": "n32", "target": "n43" } },
-    { "data": { "id": "n13-n24", "source": "n13", "target": "n24" } },
-    { "data": { "id": "n24-n35", "source": "n24", "target": "n35" } },
-    { "data": { "id": "n14-n25", "source": "n14", "target": "n25" } },
-    { "data": { "id": "n11-n12", "source": "n11", "target": "n12" } },
-    { "data": { "id": "n12-n13", "source": "n12", "target": "n13" } },
-    { "data": { "id": "n13-n14", "source": "n13", "target": "n14" } },
-    { "data": { "id": "n14-n15", "source": "n14", "target": "n15" } },
-    { "data": { "id": "n21-n22", "source": "n21", "target": "n22" } },
-    { "data": { "id": "n22-n23", "source": "n22", "target": "n23" } },
-    { "data": { "id": "n23-n24", "source": "n23", "target": "n24" } },
-    { "data": { "id": "n24-n25", "source": "n24", "target": "n25" } },
-    { "data": { "id": "n31-n32", "source": "n31", "target": "n32" } },
-    { "data": { "id": "n32-n33", "source": "n32", "target": "n33" } },
-    { "data": { "id": "n33-n34", "source": "n33", "target": "n34" } },
-    { "data": { "id": "n34-n35", "source": "n34", "target": "n35" } },
-    { "data": { "id": "n41-n42", "source": "n41", "target": "n42", "curve": 0 } },
-    { "data": { "id": "n42-n43", "source": "n42", "target": "n43", "curve": 0 } },
-    { "data": { "id": "n43-n44", "source": "n43", "target": "n44", "curve": 0 } },
-    { "data": { "id": "n44-n45", "source": "n44", "target": "n45", "curve": 0 } },
-    { "data": { "id": "n41-n51", "source": "n41", "target": "n51", "curve": 0 }, "classes": "highlight" },
-    { "data": { "id": "n42-n52", "source": "n42", "target": "n52", "curve": 0 }, "classes": "highlight" },
-    { "data": { "id": "n43-n53", "source": "n43", "target": "n53", "curve": 0 }, "classes": "highlight", "classes": "highlight" },
-    { "data": { "id": "n44-n54", "source": "n44", "target": "n54", "curve": 0 }, "classes": "highlight" },
-    { "data": { "id": "n45-n55", "source": "n45", "target": "n55", "curve": 0 }, "classes": "highlight" },
-    { "data": { "id": "n42-n51", "source": "n42", "target": "n51", "label": "(p,0,∞)", "curve": 0 }, "classes": "highlight", "css": { "font-size": 10, "text-rotation": "none","text-halign": "right", "text-valign": "center", "text-margin-x": 18, "text-margin-y": 0 } },
-    { "data": { "id": "n43-n52", "source": "n43", "target": "n52", "label": "(p,0,∞)", "curve": 0 }, "classes": "highlight", "css": { "font-size": 10, "text-rotation": "none","text-halign": "right", "text-valign": "center", "text-margin-x": 18, "text-margin-y": 0 } },
-    { "data": { "id": "n44-n53", "source": "n44", "target": "n53", "label": "(p,0,∞)", "curve": 0 }, "classes": "highlight", "css": { "font-size": 10, "text-rotation": "none","text-halign": "right", "text-valign": "center", "text-margin-x": 18, "text-margin-y": 0 } },
-    { "data": { "id": "n45-n54", "source": "n45", "target": "n54", "label": "(p,0,∞)", "curve": 0 }, "classes": "highlight", "css": { "font-size": 10, "text-rotation": "none","text-halign": "right", "text-valign": "center", "text-margin-x": 18, "text-margin-y": 0 } }
+"arcs": [
+  {"from": "n11", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n44", "class": "fade"},
+  {"from": "n12", "to": "n23", "class": "fade"},
+  {"from": "n23", "to": "n34", "class": "fade"},
+  {"from": "n34", "to": "n45", "class": "fade"},
+  {"from": "n21", "to": "n32", "class": "fade"},
+  {"from": "n31", "to": "n42", "class": "fade"},
+  {"from": "n32", "to": "n43", "class": "fade"},
+  {"from": "n13", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n35", "class": "fade"},
+  {"from": "n14", "to": "n25", "class": "fade"},
+  {"from": "n11", "to": "n12", "class": "fade"},
+  {"from": "n12", "to": "n13", "class": "fade"},
+  {"from": "n13", "to": "n14", "class": "fade"},
+  {"from": "n14", "to": "n15", "class": "fade"},
+  {"from": "n21", "to": "n22", "class": "fade"},
+  {"from": "n22", "to": "n23", "class": "fade"},
+  {"from": "n23", "to": "n24", "class": "fade"},
+  {"from": "n24", "to": "n25", "class": "fade"},
+  {"from": "n31", "to": "n32", "class": "fade"},
+  {"from": "n32", "to": "n33", "class": "fade"},
+  {"from": "n33", "to": "n34", "class": "fade"},
+  {"from": "n34", "to": "n35", "class": "fade"},
+  {"from": "n41", "to": "n42", "class": "fade"},
+  {"from": "n42", "to": "n43", "class": "fade"},
+  {"from": "n43", "to": "n44", "class": "fade"},
+  {"from": "n44", "to": "n45", "class": "fade"},
+  {"from": "n41", "to": "n51"},
+  {"from": "n42", "to": "n52"},
+  {"from": "n43", "to": "n53"},
+  {"from": "n44", "to": "n54"},
+  {"from": "n45", "to": "n55"},
+  {"from": "n42", "to": "n51", "label": "(p,0,∞)", "swap": true},
+  {"from": "n43", "to": "n52", "label": "(p,0,∞)", "swap": true},
+  {"from": "n44", "to": "n53", "label": "(p,0,∞)", "swap": true},
+  {"from": "n45", "to": "n54", "label": "(p,0,∞)", "swap": true}
 ]
 }
 -->

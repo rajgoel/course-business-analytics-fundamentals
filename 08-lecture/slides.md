@@ -47,7 +47,35 @@ A *network* is defined by
 
 ### Example
 
-<img class="stretch" src="08-lecture/network.svg"></img>
+<div class="netflow">
+<!--
+{
+"unit": 150,
+"radius": 30,
+"nodes": [
+  {"id": "1", "x": 0, "y": 1.5, "label": "1"},
+  {"id": "2", "x": 2, "y": 3, "label": "2"},
+  {"id": "3", "x": 2, "y": 0, "label": "3"},
+  {"id": "4", "x": 4, "y": 3, "label": "4"},
+  {"id": "5", "x": 4, "y": 0, "label": "5"},
+  {"id": "6", "x": 6, "y": 1.5, "label": "6"}
+],
+"arcs": [
+  {"from": "1", "to": "2", "label": "4"},
+  {"from": "1", "to": "3", "label": "3", "swap": true},
+  {"from": "2", "to": "3", "label": "3", "bend": -15, "swap": true},
+  {"from": "3", "to": "2", "label": "2", "bend": -15, "swap": true},
+  {"from": "2", "to": "4", "label": "2"},
+  {"from": "2", "to": "5", "label": "1"},
+  {"from": "3", "to": "5", "label": "3", "swap": true},
+  {"from": "4", "to": "5", "label": "1", "bend": -15, "swap": true},
+  {"from": "5", "to": "4", "label": "2", "bend": -15, "swap": true},
+  {"from": "4", "to": "6", "label": "3"},
+  {"from": "5", "to": "6", "label": "7", "swap": true}
+]
+}
+-->
+</div>
 
 ---
 
@@ -59,7 +87,35 @@ A *path* is a sequence of nodes $n_1, n_2, \ldots, n_k \in N$  with $(n_i,n_{i+1
 
 ### Example: A path through nodes 1, 2, 5, 4, 6
 
-<img class="stretch" src="08-lecture/path.svg"></img>
+<div class="netflow">
+<!--
+{
+"unit": 150,
+"radius": 30,
+"nodes": [
+  {"id": "1", "x": 0, "y": 1.5, "label": "1", "class": "accent"},
+  {"id": "2", "x": 2, "y": 3, "label": "2", "class": "accent"},
+  {"id": "3", "x": 2, "y": 0, "label": "3"},
+  {"id": "4", "x": 4, "y": 3, "label": "4", "class": "accent"},
+  {"id": "5", "x": 4, "y": 0, "label": "5", "class": "accent"},
+  {"id": "6", "x": 6, "y": 1.5, "label": "6", "class": "accent"}
+],
+"arcs": [
+  {"from": "1", "to": "2", "label": "4", "class": "accent"},
+  {"from": "1", "to": "3", "label": "3", "swap": true},
+  {"from": "2", "to": "3", "label": "3", "bend": -15, "swap": true},
+  {"from": "3", "to": "2", "label": "2", "bend": -15, "swap": true},
+  {"from": "2", "to": "4", "label": "2"},
+  {"from": "2", "to": "5", "label": "1", "class": "accent"},
+  {"from": "3", "to": "5", "label": "3", "swap": true},
+  {"from": "4", "to": "5", "label": "1", "bend": -15, "swap": true},
+  {"from": "5", "to": "4", "label": "2", "bend": -15, "swap": true, "class": "accent"},
+  {"from": "4", "to": "6", "label": "3", "class": "accent"},
+  {"from": "5", "to": "6", "label": "7", "swap": true}
+]
+}
+-->
+</div>
 
 
 ===
@@ -73,7 +129,35 @@ where each arc is given a **positive length (or cost)** $c_{i,j}$.
 
 What is the shortest path from node 1 to node 6 if the indicated numbers represent the length of the arc?
 
-<img class="stretch" src="08-lecture/network.svg"></img>
+<div class="netflow">
+<!--
+{
+"unit": 150,
+"radius": 30,
+"nodes": [
+  {"id": "1", "x": 0, "y": 1.5, "label": "1"},
+  {"id": "2", "x": 2, "y": 3, "label": "2"},
+  {"id": "3", "x": 2, "y": 0, "label": "3"},
+  {"id": "4", "x": 4, "y": 3, "label": "4"},
+  {"id": "5", "x": 4, "y": 0, "label": "5"},
+  {"id": "6", "x": 6, "y": 1.5, "label": "6"}
+],
+"arcs": [
+  {"from": "1", "to": "2", "label": "4"},
+  {"from": "1", "to": "3", "label": "3", "swap": true},
+  {"from": "2", "to": "3", "label": "3", "bend": -15, "swap": true},
+  {"from": "3", "to": "2", "label": "2", "bend": -15, "swap": true},
+  {"from": "2", "to": "4", "label": "2"},
+  {"from": "2", "to": "5", "label": "1"},
+  {"from": "3", "to": "5", "label": "3", "swap": true},
+  {"from": "4", "to": "5", "label": "1", "bend": -15, "swap": true},
+  {"from": "5", "to": "4", "label": "2", "bend": -15, "swap": true},
+  {"from": "4", "to": "6", "label": "3"},
+  {"from": "5", "to": "6", "label": "7", "swap": true}
+]
+}
+-->
+</div>
 
 > [!NOTE]
 > For larger networks it is impossible to easily identify the shortest path.
@@ -161,7 +245,35 @@ The *maximum flow problem* is the problem of finding the maximum amount of flow 
 
 What is the maximum flow from node 1 to node 6 if the indicated numbers represent the capacity of the arc?
 
-<img class="stretch" src="08-lecture/network.svg"></img>
+<div class="netflow">
+<!--
+{
+"unit": 150,
+"radius": 30,
+"nodes": [
+  {"id": "1", "x": 0, "y": 1.5, "label": "1"},
+  {"id": "2", "x": 2, "y": 3, "label": "2"},
+  {"id": "3", "x": 2, "y": 0, "label": "3"},
+  {"id": "4", "x": 4, "y": 3, "label": "4"},
+  {"id": "5", "x": 4, "y": 0, "label": "5"},
+  {"id": "6", "x": 6, "y": 1.5, "label": "6"}
+],
+"arcs": [
+  {"from": "1", "to": "2", "label": "4"},
+  {"from": "1", "to": "3", "label": "3", "swap": true},
+  {"from": "2", "to": "3", "label": "3", "bend": -15, "swap": true},
+  {"from": "3", "to": "2", "label": "2", "bend": -15, "swap": true},
+  {"from": "2", "to": "4", "label": "2"},
+  {"from": "2", "to": "5", "label": "1"},
+  {"from": "3", "to": "5", "label": "3", "swap": true},
+  {"from": "4", "to": "5", "label": "1", "bend": -15, "swap": true},
+  {"from": "5", "to": "4", "label": "2", "bend": -15, "swap": true},
+  {"from": "4", "to": "6", "label": "3"},
+  {"from": "5", "to": "6", "label": "7", "swap": true}
+]
+}
+-->
+</div>
 
 ---
 
@@ -223,7 +335,33 @@ Given two sets $N'$ and $N''$ with the same number of nodes, the *assignment pro
 
 What is the cheapest way of assigning nodes 1,2,3 to nodes 4,5,6?
 
-<img class="stretch" src="08-lecture/assignmentproblem.svg"></img>
+<div class="netflow">
+<!--
+{
+"unit": 150,
+"radius": 30,
+"nodes": [
+  {"id": "1", "x": 0, "y": 3, "label": "1"},
+  {"id": "2", "x": 3, "y": 3, "label": "2"},
+  {"id": "3", "x": 6, "y": 3, "label": "3"},
+  {"id": "4", "x": 0, "y": 0, "label": "4"},
+  {"id": "5", "x": 3, "y": 0, "label": "5"},
+  {"id": "6", "x": 6, "y": 0, "label": "6"}
+],
+"arcs": [
+  {"from": "1", "to": "4", "label": "11", "pos": 0.3, "swap": true},
+  {"from": "1", "to": "5", "label": "13", "pos": 0.3, "swap": true},
+  {"from": "1", "to": "6", "label": "11", "pos": 0.25, "swap": true},
+  {"from": "2", "to": "4", "label": "8", "pos": 0.2, "swap": true},
+  {"from": "2", "to": "5", "label": "10", "pos": 0.2, "swap": true},
+  {"from": "2", "to": "6", "label": "12", "pos": 0.2},
+  {"from": "3", "to": "4", "label": "16", "pos": 0.25},
+  {"from": "3", "to": "5", "label": "3", "pos": 0.3},
+  {"from": "3", "to": "6", "label": "17", "pos": 0.3}
+]
+}
+-->
+</div>
 
 ---
 
@@ -280,7 +418,39 @@ Given two sets $N'$ and $N''$ where each node $i\in N'$ has a given supply $s_i$
 
 What is the cheapest way of fulfilling the demand at nodes 4,5,6 from the supply at nodes 1,2,3?
 
-<img class="stretch" src="08-lecture/transportationproblem.svg"></img>
+<div class="netflow">
+<!--
+{
+"unit": 130,
+"radius": 30,
+"nodes": [
+  {"id": "1", "x": 0, "y": 3, "label": "1"},
+  {"id": "2", "x": 3, "y": 3, "label": "2"},
+  {"id": "3", "x": 6, "y": 3, "label": "3"},
+  {"id": "4", "x": 0, "y": 0, "label": "4"},
+  {"id": "5", "x": 3, "y": 0, "label": "5"},
+  {"id": "6", "x": 6, "y": 0, "label": "6"},
+  {"id": "1_supply", "x": 0, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "7", "class": "text"},
+  {"id": "2_supply", "x": 3, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "8", "class": "text"},
+  {"id": "3_supply", "x": 6, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "5", "class": "text"},
+  {"id": "4_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "9", "class": "text"},
+  {"id": "5_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "3", "class": "text"},
+  {"id": "6_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "8", "class": "text"}
+],
+"arcs": [
+  {"from": "1", "to": "4", "label": "11", "pos": 0.3, "swap": true},
+  {"from": "1", "to": "5", "label": "13", "pos": 0.3, "swap": true},
+  {"from": "1", "to": "6", "label": "11", "pos": 0.25, "swap": true},
+  {"from": "2", "to": "4", "label": "8", "pos": 0.2, "swap": true},
+  {"from": "2", "to": "5", "label": "10", "pos": 0.2, "swap": true},
+  {"from": "2", "to": "6", "label": "12", "pos": 0.2},
+  {"from": "3", "to": "4", "label": "16", "pos": 0.25},
+  {"from": "3", "to": "5", "label": "3", "pos": 0.3},
+  {"from": "3", "to": "6", "label": "17", "pos": 0.3}
+]
+}
+-->
+</div>
 
 ---
 
