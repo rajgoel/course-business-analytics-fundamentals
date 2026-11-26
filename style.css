@@ -175,7 +175,6 @@ blockquote.admonition ul {
  *********************************************/
 
 .reveal .netflow {
-  --nf-fill: aliceblue;
   --nf-node-font: 0.8em;
   --nf-arc-font: 0.7em;
   margin: 20px auto;
@@ -184,7 +183,10 @@ blockquote.admonition ul {
 .reveal .netflow .nf-line { stroke-width: 2; }
 .reveal .netflow .fade { opacity: 0.3; }
 .reveal .netflow .accent { --nf-stroke: firebrick; color: firebrick; }
-.reveal .netflow .nf-node.filled { background: firebrick; color: white; }
+.reveal .netflow .accent .nf-line { stroke-width: 4; }
+.reveal .netflow .nf-node.accent { border-width: 4px; }
+/* semi-transparent background so arc labels stay readable where other arcs cross them */
+.reveal .netflow .nf-arc-label > div { background: rgba(255,255,255,0.75); padding: 0 4px; }
 /* label-only nodes */
 .reveal .netflow .nf-node.text,
 .reveal .netflow .nf-node.text-rotated { border: none; background: none; }

@@ -59,13 +59,13 @@ Modelling an optimisation problem as a minimum cost network flow problem has the
   {"id": "5_supply", "x": 5, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-19", "class": "text"}
 ],
 "arcs": [
-  {"from": "1", "to": "2", "label": "(7, 0, 30)"},
-  {"from": "1", "to": "3", "label": "(6, 0, 20)", "swap": true},
-  {"from": "2", "to": "3", "label": "(5, 0, 25)", "swap": true},
-  {"from": "2", "to": "4", "label": "(4, 0, 10)"},
-  {"from": "3", "to": "4", "label": "(2, 0, 20)", "pos": 0.7},
-  {"from": "3", "to": "5", "label": "(2, 0, 25)", "swap": true},
-  {"from": "4", "to": "5", "label": "(1, 0, 20)"}
+  {"from": "1", "to": "2", "label": "7, [0, 30]"},
+  {"from": "1", "to": "3", "label": "6, [0, 20]", "swap": true},
+  {"from": "2", "to": "3", "label": "5, [0, 25]", "swap": true},
+  {"from": "2", "to": "4", "label": "4, [0, 10]"},
+  {"from": "3", "to": "4", "label": "2, [0, 20]", "pos": 0.7},
+  {"from": "3", "to": "5", "label": "2, [0, 25]", "swap": true},
+  {"from": "4", "to": "5", "label": "1, [0, 20]"}
 ]
 }
 -->
@@ -264,7 +264,7 @@ If the network is unbalanced, i.e., if the total supply does not match the total
   {"id": "A", "x": 0, "y": 0, "label": "A"},
   {"id": "B", "x": 3, "y": 0, "label": "B"},
   {"id": "C", "x": 6, "y": 0, "label": "C"},
-  {"id": "D", "x": 3, "y": 2.5, "label": "D", "class": "filled"},
+  {"id": "D", "x": 3, "y": 2.5, "label": "D", "class": "accent"},
   {"id": "1_supply", "x": 1.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "80", "class": "text"},
   {"id": "2_supply", "x": 4.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "130", "class": "text"},
   {"id": "A_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-60", "class": "text"},
@@ -330,8 +330,8 @@ We can formulate a standard minimum cost network flow problem by
   {"id": "A", "x": 0, "y": 0, "label": "A"},
   {"id": "B", "x": 3, "y": 0, "label": "B"},
   {"id": "C", "x": 6, "y": 0, "label": "C"},
-  {"id": "D", "x": 3, "y": 2.5, "label": "D"},
-  {"id": "E", "x": 3, "y": 1, "label": "E"},
+  {"id": "D", "x": 3, "y": 2.5, "label": "D", "class": "accent"},
+  {"id": "E", "x": 3, "y": 1, "label": "E", "class": "accent"},
   {"id": "1_supply", "x": 1.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "100", "class": "text"},
   {"id": "2_supply", "x": 4.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "100", "class": "text"},
   {"id": "A_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-70", "class": "text"},
@@ -347,7 +347,7 @@ We can formulate a standard minimum cost network flow problem by
   {"from": "2", "to": "C"},
   {"from": "1", "to": "D"},
   {"from": "2", "to": "D"},
-  {"from": "D", "to": "E", "class": "accent"},
+  {"from": "D", "to": "E", "class": "accent", "label": "$[0,q_{D,E}]$"},
   {"from": "E", "to": "A"},
   {"from": "E", "to": "B"},
   {"from": "E", "to": "C"}
@@ -703,34 +703,34 @@ These copies are then connected by arcs in such a way that the time required to 
   {"id": "n45_label", "x": 8.55, "y": 0, "shape": "rect", "w": 1, "h": 1, "label": "-90", "class": "text"}
 ],
 "arcs": [
-  {"from": "n11", "to": "n22", "label": "(10,0,100)"},
-  {"from": "n22", "to": "n33", "label": "(50,0,100)"},
-  {"from": "n33", "to": "n44", "label": "(10,0,100)"},
-  {"from": "n12", "to": "n23", "label": "(10,0,100)"},
-  {"from": "n23", "to": "n34", "label": "(50,0,100)"},
-  {"from": "n34", "to": "n45", "label": "(10,0,100)"},
+  {"from": "n11", "to": "n22", "label": "10,[0,100]"},
+  {"from": "n22", "to": "n33", "label": "50,[0,100]"},
+  {"from": "n33", "to": "n44", "label": "10,[0,100]"},
+  {"from": "n12", "to": "n23", "label": "10,[0,100]"},
+  {"from": "n23", "to": "n34", "label": "50,[0,100]"},
+  {"from": "n34", "to": "n45", "label": "10,[0,100]"},
   {"from": "n21", "to": "n32", "class": "fade"},
   {"from": "n31", "to": "n42", "class": "fade"},
   {"from": "n32", "to": "n43", "class": "fade"},
   {"from": "n13", "to": "n24", "class": "fade"},
   {"from": "n24", "to": "n35", "class": "fade"},
   {"from": "n14", "to": "n25", "class": "fade"},
-  {"from": "n11", "to": "n12", "label": "(0,0,∞)", "swap": true},
+  {"from": "n11", "to": "n12", "label": "0,[0,∞]", "swap": true},
   {"from": "n12", "to": "n13", "class": "fade"},
   {"from": "n13", "to": "n14", "class": "fade"},
   {"from": "n14", "to": "n15", "class": "fade"},
   {"from": "n21", "to": "n22", "class": "fade"},
-  {"from": "n22", "to": "n23", "label": "(0,0,∞)"},
+  {"from": "n22", "to": "n23", "label": "0,[0,∞]"},
   {"from": "n23", "to": "n24", "class": "fade"},
   {"from": "n24", "to": "n25", "class": "fade"},
   {"from": "n31", "to": "n32", "class": "fade"},
   {"from": "n32", "to": "n33", "class": "fade"},
-  {"from": "n33", "to": "n34", "label": "(0,0,∞)"},
+  {"from": "n33", "to": "n34", "label": "0,[0,∞]"},
   {"from": "n34", "to": "n35", "class": "fade"},
   {"from": "n41", "to": "n42", "class": "fade"},
   {"from": "n42", "to": "n43", "class": "fade"},
   {"from": "n43", "to": "n44", "class": "fade"},
-  {"from": "n44", "to": "n45", "label": "(0,0,∞)"}
+  {"from": "n44", "to": "n45", "label": "0,[0,∞]"}
 ]
 }
 -->
@@ -874,9 +874,9 @@ Suppose we can use a direct transport mode that can be used to ship an unlimited
   {"from": "n42", "to": "n43", "class": "fade"},
   {"from": "n43", "to": "n44", "class": "fade"},
   {"from": "n44", "to": "n45", "class": "fade"},
-  {"from": "n11", "to": "n43", "label": "(100,0,∞)"},
-  {"from": "n12", "to": "n44", "label": "(100,0,∞)"},
-  {"from": "n13", "to": "n45", "label": "(100,0,∞)"}
+  {"from": "n11", "to": "n43", "label": "100,[0,∞]"},
+  {"from": "n12", "to": "n44", "label": "100,[0,∞]"},
+  {"from": "n13", "to": "n45", "label": "100,[0,∞]"}
 ]
 }
 -->
@@ -1002,17 +1002,17 @@ We can use dummy nodes and arcs to model the upper bounds.
   {"id": "n45", "x": 8, "y": 0, "class": "fade"}
 ],
 "arcs": [
-  {"from": "sink", "to": "source", "bend": 60, "looseness": 1.2, "label": "(0,0,∞)"},
-  {"from": "source", "to": "n11", "label": "(•,0,70)", "pos": 0.7},
-  {"from": "source", "to": "n12", "label": "(•,0,80)", "pos": 0.7},
-  {"from": "source", "to": "n13", "label": "(•,0,60)", "pos": 0.7},
-  {"from": "source", "to": "n14", "label": "(•,0,90)", "pos": 0.7},
-  {"from": "source", "to": "n15", "label": "(•,0,50)", "pos": 0.7},
-  {"from": "n41", "to": "sink", "label": "(•,0,50)", "pos": 0.3},
-  {"from": "n42", "to": "sink", "label": "(•,0,60)", "pos": 0.3},
-  {"from": "n43", "to": "sink", "label": "(•,0,90)", "pos": 0.3},
-  {"from": "n44", "to": "sink", "label": "(•,0,70)", "pos": 0.3},
-  {"from": "n45", "to": "sink", "label": "(•,0,80)", "pos": 0.3},
+  {"from": "sink", "to": "source", "bend": 60, "looseness": 1.2, "label": "0,[0,∞]"},
+  {"from": "source", "to": "n11", "label": "[0,70]", "pos": 0.7},
+  {"from": "source", "to": "n12", "label": "[0,80]", "pos": 0.7},
+  {"from": "source", "to": "n13", "label": "[0,60]", "pos": 0.7},
+  {"from": "source", "to": "n14", "label": "[0,90]", "pos": 0.7},
+  {"from": "source", "to": "n15", "label": "[0,50]", "pos": 0.7},
+  {"from": "n41", "to": "sink", "label": "[0,50]", "pos": 0.3},
+  {"from": "n42", "to": "sink", "label": "[0,60]", "pos": 0.3},
+  {"from": "n43", "to": "sink", "label": "[0,90]", "pos": 0.3},
+  {"from": "n44", "to": "sink", "label": "[0,70]", "pos": 0.3},
+  {"from": "n45", "to": "sink", "label": "[0,80]", "pos": 0.3},
   {"from": "n11", "to": "n22", "class": "fade"},
   {"from": "n22", "to": "n33", "class": "fade"},
   {"from": "n33", "to": "n44", "class": "fade"},
@@ -1179,10 +1179,10 @@ We can use arcs traveling backwards in time to consider backlogging.
   {"from": "n42", "to": "n43", "class": "fade"},
   {"from": "n43", "to": "n44", "class": "fade"},
   {"from": "n44", "to": "n45", "class": "fade"},
-  {"from": "n42", "to": "n41", "bend": -30, "label": "(p,0,∞)", "swap": true},
-  {"from": "n43", "to": "n42", "bend": -30, "label": "(p,0,∞)", "swap": true},
-  {"from": "n44", "to": "n43", "bend": -30, "label": "(p,0,∞)", "swap": true},
-  {"from": "n45", "to": "n44", "bend": -30, "label": "(p,0,∞)", "swap": true}
+  {"from": "n42", "to": "n41", "bend": -30, "label": "p,[0,∞]", "swap": true},
+  {"from": "n43", "to": "n42", "bend": -30, "label": "p,[0,∞]", "swap": true},
+  {"from": "n44", "to": "n43", "bend": -30, "label": "p,[0,∞]", "swap": true},
+  {"from": "n45", "to": "n44", "bend": -30, "label": "p,[0,∞]", "swap": true}
 ]
 }
 -->
@@ -1253,10 +1253,10 @@ Suppose we want to restrict backlogging to at most one day.
   {"from": "n42", "to": "n43", "class": "fade"},
   {"from": "n43", "to": "n44", "class": "fade"},
   {"from": "n44", "to": "n45", "class": "fade"},
-  {"from": "n42", "to": "n41", "bend": -30, "label": "(p,0,∞)", "swap": true},
-  {"from": "n43", "to": "n42", "bend": -30, "label": "(p,0,∞)", "swap": true},
-  {"from": "n44", "to": "n43", "bend": -30, "label": "(p,0,∞)", "swap": true},
-  {"from": "n45", "to": "n44", "bend": -30, "label": "(p,0,∞)", "swap": true}
+  {"from": "n42", "to": "n41", "bend": -30, "label": "p,[0,∞]", "swap": true},
+  {"from": "n43", "to": "n42", "bend": -30, "label": "p,[0,∞]", "swap": true},
+  {"from": "n44", "to": "n43", "bend": -30, "label": "p,[0,∞]", "swap": true},
+  {"from": "n45", "to": "n44", "bend": -30, "label": "p,[0,∞]", "swap": true}
 ]
 }
 -->
@@ -1336,10 +1336,10 @@ We can split the demand nodes to consider backlogging of at most one day.
   {"from": "n43", "to": "n53"},
   {"from": "n44", "to": "n54"},
   {"from": "n45", "to": "n55"},
-  {"from": "n42", "to": "n51", "label": "(p,0,∞)", "swap": true},
-  {"from": "n43", "to": "n52", "label": "(p,0,∞)", "swap": true},
-  {"from": "n44", "to": "n53", "label": "(p,0,∞)", "swap": true},
-  {"from": "n45", "to": "n54", "label": "(p,0,∞)", "swap": true}
+  {"from": "n42", "to": "n51", "label": "p,[0,∞]", "swap": true},
+  {"from": "n43", "to": "n52", "label": "p,[0,∞]", "swap": true},
+  {"from": "n44", "to": "n53", "label": "p,[0,∞]", "swap": true},
+  {"from": "n45", "to": "n54", "label": "p,[0,∞]", "swap": true}
 ]
 }
 -->
