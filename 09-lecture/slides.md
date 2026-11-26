@@ -52,20 +52,20 @@ Modelling an optimisation problem as a minimum cost network flow problem has the
   {"id": "3", "x": 2.5, "y": 0, "label": "3"},
   {"id": "4", "x": 5, "y": 3, "label": "4"},
   {"id": "5", "x": 5, "y": 0, "label": "5"},
-  {"id": "1_supply", "x": -0.5, "y": 1.5, "shape": "rect", "w": 1, "h": 1, "label": "23", "class": "text"},
-  {"id": "2_supply", "x": 2.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "5", "class": "text"},
-  {"id": "3_supply", "x": 2.5, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-7", "class": "text"},
-  {"id": "4_supply", "x": 5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "-2", "class": "text"},
-  {"id": "5_supply", "x": 5, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-19", "class": "text"}
+  {"id": "1_supply", "x": -0.5, "y": 1.5, "shape": "rect", "w": 1, "h": 1, "label": "$23$", "class": "text"},
+  {"id": "2_supply", "x": 2.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$5$", "class": "text"},
+  {"id": "3_supply", "x": 2.5, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-7$", "class": "text"},
+  {"id": "4_supply", "x": 5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$-2$", "class": "text"},
+  {"id": "5_supply", "x": 5, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-19$", "class": "text"}
 ],
 "arcs": [
-  {"from": "1", "to": "2", "label": "7, [0, 30]"},
-  {"from": "1", "to": "3", "label": "6, [0, 20]", "swap": true},
-  {"from": "2", "to": "3", "label": "5, [0, 25]", "swap": true},
-  {"from": "2", "to": "4", "label": "4, [0, 10]"},
-  {"from": "3", "to": "4", "label": "2, [0, 20]", "pos": 0.7},
-  {"from": "3", "to": "5", "label": "2, [0, 25]", "swap": true},
-  {"from": "4", "to": "5", "label": "1, [0, 20]"}
+  {"from": "1", "to": "2", "label": "$7, [0, 30]$"},
+  {"from": "1", "to": "3", "label": "$6, [0, 20]$", "swap": true},
+  {"from": "2", "to": "3", "label": "$5, [0, 25]$", "swap": true},
+  {"from": "2", "to": "4", "label": "$4, [0, 10]$"},
+  {"from": "3", "to": "4", "label": "$2, [0, 20]$", "pos": 0.7},
+  {"from": "3", "to": "5", "label": "$2, [0, 25]$", "swap": true},
+  {"from": "4", "to": "5", "label": "$1, [0, 20]$"}
 ]
 }
 -->
@@ -108,11 +108,11 @@ Model this problem as a minimum cost network flow problem.
   {"id": "A", "x": 0, "y": 0, "label": "A"},
   {"id": "B", "x": 3, "y": 0, "label": "B"},
   {"id": "C", "x": 6, "y": 0, "label": "C"},
-  {"id": "1_supply", "x": 1.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "80", "class": "text"},
-  {"id": "2_supply", "x": 4.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "130", "class": "text"},
-  {"id": "A_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-60", "class": "text"},
-  {"id": "B_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-80", "class": "text"},
-  {"id": "C_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-70", "class": "text"}
+  {"id": "1_supply", "x": 1.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$80$", "class": "text"},
+  {"id": "2_supply", "x": 4.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$130$", "class": "text"},
+  {"id": "A_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-60$", "class": "text"},
+  {"id": "B_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-80$", "class": "text"},
+  {"id": "C_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-70$", "class": "text"}
 ],
 "arcs": [
   {"from": "1", "to": "A"},
@@ -166,11 +166,11 @@ Model this problem as a minimum cost network flow problem.
   {"id": "B", "x": 3, "y": 0, "label": "B"},
   {"id": "C", "x": 6, "y": 0, "label": "C"},
   {"id": "D", "x": 3, "y": 2.5, "label": "D"},
-  {"id": "1_supply", "x": 1.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "80", "class": "text"},
-  {"id": "2_supply", "x": 4.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "130", "class": "text"},
-  {"id": "A_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-60", "class": "text"},
-  {"id": "B_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-80", "class": "text"},
-  {"id": "C_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-70", "class": "text"}
+  {"id": "1_supply", "x": 1.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$80$", "class": "text"},
+  {"id": "2_supply", "x": 4.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$130$", "class": "text"},
+  {"id": "A_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-60$", "class": "text"},
+  {"id": "B_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-80$", "class": "text"},
+  {"id": "C_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-70$", "class": "text"}
 ],
 "arcs": [
   {"from": "1", "to": "A"},
@@ -216,19 +216,19 @@ Can we model this problem as a minimum cost network flow problem?
   {"id": "N", "x": 0, "y": 0, "label": "N"},
   {"id": "S", "x": 3, "y": 0, "label": "S"},
   {"id": "X", "x": 6, "y": 0, "label": "", "class": "fade"},
-  {"id": "1_supply", "x": 0, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "100", "class": "text"},
-  {"id": "2_supply", "x": 3, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "100", "class": "text"},
-  {"id": "N_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-70", "class": "text"},
-  {"id": "S_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-120", "class": "text"},
-  {"id": "X_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-10", "class": "text fade"}
+  {"id": "1_supply", "x": 0, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$100$", "class": "text"},
+  {"id": "2_supply", "x": 3, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$100$", "class": "text"},
+  {"id": "N_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-70$", "class": "text"},
+  {"id": "S_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-120$", "class": "text"},
+  {"id": "X_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-10$", "class": "text fade"}
 ],
 "arcs": [
-  {"from": "1", "to": "N", "label": "11", "pos": 0.3, "swap": true},
-  {"from": "1", "to": "S", "label": "13", "pos": 0.3, "swap": true},
-  {"from": "1", "to": "X", "label": "0", "pos": 0.25, "swap": true, "class": "fade"},
-  {"from": "2", "to": "N", "label": "8", "pos": 0.2, "swap": true},
-  {"from": "2", "to": "S", "label": "10", "pos": 0.2, "swap": true},
-  {"from": "2", "to": "X", "label": "0", "pos": 0.2, "class": "fade"}
+  {"from": "1", "to": "N", "label": "$11$", "pos": 0.3, "swap": true},
+  {"from": "1", "to": "S", "label": "$13$", "pos": 0.3, "swap": true},
+  {"from": "1", "to": "X", "label": "$0$", "pos": 0.25, "swap": true, "class": "fade"},
+  {"from": "2", "to": "N", "label": "$8$", "pos": 0.2, "swap": true},
+  {"from": "2", "to": "S", "label": "$10$", "pos": 0.2, "swap": true},
+  {"from": "2", "to": "X", "label": "$0$", "pos": 0.2, "class": "fade"}
 ]
 }
 -->
@@ -265,11 +265,11 @@ If the network is unbalanced, i.e., if the total supply does not match the total
   {"id": "B", "x": 3, "y": 0, "label": "B"},
   {"id": "C", "x": 6, "y": 0, "label": "C"},
   {"id": "D", "x": 3, "y": 2.5, "label": "D", "class": "accent"},
-  {"id": "1_supply", "x": 1.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "80", "class": "text"},
-  {"id": "2_supply", "x": 4.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "130", "class": "text"},
-  {"id": "A_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-60", "class": "text"},
-  {"id": "B_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-80", "class": "text"},
-  {"id": "C_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-70", "class": "text"}
+  {"id": "1_supply", "x": 1.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$80$", "class": "text"},
+  {"id": "2_supply", "x": 4.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$130$", "class": "text"},
+  {"id": "A_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-60$", "class": "text"},
+  {"id": "B_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-80$", "class": "text"},
+  {"id": "C_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-70$", "class": "text"}
 ],
 "arcs": [
   {"from": "1", "to": "A"},
@@ -332,11 +332,11 @@ We can formulate a standard minimum cost network flow problem by
   {"id": "C", "x": 6, "y": 0, "label": "C"},
   {"id": "D", "x": 3, "y": 2.5, "label": "D", "class": "accent"},
   {"id": "E", "x": 3, "y": 1, "label": "E", "class": "accent"},
-  {"id": "1_supply", "x": 1.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "100", "class": "text"},
-  {"id": "2_supply", "x": 4.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "100", "class": "text"},
-  {"id": "A_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-70", "class": "text"},
-  {"id": "B_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-120", "class": "text"},
-  {"id": "C_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "-10", "class": "text"}
+  {"id": "1_supply", "x": 1.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$100$", "class": "text"},
+  {"id": "2_supply", "x": 4.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$100$", "class": "text"},
+  {"id": "A_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-70$", "class": "text"},
+  {"id": "B_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-120$", "class": "text"},
+  {"id": "C_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-10$", "class": "text"}
 ],
 "arcs": [
   {"from": "1", "to": "A"},
@@ -665,7 +665,7 @@ These copies are then connected by arcs in such a way that the time required to 
 
 <!-- .slide: data-transition="fade-in slide-out" -->
 
-<div class="netflow" style="--nf-arc-font: 0.55em;">
+<div class="netflow" style="--nf-arc-font: 0.45em; --nf-node-font: 0.65em;">
 <!--
 {
 "unit": 110,
@@ -693,50 +693,46 @@ These copies are then connected by arcs in such a way that the time required to 
   {"id": "n43", "x": 8, "y": 2, "class": "fade"},
   {"id": "n44", "x": 8, "y": 1},
   {"id": "n45", "x": 8, "y": 0},
-  {"id": "n11_label", "x": 1.45, "y": 4, "shape": "rect", "w": 1, "h": 1, "label": "70", "class": "text"},
-  {"id": "n12_label", "x": 1.45, "y": 3, "shape": "rect", "w": 1, "h": 1, "label": "80", "class": "text"},
-  {"id": "n22_label", "x": 3.58, "y": 2.9, "shape": "rect", "w": 1, "h": 1, "label": "0", "class": "text"},
-  {"id": "n23_label", "x": 3.58, "y": 1.9, "shape": "rect", "w": 1, "h": 1, "label": "0", "class": "text"},
-  {"id": "n33_label", "x": 5.58, "y": 1.9, "shape": "rect", "w": 1, "h": 1, "label": "0", "class": "text"},
-  {"id": "n34_label", "x": 5.58, "y": 0.9, "shape": "rect", "w": 1, "h": 1, "label": "0", "class": "text"},
-  {"id": "n44_label", "x": 8.55, "y": 1, "shape": "rect", "w": 1, "h": 1, "label": "-60", "class": "text"},
-  {"id": "n45_label", "x": 8.55, "y": 0, "shape": "rect", "w": 1, "h": 1, "label": "-90", "class": "text"}
+  {"id": "n11_label", "x": 1.45, "y": 4, "shape": "rect", "w": 1, "h": 1, "label": "$70$", "class": "text"},
+  {"id": "n12_label", "x": 1.45, "y": 3, "shape": "rect", "w": 1, "h": 1, "label": "$80$", "class": "text"},
+  {"id": "n44_label", "x": 8.55, "y": 1, "shape": "rect", "w": 1, "h": 1, "label": "$-60$", "class": "text"},
+  {"id": "n45_label", "x": 8.55, "y": 0, "shape": "rect", "w": 1, "h": 1, "label": "$-90$", "class": "text"}
 ],
 "arcs": [
-  {"from": "n11", "to": "n22", "label": "10,[0,100]"},
-  {"from": "n22", "to": "n33", "label": "50,[0,100]"},
-  {"from": "n33", "to": "n44", "label": "10,[0,100]"},
-  {"from": "n12", "to": "n23", "label": "10,[0,100]"},
-  {"from": "n23", "to": "n34", "label": "50,[0,100]"},
-  {"from": "n34", "to": "n45", "label": "10,[0,100]"},
+  {"from": "n11", "to": "n22", "label": "$10,[0,100]$"},
+  {"from": "n22", "to": "n33", "label": "$50,[0,100]$"},
+  {"from": "n33", "to": "n44", "label": "$10,[0,100]$"},
+  {"from": "n12", "to": "n23", "label": "$10,[0,100]$"},
+  {"from": "n23", "to": "n34", "label": "$50,[0,100]$"},
+  {"from": "n34", "to": "n45", "label": "$10,[0,100]$"},
   {"from": "n21", "to": "n32", "class": "fade"},
   {"from": "n31", "to": "n42", "class": "fade"},
   {"from": "n32", "to": "n43", "class": "fade"},
   {"from": "n13", "to": "n24", "class": "fade"},
   {"from": "n24", "to": "n35", "class": "fade"},
   {"from": "n14", "to": "n25", "class": "fade"},
-  {"from": "n11", "to": "n12", "label": "0,[0,∞]", "swap": true},
+  {"from": "n11", "to": "n12", "label": "$0,[0,\\infty]$", "pos": 0.6, "swap": true},
   {"from": "n12", "to": "n13", "class": "fade"},
   {"from": "n13", "to": "n14", "class": "fade"},
   {"from": "n14", "to": "n15", "class": "fade"},
   {"from": "n21", "to": "n22", "class": "fade"},
-  {"from": "n22", "to": "n23", "label": "0,[0,∞]"},
+  {"from": "n22", "to": "n23", "label": "$0,[0,\\infty]$", "pos": 0.6},
   {"from": "n23", "to": "n24", "class": "fade"},
   {"from": "n24", "to": "n25", "class": "fade"},
   {"from": "n31", "to": "n32", "class": "fade"},
   {"from": "n32", "to": "n33", "class": "fade"},
-  {"from": "n33", "to": "n34", "label": "0,[0,∞]"},
+  {"from": "n33", "to": "n34", "label": "$0,[0,\\infty]$", "pos": 0.6},
   {"from": "n34", "to": "n35", "class": "fade"},
   {"from": "n41", "to": "n42", "class": "fade"},
   {"from": "n42", "to": "n43", "class": "fade"},
   {"from": "n43", "to": "n44", "class": "fade"},
-  {"from": "n44", "to": "n45", "label": "0,[0,∞]"}
+  {"from": "n44", "to": "n45", "label": "$0,[0,\\infty]$", "pos": 0.6}
 ]
 }
 -->
 </div>
 <small>
-Numbers next to the nodes indicate supply/demand values. Numbers next to the arcs indicate costs, lower bound, and upper bound.
+Numbers next to the nodes indicate supply/demand values. Nodes without number have 0 supply/demand. Numbers next to the arcs indicate costs, lower bound, and upper bound.
 </small>
 
 ---
@@ -874,9 +870,9 @@ Suppose we can use a direct transport mode that can be used to ship an unlimited
   {"from": "n42", "to": "n43", "class": "fade"},
   {"from": "n43", "to": "n44", "class": "fade"},
   {"from": "n44", "to": "n45", "class": "fade"},
-  {"from": "n11", "to": "n43", "label": "100,[0,∞]"},
-  {"from": "n12", "to": "n44", "label": "100,[0,∞]"},
-  {"from": "n13", "to": "n45", "label": "100,[0,∞]"}
+  {"from": "n11", "to": "n43", "label": "$100,[0,\\infty]$"},
+  {"from": "n12", "to": "n44", "label": "$100,[0,\\infty]$"},
+  {"from": "n13", "to": "n45", "label": "$100,[0,\\infty]$"}
 ]
 }
 -->
@@ -921,16 +917,16 @@ Suppose we have upper bounds on supply and demand as shown below.
   {"id": "n43", "x": 8, "y": 2, "class": "fade"},
   {"id": "n44", "x": 8, "y": 1, "class": "fade"},
   {"id": "n45", "x": 8, "y": 0, "class": "fade"},
-  {"id": "n11_label", "x": 1.45, "y": 4, "shape": "rect", "w": 1, "h": 1, "label": "≤70", "class": "text accent"},
-  {"id": "n12_label", "x": 1.45, "y": 3, "shape": "rect", "w": 1, "h": 1, "label": "≤80", "class": "text accent"},
-  {"id": "n13_label", "x": 1.45, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "≤60", "class": "text accent"},
-  {"id": "n14_label", "x": 1.45, "y": 1, "shape": "rect", "w": 1, "h": 1, "label": "≤90", "class": "text accent"},
-  {"id": "n15_label", "x": 1.45, "y": 0, "shape": "rect", "w": 1, "h": 1, "label": "≤50", "class": "text accent"},
-  {"id": "n41_label", "x": 8.55, "y": 4, "shape": "rect", "w": 1, "h": 1, "label": "≤50", "class": "text accent"},
-  {"id": "n42_label", "x": 8.55, "y": 3, "shape": "rect", "w": 1, "h": 1, "label": "≤60", "class": "text accent"},
-  {"id": "n43_label", "x": 8.55, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "≤90", "class": "text accent"},
-  {"id": "n44_label", "x": 8.55, "y": 1, "shape": "rect", "w": 1, "h": 1, "label": "≤70", "class": "text accent"},
-  {"id": "n45_label", "x": 8.55, "y": 0, "shape": "rect", "w": 1, "h": 1, "label": "≤80", "class": "text accent"}
+  {"id": "n11_label", "x": 1.3, "y": 4, "shape": "rect", "w": 1, "h": 1, "label": "$\\leq 70$", "class": "text accent"},
+  {"id": "n12_label", "x": 1.3, "y": 3, "shape": "rect", "w": 1, "h": 1, "label": "$\\leq 80$", "class": "text accent"},
+  {"id": "n13_label", "x": 1.3, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "$\\leq 60$", "class": "text accent"},
+  {"id": "n14_label", "x": 1.3, "y": 1, "shape": "rect", "w": 1, "h": 1, "label": "$\\leq 90$", "class": "text accent"},
+  {"id": "n15_label", "x": 1.3, "y": 0, "shape": "rect", "w": 1, "h": 1, "label": "$\\leq 50$", "class": "text accent"},
+  {"id": "n41_label", "x": 8.7, "y": 4, "shape": "rect", "w": 1, "h": 1, "label": "$\\leq 50$", "class": "text accent"},
+  {"id": "n42_label", "x": 8.7, "y": 3, "shape": "rect", "w": 1, "h": 1, "label": "$\\leq 60$", "class": "text accent"},
+  {"id": "n43_label", "x": 8.7, "y": 2, "shape": "rect", "w": 1, "h": 1, "label": "$\\leq 90$", "class": "text accent"},
+  {"id": "n44_label", "x": 8.7, "y": 1, "shape": "rect", "w": 1, "h": 1, "label": "$\\leq 70$", "class": "text accent"},
+  {"id": "n45_label", "x": 8.7, "y": 0, "shape": "rect", "w": 1, "h": 1, "label": "$\\leq 80$", "class": "text accent"}
 ],
 "arcs": [
   {"from": "n11", "to": "n22", "class": "fade"},
@@ -1002,17 +998,17 @@ We can use dummy nodes and arcs to model the upper bounds.
   {"id": "n45", "x": 8, "y": 0, "class": "fade"}
 ],
 "arcs": [
-  {"from": "sink", "to": "source", "bend": 60, "looseness": 1.2, "label": "0,[0,∞]"},
-  {"from": "source", "to": "n11", "label": "[0,70]", "pos": 0.7},
-  {"from": "source", "to": "n12", "label": "[0,80]", "pos": 0.7},
-  {"from": "source", "to": "n13", "label": "[0,60]", "pos": 0.7},
-  {"from": "source", "to": "n14", "label": "[0,90]", "pos": 0.7},
-  {"from": "source", "to": "n15", "label": "[0,50]", "pos": 0.7},
-  {"from": "n41", "to": "sink", "label": "[0,50]", "pos": 0.3},
-  {"from": "n42", "to": "sink", "label": "[0,60]", "pos": 0.3},
-  {"from": "n43", "to": "sink", "label": "[0,90]", "pos": 0.3},
-  {"from": "n44", "to": "sink", "label": "[0,70]", "pos": 0.3},
-  {"from": "n45", "to": "sink", "label": "[0,80]", "pos": 0.3},
+  {"from": "sink", "to": "source", "bend": 60, "looseness": 1.2, "label": "$0,[0,\\infty]$"},
+  {"from": "source", "to": "n11", "label": "$[0,70]$", "pos": 0.7},
+  {"from": "source", "to": "n12", "label": "$[0,80]$", "pos": 0.7},
+  {"from": "source", "to": "n13", "label": "$[0,60]$", "pos": 0.7},
+  {"from": "source", "to": "n14", "label": "$[0,90]$", "pos": 0.7},
+  {"from": "source", "to": "n15", "label": "$[0,50]$", "pos": 0.7},
+  {"from": "n41", "to": "sink", "label": "$[0,50]$", "pos": 0.3},
+  {"from": "n42", "to": "sink", "label": "$[0,60]$", "pos": 0.3},
+  {"from": "n43", "to": "sink", "label": "$[0,90]$", "pos": 0.3},
+  {"from": "n44", "to": "sink", "label": "$[0,70]$", "pos": 0.3},
+  {"from": "n45", "to": "sink", "label": "$[0,80]$", "pos": 0.3},
   {"from": "n11", "to": "n22", "class": "fade"},
   {"from": "n22", "to": "n33", "class": "fade"},
   {"from": "n33", "to": "n44", "class": "fade"},
@@ -1179,10 +1175,10 @@ We can use arcs traveling backwards in time to consider backlogging.
   {"from": "n42", "to": "n43", "class": "fade"},
   {"from": "n43", "to": "n44", "class": "fade"},
   {"from": "n44", "to": "n45", "class": "fade"},
-  {"from": "n42", "to": "n41", "bend": -30, "label": "p,[0,∞]", "swap": true},
-  {"from": "n43", "to": "n42", "bend": -30, "label": "p,[0,∞]", "swap": true},
-  {"from": "n44", "to": "n43", "bend": -30, "label": "p,[0,∞]", "swap": true},
-  {"from": "n45", "to": "n44", "bend": -30, "label": "p,[0,∞]", "swap": true}
+  {"from": "n42", "to": "n41", "bend": -30, "label": "$p,[0,\\infty]$", "swap": true},
+  {"from": "n43", "to": "n42", "bend": -30, "label": "$p,[0,\\infty]$", "swap": true},
+  {"from": "n44", "to": "n43", "bend": -30, "label": "$p,[0,\\infty]$", "swap": true},
+  {"from": "n45", "to": "n44", "bend": -30, "label": "$p,[0,\\infty]$", "swap": true}
 ]
 }
 -->
@@ -1253,10 +1249,10 @@ Suppose we want to restrict backlogging to at most one day.
   {"from": "n42", "to": "n43", "class": "fade"},
   {"from": "n43", "to": "n44", "class": "fade"},
   {"from": "n44", "to": "n45", "class": "fade"},
-  {"from": "n42", "to": "n41", "bend": -30, "label": "p,[0,∞]", "swap": true},
-  {"from": "n43", "to": "n42", "bend": -30, "label": "p,[0,∞]", "swap": true},
-  {"from": "n44", "to": "n43", "bend": -30, "label": "p,[0,∞]", "swap": true},
-  {"from": "n45", "to": "n44", "bend": -30, "label": "p,[0,∞]", "swap": true}
+  {"from": "n42", "to": "n41", "bend": -30, "label": "$p,[0,\\infty]$", "swap": true},
+  {"from": "n43", "to": "n42", "bend": -30, "label": "$p,[0,\\infty]$", "swap": true},
+  {"from": "n44", "to": "n43", "bend": -30, "label": "$p,[0,\\infty]$", "swap": true},
+  {"from": "n45", "to": "n44", "bend": -30, "label": "$p,[0,\\infty]$", "swap": true}
 ]
 }
 -->
@@ -1336,10 +1332,10 @@ We can split the demand nodes to consider backlogging of at most one day.
   {"from": "n43", "to": "n53"},
   {"from": "n44", "to": "n54"},
   {"from": "n45", "to": "n55"},
-  {"from": "n42", "to": "n51", "label": "p,[0,∞]", "swap": true},
-  {"from": "n43", "to": "n52", "label": "p,[0,∞]", "swap": true},
-  {"from": "n44", "to": "n53", "label": "p,[0,∞]", "swap": true},
-  {"from": "n45", "to": "n54", "label": "p,[0,∞]", "swap": true}
+  {"from": "n42", "to": "n51", "label": "$p,[0,\\infty]$", "swap": true},
+  {"from": "n43", "to": "n52", "label": "$p,[0,\\infty]$", "swap": true},
+  {"from": "n44", "to": "n53", "label": "$p,[0,\\infty]$", "swap": true},
+  {"from": "n45", "to": "n54", "label": "$p,[0,\\infty]$", "swap": true}
 ]
 }
 -->
