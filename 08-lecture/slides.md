@@ -243,13 +243,14 @@ The *maximum flow problem* is the problem of finding the maximum amount of flow 
 
 ---
 
-What is the maximum flow from node 1 to node 6 if the indicated numbers represent the capacity of the arc?
+What is the maximum flow from node 1 to node 6 if the flow along each arc must remain within the given intervals?
 
 <div class="netflow">
 <!--
 {
 "unit": 150,
 "radius": 30,
+"labelOffset": 1,
 "nodes": [
   {"id": "1", "x": 0, "y": 1.5, "label": "1"},
   {"id": "2", "x": 2, "y": 3, "label": "2"},
@@ -259,17 +260,17 @@ What is the maximum flow from node 1 to node 6 if the indicated numbers represen
   {"id": "6", "x": 6, "y": 1.5, "label": "6"}
 ],
 "arcs": [
-  {"from": "1", "to": "2", "label": "$4$"},
-  {"from": "1", "to": "3", "label": "$3$", "swap": true},
-  {"from": "2", "to": "3", "label": "$3$", "bend": -15, "swap": true},
-  {"from": "3", "to": "2", "label": "$2$", "bend": -15, "swap": true},
-  {"from": "2", "to": "4", "label": "$2$"},
-  {"from": "2", "to": "5", "label": "$1$"},
-  {"from": "3", "to": "5", "label": "$3$", "swap": true},
-  {"from": "4", "to": "5", "label": "$1$", "bend": -15, "swap": true},
-  {"from": "5", "to": "4", "label": "$2$", "bend": -15, "swap": true},
-  {"from": "4", "to": "6", "label": "$3$"},
-  {"from": "5", "to": "6", "label": "$7$", "swap": true}
+  {"from": "1", "to": "2", "label": "$[0,4]$"},
+  {"from": "1", "to": "3", "label": "$[0,3]$", "swap": true},
+  {"from": "2", "to": "3", "label": "$[0,3]$", "bend": -15, "swap": true},
+  {"from": "3", "to": "2", "label": "$[0,2]$", "bend": -15, "swap": true},
+  {"from": "2", "to": "4", "label": "$[0,2]$"},
+  {"from": "2", "to": "5", "label": "$[0,1]$", "pos": 0.25},
+  {"from": "3", "to": "5", "label": "$[0,3]$", "swap": true},
+  {"from": "4", "to": "5", "label": "$[0,1]$", "bend": -15, "swap": true},
+  {"from": "5", "to": "4", "label": "$[0,2]$", "bend": -15, "swap": true},
+  {"from": "4", "to": "6", "label": "$[0,3]$"},
+  {"from": "5", "to": "6", "label": "$[0,7]$", "swap": true}
 ]
 }
 -->
