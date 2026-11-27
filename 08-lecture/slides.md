@@ -498,14 +498,14 @@ $$0\leq x_{i,j} \textrm{ for all } (i,j)\in  N' \times N''$$
 
 ## Min-cost network flow problem
 
-Given a network $(N,A)$ where each node $i\in N$ has a given supply or demand $b_i$, the *minimum-cost network flow problem* is the problem of matching supply and demand with the smallest cost without violating the given lower and upper bounds $l_{i,j}$ and $u_{i,j}$ on the flow along the arc $(i,j)\in A$, where the cost of shipping one unit along the arc is $c_{i,j}$.
+Given a network $(N,A)$ where each node $i\in N$ has a given supply $b_i$ (or demand $-b_i$), the *minimum-cost network flow problem* is the problem of matching supply and demand with the smallest cost without violating the given lower and upper bounds $l_{i,j}$ and $u_{i,j}$ on the flow along the arc $(i,j)\in A$, where the cost of shipping one unit along the arc is $c_{i,j}$.
 
 > [!NOTE]
 > A node $i\in N$ with $b_i >0$ is a supply node, a node $i\in N$ with $b_i <0$ is a demand node, and a node $i\in N$ with $b_i =0$ is a transshipment node. 
 
 ---
 
-> Given a network $(N,A)$ where each node $i\in N$ has a given supply or demand $b_i$, the *minimum-cost network flow problem* is the problem of matching supply and demand with the smallest cost without violating the given lower and upper bounds $l_{i,j}$ and $u_{i,j}$ on the flow along the arc $(i,j)\in A$, where the cost of shipping one unit along the arc is $c_{i,j}$.
+> Given a network $(N,A)$ where each node $i\in N$ has a given supply $b_i$ (or demand $-b_i$), the *minimum-cost network flow problem* is the problem of matching supply and demand with the smallest cost without violating the given lower and upper bounds $l_{i,j}$ and $u_{i,j}$ on the flow along the arc $(i,j)\in A$, where the cost of shipping one unit along the arc is $c_{i,j}$.
 
 Model the minimum-cost network flow problem as a linear program.
 
