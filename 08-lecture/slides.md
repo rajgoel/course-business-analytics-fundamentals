@@ -514,10 +514,11 @@ The minimum-cost network flow problem can be modelled using linear variables $x_
 
 ---
 
+### Flow conservation constraint
 
-For each node $i \in N$ the difference between the total outgoing and incoming flow must be equal to the supply $b_i$, i.e. 
+For each node $i \in N$ the sum of the supply $b_i$ and the total incoming flow must match the total outgoing flow, i.e. 
 
-$$\underbrace{\sum_{j \in N : (i,j)\in A} x_{i,j}}\_{\textrm{flow out of } i} - \underbrace{\sum_{j \in N : (j,i)\in A} x_{j,i}}\_{\textrm{flow into } i} = b_i \textrm{ for all } i\in N$$
+$$\underbrace{b_i}\_{\rm supply} +  \underbrace{\sum_{j \in N : (j,i)\in A} x_{j,i}}\_{\textrm{flow into } i}  = \underbrace{\sum_{j \in N : (i,j)\in A} x_{i,j}}\_{\textrm{flow out of } i} \textrm{ for all } i\in N$$
 
 ---
 
@@ -539,7 +540,7 @@ minimise $\displaystyle\sum_{(i,j)\in A} c_{i,j} x_{i,j}$
 
 subject to
 
-$$\sum_{j \in N : (i,j)\in A} x_{i,j} - \sum_{j \in N : (j,i)\in A} x_{j,i} = b_i \textrm{ for all } i\in N$$
+$$b_i + \sum_{j \in N : (j,i)\in A} x_{j,i} = \sum_{j \in N : (i,j)\in A} x_{i,j} \textrm{ for all } i\in N$$
 
 $$l_{i,j} \leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
 
@@ -574,6 +575,120 @@ Thus, also the solution of the special cases will be integer if all parameters a
 > [!NOTE]
 > Although, we can solve these problems using the simplex algorithm, there are even more efficient algorithms which exploit the special structure of these problems.
 
+===
+
+## Network flow modelling 
+
+<br>
+<div class="twocolumn" style="font-size:75%;gap:50px;top-margin:50px;">
+<div>
+<div style="height:100%;background-color:#f7f7f8;padding:20px;border-radius:10pt;">
+<h3 style="font-size:200%;">Problem</h4>
+
+minimise $\displaystyle\sum_{(i,j)\in A} c_{i,j} x_{i,j}$
+
+subject to
+
+$$b_i + \sum_{j \in N : (j,i)\in A} x_{j,i} = \sum_{j \in N : (i,j)\in A} x_{i,j} \textrm{ for all } i\in N$$
+
+$$l_{i,j} \leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
+</div>
+This is considered as fixed from now on.
+</div>
+<div>
+<div style="height:100%;background-color:#f7f7f8;padding:20px;border-radius:10pt;">
+<h3 style="font-size:200%;">Data</h4>
+<div style="text-align:left">
+
+**Sets**
+
+- $N$: set of nodes
+- $A$: set of arcs
+
+**Parameters**
+
+- $b_i$: the supply at node $i\in N$
+- $c_{i,j}$: cost per unit of flow along arc $(i,j)\in A$
+- $[l_{i,j},u_{i,j}]$: lower and upper bound on the flow along arc $(i,j)\in A$
+
+</div>
+</div>
+This is what we model.
+</div>
+</div>
+
+---
+
+## Visualisation of a network flow model
+
+<div class="netflow">
+<!--
+{
+"unit": 130,
+"radius": 30,
+"nodes": [
+  {"id": "1", "x": 0, "y": 1.5, "label": "1"},
+  {"id": "2", "x": 2.5, "y": 3, "label": "2"},
+  {"id": "3", "x": 2.5, "y": 0, "label": "3"},
+  {"id": "4", "x": 5, "y": 3, "label": "4"},
+  {"id": "5", "x": 5, "y": 0, "label": "5"},
+  {"id": "1_supply", "x": -0.5, "y": 1.5, "shape": "rect", "w": 1, "h": 1, "label": "$b_1$", "class": "text"},
+  {"id": "2_supply", "x": 2.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$b_2$", "class": "text"},
+  {"id": "3_supply", "x": 2.5, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$b_3$", "class": "text"},
+  {"id": "4_supply", "x": 5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$b_4$", "class": "text"},
+  {"id": "5_supply", "x": 5, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$b_5$", "class": "text"}
+],
+"arcs": [
+  {"from": "1", "to": "2", "label": "$c_{1,2}, [l_{1,2}, u_{1,2}]$"},
+  {"from": "1", "to": "3", "label": "$c_{1,3}, [l_{1,3}, u_{1,3}]$", "swap": true},
+  {"from": "2", "to": "3", "label": "$c_{2,3}, [l_{2,3}, u_{2,3}]$", "swap": true},
+  {"from": "2", "to": "4", "label": "$c_{2,4}, [l_{2,4}, u_{2,4}]$"},
+  {"from": "3", "to": "4", "label": "$c_{3,4}, [l_{3,4}, u_{3,4}]$", "pos": 0.7},
+  {"from": "3", "to": "5", "label": "$c_{3,5}, [l_{3,5}, u_{3,5}]$", "swap": true},
+  {"from": "4", "to": "5", "label": "$c_{4,5}, [l_{4,5}, u_{4,5}]$"}
+]
+}
+-->
+</div>
+
+---
+
+## Example: a network flow model with explicit parameters
+
+<div class="netflow">
+<!--
+{
+"unit": 130,
+"radius": 30,
+"nodes": [
+  {"id": "1", "x": 0, "y": 1.5, "label": "1"},
+  {"id": "2", "x": 2.5, "y": 3, "label": "2"},
+  {"id": "3", "x": 2.5, "y": 0, "label": "3"},
+  {"id": "4", "x": 5, "y": 3, "label": "4"},
+  {"id": "5", "x": 5, "y": 0, "label": "5"},
+  {"id": "1_supply", "x": -0.5, "y": 1.5, "shape": "rect", "w": 1, "h": 1, "label": "$23$", "class": "text"},
+  {"id": "2_supply", "x": 2.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$5$", "class": "text"},
+  {"id": "3_supply", "x": 2.5, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-7$", "class": "text"},
+  {"id": "4_supply", "x": 5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$-2$", "class": "text"},
+  {"id": "5_supply", "x": 5, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-19$", "class": "text"}
+],
+"arcs": [
+  {"from": "1", "to": "2", "label": "$7, [0, 30]$"},
+  {"from": "1", "to": "3", "label": "$6, [0, 20]$", "swap": true},
+  {"from": "2", "to": "3", "label": "$5, [0, 25]$", "swap": true},
+  {"from": "2", "to": "4", "label": "$4, [0, 10]$"},
+  {"from": "3", "to": "4", "label": "$2, [0, 20]$", "pos": 0.7},
+  {"from": "3", "to": "5", "label": "$2, [0, 25]$", "swap": true},
+  {"from": "4", "to": "5", "label": "$1, [0, 20]$"}
+]
+}
+-->
+</div>
+
+<small>
+Numbers next to the nodes indicate supply/demand values, numbers next to the arcs indicate costs, lower bound, and upper bound.
+</small>
+
 ---
 
 ### AMPL: networkflow.mod ###
@@ -601,19 +716,27 @@ UpperBounds { (i,j) in Arcs }: flow[i,j] <= upperbound[i,j];
 ### AMPL: networkflow.dat ###
 
 ```ampl[]
-set Nodes:= origin terminal destination;
-set Arcs:= (origin,destination) (origin,terminal) (terminal,destination);
+set Nodes:= Node1 Node2 Node3 Node4 Node5;
+set Arcs:= (Node1,Node2) (Node1,Node3) (Node2,Node3) (Node2,Node4)
+           (Node3,Node4) (Node3,Node5) (Node4,Node5);
 
-param                supply :=
- origin                   1
- destination             -1
- terminal                 0
+param         supply :=
+ Node1            23
+ Node2             5
+ Node3            -7
+ Node4            -2
+ Node5           -19
 ;
 
-param:                costs lowerbound upperbound :=
- origin destination       3          0   Infinity
- origin terminal          1          0   Infinity
- terminal destination     1          0   Infinity
+param:         costs lowerbound upperbound :=
+ Node1 Node2       7          0         30
+ Node1 Node3       6          0         20
+ Node2 Node3       5          0         25
+ Node2 Node4       4          0         10
+ Node3 Node4       2          0         20
+ Node3 Node5       2          0         25
+ Node4 Node5       1          0         20
 ;
 ```
+<!-- .element: style="height:600px;" -->
 

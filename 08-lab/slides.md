@@ -1,12 +1,3 @@
-### Example: <a href="markdown-viewer.html?file=08-lab/cape_cod.md" data-preview-link>Cape Cod <i class="fa-solid fa-magnifying-glass"></i></a>
-
-How can we model this decision problem as a shortest path problem?
-
-> [!TIP]
-> Draw the nodes and arcs of the network and indicate the costs (negative revenue) for each arc.
-
-===
-
 ### Example: <a href="markdown-viewer.html?file=08-lab/machine_setup.md" data-preview-link>Machine setup problem <i class="fa-solid fa-magnifying-glass"></i></a>
 
 How can we model this decision problem as a minimum flow problem?
@@ -27,6 +18,15 @@ How can we model this decision problem as a min-cost network flow problem?
 
 > [!TIP]
 > Draw the nodes and arcs of the network and indicate supply and demand at nodes, costs, lower bounds, and upper bounds on arcs.
+
+===
+
+### Example: <a href="markdown-viewer.html?file=08-lab/cape_cod.md" data-preview-link>Cape Cod <i class="fa-solid fa-magnifying-glass"></i></a>
+
+How can we model this decision problem as a shortest path problem?
+
+> [!TIP]
+> Draw the nodes and arcs of the network and indicate the costs (negative revenue) for each arc.
 
 ===
 

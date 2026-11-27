@@ -8,7 +8,7 @@ minimise $\displaystyle\sum_{(i,j)\in A} c_{i,j} x_{i,j}$
 
 subject to
 
-$$\sum_{j \in N : (i,j)\in A} x_{i,j} - \sum_{j \in N : (j,i)\in A} x_{j,i} = b_i \textrm{ for all } i\in N$$
+$$b_i + \sum_{j \in N : (j,i)\in A} x_{j,i} = \sum_{j \in N : (i,j)\in A} x_{i,j} \textrm{ for all } i\in N$$
 
 $$l_{i,j} \leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
 
@@ -17,29 +17,7 @@ $$l_{i,j} \leq x_{i,j} \leq u_{i,j} \textrm{ for all } (i,j)\in A$$
 
 ---
 
-Problems which can be modelled as a minimum cost network flow problem can be solved very efficiently, even for very large instances.
-
----
-
-To specify a minimum cost network flow model we only have to provide the data including
-- nodes
-- arcs
-- supply/demand values
-- arc costs
-- lower and upper bounds
-
----
-
-If all supply/demand values and lower and upper bounds are integers, the solution will also be integer valued.
-
----
-
-## Visualisation of a  minimum cost network flow problem
-
-Modelling an optimisation problem as a minimum cost network flow problem has the additional advantage that the problem can be easily visualised.
-
----
-
+## Example: a network flow model with explicit parameters
 
 <div class="netflow">
 <!--
@@ -132,6 +110,91 @@ Numbers next to the nodes indicate supply/demand values. All arcs have a lower b
 
 ---
 
+### Example: Unbalanced network
+
+<div class="netflow">
+<!--
+{
+"unit": 120,
+"radius": 30,
+"nodes": [
+  {"id": "1", "x": 1.5, "y": 3, "label": "1"},
+  {"id": "2", "x": 4.5, "y": 3, "label": "2"},
+  {"id": "A", "x": 0, "y": 0, "label": "A"},
+  {"id": "B", "x": 3, "y": 0, "label": "B"},
+  {"id": "C", "x": 6, "y": 0, "label": "C"},
+  {"id": "1_supply", "x": 1.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$80$", "class": "text"},
+  {"id": "2_supply", "x": 4.5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$100$", "class": "text"},
+  {"id": "A_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-60$", "class": "text"},
+  {"id": "B_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-80$", "class": "text"},
+  {"id": "C_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-70$", "class": "text"}
+],
+"arcs": [
+  {"from": "1", "to": "A"},
+  {"from": "1", "to": "B"},
+  {"from": "1", "to": "C"},
+  {"from": "2", "to": "A"},
+  {"from": "2", "to": "B"},
+  {"from": "2", "to": "C"}
+]
+}
+-->
+</div>
+
+> [!IMPORTANT]
+> As $\sum_{i\in N} b_i \neq 0$ there is **no** solution.
+
+Can we reformulate this model so that total supply is balanced?
+
+===
+
+### Example: Balanced network
+
+<div class="netflow">
+<!--
+{
+"unit": 120,
+"radius": 30,
+"nodes": [
+  {"id": "1", "x": 1, "y": 3, "label": "1"},
+  {"id": "2", "x": 3, "y": 3, "label": "2"},
+  {"id": "3", "x": 5, "y": 3, "label": "D", "class": "fade"},
+  {"id": "A", "x": 0, "y": 0, "label": "A"},
+  {"id": "B", "x": 3, "y": 0, "label": "B"},
+  {"id": "C", "x": 6, "y": 0, "label": "C"},
+  {"id": "1_supply", "x": 1, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$80$", "class": "text"},
+  {"id": "2_supply", "x": 3, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$100$", "class": "text"},
+  {"id": "3_supply", "x": 5, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$30$", "class": "text fade"},
+  {"id": "A_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-60$", "class": "text"},
+  {"id": "B_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-80$", "class": "text"},
+  {"id": "C_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-70$", "class": "text"}
+],
+"arcs": [
+  {"from": "1", "to": "A"},
+  {"from": "1", "to": "B"},
+  {"from": "1", "to": "C"},
+  {"from": "2", "to": "A"},
+  {"from": "2", "to": "B"},
+  {"from": "2", "to": "C"},
+  {"from": "3", "to": "A", "class": "fade"},
+  {"from": "3", "to": "B", "class": "fade"},
+  {"from": "3", "to": "C", "class": "fade"}
+]
+}
+-->
+</div>
+
+For this network with $\sum_{i\in N} b_i = 0$ there is a solution.
+
+> [!TIP]
+> In general, we can add a **dummy supply or demand node** to **compensate for  excess demand or supply**. This node is typically connected to each demand or supply node.
+
+===
+
+## Node splitting
+
+---
+
 ## Exercise: Transportation to warehouses with distribution centre
 
 > A company has two factories and three warehouses. Factory 1 has a supply of 80 units, factory 2 has a supply of 130 units. The demand at warehouses A, B, and C is 60, 80, and 70. The company can ship an unlimited amount from each factory to each warehouse at the following costs per unit:
@@ -193,61 +256,6 @@ Model this problem as a minimum cost network flow problem.
 Numbers next to the nodes indicate supply/demand values. All arcs have a lower bound of zero and an infinite upper bound. The costs of direct arcs from a factory to a warehouse can be found in the table. The costs of arcs from either factory to the distribution centre are 5. The costs of arcs from the distribution centre to a warehouse are zero.   
 </small>
 
-===
-
-### Example: Unbalanced network
-
-> A company has two factories which can produce up to 100 units of a product each. The company wants to determine how to minimise costs for shipping 70 units to a distribution centre in the north and 120 units to a distribution center in the south.
-
-Can we model this problem as a minimum cost network flow problem?
-
----
-
-### Example: Balanced network with dummy node
-
-<div class="netflow">
-<!--
-{
-"unit": 130,
-"radius": 30,
-"nodes": [
-  {"id": "1", "x": 0, "y": 3, "label": "1"},
-  {"id": "2", "x": 3, "y": 3, "label": "2"},
-  {"id": "N", "x": 0, "y": 0, "label": "N"},
-  {"id": "S", "x": 3, "y": 0, "label": "S"},
-  {"id": "X", "x": 6, "y": 0, "label": "", "class": "fade"},
-  {"id": "1_supply", "x": 0, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$100$", "class": "text"},
-  {"id": "2_supply", "x": 3, "y": 3.45, "shape": "rect", "w": 1, "h": 1, "label": "$100$", "class": "text"},
-  {"id": "N_supply", "x": 0, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-70$", "class": "text"},
-  {"id": "S_supply", "x": 3, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-120$", "class": "text"},
-  {"id": "X_supply", "x": 6, "y": -0.5, "shape": "rect", "w": 1, "h": 1, "label": "$-10$", "class": "text fade"}
-],
-"arcs": [
-  {"from": "1", "to": "N", "label": "$11$", "pos": 0.3, "swap": true},
-  {"from": "1", "to": "S", "label": "$13$", "pos": 0.3, "swap": true},
-  {"from": "1", "to": "X", "label": "$0$", "pos": 0.25, "swap": true, "class": "fade"},
-  {"from": "2", "to": "N", "label": "$8$", "pos": 0.2, "swap": true},
-  {"from": "2", "to": "S", "label": "$10$", "pos": 0.2, "swap": true},
-  {"from": "2", "to": "X", "label": "$0$", "pos": 0.2, "class": "fade"}
-]
-}
--->
-</div>
-
-<small>
-Numbers next to the nodes indicate supply/demand values. Numbers next to the arcs indicate costs. All arcs have a lower bound of zero and an infinite upper bound.
-</small>
-
----
-
-### Dummy nodes and arcs
-
-If the network is unbalanced, i.e., if the total supply does not match the total demand, we can always add a dummy supply or demand node to compensate for the excess demand or supply. This node is typically connected to each demand or supply node and is given a high cost value.
-
-===
-
-## Node splitting
-
 ---
 
 ### Example: Minimum cost network flow problem with capacity constraints
@@ -298,7 +306,7 @@ minimise $$\displaystyle\sum_{(i,j)\in A} c_{i,j} x_{i,j}$$
 
 subject to
 
-$$\displaystyle\sum_{j \in N : (i,j)\in A} x_{i,j} - \displaystyle\sum_{j \in N : (j,i)\in A} x_{j,i} = b_i \textrm{ for all } i\in N$$
+$$b_i + \sum_{j \in N : (j,i)\in A} x_{j,i} = \sum_{j \in N : (i,j)\in A} x_{i,j} \textrm{ for all } i\in N$$
 
 $$\class{highlight}{\displaystyle\sum_{j \in N : (j,i)\in A} x_{j,i} \leq q_i \textrm{ for all } i\in N}$$
 
