@@ -184,8 +184,6 @@ Can we reformulate this model so that total supply is balanced?
 -->
 </div>
 
-For this network with $\sum_{i\in N} b_i = 0$ there is a solution.
-
 > [!TIP]
 > In general, we can add a **dummy supply or demand node** to **compensate for  excess demand or supply**. This node is typically connected to each demand or supply node.
 
