@@ -12,7 +12,8 @@
  *                        //   on <section data-auto-animate> transitions
  *   nodes: [{ id, x, y, label?, shape?: 'circle'|'rect', r?, w?, h?, class?, fragment? }],
  *   arcs:  [{ from, to, id?, label?, bend?: deg (+ = left, like TikZ "bend left"),
- *             looseness?: 1, pos?: 0.5, swap?: false, class?, fragment? }]
+ *             looseness?: 1, pos?: 0.5, swap?: false, labelOffset?, class?, fragment? }]
+ *                        // arc labelOffset overrides the diagram's labelOffset
  * }
  * - Coordinates are TikZ-like: y points up.
  * - Labels: if window.katex exists, "$...$" parts are rendered as math; otherwise plain text.
@@ -210,8 +211,9 @@
         const tt = a.pos ?? 0.5, q = bez(sh.p, tt), dv = bezD(sh.p, tt), L = Math.hypot(...dv) || 1;
         let nx = dv[1] / L, ny = -dv[0] / L;      // left of travel direction (TikZ "auto")
         if (a.swap) { nx = -nx; ny = -ny; }
-        r.labelOuter.style.left = (q[0] + nx * off) + 'px';
-        r.labelOuter.style.top = (q[1] + ny * off) + 'px';
+        const o = a.labelOffset ?? off;
+        r.labelOuter.style.left = (q[0] + nx * o) + 'px';
+        r.labelOuter.style.top = (q[1] + ny * o) + 'px';
         r.labelInner.style.transform = `translate(${-50 + 50 * nx}%,${-50 + 50 * ny}%)`;
       }
     });

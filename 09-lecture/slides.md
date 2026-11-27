@@ -981,6 +981,7 @@ We can use dummy nodes and arcs to model the upper bounds.
 {
 "unit": 90,
 "radius": 17,
+"labelOffset": -24,
 "nodes": [
   {"id": "source", "x": 0, "y": 2},
   {"id": "sink", "x": 10, "y": 2},
@@ -1006,7 +1007,7 @@ We can use dummy nodes and arcs to model the upper bounds.
   {"id": "n45", "x": 8, "y": 0, "class": "fade"}
 ],
 "arcs": [
-  {"from": "sink", "to": "source", "bend": 60, "looseness": 1.2, "label": "$0,[0,\\infty]$"},
+  {"from": "sink", "to": "source", "bend": 60, "looseness": 1.2, "label": "$0,[0,\\infty]$", "labelOffset": 10},
   {"from": "source", "to": "n11", "label": "$[0,70]$", "pos": 0.7},
   {"from": "source", "to": "n12", "label": "$[0,80]$", "pos": 0.7},
   {"from": "source", "to": "n13", "label": "$[0,60]$", "pos": 0.7},
